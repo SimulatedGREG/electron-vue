@@ -2,16 +2,15 @@
   "name": "app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "electron.js",
   "dependencies": {
     "vue": "^1.0.24",
     "vue-resource": "^0.7.0",
     "vue-router": "^0.7.13",
     "vuex": "^0.6.3"
   },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "devDependencies": {
+    "asar": "^0.11.0"
   },
   "author": "",
   "license": "ISC"

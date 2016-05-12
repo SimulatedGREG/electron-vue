@@ -1,14 +1,19 @@
 {
-  "name": "webpack-starter",
+  "name": "electron-vue",
   "version": "1.0.0",
-  "description": "",
+  "description": "An Electron & Vue.js quick starter",
   "scripts": {
     "build": "webpack -p",
     "dev": "node build/runner.dev.js",
-    "start": "node build/main.js && npm run dev"
+    "release": "node build/release.js",
+    "release:clean": "del releases/* !.gitkeep",
+    "release:darwin": "cross-env PLATFORM_TARGET=darwin node build/release.js",
+    "release:linux": "cross-env PLATFORM_TARGET=linux node build/release.js",
+    "release:mas": "cross-env PLATFORM_TARGET=mas node build/release.js",
+    "release:win32": "cross-env PLATFORM_TARGET=win32 node build/release.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Greg Holguin <simulatedgreg@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.8.0",
     "babel-loader": "^6.2.4",
@@ -18,6 +23,7 @@
     "babel-runtime": "^6.6.1",
     "cross-env": "^1.0.7",
     "css-loader": "^0.23.1",
+    "electron-packager": "^7.0.1",
     "electron-prebuilt": "^1.0.1",
     "eslint": "^2.9.0",
     "eslint-config-standard": "^5.3.1",

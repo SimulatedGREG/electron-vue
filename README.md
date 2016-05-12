@@ -4,7 +4,7 @@
 **This project is still in development. Check the TODO's below for future plans.**
 
 ## Overview
-The aim of this project is to remove the need to setup electron apps using vue. Since vue can take advantage of module loaders like webpack, getting everything to work can be a little tricky.
+The aim of this project is to remove the need to setup electron apps using vue. Since vue can take advantage of module loaders like webpack, getting everything to play nicely can be a little tricky.
 
 This boilerplate comes pre-packaged with vue-router, vue-resource, and vuex.
 
@@ -24,10 +24,12 @@ npm run dev
 ```
 
 ## TODO
-  1. Ability to create electron builds for all platforms
+  1. ~~Ability to create electron builds for all platforms~~
   2. Show eslint errors in browser
   3. Create documentation explaining the use of both `package.json` files
-  4. (more)
+  4. Create script to compile npm modules that are needed to build against electron
+  5. Get Vue devtools working
+  6. (more)
 
 ***
 
