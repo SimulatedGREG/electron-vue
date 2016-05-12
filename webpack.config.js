@@ -1,6 +1,7 @@
 const path = require('path')
+const webpack = require('webpack')
 
-var config = {
+module.exports = {
   devtool: '#eval-source-map',
   entry: path.join(__dirname, 'app/src/main.js'),
   module: {
@@ -28,6 +29,9 @@ var config = {
       }
     ]
   },
+  plugins:[
+    new webpack.NoErrorsPlugin()
+  ],
   output: {
     filename: 'build.js',
     path: path.join(__dirname, 'app/dist'),
@@ -47,5 +51,3 @@ var config = {
     }
   }
 }
-
-module.exports = config

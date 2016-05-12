@@ -25,15 +25,15 @@ let children = []
 function run (command, color, name) {
   let child = exec(command)
 
-  child.stdout.on('data', function (data) {
+  child.stdout.on('data', data => {
     console.log(format(name, data, color))
   })
 
-  child.stderr.on('data', function (data) {
+  child.stderr.on('data', data => {
     console.error(format(name, data, color))
   })
 
-  child.on('exit', function (code) {
+  child.on('exit', code => {
     exit(code)
   })
 
@@ -41,7 +41,7 @@ function run (command, color, name) {
 }
 
 function exit (code) {
-  children.forEach(function (child) {
+  children.forEach(child => {
     child.kill()
   })
   process.exit(code)
