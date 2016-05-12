@@ -23,6 +23,26 @@ npm i
 npm run dev
 ```
 
+## Making a Release/Build
+electron-vue makes use of [electron-userland/electron-packager](https://github.com/electron-userland/electron-packager) in order to create builds.
+
+#### Building for all platforms
+```bash
+npm run release
+```
+#### Building for a specific platforms
+Can be `win32`, `darwin`, `mas`, or `linux`
+```bash
+npm run release:darwin # builds for darwin (OS X)
+```
+#### Clean `release` directory
+```bash
+npm run release:clean
+```
+
+**Further customizations can be added at `build/release.js`.**
+
+
 ## TODO
   1. ~~Ability to create electron builds for all platforms~~
   2. Show eslint errors in browser
