@@ -1,7 +1,5 @@
 /**
- * Runs both the express dev server and the electron client with
- * a single command. When one process exits, all processes exit.
- * Stdout and stderr from both processes is logged to the same console.
+ * Credits to https://github.com/bradstewart/electron-boilerplate-vue/blob/master/build/dev-runner.js
  */
 'use strict'
 

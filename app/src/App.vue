@@ -1,11 +1,11 @@
-<style lang="scss">
-body {
-  h1 {
-      font-size: 1em;
-  }
-}
-</style>
-
 <template>
-  <h1>hihihi</h1>
+  <router-view></router-view>
 </template>
+
+<script>
+  import store from './vuex/store'
+
+  export default {
+    store
+  }
+</script>

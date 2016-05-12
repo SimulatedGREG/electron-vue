@@ -4,6 +4,18 @@ var config = {
   devtool: '#eval-source-map',
   entry: path.join(__dirname, 'app/src/main.js'),
   module: {
+    preLoaders: [
+      {
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.vue$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      }
+    ],
     loaders: [
       {
         test: /\.js$/,

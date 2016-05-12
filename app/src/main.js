@@ -1,7 +1,23 @@
 import Vue from 'vue'
-import App from './App'
+import Resource from 'vue-resource'
+import Router from 'vue-router'
 
-new Vue({
-  el: 'body',
-  components: { App }
+import App from './App'
+import routes from './routes'
+import './vuex/store'
+
+Vue.use(Resource)
+Vue.use(Router)
+Vue.config.debug = true
+
+const router = new Router()
+
+router.map(routes)
+router.beforeEach(() => {
+  window.scrollTo(0, 0)
 })
+router.redirect({
+  '*': '/'
+})
+
+router.start(App, 'app')
