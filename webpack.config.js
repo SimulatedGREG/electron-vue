@@ -1,7 +1,11 @@
+'use strict'
+
 const path = require('path')
 const webpack = require('webpack')
 
-module.exports = {
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+let config = {
   devtool: '#eval-source-map',
   entry: path.join(__dirname, 'app/src/main.js'),
   module: {
@@ -29,13 +33,17 @@ module.exports = {
       }
     ]
   },
-  plugins:[
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: './app/index.html',
+      inject: true
+    }),
     new webpack.NoErrorsPlugin()
   ],
   output: {
     filename: 'build.js',
-    path: path.join(__dirname, 'app/dist'),
-    publicPath: '/dist/'
+    path: path.join(__dirname, 'app/dist')
   },
   resolve: {
     extensions: ['', '.js', '.vue']
@@ -49,5 +57,14 @@ module.exports = {
       sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
       scss: 'vue-style-loader!css-loader!sass-loader'
     }
-  }
+  },
+  vueDevTools: false
 }
+
+if(config.vueDevTools) {
+  config.plugins.push(new HtmlWebpackPlugin({
+    // TODO: Bring in vue devtools
+  }))
+}
+
+module.exports = config
