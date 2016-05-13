@@ -1,5 +1,7 @@
 <template>
-  You are currently on the {{ view }}
+  <p>
+    You are currently on the {{ view }}
+  </p>
 </template>
 
 <script>
