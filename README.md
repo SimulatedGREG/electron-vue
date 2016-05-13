@@ -6,7 +6,15 @@
 ## Overview
 The aim of this project is to remove the need to setup electron apps using vue. Since vue can take advantage of module loaders like webpack, getting everything to play nicely can be a little tricky.
 
-This boilerplate comes pre-packaged with vue-router, vue-resource, and vuex.
+Things you'll find in this boilerplate...
+  * Basic project structure
+  * Ready to use Vue plugins ([vue-resource](https://github.com/vuejs/vue-resource), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex))
+  * A working set of the [vue-devtools](https://github.com/vuejs/vue-devtools) for development
+  * Ability to easily create releases/builds of your electron app using [electron-userland/electron-packager](https://github.com/electron-userland/electron-packager)
+  * Use of webpack and [vue-loader](https://github.com/vuejs/vue-loader) for Hot Module Replacement
+  * CSS pre-processor support (SASS/SCSS [more to come])
+  * ES6 by default
+  * Eslint (extends 'standard')
 
 ## Let's get started
 FYI, this project was built using node v5.10.0. You can check your node version by running `node -v`. If you need to change your node version, then I'd recommend using [creationix/nvm](https://github.com/creationix/nvm/blob/master/README.markdown).
@@ -18,10 +26,14 @@ cd electron-vue
 npm i
 ```
 
-### Starting the app in development
+## Development
+#### Starting the app
 ```bash
 npm run dev
 ```
+
+#### vue-devtools
+Once your app loads, another window will be opened that loads the vue-devtools. These tools will open by default and can be manually turned off in `webpack.config.js` by setting `config.vueDevTools = false`.
 
 ## Making a Release/Build
 electron-vue makes use of [electron-userland/electron-packager](https://github.com/electron-userland/electron-packager) in order to create builds.
@@ -48,7 +60,7 @@ npm run release:clean
   2. Show eslint errors in browser
   3. Create documentation explaining the use of both `package.json` files
   4. Create script to compile npm modules that are needed to build against electron
-  5. Get Vue devtools working
+  5. ~~Get Vue devtools working~~
   6. (more)
 
 ***

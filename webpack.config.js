@@ -7,13 +7,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 let config = {
   devtool: '#eval-source-map',
-  entry: path.join(__dirname, 'app/src/main.js'),
+  entry: {
+    build: [path.join(__dirname, 'app/src/main.js')],
+    devtools: [path.join(__dirname, 'devtools/devtools.js')]
+  },
   module: {
     preLoaders: [
       {
         test: /\.js$/,
         loader: 'eslint-loader',
-        exclude: /node_modules/
+        exclude: /node_modules|devtools/
       },
       {
         test: /\.vue$/,
@@ -35,14 +38,14 @@ let config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      excludeChunks: ['devtools'],
       filename: 'index.html',
-      template: './app/index.html',
-      inject: true
+      template: './app/index.html'
     }),
     new webpack.NoErrorsPlugin()
   ],
   output: {
-    filename: 'build.js',
+    filename: '[name].js',
     path: path.join(__dirname, 'app/dist')
   },
   resolve: {
@@ -58,12 +61,23 @@ let config = {
       scss: 'vue-style-loader!css-loader!sass-loader'
     }
   },
-  vueDevTools: false
+  vueDevTools: true
 }
 
+/**
+ * Credits to
+ * https://github.com/bradstewart/electron-boilerplate-vue/pull/17
+ */
 if(config.vueDevTools) {
+  config.entry.build.unshift(
+    path.join(__dirname, 'devtools/hook.js'),
+    path.join(__dirname, 'devtools/backend.js')
+  )
+
   config.plugins.push(new HtmlWebpackPlugin({
-    // TODO: Bring in vue devtools
+    filename: 'devtools.html',
+    template: path.join(__dirname, 'devtools/index.html'),
+    excludeChunks: ['build']
   }))
 }
 
