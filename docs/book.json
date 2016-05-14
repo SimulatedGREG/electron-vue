@@ -1,0 +1,15 @@
+ {
+  "gitbook": "2.x.x",
+  "plugins": ["github"],
+  "pluginsConfig": {
+    "github": {
+      "url": "https://github.com/SimulatedGREG/electron-vue"
+    }
+  },
+  "links": {
+    "sharing": {
+      "facebook": false,
+      "twitter": false
+    }
+  }
+}
