@@ -1,7 +1,7 @@
 # electron-vue
 > The boilerplate for making electron apps using vue (pretty much what it sounds like).
 
-**This project is still in development. Check the TODO's below for future plans.**
+####**This project is still in development. Check the TODO's below for future plans.**
 
 ## Overview
 The aim of this project is to remove the need to setup electron apps using vue. Since vue can take advantage of module loaders like webpack, getting everything to play nicely can be a little tricky.
