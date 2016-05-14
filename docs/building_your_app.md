@@ -17,7 +17,7 @@
     dir: path.join(__dirname, '../app'),
 
     // Set electron app icon
-    // Change default icon in `builds/icons`
+    // Change default icon in `app/icons`
     //
     // If building for Linux, please read
     // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#icon
