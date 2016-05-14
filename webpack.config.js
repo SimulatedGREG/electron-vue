@@ -1,5 +1,6 @@
 'use strict'
 
+const settings = require('./config.js')
 const path = require('path')
 const webpack = require('webpack')
 
@@ -58,8 +59,7 @@ let config = {
       sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
       scss: 'vue-style-loader!css-loader!sass-loader'
     }
-  },
-  vueDevTools: true
+  }
 }
 
 /**
@@ -68,7 +68,7 @@ let config = {
  *
  * Apply vue-devtools window. Is ignored in production mode when building
  */
-if(config.vueDevTools && process.env.NODE_ENV !== 'production') {
+if(settings.vueDevTools && process.env.NODE_ENV !== 'production') {
   config.entry.build.unshift(
     path.join(__dirname, 'devtools/hook.js'),
     path.join(__dirname, 'devtools/backend.js')
@@ -93,7 +93,6 @@ if(process.env.NODE_ENV === 'production') {
     'process.env.NODE_ENV': '"production"'
   }))
 
-  // NOTE: Setting to false until general configuration file is implemented
   config.devtool = false
 }
 

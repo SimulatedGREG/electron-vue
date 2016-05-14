@@ -8,4 +8,6 @@
   4. Create script to compile npm modules that are needed to build against electron
   5. ~~Get Vue devtools working~~
   6. ~~Add console.log messages to describe actions~~
-  7. (more)
+  7. ~~Create scripts for making vue routes / vuex modules~~
+  8. ~~Use universal config file~~
+  9. (more)

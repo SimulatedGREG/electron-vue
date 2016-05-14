@@ -58,3 +58,6 @@ npm run build:darwin # builds for darwin (OS X)
 ```bash
 npm run build:clean
 ```
+
+### A note for non-Windows users
+If you are wanting to build for Windows **with a custom icon** using a non-Windows platform, you must have [wine](https://www.winehq.org/) installed. [More Info](https://github.com/electron-userland/electron-packager#building-windows-apps-from-non-windows-platforms).
