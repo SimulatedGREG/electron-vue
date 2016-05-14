@@ -38,7 +38,7 @@ function run (command, color, name) {
      */
     if(/VALID/g.test(data.trim().replace(/\n/g, '\n' + repeat(' ', command.length + 2))) && !isElectronOpen) {
       console.log(`${BLUE}Starting electron...\n${END}`)
-      run('electron build/electron.dev.js', BLUE, 'electron')
+      run('electron tasks/electron.dev.js', BLUE, 'electron')
       isElectronOpen = true
     }
   })

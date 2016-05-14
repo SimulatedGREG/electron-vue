@@ -1,7 +1,8 @@
 .DS_Store
 app/dist/*
+builds/*
 node_modules
 npm-debug.log
-releases/*
 thumbs.db
 !.gitkeep
+!builds/icons/*
