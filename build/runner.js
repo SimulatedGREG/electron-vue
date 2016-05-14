@@ -9,6 +9,8 @@ let YELLOW = '\x1b[33m'
 let BLUE = '\x1b[34m'
 let END = '\x1b[0m'
 
+let isElectronOpen = false
+
 function format (command, data, color) {
   return color + command + END +
     '  ' + // Two space offset
@@ -27,15 +29,22 @@ function run (command, color, name) {
 
   child.stdout.on('data', data => {
     console.log(format(name, data, color))
+
+    /**
+     * Start electron after VALID build
+     * (prevents electron from opening a blank window that requires refreshing)
+     *
+     * NOTE: needs more testing for stability
+     */
+    if(/VALID/g.test(data.trim().replace(/\n/g, '\n' + repeat(' ', command.length + 2))) && !isElectronOpen) {
+      console.log(`${BLUE}Starting electron...\n${END}`)
+      run('electron build/electron.dev.js', BLUE, 'electron')
+      isElectronOpen = true
+    }
   })
 
-  child.stderr.on('data', data => {
-    console.error(format(name, data, color))
-  })
-
-  child.on('exit', code => {
-    exit(code)
-  })
+  child.stderr.on('data', data => console.error(format(name, data, color)))
+  child.on('exit', code => exit(code))
 
   children.push(child)
 }
@@ -47,5 +56,5 @@ function exit (code) {
   process.exit(code)
 }
 
+console.log(`${YELLOW}Starting webpack-dev-server...\n${END}`)
 run('webpack-dev-server --inline --hot --content-base app/', YELLOW, 'webpack')
-run('electron build/electron.dev.js', BLUE, 'electron')

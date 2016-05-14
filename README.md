@@ -14,7 +14,7 @@ Things you'll find in this boilerplate...
   * Use of webpack and [vue-loader](https://github.com/vuejs/vue-loader) for Hot Module Replacement
   * CSS pre-processor support (SASS/SCSS [more to come])
   * ES6 by default
-  * Eslint (extends 'standard')
+  * ESLint (extends 'standard')
 
 ## Let's get started
 FYI, this project was built using node v5.10.0. You can check your node version by running `node -v`. If you need to change your node version, then I'd recommend using [creationix/nvm](https://github.com/creationix/nvm/blob/master/README.markdown).
@@ -54,6 +54,13 @@ npm run release:clean
 
 **Further customizations can be added at `build/release.js`.**
 
+## FAQs
+> Why does my electron app show a file explorer?
+
+#### TL;DR
+Your `src` contains error(s). Check console, fix errors, then refresh electron.
+#### Long answer
+When webpack is loaded it then calls electron to start, but if there are errors in your `src` this creates conflicts with ESLint, and doesn't produce a VALID `build.js` (also interupts HtmlWebpackPlugin), therefore electron doesn't have anything to load and the webpack-dev-server falls back to the file explorer.
 
 ## TODO
   1. ~~Ability to create electron builds for all platforms~~
@@ -61,7 +68,8 @@ npm run release:clean
   3. Create documentation explaining the use of both `package.json` files
   4. Create script to compile npm modules that are needed to build against electron
   5. ~~Get Vue devtools working~~
-  6. (more)
+  6. ~~Add console.log messages to describe actions~~
+  7. (more)
 
 ***
 

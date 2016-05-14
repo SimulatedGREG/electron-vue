@@ -19,8 +19,7 @@ let config = {
       },
       {
         test: /\.vue$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/
+        loader: 'eslint-loader'
       }
     ],
     loaders: [
@@ -81,14 +80,21 @@ if(config.vueDevTools && process.env.NODE_ENV !== 'production') {
 
   config.plugins.push(new HtmlWebpackPlugin({
     filename: 'devtools.html',
-    template: path.join(__dirname, 'devtools/index.html'),
+    template: path.join(__dirname, 'devtools/devtools.html'),
     excludeChunks: ['build']
   }))
 }
 
-if(process.env.NODE_ENV === 'production')
+/**
+ * Adjust config for production settings
+ */
+if(process.env.NODE_ENV === 'production') {
   config.plugins.push(new webpack.DefinePlugin({
     'process.env.NODE_ENV': '"production"'
   }))
+
+  // NOTE: Setting to false until general configuration file is implemented
+  config.devtool = false
+}
 
 module.exports = config

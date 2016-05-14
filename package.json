@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "An Electron & Vue.js quick starter",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack -p",
-    "dev": "node build/runner.dev.js",
+    "build": "cross-env NODE_ENV=production webpack -p --progress",
+    "dev": "node build/runner.js",
     "release": "node build/release.js",
     "release:clean": "del releases/* !.gitkeep",
     "release:darwin": "cross-env PLATFORM_TARGET=darwin node build/release.js",
