@@ -8,8 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 let config = {
   devtool: '#eval-source-map',
   entry: {
-    build: [path.join(__dirname, 'app/src/main.js')],
-    devtools: [path.join(__dirname, 'devtools/devtools.js')]
+    build: [path.join(__dirname, 'app/src/main.js')]
   },
   module: {
     preLoaders: [
@@ -40,7 +39,7 @@ let config = {
     new HtmlWebpackPlugin({
       excludeChunks: ['devtools'],
       filename: 'index.html',
-      template: './app/index.html'
+      template: './app/main.html'
     }),
     new webpack.NoErrorsPlugin()
   ],
@@ -67,12 +66,18 @@ let config = {
 /**
  * Credits to
  * https://github.com/bradstewart/electron-boilerplate-vue/pull/17
+ *
+ * Apply vue-devtools window. Is ignored in production mode when building
  */
-if(config.vueDevTools) {
+if(config.vueDevTools && process.env.NODE_ENV !== 'production') {
   config.entry.build.unshift(
     path.join(__dirname, 'devtools/hook.js'),
     path.join(__dirname, 'devtools/backend.js')
   )
+
+  config.entry.devtools = [
+    path.join(__dirname, 'devtools/devtools.js')
+  ]
 
   config.plugins.push(new HtmlWebpackPlugin({
     filename: 'devtools.html',
@@ -80,5 +85,10 @@ if(config.vueDevTools) {
     excludeChunks: ['build']
   }))
 }
+
+if(process.env.NODE_ENV === 'production')
+  config.plugins.push(new webpack.DefinePlugin({
+    'process.env.NODE_ENV': '"production"'
+  }))
 
 module.exports = config

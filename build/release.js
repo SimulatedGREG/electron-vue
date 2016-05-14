@@ -8,9 +8,9 @@ const platform = process.env.PLATFORM_TARGET || 'all'
 let options = {
   'app-version': pkg.version,
   arch: 'x64',
-  asar: true,
+  asar: false,
   dir: path.join(__dirname, '../app'),
-  ignore: /node_modules/,
+  ignore: /node_modules|src|main.html/,
   name: pkg.name,
   out: path.join(__dirname, '../releases'),
   overwrite: true,

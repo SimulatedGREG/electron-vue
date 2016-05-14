@@ -57,7 +57,7 @@ npm run release:clean
 
 ## TODO
   1. ~~Ability to create electron builds for all platforms~~
-  2. Show eslint errors in browser
+  2. ~~Show eslint errors in browser~~ (on hold, needs custom formatter)
   3. Create documentation explaining the use of both `package.json` files
   4. Create script to compile npm modules that are needed to build against electron
   5. ~~Get Vue devtools working~~

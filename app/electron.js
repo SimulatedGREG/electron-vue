@@ -10,7 +10,7 @@ function createWindow () {
     width: 800
   })
 
-  mainWindow.loadURL('file://' + __dirname + '/index.html')
+  mainWindow.loadURL('file://' + __dirname + '/dist/index.html')
 
   mainWindow.on('closed', function () {
     mainWindow = null
