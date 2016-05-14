@@ -6,6 +6,8 @@
 ## Overview
 The aim of this project is to remove the need to setup electron apps using vue. Since vue can take advantage of module loaders like webpack, getting everything to play nicely can be a little tricky.
 
+**Check out the documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).**
+
 Things you'll find in this boilerplate...
   * Basic project structure
   * Ready to use Vue plugins ([vue-resource](https://github.com/vuejs/vue-resource), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex))
