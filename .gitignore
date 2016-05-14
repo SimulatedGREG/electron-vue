@@ -5,4 +5,3 @@ node_modules
 npm-debug.log
 thumbs.db
 !.gitkeep
-!builds/icons/*

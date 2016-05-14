@@ -27,7 +27,7 @@ function build () {
     arch: 'x64',
     asar: true,
     dir: path.join(__dirname, '../app'),
-    icon: path.join(__dirname, '../builds/icons/icon'),
+    icon: path.join(__dirname, '../app/icons/icon'),
     ignore: /node_modules|src|main.html/,
     name: pkg.name,
     out: path.join(__dirname, '../builds'),
