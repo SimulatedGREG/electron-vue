@@ -1,4 +1,4 @@
-# Making a Release/Build
+# Building you app
  electron-vue makes use of [electron-userland/electron-packager](https://github.com/electron-userland/electron-packager) to produce builds and are then saved to `builds`.
 
 ## Defaults
@@ -18,7 +18,7 @@
 
     // Set electron app icon
     // Change default icon in `app/icons`
-    // File extentions are added based on platform
+    // File extensions are added based on platform
     //
     // If building for Linux, please read
     // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#icon
@@ -40,7 +40,7 @@
     platform: 'all'
 }
   ```
- More customization can be made at `build/release.js` in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options).
+ Further customizations can be made at `build/release.js` in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options).
 
 
 #### Building for all platforms
