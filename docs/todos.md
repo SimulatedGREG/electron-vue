@@ -12,5 +12,5 @@
   10. **Describe project structure in more detail**
   11. **Create new app icon based on new logo**
   12. **Setup support for other CSS/JS pre-processors**
-  13. **Set autoprefixer to only target chrome, and add uglifyjs settings on production builds**
+  13. ~~Set autoprefixer to only target chrome, and add uglifyjs settings on production builds~~
   14. **(more)**

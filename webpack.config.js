@@ -55,6 +55,9 @@ let config = {
   },
   target: 'electron-renderer',
   vue: {
+    autoprefixer: {
+      browsers: ['last 2 Chrome versions']
+    },
     loaders: {
       sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
       scss: 'vue-style-loader!css-loader!sass-loader'
@@ -89,9 +92,16 @@ if(settings.vueDevTools && process.env.NODE_ENV !== 'production') {
  * Adjust config for production settings
  */
 if(process.env.NODE_ENV === 'production') {
-  config.plugins.push(new webpack.DefinePlugin({
-    'process.env.NODE_ENV': '"production"'
-  }))
+  config.plugins.push(
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"production"'
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
+  )
 
   config.devtool = false
 }
