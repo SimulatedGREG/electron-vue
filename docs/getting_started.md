@@ -10,8 +10,8 @@ cd electron-vue
 npm i
 ```
 
-### Starting the app
-```
+## Starting the app
+```bash
 npm run dev
 ```
 ...and boom! You now have a running electron-vue app.

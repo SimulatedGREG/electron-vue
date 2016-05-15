@@ -22,10 +22,16 @@ electron-vue
 │  ├─ dist
 │  ├─ icons
 │  ├─ node_modules
-│  └─ src
-│     ├─ components
-│     └─ vuex
-│        └─ modules
+│  ├─ src
+│  │  ├─ components
+│  │  ├─ vuex
+│  │  │  └─ modules
+│  │  ├─ App.vue
+│  │  ├─ main.js
+│  │  └─ routes.js
+│  ├─ electron.js
+│  ├─ main.html
+│  └─ package.json
 ├─ builds
 ├─ devtools
 ├─ docs
@@ -43,3 +49,4 @@ app.asar
 ├─ electron.js
 └─ package.json
 ```
+As you can probably already tell, almost everything is stripped down in final production builds. This is almost mandatory when distributing electron app, as you do not want your users to download large file sizes. 
