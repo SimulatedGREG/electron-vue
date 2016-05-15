@@ -18,10 +18,11 @@
 
     // Set electron app icon
     // Change default icon in `app/icons`
+    // File extentions are added based on platform
     //
     // If building for Linux, please read
     // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#icon
-    icon: path.join(__dirname, '../builds/icons/icon'),
+    icon: path.join(__dirname, '../app/icons/icon'),
 
     // Ignore files that would bloat final build size
     ignore: /node_modules|src|main.html/,
@@ -30,13 +31,13 @@
     name: pkg.name,
 
     // Save builds to `releases`
-    out: path.join(__dirname, '../releases'),
+    out: path.join(__dirname, '../builds'),
 
     // Overwrite existing builds
     overwrite: true,
 
     // Environment variable that sets platform
-    platform
+    platform: 'all'
 }
   ```
  More customization can be made at `build/release.js` in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options).
