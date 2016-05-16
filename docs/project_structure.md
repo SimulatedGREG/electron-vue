@@ -12,7 +12,8 @@ Here you should install modules that you only need during development. Items inc
 #### `./app/package.json` is for your actual electron app
 **This `package.json` is your app's manifest.** Here you should install all your dependencies needed in your final app. It is inside this `app` folder that electron-packager creates production builds.
 
-**NOTE**: When building production apps, `electron-packager` ignores `node_modules` to cut down file size. Webpack will import everything needed in its bundle.
+##### Installing Native NPM modules
+As mentioned above, we need to make sure our native npm modules are built against electron. To do that, we can use [electron/electron-rebuild](https://github.com/electron/electron-rebuild).
 
 ## File tree
 #### During development

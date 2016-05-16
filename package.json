@@ -11,6 +11,7 @@
     "build:mas": "cross-env PLATFORM_TARGET=mas node tasks/release.js",
     "build:win32": "cross-env PLATFORM_TARGET=win32 node tasks/release.js",
     "pack": "cross-env NODE_ENV=production webpack -p --progress",
+    "postinstall": "cd app && npm i",
     "vue:route": "node tasks/vue/route.js",
     "vuex:module": "node tasks/vuex/module.js"
   },
@@ -27,6 +28,7 @@
     "css-loader": "^0.23.1",
     "electron-packager": "^7.0.1",
     "electron-prebuilt": "^1.0.1",
+    "electron-rebuild": "^1.1.3",
     "eslint": "^2.9.0",
     "eslint-config-standard": "^5.3.1",
     "eslint-loader": "^1.3.0",
