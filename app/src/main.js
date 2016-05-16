@@ -4,7 +4,6 @@ import Router from 'vue-router'
 
 import App from './App'
 import routes from './routes'
-import './vuex/store'
 
 Vue.use(Resource)
 Vue.use(Router)

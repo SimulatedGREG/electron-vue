@@ -8,7 +8,7 @@
   6. ~~Add console.log messages to describe actions~~
   7. ~~Create scripts for making vue routes / vuex modules~~
   8. ~~Use universal config file~~
-  9. **App assets (setup url-loader)**
+  9. ~~App assets (setup url-loader)~~
   10. ~~Describe project structure in more detail~~
   11. ~~Create new app icon based on new logo~~
   12. **Setup support for other CSS/JS pre-processors**

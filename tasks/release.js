@@ -1,6 +1,7 @@
 'use strict'
 
 const exec = require('child_process').exec
+const del = require('del')
 const pkg = require('../app/package.json')
 const packager = require('electron-packager')
 const path = require('path')
@@ -8,14 +9,25 @@ const platform = process.env.PLATFORM_TARGET || 'all'
 
 
 /**
- * Build webpack
+ * Clean previous `dist` files
  */
-console.log('\x1b[33mBuilding webpack in production mode...\n\x1b[0m')
-let pack = exec('npm run pack')
+console.log('\x1b[33mCleaning previous `dist` files...\n\x1b[0m')
+del(['app/dist/*']).then(paths => {
+  console.log('Deleted:\n', paths.join('\n'))
+  pack()
+})
 
-pack.stdout.on('data', data => console.log(data))
-pack.stderr.on('data', data => console.error(data))
-pack.on('exit', code => build())
+/**
+ * Build webpack in production
+ */
+function pack () {
+  console.log('\x1b[33mBuilding webpack in production mode...\n\x1b[0m')
+  let pack = exec('npm run pack')
+
+  pack.stdout.on('data', data => console.log(data))
+  pack.stderr.on('data', data => console.error(data))
+  pack.on('exit', code => build())
+}
 
 
 /**
