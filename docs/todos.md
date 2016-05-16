@@ -15,5 +15,5 @@
   13. ~~Set autoprefixer to only target chrome, and add uglifyjs settings on production builds~~
   14. ~~Add new electron devtron tools~~
   15. **Bring vue-devtools inside the actual devtools panel**
-  16. **export mainWindow settings to `electron.dev.js`**
+  16. ~~export mainWindow settings to `electron.dev.js`~~ (resolved to using one electron starter)
   14. **(more)**
