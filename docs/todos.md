@@ -16,4 +16,5 @@
   14. ~~Add new electron devtron tools~~
   15. **Bring vue-devtools inside the actual devtools panel**
   16. ~~export mainWindow settings to `electron.dev.js`~~ (resolved to using one electron starter)
-  14. **(more)**
+  17. **Create documentation about global `config.js`**
+  18. **(more)**
