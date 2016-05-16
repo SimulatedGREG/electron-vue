@@ -13,4 +13,7 @@
   11. ~~Create new app icon based on new logo~~
   12. **Setup support for other CSS/JS pre-processors**
   13. ~~Set autoprefixer to only target chrome, and add uglifyjs settings on production builds~~
+  14. ~~Add new electron devtron tools~~
+  15. **Bring vue-devtools inside the actual devtools panel**
+  16. **export mainWindow settings to `electron.dev.js`**
   14. **(more)**

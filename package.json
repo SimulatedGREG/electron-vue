@@ -26,6 +26,7 @@
     "babel-runtime": "^6.6.1",
     "cross-env": "^1.0.7",
     "css-loader": "^0.23.1",
+    "devtron": "^1.1.0",
     "electron-packager": "^7.0.1",
     "electron-prebuilt": "^1.0.1",
     "electron-rebuild": "^1.1.3",

@@ -89,27 +89,29 @@ let config = {
   }
 }
 
-/**
- * Credits to
- * https://github.com/bradstewart/electron-boilerplate-vue/pull/17
- *
- * Apply vue-devtools window. Is ignored in production mode when building
- */
-if(settings.vueDevTools && process.env.NODE_ENV !== 'production') {
-  config.entry.build.unshift(
-    path.join(__dirname, 'devtools/hook.js'),
-    path.join(__dirname, 'devtools/backend.js')
-  )
+if(process.env.NODE_ENV !== 'production') {
+  /**
+   * Credits to
+   * https://github.com/bradstewart/electron-boilerplate-vue/pull/17
+   *
+   * Apply vue-devtools window. Is ignored in production mode when building
+   */
+  if(settings.vueDevTools) {
+    config.entry.build.unshift(
+      path.join(__dirname, 'devtools/hook.js'),
+      path.join(__dirname, 'devtools/backend.js')
+    )
 
-  config.entry.devtools = [
-    path.join(__dirname, 'devtools/devtools.js')
-  ]
+    config.entry.devtools = [
+      path.join(__dirname, 'devtools/devtools.js')
+    ]
 
-  config.plugins.push(new HtmlWebpackPlugin({
-    filename: 'devtools.html',
-    template: path.join(__dirname, 'devtools/devtools.html'),
-    excludeChunks: ['build']
-  }))
+    config.plugins.push(new HtmlWebpackPlugin({
+      filename: 'devtools.html',
+      template: path.join(__dirname, 'devtools/devtools.html'),
+      excludeChunks: ['build']
+    }))
+  }
 }
 
 /**
@@ -126,8 +128,6 @@ if(process.env.NODE_ENV === 'production') {
       }
     })
   )
-
-  config.devtool = false
 }
 
 module.exports = config

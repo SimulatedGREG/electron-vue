@@ -1,4 +1,6 @@
+const devtron = require('../config').devtron
 const electron = require('electron')
+const path = require('path')
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 
@@ -14,21 +16,24 @@ function createWindow () {
 
   mainWindow.webContents.openDevTools()
 
-  mainWindow.on('closed', function () {
+  mainWindow.on('closed', () => {
     mainWindow = null
   })
 
-  console.log('mainWindow opened');
+  if(devtron) BrowserWindow.addDevToolsExtension(path.join(__dirname, '../node_modules/devtron'))
+  else BrowserWindow.removeDevToolsExtension('devtron')
+
+  console.log('mainWindow opened')
 }
 
 app.on('ready', createWindow)
 
-app.on('window-all-closed', function () {
+app.on('window-all-closed', () => {
   if (process.platform !== 'darwin')
     app.quit()
 })
 
-app.on('activate', function () {
+app.on('activate', () => {
   if (mainWindow === null)
     createWindow()
 })
