@@ -9,7 +9,7 @@ let mainWindow, config = {}
 
 if(process.env.NODE_ENV === 'development') {
   config = require('../config')
-  config.url = 'http://localhost:8080'
+  config.url = `http://localhost:${config.port}`
 } else {
   config.devtron = false
   config.url = 'file://' + __dirname + '/dist/index.html'

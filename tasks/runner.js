@@ -3,6 +3,7 @@
  */
 'use strict'
 
+const config = require('../config')
 const exec = require('child_process').exec
 
 let YELLOW = '\x1b[33m'
@@ -57,4 +58,4 @@ function exit (code) {
 }
 
 console.log(`${YELLOW}Starting webpack-dev-server...\n${END}`)
-run('webpack-dev-server --inline --hot --content-base app/', YELLOW, 'webpack')
+run(`webpack-dev-server --inline --hot --colors --port ${config.port} --content-base app/`, YELLOW, 'webpack')
