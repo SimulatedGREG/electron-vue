@@ -24,4 +24,5 @@
   22. **create helper scripts for general application support**
   23. **create cli that takes options when scaffolding boilerplate**
   24. ~~Create postinstall script~~
-  25. **(more)**
+  25. create npm script to remove landing-page components
+  26. **(more)**
