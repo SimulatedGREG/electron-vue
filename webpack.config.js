@@ -2,8 +2,10 @@
 
 const settings = require('./config.js')
 const path = require('path')
+const pkg = require('./app/package.json')
 const webpack = require('webpack')
 
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 let config = {
@@ -42,6 +44,10 @@ let config = {
         loader: 'vue-html-loader'
       },
       {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         query: {
@@ -60,10 +66,12 @@ let config = {
     ]
   },
   plugins: [
+    new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
       excludeChunks: ['devtools'],
       filename: 'index.html',
-      template: './app/main.html'
+      template: './app/main.ejs',
+      title: pkg.name
     }),
     new webpack.NoErrorsPlugin()
   ],
@@ -72,7 +80,7 @@ let config = {
     path: path.join(__dirname, 'app/dist')
   },
   resolve: {
-    extensions: ['', '.js', '.vue']
+    extensions: ['', '.js', '.vue', '.json', '.css']
   },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules')

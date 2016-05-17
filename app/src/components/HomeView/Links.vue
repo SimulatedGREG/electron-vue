@@ -1,4 +1,11 @@
-<style scoped>
+<style lang="scss" scoped>
+  a {
+    color: rgb(50, 174, 110);
+    text-decoration: none;
+
+    &:hover { color: rgb(40, 56, 76); }
+  }
+
   ul {
     list-style-type: none;
     margin-top: 10px;

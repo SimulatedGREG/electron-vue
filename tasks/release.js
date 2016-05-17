@@ -7,15 +7,7 @@ const packager = require('electron-packager')
 const path = require('path')
 const platform = process.env.PLATFORM_TARGET || 'all'
 
-
-/**
- * Clean previous `dist` files
- */
-console.log('\x1b[33mCleaning previous `dist` files...\n\x1b[0m')
-del(['app/dist/*']).then(paths => {
-  console.log('Deleted:\n', paths.join('\n'))
-  pack()
-})
+pack()
 
 /**
  * Build webpack in production

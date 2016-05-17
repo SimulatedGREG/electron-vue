@@ -17,6 +17,9 @@
   15. **Bring vue-devtools inside the actual devtools panel**
   16. ~~export mainWindow settings to `electron.dev.js`~~ (resolved to using one electron starter)
   17. ~~Create documentation about global `config.js`~~
-  18. **Use ExtractTextPlugin for vendor CSS libraries, and documentation**
-  19. **don't clean `app/dist` before building**
+  18. ~~Use ExtractTextPlugin for vendor CSS libraries, and documentation~~
+  19. ~~don't clean `app/dist` before building~~
+  20. **Create documentation explaining how to use dynamic assets in `dist` folder**
+  21. **bring building settings to global `config.js`**
+  22. **create option to include electron-boiler plate script like external links support**
   19. **(more)**
