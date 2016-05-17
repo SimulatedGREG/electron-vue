@@ -12,7 +12,22 @@ electron-vue uses the [webpack/webpack](https://github.com/webpack/webpack) modu
   port: 9080,
 
   // Enable vue-devtools in development
-  vueDevTools: true
+  vueDevTools: true,
+  
+  // electron-packager options
+  // See `Building you app` for more info
+  building: {
+    'app-version': pkg.version,
+    arch: 'x64',
+    asar: true,
+    dir: path.join(__dirname, 'app'),
+    icon: path.join(__dirname, 'app/icons/icon'),
+    ignore: /node_modules|src|main.html|icons/,
+    name: pkg.name,
+    out: path.join(__dirname, 'builds'),
+    overwrite: true,
+    platform: 'all'
+  }
 }
 ```
 **NOTE**
