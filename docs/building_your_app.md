@@ -40,7 +40,7 @@
     platform: 'all'
 }
   ```
- Further customizations can be made at `build/release.js` in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options).
+ Further customizations can be made at `config.js` in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options).
 
 
 #### Building for all platforms

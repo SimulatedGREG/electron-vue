@@ -11,7 +11,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 let config = {
   devtool: '#eval-source-map',
   entry: {
-    build: [path.join(__dirname, 'app/src/main.js')]
+    build: [ path.join(__dirname, 'app/src/main.js') ]
   },
   module: {
     preLoaders: [

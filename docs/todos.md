@@ -20,6 +20,8 @@
   18. ~~Use ExtractTextPlugin for vendor CSS libraries, and documentation~~
   19. ~~don't clean `app/dist` before building~~
   20. ~~Create documentation explaining how to use dynamic assets in `dist` folder~~
-  21. **bring building settings to global `config.js`**
-  22. **create option to include electron-boiler plate script like external links support**
-  19. **(more)**
+  21. ~~bring building settings to global `config.js`~~
+  22. **create helper scripts for general application support**
+  23. **create cli that takes options when scaffolding boilerplate**
+  24. ~~Create postinstall script~~
+  25. **(more)**

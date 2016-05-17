@@ -11,7 +11,7 @@
     "build:mas": "cross-env PLATFORM_TARGET=mas node tasks/release.js",
     "build:win32": "cross-env PLATFORM_TARGET=win32 node tasks/release.js",
     "pack": "cross-env NODE_ENV=production webpack -p --progress",
-    "postinstall": "cd app && npm i",
+    "postinstall": "node tasks/postinstall.js",
     "vue:route": "node tasks/vue/route.js",
     "vuex:module": "node tasks/vuex/module.js"
   },

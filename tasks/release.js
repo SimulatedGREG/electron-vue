@@ -1,11 +1,7 @@
 'use strict'
 
 const exec = require('child_process').exec
-const del = require('del')
-const pkg = require('../app/package.json')
 const packager = require('electron-packager')
-const path = require('path')
-const platform = process.env.PLATFORM_TARGET || 'all'
 
 pack()
 
@@ -26,18 +22,7 @@ function pack () {
  * Use electron-packager to build electron app
  */
 function build () {
-  let options = {
-    'app-version': pkg.version,
-    arch: 'x64',
-    asar: true,
-    dir: path.join(__dirname, '../app'),
-    icon: path.join(__dirname, '../app/icons/icon'),
-    ignore: /node_modules|src|main.html|icons/,
-    name: pkg.name,
-    out: path.join(__dirname, '../builds'),
-    overwrite: true,
-    platform
-  }
+  let options = require('../config').building
 
   console.log('\x1b[34mBuilding electron app(s)...\n\x1b[0m')
   packager(options, (err, appPaths) => {
