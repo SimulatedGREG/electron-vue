@@ -25,4 +25,5 @@
   23. **create cli that takes options when scaffolding boilerplate**
   24. ~~Create postinstall script~~
   25. create npm script to remove landing-page components
+  26. **SUPPORT ELECTRON MAIN PROCESS PACKING**
   26. **(more)**
