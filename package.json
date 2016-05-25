@@ -13,7 +13,8 @@
     "pack": "cross-env NODE_ENV=production webpack -p --progress",
     "postinstall": "node tasks/postinstall.js",
     "vue:route": "node tasks/vue/route.js",
-    "vuex:module": "node tasks/vuex/module.js"
+    "vuex:module": "node tasks/vuex/module.js",
+    "lint": "eslint --ext .js,.vue app"
   },
   "author": "Greg Holguin <simulatedgreg@gmail.com>",
   "license": "MIT",
