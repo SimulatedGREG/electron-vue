@@ -3,18 +3,18 @@
   "version": "0.1.0",
   "description": "An Electron & Vue.js quick starter",
   "scripts": {
-    "dev": "node tasks/runner.js",
     "build": "node tasks/release.js",
     "build:clean": "del builds/* !.gitkeep !builds/icons",
     "build:darwin": "cross-env PLATFORM_TARGET=darwin node tasks/release.js",
     "build:linux": "cross-env PLATFORM_TARGET=linux node tasks/release.js",
     "build:mas": "cross-env PLATFORM_TARGET=mas node tasks/release.js",
     "build:win32": "cross-env PLATFORM_TARGET=win32 node tasks/release.js",
+    "dev": "node tasks/runner.js",
+    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter app",
     "pack": "cross-env NODE_ENV=production webpack -p --progress",
     "postinstall": "node tasks/postinstall.js",
     "vue:route": "node tasks/vue/route.js",
-    "vuex:module": "node tasks/vuex/module.js",
-    "lint": "eslint --ext .js,.vue app"
+    "vuex:module": "node tasks/vuex/module.js"
   },
   "author": "Greg Holguin <simulatedgreg@gmail.com>",
   "license": "MIT",
