@@ -11,3 +11,5 @@
 * [Building your app](docs/building_your_app.md)
 * [FAQs](docs/faqs.md)
 * [TODOs](docs/todos.md)
+* [Contributing](docs/contributing.md)
+

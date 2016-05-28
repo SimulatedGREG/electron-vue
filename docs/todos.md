@@ -26,4 +26,5 @@
   24. ~~Create postinstall script~~
   25. create npm script to remove landing-page components
   26. **SUPPORT ELECTRON MAIN PROCESS PACKING**
-  26. **(more)**
+  27. **Determine why webpack seems to crash at random points**
+  28. **(more)**
