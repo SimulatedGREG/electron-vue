@@ -4,6 +4,7 @@
 * [Getting Started](docs/getting_started.md)
 * [Development](docs/development.md)
    * [Global Configuration](docs/global_configuration.md)
+   * [Entry index.html](docs/entry_indexhtml.md)
    * [Vue Accessories](docs/vue_accessories.md)
    * [NPM Scripts](docs/npm_scripts.md)
 * [Project Structure](docs/project_structure.md)
