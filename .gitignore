@@ -1,5 +1,6 @@
 .DS_Store
-app/dist/*
+app/dist/build.js
+app/dist/index.html
 builds/*
 node_modules
 npm-debug.log
