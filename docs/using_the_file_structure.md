@@ -49,13 +49,13 @@ Let's say I have a component that loads an image, but I don't know the image's p
 
 ```html
 <template>
-  <img v-bind:src="image_url">
+  <img v-bind:src="imageUrl">
 </template>
 
 <script>
   export default {
     data () {
-      return { image_url: 'imgs/unsplash.png' }
+      return { imageUrl: 'imgs/unsplash.png' }
     }
   }
 </script>

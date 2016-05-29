@@ -10,6 +10,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 let config = {
   devtool: '#eval-source-map',
+  eslint: {
+    formatter: require('eslint-friendly-formatter')
+  },
   entry: {
     build: [ path.join(__dirname, 'app/src/main.js') ]
   },
@@ -94,9 +97,6 @@ let config = {
       sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
       scss: 'vue-style-loader!css-loader!sass-loader'
     }
-  },
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
   }
 }
 

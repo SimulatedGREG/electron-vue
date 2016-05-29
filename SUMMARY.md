@@ -5,6 +5,7 @@
 * [Development](docs/development.md)
    * [Global Configuration](docs/global_configuration.md)
    * [Vue Accessories](docs/vue_accessories.md)
+   * [NPM Scripts](docs/npm_scripts.md)
 * [Project Structure](docs/project_structure.md)
    * [Using the file structure](docs/using_the_file_structure.md)
    * [Using CSS frameworks](docs/using_css_frameworks.md)
