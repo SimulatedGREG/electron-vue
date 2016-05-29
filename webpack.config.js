@@ -17,17 +17,7 @@ let config = {
     build: [ path.join(__dirname, 'app/src/main.js') ]
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.js$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules|devtools/
-      },
-      {
-        test: /\.vue$/,
-        loader: 'eslint-loader'
-      }
-    ],
+    preLoaders: [],
     loaders: [
       {
         test: /\.js$/,
@@ -102,12 +92,29 @@ let config = {
 
 if(process.env.NODE_ENV !== 'production') {
   /**
+   * Apply ESLint
+   */
+  if (settings.eslint) {
+    config.module.preLoaders.push(
+      {
+        test: /\.js$/,
+        loader: 'eslint-loader',
+        exclude: /node_modules|devtools/
+      },
+      {
+        test: /\.vue$/,
+        loader: 'eslint-loader'
+      }
+    )
+  }
+
+  /**
    * Credits to
    * https://github.com/bradstewart/electron-boilerplate-vue/pull/17
    *
    * Apply vue-devtools window. Is ignored in production mode when building
    */
-  if(settings.vueDevTools) {
+  if (settings.vueDevTools) {
     config.entry.build.unshift(
       path.join(__dirname, 'devtools/hook.js'),
       path.join(__dirname, 'devtools/backend.js')
@@ -128,7 +135,7 @@ if(process.env.NODE_ENV !== 'production') {
 /**
  * Adjust config for production settings
  */
-if(process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
   config.plugins.push(
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'

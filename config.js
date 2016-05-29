@@ -8,6 +8,10 @@ let config = {
   // Enable electron's devtron devtools extension in development
   devtron: true,
 
+  // Use ESLint (extends `standard`)
+  // Further changes can be made in `.eslintrc.js`
+  eslint: true,
+
   // webpack-dev-server port
   port: 9080,
 
