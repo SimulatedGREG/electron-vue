@@ -29,8 +29,12 @@
 
 <script>
   import store from './vuex/store'
+  import {notify} from './windows/native-notifications'
 
   export default {
-    store
+    store,
+    methods: {
+      notify
+    }
   }
 </script>
