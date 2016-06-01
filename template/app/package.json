@@ -1,0 +1,10 @@
+{
+  "name": "{{ name }}",
+  "version": "0.0.0",
+  "description": "",
+  "main": "electron.js",
+  "dependencies": {
+    "vue": "^1.0.24"{{deps plugins}}
+  },
+  "author": "{{ author }}"
+}
