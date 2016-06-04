@@ -27,5 +27,5 @@
   25. ~~Create npm script to remove landing-page components~~ (dropping in favor for `vue-cli`)
   26. ~~SUPPORT ELECTRON MAIN PROCESS PACKING~~ (dropped)
   27. **Determine why webpack seems to crash at random points**
-  28. **support css linting with [stylelint](https://github.com/stylelint/stylelint)**
-  28. **(more)**
+  28. ~~support css linting with [stylelint](https://github.com/stylelint/stylelint)~~ (dropped, not enough support from stylelint-loader)
+  29. **(more)**
