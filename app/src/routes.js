@@ -1,6 +1,6 @@
 export default {
   '/': {
-    component: require('./components/HomeView'),
-    name: 'home'
+    component: require('./components/LandingPageView'),
+    name: 'landing-page'
   }
 }

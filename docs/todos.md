@@ -21,10 +21,11 @@
   19. ~~don't clean `app/dist` before building~~
   20. ~~Create documentation explaining how to use dynamic assets in `dist` folder~~
   21. ~~bring building settings to global `config.js`~~
-  22. **Create helper scripts for general application support**
-  23. **Create cli that takes options when scaffolding boilerplate**
+  22. ~~Create helper scripts for general application support~~
+  23. Create cli that takes options when scaffolding boilerplate**
   24. ~~Create postinstall script~~
-  25. **Create npm script to remove landing-page components**
+  25. ~~Create npm script to remove landing-page components~~ (dropping in favor for `vue-cli`)
   26. ~~SUPPORT ELECTRON MAIN PROCESS PACKING~~ (dropped)
   27. **Determine why webpack seems to crash at random points**
+  28. **support css linting with [stylelint](https://github.com/stylelint/stylelint)**
   28. **(more)**
