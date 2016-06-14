@@ -5,6 +5,10 @@ electron-vue uses the [webpack/webpack](https://github.com/webpack/webpack) modu
 #### ``config.js``
 ```js
 {
+  // Name of electron app
+  // Will be used in production builds
+  name: 'app',
+
   // Enable electron's devtron devtools extension in development
   devtron: true,
 
@@ -34,6 +38,3 @@ electron-vue uses the [webpack/webpack](https://github.com/webpack/webpack) modu
   }
 }
 ```
-**NOTE**
-
-At the moment, the configuration options are rather sparse. More will continually be added as needed.

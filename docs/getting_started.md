@@ -12,6 +12,6 @@ cd electron-vue
 npm install
 ```
 
- #### NOTE
+#### NOTE
 
- When running `npm install`, a post install script is also executed, which will `npm install` inside the `app` directory, remove the `.git` repo, and add documentation files/folders to the `.gitignore`. You're welcome.
+ When running `npm install` a post install script is also executed, which will `npm install` inside the `app` directory and add documentation files/folders to the `.gitignore`.

@@ -5,6 +5,10 @@ const pkg = require('./app/package.json')
 const platform = process.env.PLATFORM_TARGET || 'all'
 
 let config = {
+  // Name of electron app
+  // Will be used in production builds
+  name: 'app',
+
   // Enable electron's devtron devtools extension in development
   devtron: true,
 
@@ -27,11 +31,12 @@ let config = {
     dir: path.join(__dirname, 'app'),
     icon: path.join(__dirname, 'app/icons/icon'),
     ignore: /node_modules|src|main.ejs|icons/,
-    name: pkg.name,
     out: path.join(__dirname, 'builds'),
     overwrite: true,
     platform
   }
 }
+
+config.building.name = config.name
 
 module.exports = config

@@ -20,25 +20,25 @@ let config = {
     preLoaders: [],
     loaders: [
       {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.vue$/,
-        loader: 'vue-loader'
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
       },
       {
         test: /\.html$/,
         loader: 'vue-html-loader'
       },
       {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader'
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -73,7 +73,12 @@ let config = {
     path: path.join(__dirname, 'app/dist')
   },
   resolve: {
-    extensions: ['', '.js', '.vue', '.json', '.css']
+    alias: {
+      'components': path.join(__dirname, 'app/src/components'),
+      'src': path.join(__dirname, 'app/src')
+    },
+    extensions: ['', '.js', '.vue', '.json', '.css'],
+    fallback: [path.join(__dirname, 'app/node_modules')]      
   },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules')
@@ -90,7 +95,7 @@ let config = {
   }
 }
 
-if(process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV !== 'production') {
   /**
    * Apply ESLint
    */
@@ -136,6 +141,8 @@ if(process.env.NODE_ENV !== 'production') {
  * Adjust config for production settings
  */
 if (process.env.NODE_ENV === 'production') {
+  config.devtool = ''
+
   config.plugins.push(
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
