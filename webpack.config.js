@@ -1,8 +1,8 @@
 'use strict'
 
-const settings = require('./config.js')
 const path = require('path')
 const pkg = require('./app/package.json')
+const settings = require('./config.js')
 const webpack = require('webpack')
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
@@ -64,7 +64,7 @@ let config = {
       excludeChunks: ['devtools'],
       filename: 'index.html',
       template: './app/main.ejs',
-      title: pkg.name
+      title: settings.name
     }),
     new webpack.NoErrorsPlugin()
   ],
@@ -78,7 +78,7 @@ let config = {
       'src': path.join(__dirname, 'app/src')
     },
     extensions: ['', '.js', '.vue', '.json', '.css'],
-    fallback: [path.join(__dirname, 'app/node_modules')]      
+    fallback: [path.join(__dirname, 'app/node_modules')]
   },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules')

@@ -1,11 +1,6 @@
 [![](docs/logo.png)](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html)
 
-> The boilerplate for making electron apps using vue (pretty much what it sounds like).
-
-#### **This project is still in *development*.**
-But hey, isn't everything?
-
----
+> The boilerplate for making electron apps built with vue (pretty much what it sounds like).
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
