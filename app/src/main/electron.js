@@ -1,19 +1,16 @@
-'use strict'
-
-const electron = require('electron')
-const path = require('path')
-const app = electron.app
-const BrowserWindow = electron.BrowserWindow
+import { app, BrowserWindow } from 'electron'
+import include from './include'
+import path from 'path'
 
 let mainWindow
 let config = {}
 
 if (process.env.NODE_ENV === 'development') {
-  config = require('../config')
+  config = require('../../../config')
   config.url = `http://localhost:${config.port}`
 } else {
   config.devtron = false
-  config.url = `file://${__dirname}/dist/index.html`
+  config.url = path.join('file://', __dirname, '/index.html')
 }
 
 function createWindow () {
@@ -26,16 +23,22 @@ function createWindow () {
   })
 
   mainWindow.loadURL(config.url)
-  if (process.env.NODE_ENV === 'development') mainWindow.webContents.openDevTools()
+  if (process.env.NODE_ENV === 'development') {
+    mainWindow.webContents.openDevTools()
+  }
 
   mainWindow.on('closed', () => {
     mainWindow = null
   })
 
-  if (config.devtron) BrowserWindow.addDevToolsExtension(path.join(__dirname, '../node_modules/devtron'))
-  else BrowserWindow.removeDevToolsExtension('devtron')
+  if (config.devtron) {
+    BrowserWindow.addDevToolsExtension(path.join(__dirname, '../node_modules/devtron'))
+  } else {
+    BrowserWindow.removeDevToolsExtension('devtron')
+  }
 
   console.log('mainWindow opened')
+  include()
 }
 
 app.on('ready', createWindow)

@@ -1,20 +1,23 @@
-'use strict'
+import path from 'path'
+import webpack from 'webpack'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-const path = require('path')
 const pkg = require('./app/package.json')
 const settings = require('./config.js')
-const webpack = require('webpack')
-
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 let config = {
   devtool: '#eval-source-map',
+  node: {
+    __dirname: false,
+    __filename: false
+  },
   eslint: {
     formatter: require('eslint-friendly-formatter')
   },
   entry: {
-    build: [ path.join(__dirname, 'app/src/main.js') ]
+    renderer: [ path.join(__dirname, 'app/src/renderer/main.js') ],
+    main: path.join(__dirname, 'app/src/main/electron.js')
   },
   module: {
     preLoaders: [],
@@ -61,9 +64,9 @@ let config = {
   plugins: [
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
-      excludeChunks: ['devtools'],
+      excludeChunks: ['devtools', 'main'],
       filename: 'index.html',
-      template: './app/main.ejs',
+      template: './app/index.ejs',
       title: settings.name
     }),
     new webpack.NoErrorsPlugin()
@@ -74,8 +77,8 @@ let config = {
   },
   resolve: {
     alias: {
-      'components': path.join(__dirname, 'app/src/components'),
-      'src': path.join(__dirname, 'app/src')
+      'components': path.join(__dirname, 'app/src/renderer/components'),
+      'src': path.join(__dirname, 'app/src/renderer')
     },
     extensions: ['', '.js', '.vue', '.json', '.css'],
     fallback: [path.join(__dirname, 'app/node_modules')]
@@ -83,7 +86,7 @@ let config = {
   resolveLoader: {
     root: path.join(__dirname, 'node_modules')
   },
-  target: 'electron-renderer',
+  target: 'electron',
   vue: {
     autoprefixer: {
       browsers: ['last 2 Chrome versions']
@@ -120,7 +123,7 @@ if (process.env.NODE_ENV !== 'production') {
    * Apply vue-devtools window. Is ignored in production mode when building
    */
   if (settings.vueDevTools) {
-    config.entry.build.unshift(
+    config.entry.renderer.unshift(
       path.join(__dirname, 'devtools/hook.js'),
       path.join(__dirname, 'devtools/backend.js')
     )
