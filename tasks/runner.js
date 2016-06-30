@@ -1,8 +1,6 @@
 /**
  * Credits to https://github.com/bradstewart/electron-boilerplate-vue/blob/master/build/dev-runner.js
  */
-'use strict'
-
 import { exec } from 'child_process'
 
 const config = require('../config')
