@@ -1,6 +1,5 @@
-'use strict'
+import path from 'path'
 
-const path = require('path')
 const pkg = require('./app/package.json')
 const platform = process.env.PLATFORM_TARGET || 'all'
 

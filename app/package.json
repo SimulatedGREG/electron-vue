@@ -2,7 +2,7 @@
   "name": "app",
   "version": "1.0.0",
   "description": "",
-  "main": "electron.js",
+  "main": "dist/main.js",
   "dependencies": {
     "vue": "^1.0.24",
     "vue-electron": "^1.0.0",

@@ -3,8 +3,9 @@
  */
 'use strict'
 
+import { exec } from 'child_process'
+
 const config = require('../config')
-const exec = require('child_process').exec
 
 let YELLOW = '\x1b[33m'
 let BLUE = '\x1b[34m'
@@ -39,7 +40,7 @@ function run (command, color, name) {
      */
     if (/VALID/g.test(data.toString().trim().replace(/\n/g, '\n' + repeat(' ', command.length + 2))) && !isElectronOpen) {
       console.log(`${BLUE}Starting electron...\n${END}`)
-      run('cross-env NODE_ENV=development electron app/electron.js', BLUE, 'electron')
+      run('cross-env NODE_ENV=development electron -r babel-register app/src/main/electron.js', BLUE, 'electron')
       isElectronOpen = true
     }
   })
