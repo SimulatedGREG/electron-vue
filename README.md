@@ -14,11 +14,11 @@ The aim of this project is to remove the need to setup electron apps using vue. 
 Things you'll find in this boilerplate...
   * Basic project structure
   * Ready to use Vue plugins ([vue-electron](https://github.com/SimulatedGREG/vue-electron),  [vue-resource](https://github.com/vuejs/vue-resource), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex))
-  * A working set of the [vue-devtools](https://github.com/vuejs/vue-devtools) for development
+  * Installed [vuejs/vue-devtools](https://github.com/vuejs/vue-devtools) and [electron/devtron](https://github.com/electron/devtron) tools for development
   * Ability to easily create builds of your electron app using [electron-userland/electron-packager](https://github.com/electron-userland/electron-packager)
   * Handy NPM scripts
   * Use of webpack and [vue-loader](https://github.com/vuejs/vue-loader) for Hot Module Replacement
-  * CSS pre-processor support
+  * CSS/JS pre-processor support with [vuejs/vue-loader](https://github.com/vuejs/vue-loader/)
   * ES6 by default
   * ESLint (extends 'standard')
 

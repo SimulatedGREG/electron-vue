@@ -27,8 +27,8 @@
     // Ignore files that would bloat final build size
     ignore: /node_modules|src|main.html/,
 
-    // `app/package.json` name
-    name: pkg.name,
+    // `config.js` name
+    name: config.name,
 
     // Save builds to `releases`
     out: path.join(__dirname, '../builds'),
