@@ -31,4 +31,6 @@ let config = {
   }
 }
 
+config.building.name = config.name
+
 module.exports = config
