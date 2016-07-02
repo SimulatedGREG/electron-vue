@@ -14,7 +14,7 @@ let config = {
     formatter: require('eslint-friendly-formatter')
   },
   entry: {
-    build: [ path.join(__dirname, 'app/src/main.js') ]
+    build: path.join(__dirname, 'app/src/main.js')
   },
   module: {
     preLoaders: [],
@@ -61,7 +61,6 @@ let config = {
   plugins: [
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
-      excludeChunks: ['devtools'],
       filename: 'index.html',
       template: './app/main.ejs',
       title: settings.name
@@ -104,36 +103,13 @@ if (process.env.NODE_ENV !== 'production') {
       {
         test: /\.js$/,
         loader: 'eslint-loader',
-        exclude: /node_modules|devtools/
+        exclude: /node_modules/
       },
       {
         test: /\.vue$/,
         loader: 'eslint-loader'
       }
     )
-  }
-
-  /**
-   * Credits to
-   * https://github.com/bradstewart/electron-boilerplate-vue/pull/17
-   *
-   * Apply vue-devtools window. Is ignored in production mode when building
-   */
-  if (settings.vueDevTools) {
-    config.entry.build.unshift(
-      path.join(__dirname, 'devtools/hook.js'),
-      path.join(__dirname, 'devtools/backend.js')
-    )
-
-    config.entry.devtools = [
-      path.join(__dirname, 'devtools/devtools.js')
-    ]
-
-    config.plugins.push(new HtmlWebpackPlugin({
-      filename: 'devtools.html',
-      template: path.join(__dirname, 'devtools/devtools.html'),
-      excludeChunks: ['build']
-    }))
   }
 }
 
