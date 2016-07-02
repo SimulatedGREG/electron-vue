@@ -4,6 +4,11 @@
     <meta charset="utf8">
     <title>vue-devtools</title>
     <style>
+      #dragger {
+        background-color: ghostwhite;
+        height: 20px;
+        -webkit-app-region: drag;
+      }
       #target {
         flex: 1;
         border: none;
@@ -11,7 +16,7 @@
       }
       #container {
         display: flex;
-        height: 400px;
+        height: 100%;
         overflow: hidden;
       }
       body {
@@ -29,6 +34,7 @@
     </style>
   </head>
   <body>
+    <div id="dragger"></div>
     <div id="container"></div>
   </body>
 </html>

@@ -25,6 +25,7 @@
       CurrentPage,
       Links,
       Versions
-    }
+    },
+    name: 'landing-page'
   }
 </script>
