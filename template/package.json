@@ -12,7 +12,7 @@
     "dev": "node tasks/runner.js",
     "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter app",
     "pack": "cross-env NODE_ENV=production webpack -p --progress --colors",
-    "postinstall": "node tasks/postinstall.js"{{#isEnabled plugins 'vue-router'}},
+    "postinstall": "cd app && npm install"{{#isEnabled plugins 'vue-router'}},
     "vue:route": "node tasks/vue/route.js"{{/isEnabled}}{{#isEnabled plugins 'vuex'}},
     "vuex:module": "node tasks/vuex/module.js"{{/isEnabled}}
   },
