@@ -5,7 +5,7 @@ module.exports = {
     name: {
       type: 'string',
       required: true,
-      message: 'Project Name'
+      message: 'Application Name'
     },
     eslint: {
       type: 'confirm',
@@ -16,8 +16,8 @@ module.exports = {
     plugins: {
       type: 'checkbox',
       message: 'Select which Vue plugins to install',
-      choices: ['vue-resource', 'vue-router', 'vuex'],
-      default: ['vue-resource', 'vue-router', 'vuex']
+      choices: ['vue-electron', 'vue-resource', 'vue-router', 'vuex'],
+      default: ['vue-electron', 'vue-resource', 'vue-router', 'vuex']
     }
   },
   helpers: {
@@ -28,6 +28,7 @@ module.exports = {
     deps (plugins) {
       let output = ''
       let dependencies = {
+        "vue-electron": "^1.0.0",
         "vue-resource": "^0.7.0",
         "vue-router": "^0.7.13",
         "vuex": "^0.6.3"
@@ -47,7 +48,9 @@ module.exports = {
     'app/src/routes.js': 'plugins[\'vue-router\']',
     'app/src/components/LandingView.vue': 'plugins[\'vue-router\']',
     'app/src/components/LandingView/**/*': 'plugins[\'vue-router\']',
-    'app/src/vuex/**/*': 'plugins[\'vuex\']'
+    'app/src/vuex/**/*': 'plugins[\'vuex\']',
+    'tasks/vue/**/*': 'plugins[\'vue-router\']',
+    'tasks/vuex/**/*': 'plugins[\'vuex\']'
   },
   completeMessage: `All set. More configurations can be made at \x1b[33mconfig.js\x1b[0m.
     `

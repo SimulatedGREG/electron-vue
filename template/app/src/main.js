@@ -1,4 +1,7 @@
 import Vue from 'vue'
+{{#isEnabled plugins 'vue-electron'}}
+import Electron from 'vue-electron'
+{{/isEnabled}}
 {{#isEnabled plugins 'vue-resource'}}
 import Resource from 'vue-resource'
 {{/isEnabled}}
@@ -9,6 +12,9 @@ import App from './App'
 import routes from './routes'
 {{/isEnabled}}
 
+{{#isEnabled plugins 'vue-electron'}}
+Vue.use(Electron)
+{{/isEnabled}}
 {{#isEnabled plugins 'vue-resource'}}
 Vue.use(Resource)
 {{/isEnabled}}
