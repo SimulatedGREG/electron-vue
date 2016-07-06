@@ -27,15 +27,30 @@
 
 <template>
   <div>
+    {{#isEnabled plugins 'vue-router'}}
     <router-view></router-view>
+    {{else}}
+    <landing-page></landing-page>
+    {{/isEnabled}}
   </div>
 </template>
 
 <script>
+{{#isEnabled plugins 'vue-router'}}
+{{else}}
+  import LandingPage from './components/LandingPageView'
+{{/isEnabled}}
 {{#isEnabled plugins 'vuex'}}
   import store from 'src/vuex/store'
 {{/isEnabled}}
+
   export default {
+{{#isEnabled plugins 'vue-router'}}
+{{else}}
+    components: {
+      LandingPage
+    },
+{{/isEnabled}}
 {{#isEnabled plugins 'vuex'}}
     store
 {{/isEnabled}}

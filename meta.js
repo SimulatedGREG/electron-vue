@@ -52,8 +52,7 @@ module.exports = {
   },
   filters: {
     'app/src/routes.js': 'plugins[\'vue-router\']',
-    'app/src/components/LandingView.vue': 'plugins[\'vue-router\']',
-    'app/src/components/LandingView/**/*': 'plugins[\'vue-router\']',
+    'app/src/components/LandingPageView/CurrentPage.vue': 'plugins[\'vue-router\']',
     'app/src/vuex/**/*': 'plugins[\'vuex\']',
     'tasks/vue/**/*': 'plugins[\'vue-router\']',
     'tasks/vuex/**/*': 'plugins[\'vuex\']'
