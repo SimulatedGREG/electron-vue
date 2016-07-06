@@ -7,6 +7,12 @@ module.exports = {
       required: true,
       message: 'Application Name'
     },
+    description: {
+      type: 'string',
+      required: false,
+      message: 'Project description',
+      default: 'An electron-vue project'
+    },
     eslint: {
       type: 'confirm',
       require: true,
