@@ -43,7 +43,6 @@
 {{#isEnabled plugins 'vuex'}}
   import store from 'src/vuex/store'
 {{/isEnabled}}
-
   export default {
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
