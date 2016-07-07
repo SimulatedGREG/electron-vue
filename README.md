@@ -13,14 +13,28 @@ The aim of this project is to remove the need to setup electron apps using vue. 
 
 Things you'll find in this boilerplate...
   * Basic project structure
+  * Project scaffolding using [vue-cli](https://github.com/vuejs/vue-cli)
   * Ready to use Vue plugins ([vue-electron](https://github.com/SimulatedGREG/vue-electron),  [vue-resource](https://github.com/vuejs/vue-resource), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex))
-  * Installed [vuejs/vue-devtools](https://github.com/vuejs/vue-devtools) and [electron/devtron](https://github.com/electron/devtron) tools for development
-  * Ability to easily create builds of your electron app using [electron-userland/electron-packager](https://github.com/electron-userland/electron-packager)
+  * Installed [vue-devtools](https://github.com/vuejs/vue-devtools) and [devtron](https://github.com/electron/devtron) tools for development
+  * Ability to easily create builds of your electron app using [electron-packager](https://github.com/electron-userland/electron-packager)
   * Handy NPM scripts
   * Use of webpack and [vue-loader](https://github.com/vuejs/vue-loader) for Hot Module Replacement
-  * CSS/JS pre-processor support with [vuejs/vue-loader](https://github.com/vuejs/vue-loader/)
+  * CSS/JS pre-processor support with [vue-loader](https://github.com/vuejs/vue-loader/)
   * ES6 by default
   * ESLint (extends 'standard')
+
+### Getting Started
+This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli).
+```bash
+# Install vue-cli and scaffold boilerplate
+npm install -g vue-cli
+vue init simulatedgreg/electron-vue my-project
+
+# Install dependencies and run your app
+cd my-project
+npm install
+npm run dev
+```
 
 ### Contributing
 Wanting to submit a pull request? Make sure to read [this](docs/contributing.md) first.
