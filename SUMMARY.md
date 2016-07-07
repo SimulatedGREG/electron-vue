@@ -7,6 +7,7 @@
    * [Entry index.html](docs/entry_indexhtml.md)
    * [Vue Accessories](docs/vue_accessories.md)
    * [NPM Scripts](docs/npm_scripts.md)
+   * [Using pre-processors](docs/using_pre-processors.md)
 * [Project Structure](docs/project_structure.md)
    * [Using the file structure](docs/using_the_file_structure.md)
    * [Using CSS frameworks](docs/using_css_frameworks.md)

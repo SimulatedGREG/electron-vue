@@ -1,16 +1,14 @@
 # Vue Accessories
 
-### Pre-installed vue plugins
- electron-vue comes packed with the following vue plugins out-of-box...
+### Ready to use vue plugins
+ electron-vue comes packed with the following vue plugins that can be installed during project scaffolding...
   * [vue-electron](https://github.com/SimulatedGREG/vue-electron) (attach electron APIs to Vue object)
   * [vue-resource](https://github.com/vuejs/vue-resource) (web requests)
   * [vue-router](https://github.com/vuejs/vue-router) (single page application routes)
   * [vuex](https://github.com/vuejs/vuex) (flux-inspired application architecture)
 
-**NOTE**: The pre-installed plugins are not required for use, but project structure reflects their use.
-
 ### npm scripts
-**NOTE**: The following scripts assume you are using original project structure and are highly *experimental* for the moment.
+**NOTE**: The following scripts assume you are using original project structure and are highly **experimental** for the moment.
 
 For quickly making new data modules (vuex) or routes (vue-router) you can use the following. Please know that they are not required and are only made available for convenience.
 

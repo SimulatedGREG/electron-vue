@@ -1,7 +1,7 @@
 {
-  "name": "electron-vue",
-  "version": "0.1.0",
-  "description": "An Electron & Vue.js quick starter",
+  "name": "{{ name }}",
+  "version": "0.0.0",
+  "description": "{{ description }}",
   "scripts": {
     "build": "node tasks/release.js",
     "build:clean": "del builds/* !.gitkeep",
@@ -12,9 +12,9 @@
     "dev": "node tasks/runner.js",
     "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter app",
     "pack": "cross-env NODE_ENV=production webpack -p --progress --colors",
-    "postinstall": "node tasks/postinstall.js",
-    "vue:route": "node tasks/vue/route.js",
-    "vuex:module": "node tasks/vuex/module.js"
+    "postinstall": "cd app && npm install"{{#isEnabled plugins 'vue-router'}},
+    "vue:route": "node tasks/vue/route.js"{{/isEnabled}}{{#isEnabled plugins 'vuex'}},
+    "vuex:module": "node tasks/vuex/module.js"{{/isEnabled}}
   },
   "author": "Greg Holguin <simulatedgreg@gmail.com>",
   "license": "MIT",

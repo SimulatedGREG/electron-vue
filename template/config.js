@@ -7,11 +7,11 @@ const platform = process.env.PLATFORM_TARGET || 'all'
 let config = {
   // Name of electron app
   // Will be used in production builds
-  name: 'app',
+  name: '{{ name }}',
 
   // Use ESLint (extends `standard`)
   // Further changes can be made in `.eslintrc.js`
-  eslint: true,
+  eslint: {{#if eslint}}true{{else}}false{{/if}},
 
   // webpack-dev-server port
   port: 9080,
