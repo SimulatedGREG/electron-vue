@@ -20,12 +20,12 @@ app/src/components
 Assets can also be organized in this manner. So if a particular component needs an image file, let's place that inside a folder named `assets`. If you are using dynamic assets that you do not want webpack to bundle, please read [**Using Dynamic Assets**](#using-dynamic-assets) below.
 
 ### vue routes
-Out-of-the-box, vue-router is setup by default. Click [here](https://github.com/vuejs/vue-router) for more information. You can manually remove it from your app if needed, but creating a Single Page Application is much more practical when making electron apps. Do you really want to manage a bunch of BrowserWindows or static page navigation? Probably not.
+For more information about vue-router click [here](https://github.com/vuejs/vue-router). You can manually remove it from your app if needed, but creating a Single Page Application is much more practical when making electron apps. Do you really want to manage a bunch of BrowserWindows or static page navigation? Probably not.
 
 Routes are held in `app/src/routes.js` and defined like so...
 ```js
 '/<routePath>': {
-  component: require('./components/<routeName>View'),
+  component: Vue.component('<routeName>', require('./components/<routeName>View')),
   name: '<routeName>'
 }
 ```

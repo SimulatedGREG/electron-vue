@@ -9,18 +9,12 @@ electron-vue uses the [webpack/webpack](https://github.com/webpack/webpack) modu
   // Will be used in production builds
   name: 'app',
 
-  // Enable electron's devtron devtools extension in development
-  devtron: true,
-
   // Use ESLint (extends `standard`)
   // Further changes can be made in `.eslintrc.js`
   eslint: true,
 
   // webpack-dev-server port
   port: 9080,
-
-  // Enable vue-devtools in development
-  vueDevTools: true,
 
   // electron-packager options
   // See `Building you app` for more info

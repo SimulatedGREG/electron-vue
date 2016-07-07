@@ -12,6 +12,6 @@ npm install bulma --save
 ```
 Then inside `app/src/main.js` let's add this line.
 ```bash
-import 'bulma/css/bulma.min.css'
+import 'bulma/css/bulma.css'
 ```
 Now webpack will know to bundle `bulma` into our app and make it available in our production builds.

@@ -14,7 +14,7 @@
   12. ~~Setup support for other CSS/JS pre-processors~~ (only had issues with SASS)
   13. ~~Set autoprefixer to only target chrome, and add uglifyjs settings on production builds~~
   14. ~~Add new electron devtron tools~~
-  15. **Bring vue-devtools inside the actual devtools panel**
+  15. ~~Bring vue-devtools inside the actual devtools panel~~
   16. ~~export mainWindow settings to `electron.dev.js`~~ (resolved to using one electron starter)
   17. ~~Create documentation about global `config.js`~~
   18. ~~Use ExtractTextPlugin for vendor CSS libraries, and documentation~~
@@ -22,10 +22,11 @@
   20. ~~Create documentation explaining how to use dynamic assets in `dist` folder~~
   21. ~~bring building settings to global `config.js`~~
   22. ~~Create helper scripts for general application support~~
-  23. Create cli that takes options when scaffolding boilerplate**
+  23. ~~Create cli that takes options when scaffolding boilerplate~~
   24. ~~Create postinstall script~~
   25. ~~Create npm script to remove landing-page components~~ (dropping in favor for `vue-cli`)
   26. ~~SUPPORT ELECTRON MAIN PROCESS PACKING~~ (dropped)
   27. ~~Determine why webpack seems to crash at random points~~ (might be fixed now)
   28. ~~support css linting with [stylelint](https://github.com/stylelint/stylelint)~~ (dropped, not enough support from stylelint-loader)
-  29. **(more)**
+  29. **Rewrite NPM scripts for creating vue:routes and vuex:modules**
+  30. **(more)**

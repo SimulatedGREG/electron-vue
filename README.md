@@ -24,7 +24,7 @@ Things you'll find in this boilerplate...
   * ESLint (extends 'standard')
 
 ### Getting Started
-This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli).
+This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app.
 ```bash
 # Install vue-cli and scaffold boilerplate
 npm install -g vue-cli
