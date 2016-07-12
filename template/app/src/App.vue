@@ -48,7 +48,7 @@
 {{else}}
     components: {
       LandingPage
-    }{{#isEnabled plugins 'vuex'}},{{else}}{{/isEnabled}}
+    }{{#isEnabled plugins 'vuex'}},{{/isEnabled}}
 {{/isEnabled}}
 {{#isEnabled plugins 'vuex'}}
     store
