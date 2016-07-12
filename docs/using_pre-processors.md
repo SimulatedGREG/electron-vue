@@ -7,10 +7,10 @@ Let's say we need to use Sass/SCSS for pre-processing our CSS. Firstly, we need 
 
 #### Installing `sass-loader` in our root directory
 ```bash
-npm install --save-dev sass-loader
+npm install --save-dev sass-loader node-sass
 ```
 
-Once the loader we need is installed, everything is pretty much finished. vue-loader will magically take care of the rest. Now we can easily add `lang="sass"` or `lang="scss"` to our Vue component files.
+Once the loader we need is installed, everything is pretty much finished. vue-loader will magically take care of the rest. Now we can easily add `lang="sass"` or `lang="scss"` to our Vue component files. Notice we also installed `node-sass` as it is a dependent package for `sass-loader`.
 
 #### Applying the `lang` attribute
 So...
@@ -32,4 +32,4 @@ So...
 
 The same principals apply for just about any other pre-processor. So maybe you need coffeescript for your JS? Simply installed the [coffeescript-loader](https://github.com/webpack/coffee-loader) and apply the `lang="coffeescript"` attribute to your `<script>` tag.
 
-For more advanced of this feature please head over to the [vue-loader documentation](http://vue-loader.vuejs.org/en/configurations/pre-processors.html) for more information.
+For more advanced use of this feature please head over to the [vue-loader documentation](http://vue-loader.vuejs.org/en/configurations/pre-processors.html) for more information.
