@@ -1,10 +1,14 @@
 {
   "plugins": [
-    "github"
+    "github",
+    "ga"
   ],
   "pluginsConfig": {
     "github": {
       "url": "https://github.com/SimulatedGREG/electron-vue"
+    },
+    "ga": {
+      "token": "UA-64200901-3"
     }
   },
   "links": {
