@@ -31,11 +31,9 @@ electron-vue
 │  │  ├─ main.js
 │  │  └─ routes.js
 │  ├─ electron.js
-│  ├─ main.html
+│  ├─ main.ejs
 │  └─ package.json
 ├─ builds
-├─ devtools
-├─ docs
 ├─ node_modules
 └─ tasks
 |  ├─ vue
