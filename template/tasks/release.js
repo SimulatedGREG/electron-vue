@@ -3,7 +3,10 @@
 const exec = require('child_process').exec
 const packager = require('electron-packager')
 
-pack()
+if (process.env.PLATFORM_TARGET === 'clean') {
+  require('del').sync(['builds/*', '!.gitkeep'])
+  console.log('\x1b[33m`builds` directory cleaned.\n\x1b[0m')
+} else pack()
 
 /**
  * Build webpack in production

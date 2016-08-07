@@ -4,7 +4,7 @@
   "description": "{{ description }}",
   "scripts": {
     "build": "node tasks/release.js",
-    "build:clean": "del builds/* !.gitkeep",
+    "build:clean": "cross-env PLATFORM_TARGET=clean node tasks/release.js",
     "build:darwin": "cross-env PLATFORM_TARGET=darwin node tasks/release.js",
     "build:linux": "cross-env PLATFORM_TARGET=linux node tasks/release.js",
     "build:mas": "cross-env PLATFORM_TARGET=mas node tasks/release.js",
@@ -27,6 +27,7 @@
     "babel-runtime": "^6.6.1",
     "cross-env": "^1.0.7",
     "css-loader": "^0.23.1",
+    "del": "^2.2.1",
     "devtron": "^1.1.0",
     "electron-devtools-installer": "^1.1.4",
     "electron-packager": "7.4.0",
