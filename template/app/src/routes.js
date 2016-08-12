@@ -1,3 +1,15 @@
+{{#if_eq vueVersion 'next'}}
+export default [
+  {
+    path: '/',
+    component: require('components/LandingPageView')
+  },
+  {
+    path: '*',
+    redirect: '/'
+  }
+]
+{{else}}
 import Vue from 'vue'
 
 export default {
@@ -6,3 +18,4 @@ export default {
     name: 'landing-page'
   }
 }
+{{/if_eq}}

@@ -37,12 +37,12 @@ module.exports = {
       if (list[check]) return opts.fn(this)
       else return opts.inverse(this)
     },
-    deps (plugins) {
+    deps (plugins, version) {
       let output = ''
       let dependencies = {
         "vue-electron": "^1.0.0",
         "vue-resource": "^0.7.0",
-        "vue-router": "^0.7.13",
+        "vue-router": version === 'next' ? 'next' : "^0.7.13",
         "vuex": "^0.6.3"
       }
 
@@ -55,10 +55,15 @@ module.exports = {
 
       return output
     },
-    ver (version) {
-      let output = '"vue": "'
-      output += version === 'next' ? 'next' : '^1.0.26'
+    ver (version, module) {
+      module = (module === 'core') ? 'vue' : 'vue-loader'
+      let output = `"${module}": "`
+
+      if (version === 'next') output += 'next'
+      else output += (module === 'vue') ? "^1.0.26": "^8.3.1"
+
       output += '"'
+      output += (module === 'vue-loader') ? ',' : ''
       return output
     }
   },
