@@ -13,6 +13,12 @@ module.exports = {
       message: 'Project description',
       default: 'An electron-vue project'
     },
+    vueVersion: {
+      type: 'list',
+      required: true,
+      message: 'Which version of Vue.js would you like installed?',
+      choices: ['1.x', 'next']
+    },
     eslint: {
       type: 'confirm',
       require: true,
@@ -47,6 +53,12 @@ module.exports = {
         if (i !== Object.keys(plugins).length - 1) output += ',\n'
       })
 
+      return output
+    },
+    ver (version) {
+      let output = '"vue": "'
+      output += version === 'next' ? 'next' : '^1.0.26'
+      output += '"'
       return output
     }
   },
