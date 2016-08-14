@@ -43,7 +43,7 @@ module.exports = {
         "vue-electron": "^1.0.0",
         "vue-resource": "^0.7.0",
         "vue-router": version === 'next' ? 'next' : "^0.7.13",
-        "vuex": "^0.6.3"
+        "vuex": version === 'next' ? 'next' : "^0.6.3"
       }
 
       if (Object.keys(plugins).length > 0) output += ',\n'
