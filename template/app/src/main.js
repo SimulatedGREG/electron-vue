@@ -34,7 +34,7 @@ const router = new Router({
 new Vue({
   router,
   ...App
-}).$mount('body')
+}).$mount('#app')
 {{else}}
 const router = new Router()
 
