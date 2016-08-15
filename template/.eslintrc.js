@@ -1,7 +1,11 @@
 module.exports = {
   root: true,
   parserOptions: {
-    sourceType: 'module'
+    sourceType: 'module'{{#if_eq eslintConfig 'airbnb'}},
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true
+    }
+    {{/if_eq}}
   },
   env: {
     browser: true,
