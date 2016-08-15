@@ -30,9 +30,7 @@ const router = new Router({
   routes
 })
 
-{{#if eslint}}
-{{#if_eq eslintConfig 'standard'}}/* eslint-disable no-new */{{else}}{{/if_eq}}
-{{/if}}
+/* eslint-disable no-new */
 new Vue({
   router,
   ...App
@@ -53,9 +51,7 @@ router.start(App, 'app')
 {{else}}
 import App from './App'
 
-{{#if eslint}}
-{{#if_eq eslintConfig 'standard'}}/* eslint-disable no-new */{{else}}{{/if_eq}}
-{{/if}}
+/* eslint-disable no-new */
 {{#if_eq vueVersion 'next'}}
 new Vue({
   ...App

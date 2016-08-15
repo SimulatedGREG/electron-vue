@@ -43,12 +43,13 @@
 {{#isEnabled plugins 'vuex'}}
   import store from 'src/vuex/store'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
 {{/isEnabled}}
+
   export default {
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
     components: {
-      LandingPage
-    }{{#isEnabled plugins 'vuex'}},{{/isEnabled}}
+      LandingPage{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}
+    }{{#isEnabled plugins 'vuex'}},{{else}}{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}{{/isEnabled}}
 {{/isEnabled}}
 {{#isEnabled plugins 'vuex'}}
     store{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}
