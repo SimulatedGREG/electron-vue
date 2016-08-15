@@ -14,9 +14,11 @@ npm run dev
 # build electron app for production
 npm run build
 
+{{#if eslint}}
 # lint all JS/Vue component files in `app/src`
 npm run lint
 
+{{/if}}
 # run webpack in production
 npm run pack
 ```

@@ -10,7 +10,9 @@
     "build:mas": "cross-env PLATFORM_TARGET=mas node tasks/release.js",
     "build:win32": "cross-env PLATFORM_TARGET=win32 node tasks/release.js",
     "dev": "node tasks/runner.js",
+    {{#if eslint}}
     "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter app",
+    {{/if}}
     "pack": "cross-env NODE_ENV=production webpack -p --progress --colors",
     "postinstall": "cd app && npm install"{{#isEnabled plugins 'vue-router'}},
     "vue:route": "node tasks/vue/route.js"{{/isEnabled}}{{#isEnabled plugins 'vuex'}},
@@ -33,13 +35,21 @@
     "electron-packager": "^7.6.0",
     "electron-prebuilt": "^1.0.1",
     "electron-rebuild": "^1.1.3",
-    "eslint": "^2.9.0",
-    "eslint-config-standard": "^5.3.1",
+    {{#eslint}}
+    "eslint": "^2.10.2",
     "eslint-friendly-formatter": "^2.0.5",
     "eslint-loader": "^1.3.0",
-    "eslint-plugin-html": "^1.4.0",
-    "eslint-plugin-promise": "^1.1.0",
+    "eslint-plugin-html": "^1.3.0",
+    {{#if_eq eslintConfig 'standard'}}
+    "eslint-config-standard": "^5.1.0",
+    "eslint-plugin-promise": "^1.0.8",
     "eslint-plugin-standard": "^1.3.2",
+    {{/if_eq}}
+    {{#if_eq eslintConfig 'airbnb'}}
+    "eslint-config-airbnb-base": "^3.0.1",
+    "eslint-plugin-import": "^1.8.1",
+    {{/if_eq}}
+    {{/eslint}}
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.16.1",
