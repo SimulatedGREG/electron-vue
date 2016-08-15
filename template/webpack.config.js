@@ -17,7 +17,9 @@ let config = {
     build: path.join(__dirname, 'app/src/main.js')
   },
   module: {
+{{#if eslint}}
     preLoaders: [],
+{{/if}}
     loaders: [
       {
         test: /\.css$/,
@@ -94,6 +96,7 @@ let config = {
   }
 }
 
+{{#if eslint}}
 if (process.env.NODE_ENV !== 'production') {
   /**
    * Apply ESLint
@@ -113,6 +116,7 @@ if (process.env.NODE_ENV !== 'production') {
   }
 }
 
+{{/if}}
 /**
  * Adjust config for production settings
  */

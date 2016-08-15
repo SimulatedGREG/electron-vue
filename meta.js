@@ -22,8 +22,30 @@ module.exports = {
     eslint: {
       type: 'confirm',
       require: true,
-      message: 'Enable ESLint (extends `standard`)?',
+      message: 'Use linting with ESLint?',
       default: true
+    },
+    eslintConfig: {
+      when: 'eslint',
+      type: 'list',
+      message: 'Which eslint config would you like to use?',
+      choices: [
+        {
+          name: 'Standard (https://github.com/feross/standard)',
+          value: 'standard',
+          short: 'Standard'
+        },
+        {
+          name: 'AirBNB (https://github.com/airbnb/javascript)',
+          value: 'airbnb',
+          short: 'AirBNB'
+        },
+        {
+          name: 'none (configure it yourself)',
+          value: 'none',
+          short: 'none'
+        }
+      ]
     },
     plugins: {
       type: 'checkbox',
@@ -72,7 +94,9 @@ module.exports = {
     'app/src/components/LandingPageView/CurrentPage.vue': 'plugins[\'vue-router\']',
     'app/src/vuex/**/*': 'plugins[\'vuex\']',
     'tasks/vue/**/*': 'plugins[\'vue-router\']',
-    'tasks/vuex/**/*': 'plugins[\'vuex\']'
+    'tasks/vuex/**/*': 'plugins[\'vuex\']',
+    '.eslintignore': 'eslint',
+    '.eslintrc.js': 'eslint'
   },
   completeMessage: `---
 

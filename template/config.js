@@ -9,10 +9,12 @@ let config = {
   // Will be used in production builds
   name: '{{ name }}',
 
-  // Use ESLint (extends `standard`)
+{{#if eslint}}
+  // Use ESLint (extends `{{ eslintConfig }}`)
   // Further changes can be made in `.eslintrc.js`
-  eslint: {{#if eslint}}true{{else}}false{{/if}},
+  eslint: true,
 
+{{/if}}
   // webpack-dev-server port
   port: 9080,
 

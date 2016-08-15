@@ -7,7 +7,7 @@ module.exports = {
     browser: true,
     node: true
   },
-  extends: 'standard',
+  extends: '{{ eslintConfig }}',
   plugins: [
     'html'
   ],
