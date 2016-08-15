@@ -52,8 +52,14 @@ router.start(App, 'app')
 import App from './App'
 
 /* eslint-disable no-new */
+{{#if_eq vueVersion 'next'}}
+new Vue({
+  ...App
+}).$mount('#app')
+{{else}}
 new Vue({
   el: 'body',
   components: { App }
 })
+{{/if_eq}}
 {{/isEnabled}}
