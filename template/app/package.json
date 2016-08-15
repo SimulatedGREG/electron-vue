@@ -1,12 +1,11 @@
 {
   "name": "{{ name }}",
   "version": "1.0.0",
-  "description": "",
+  "description": "{{ description }}",
   "main": "electron.js",
   "dependencies": {
     {{ver vueVersion 'core'}}{{deps plugins vueVersion}}
   },
   "devDependencies": {},
-  "author": "{{ author }}",
-  "license": "ISC"
+  "author": "{{ author }}"
 }
