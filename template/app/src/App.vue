@@ -38,10 +38,10 @@
 <script>
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
-  import LandingPage from './components/LandingPageView'
+  import LandingPage from './components/LandingPageView'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
 {{/isEnabled}}
 {{#isEnabled plugins 'vuex'}}
-  import store from 'src/vuex/store'
+  import store from 'src/vuex/store'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
 {{/isEnabled}}
   export default {
 {{#isEnabled plugins 'vue-router'}}
@@ -51,7 +51,7 @@
     }{{#isEnabled plugins 'vuex'}},{{/isEnabled}}
 {{/isEnabled}}
 {{#isEnabled plugins 'vuex'}}
-    store
+    store{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}
 {{/isEnabled}}
-  }
+  }{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
 </script>

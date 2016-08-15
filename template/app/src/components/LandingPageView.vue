@@ -19,10 +19,10 @@
 
 <script>
 {{#isEnabled plugins 'vue-router'}}
-  import CurrentPage from './LandingPageView/CurrentPage'
+  import CurrentPage from './LandingPageView/CurrentPage'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
 {{/isEnabled}}
-  import Links from './LandingPageView/Links'
-  import Versions from './LandingPageView/Versions'
+  import Links from './LandingPageView/Links'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
+  import Versions from './LandingPageView/Versions'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
 
   export default {
     components: {
@@ -30,8 +30,8 @@
       CurrentPage,
 {{/isEnabled}}
       Links,
-      Versions
+      Versions{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}
     },
-    name: 'landing-page'
-  }
+    name: 'landing-page'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}
+  }{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
 </script>
