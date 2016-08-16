@@ -5,6 +5,7 @@
 
 const config = require('../config')
 const exec = require('child_process').exec
+const treeKill = require('tree-kill')
 
 let YELLOW = '\x1b[33m'
 let BLUE = '\x1b[34m'
@@ -52,9 +53,8 @@ function run (command, color, name) {
 
 function exit (code) {
   children.forEach(child => {
-    child.kill()
+    treeKill(child.pid)
   })
-  process.exit(code)
 }
 
 console.log(`${YELLOW}Starting webpack-dev-server...\n${END}`)
