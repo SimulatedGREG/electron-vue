@@ -28,7 +28,7 @@ electron-vue uses the [webpack/webpack](https://github.com/webpack/webpack) modu
     name: pkg.name,
     out: path.join(__dirname, 'builds'),
     overwrite: true,
-    platform: 'all'
+    platform: process.env.PLATFORM_TARGET || 'all'
   }
 }
 ```
