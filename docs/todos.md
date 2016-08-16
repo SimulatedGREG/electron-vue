@@ -29,4 +29,6 @@
   27. ~~Determine why webpack seems to crash at random points~~ (might be fixed now)
   28. ~~support css linting with [stylelint](https://github.com/stylelint/stylelint)~~ (dropped, not enough support from stylelint-loader)
   29. **Rewrite NPM scripts for creating vue:routes and vuex:modules**
-  30. **(more)**
+  30. ~~support vue@next~~
+  31. ~~support both standard and airbnb-base eslint configurations~~
+  32. **(more)**

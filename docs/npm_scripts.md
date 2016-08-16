@@ -10,6 +10,9 @@ Run app in development.
 ### `npm run lint`
 Lint all your `app/src`'s JS & Vue component files.
 
+### `npm run lint:fix`
+Lint all your `app/src`'s JS & Vue component files and attempt to fix issues.
+
 ### `npm run pack`
 Run webpack in production. Although this command is available, there may not be very many cases where it is need as `npm run build` will do this before hand.
 

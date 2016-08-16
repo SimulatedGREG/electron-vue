@@ -2,7 +2,6 @@
 
 const path = require('path')
 const pkg = require('./app/package.json')
-const platform = process.env.PLATFORM_TARGET || 'all'
 
 let config = {
   // Name of electron app
@@ -29,7 +28,7 @@ let config = {
     ignore: /node_modules|src|main.ejs|icons/,
     out: path.join(__dirname, 'builds'),
     overwrite: true,
-    platform
+    platform: process.env.PLATFORM_TARGET || 'all'
   }
 }
 

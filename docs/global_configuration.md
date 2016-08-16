@@ -9,7 +9,7 @@ electron-vue uses the [webpack/webpack](https://github.com/webpack/webpack) modu
   // Will be used in production builds
   name: 'app',
 
-  // Use ESLint (extends `standard`)
+  // Use ESLint
   // Further changes can be made in `.eslintrc.js`
   eslint: true,
 
