@@ -10,9 +10,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 let config = {
   devtool: '#eval-source-map',
+  {{#if eslint}}
   eslint: {
     formatter: require('eslint-friendly-formatter')
   },
+  {{/if}}
   entry: {
     build: path.join(__dirname, 'app/src/main.js')
   },

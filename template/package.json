@@ -15,7 +15,7 @@
     "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix app",
     {{/if}}
     "pack": "cross-env NODE_ENV=production webpack -p --progress --colors",
-    "postinstall": "npm run lint:fix && cd app && npm install"{{#isEnabled plugins 'vue-router'}},
+    "postinstall": "{{#if eslint}}npm run lint:fix && {{/if}}cd app && npm install"{{#isEnabled plugins 'vue-router'}},
     "vue:route": "node tasks/vue/route.js"{{/isEnabled}}{{#isEnabled plugins 'vuex'}},
     "vuex:module": "node tasks/vuex/module.js"{{/isEnabled}}
   },
