@@ -1,7 +1,6 @@
 .DS_Store
-app/dist/*
-!app/dist/imgs
-!app/dist/fonts
+app/dist/index.html
+app/dist/build.js
 builds/*
 node_modules
 npm-debug.log
