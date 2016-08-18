@@ -17,7 +17,7 @@ app/src/components
 └─ ParentComponentA.vue
 ```
 ##### NOTICE
-Assets can also be organized in this manner. So if a particular component needs an image file, let's place that inside a folder named `assets`. If you are using dynamic assets that you do not want webpack to bundle, please read [**Using Dynamic Assets**](#using-dynamic-assets) below.
+Assets can also be organized in this manner. So if a particular component needs an image file, let's place that inside a folder named `assets`. If you are using dynamic assets that you do not want webpack to bundle, please read [**Using Static Assets**](#using-static-assets) below.
 
 ### vue routes
 For more information about vue-router click [here](https://github.com/vuejs/vue-router). You can manually remove it from your app if needed, but creating a Single Page Application is much more practical when making electron apps. Do you really want to manage a bunch of BrowserWindows or static page navigation? Probably not.
@@ -38,7 +38,7 @@ electron-vue takes advantage of vuex's module structure to create multiple data 
 
 Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `app/src/vuex/modules/index.js` does the dirty work for us! This little script let's `app/src/vuex/store.js` import all of our modules in one-shot.
 
-## Using Dynamic assets
+## Using Static assets
 Sometimes your don't want webpack to bundle some of your assets. Let's say you have a large sprite collection, but your app loads the images in dynamically. You don't webpack to bundle every single sprite if only a few might be used at a time.
 
 When using dynamic assets, let's place them inside the `app/dist` folder. Essentially everything webpack produces in production builds lives in this folder, so everything inside here will be **included** in final builds.
