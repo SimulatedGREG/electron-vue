@@ -1,4 +1,4 @@
-# Building you app
+# Building your app
  electron-vue makes use of [electron-userland/electron-packager](https://github.com/electron-userland/electron-packager) to produce builds and are then saved to `builds`.
 
 ## Defaults
