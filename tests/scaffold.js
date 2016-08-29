@@ -37,6 +37,7 @@ function install (key) {
 
   child.on('close', code => {
     if (code === 0) pack(key)
+    child.kill()
   })
 }
 
@@ -45,6 +46,7 @@ function pack (key) {
 
   child.on('close', code => {
     console.log(`${BLUE}\`${key}\` passed${END}`)
+    child.kill()
   })
 }
 
