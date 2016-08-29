@@ -14,6 +14,7 @@ The aim of this project is to remove the need to setup electron apps using vue. 
 Things you'll find in this boilerplate...
   * Support for both Vue.js at `1.x.x` and `2.x.x` (using `next`)*
   * Basic project structure
+  * Detailed [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/)
   * Project scaffolding using [vue-cli](https://github.com/vuejs/vue-cli)
   * Ready to use Vue plugins ([vue-electron](https://github.com/SimulatedGREG/vue-electron),  [vue-resource](https://github.com/vuejs/vue-resource), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex))*
   * Installed [vue-devtools](https://github.com/vuejs/vue-devtools) and [devtron](https://github.com/electron/devtron) tools for development
@@ -21,7 +22,7 @@ Things you'll find in this boilerplate...
   * Handy NPM scripts
   * Use of [webpack](https://github.com/webpack/webpack) and [vue-loader](https://github.com/vuejs/vue-loader) for Hot Module Replacement
   * HTML/CSS/JS pre-processor support with [vue-loader](https://github.com/vuejs/vue-loader/)
-  * ES6 with `stage-0` by default
+  * ES6 with [`stage-0`](https://babeljs.io/docs/plugins/preset-stage-0/) by default
   * ESLint (support for [`standard`](https://github.com/feross/standard) and [`airbnb-base`](https://github.com/airbnb/javascript))*
 
 \*Customizable during vue-cli scaffolding
