@@ -1,0 +1,32 @@
+{
+  "name": "electron-vue",
+  "version": "0.0.0",
+  "description": "An Electron & Vue.js quick start boilerplate with vue-cli support",
+  "main": "meta.js",
+  "scripts": {
+    "test": "node tests/scaffold.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SimulatedGREG/electron-vue.git"
+  },
+  "keywords": [
+    "electron",
+    "vue",
+    "boilerplate",
+    "hot",
+    "reload",
+    "router",
+    "vuex",
+    "resource"
+  ],
+  "author": "Greg Holguin <simulatedgreg@gmail.com> (https://github.com/SimulatedGREG)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SimulatedGREG/electron-vue/issues"
+  },
+  "homepage": "https://github.com/SimulatedGREG/electron-vue#readme",
+  "devDependencies": {
+    "suppose": "^0.6.1"
+  }
+}
