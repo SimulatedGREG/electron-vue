@@ -1,5 +1,7 @@
 thumbs.db
 .DS_Store
 node_modules
+builds
 npm-debug.log
 npm-debug.*.log
+!.gitkeep
