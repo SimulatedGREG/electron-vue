@@ -9,3 +9,11 @@ Your `app/src` contains error(s). Check console, fix errors, then refresh electr
  
 ### Why is `vue-devtools`/`devtron` missing?
 Make sure to close and reopen the developer tools panel on first launch if they are missing. Also check your terminal to make sure they were installed successfully.
+
+### Why are my main process modules missing in production builds?
+
+#### TL;DR
+electron-vue only bundles the renderer process and `node_modules` are ignored in production builds.
+
+##### [Long answer](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/project_structure.html#on-the-subject-of-webpack-bundling)
+##### [Potential workaround](https://github.com/SimulatedGREG/electron-vue/issues/22)

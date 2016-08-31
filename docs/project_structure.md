@@ -51,4 +51,14 @@ app.asar
 ├─ electron.js
 └─ package.json
 ```
+##### Notice
+**`node_modules`** are ignored in production builds
+
 As you can probably tell, almost everything is stripped down in final production builds. This is almost mandatory when distributing electron apps, as you do not want your users to download bloated software with a large file size.
+
+#### On the subject of webpack bundling
+All modules within the dependency tree of `app/src/main.js` will be bundled with webpack. In other words, webpack will **only** bundle your renderer process JavaScript. 
+
+> What about bundling my main process?
+
+There is currently no plan to support main process bundling as hot-reloading is not stable enough *yet* for node processes. Without it, developing in the main process would require restarting your electron app every time you want to run new code. In my opinion, find another way to accomplish your task in the renderer process.
