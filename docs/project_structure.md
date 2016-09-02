@@ -62,3 +62,7 @@ All modules within the dependency tree of `app/src/main.js` will be bundled with
 > What about bundling my main process?
 
 There is currently no plan to support main process bundling as hot-reloading is not stable enough *yet* for node processes. Without it, developing in the main process would require restarting your electron app every time you want to run new code. In my opinion, find another way to accomplish your task in the renderer process.
+
+> Is there a workaround?
+
+Yes, but it can be cumbersome when building in production. Check [this issue](https://github.com/SimulatedGREG/electron-vue/issues/22) for more information.

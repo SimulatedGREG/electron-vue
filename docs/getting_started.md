@@ -1,9 +1,4 @@
 # Getting Started
-**NOTICE**
-
- electron-vue was built using node `v5.10.0` as electron `v1.0.1` uses this, but in most cases all dependencies should work fine on newer versions. I strongly recommend you use the same version of electron's node and your local instance of node. This helps prevent potential issues related to installing native npm modules needing to be built against electron. [**More info.**](http://electron.atom.io/docs/tutorial/using-native-node-modules/)
-
- You can check your node version by running `node -v`. If you need to change your node version, then I'd recommend using [creationix/nvm](https://github.com/creationix/nvm/blob/master/README.markdown).
  
 ## Scaffolding
 This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app.
@@ -19,5 +14,12 @@ npm install
 npm run dev
 ```
 
-#### NOTE
- When running `npm install` a post install script is also executed, which will `npm install` inside the `app` directory.
+When running `npm install` a post install script is also executed, which will `npm install` inside the `app` directory as well.
+
+
+> Why is there another `package.json`?
+
+electron-vue uses a two package.json setup. Find out more [here](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/project_structure.html).
+
+#### On the subject of electron
+electron-vue is required to use electron `>= v1.2.3`. The `v1.2.3` release adds support for more [`chrome.*` APIs](https://github.com/electron/electron/releases/tag/v1.2.3) that `vue-devtools` depend on. If you are needing a previous release of electron before `v1.2.3`, then you will need to manually uninstall [`electron-devtools-installer`](https://github.com/SimulatedGREG/electron-vue/blob/master/template/package.json#L36) from `./package.json` and revert `./app/electron.js` to a previous version found [here](https://github.com/SimulatedGREG/electron-vue/commit/e7175ee0337f3af36de49aef10cf58a64d75a220). 
