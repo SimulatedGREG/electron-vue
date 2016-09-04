@@ -19,7 +19,6 @@ electron-vue uses the [webpack/webpack](https://github.com/webpack/webpack) modu
   // electron-packager options
   // See `Building you app` for more info
   building: {
-    'app-version': pkg.version,
     arch: 'x64',
     asar: true,
     dir: path.join(__dirname, 'app'),
