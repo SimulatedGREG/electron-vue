@@ -4,9 +4,6 @@
 ## Defaults
 ```js
 {
-    // `app/package.json` version
-    'app-version': pkg.version,
-
     // Target 'x64' architecture
     arch: 'x64',
 
