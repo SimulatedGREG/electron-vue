@@ -13,7 +13,7 @@ Object.keys(builds).forEach(key => {
 
   setTimeout(() => {
     process.exit()
-  })
+  }, 10000)
 })
 
 function generate (key, build) {
