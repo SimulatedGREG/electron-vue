@@ -3,9 +3,6 @@
   "version": "0.0.0",
   "description": "An Electron & Vue.js quick start boilerplate with vue-cli support",
   "main": "meta.js",
-  "scripts": {
-    "test": "node tests/scaffold.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SimulatedGREG/electron-vue.git"
