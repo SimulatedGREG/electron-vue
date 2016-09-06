@@ -7,5 +7,104 @@
     "\n",
     "\n",
     "\n"
+  ],
+  "next": [
+    "\n",
+    "\n",
+    "\u001b[B\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n"
+  ],
+  "eslint-airbnb": [
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\u001b[B\n",
+    "\n",
+    "\n"
+  ],
+  "eslint-none": [
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\u001b[B\u001b[B\n",
+    "\n",
+    "\n"
+  ],
+  "next-eslint-airbnb": [
+    "\n",
+    "\n",
+    "\u001b[B\n",
+    "\n",
+    "\u001b[B\n",
+    "\n",
+    "\n"
+  ],
+  "next-eslint-none": [
+    "\n",
+    "\n",
+    "\u001b[B\n",
+    "\n",
+    "\u001b[B\u001b[B\n",
+    "\n",
+    "\n"
+  ],
+  "no-router": [
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\u001b[B\u001b[B \n",
+    "\n"
+  ],
+  "no-vuex": [
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\u001b[B\u001b[B\u001b[B \n",
+    "\n"
+  ],
+  "no-router-vuex": [
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\n",
+    "\u001b[B\u001b[B \u001b[B \n",
+    "\n"
+  ],
+  "next-no-router": [
+    "\n",
+    "\n",
+    "\u001b[B\n",
+    "\n",
+    "\n",
+    "\u001b[B\u001b[B \n",
+    "\n"
+  ],
+  "next-no-vuex": [
+    "\n",
+    "\n",
+    "\u001b[B\n",
+    "\n",
+    "\n",
+    "\u001b[B\u001b[B\u001b[B \n",
+    "\n"
+  ],
+  "next-no-router-vuex": [
+    "\n",
+    "\n",
+    "\u001b[B\n",
+    "\n",
+    "\n",
+    "\u001b[B\u001b[B \u001b[B \n",
+    "\n"
   ]
 }

@@ -1,23 +1,23 @@
 'use strict'
 
+const templateName = process.argv[2]
+
 const suppose = require('suppose')
-const builds = require('./builds.json')
+const template = require('./builds.json')[templateName]
 
 const YELLOW = '\x1b[33m'
 const END = '\x1b[0m'
 
 process.chdir(process.cwd() + '/builds')
 
-Object.keys(builds).forEach(key => {
-  generate(key, builds[key])
+generate(templateName, template)
 
-  setTimeout(() => {
-    process.exit()
-  }, 10000)
-})
+setTimeout(() => {
+  process.exit()
+}, 10000)
 
 function generate (key, build) {
-  console.log(`${YELLOW}Generating \`${key}${END}\``)
+  console.log(`${YELLOW}Generating \`${key}\`${END}`)
   suppose('vue', ['init', 'simulatedgreg/electron-vue', key], { debug: process.stdout })
     .when(/Application Name/g).respond(build[0])
     .when(/Project description/g).respond(build[1])

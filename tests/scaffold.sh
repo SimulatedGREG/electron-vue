@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Scaffold boilerplate with default options
+# Scaffold boilerplate with given templateName
 cd "$PWD/tests"
-node scaffold.js
+node scaffold.js "$1"
 
 # Install dependecies
-cd "$PWD/builds/default"
+cd "$PWD/builds/$1"
 npm install
 
 # Run webpack to check for bundling errors
