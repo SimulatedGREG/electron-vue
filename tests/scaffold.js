@@ -10,6 +10,10 @@ process.chdir(process.cwd() + '/builds')
 
 Object.keys(builds).forEach(key => {
   generate(key, builds[key])
+
+  setTimeout(() => {
+    process.exit()
+  })
 })
 
 function generate (key, build) {
