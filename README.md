@@ -9,7 +9,7 @@
 [![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
 
 ## Overview
-The aim of this project is to remove the need to setup electron apps using vue. Since vue can take advantage of module loaders like webpack, getting everything to play nicely can be a little tricky.
+The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding, `webpack` and `vue-loader`, and some of the most used plugins like `vue-router`, `vuex`, and more.
 
 #### Check out the documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
 
@@ -22,7 +22,7 @@ Things you'll find in this boilerplate...
   * Installed [vue-devtools](https://github.com/vuejs/vue-devtools) and [devtron](https://github.com/electron/devtron) tools for development
   * Ability to easily package your electron app using [electron-packager](https://github.com/electron-userland/electron-packager)
   * Handy NPM scripts
-  * Use of [webpack](https://github.com/webpack/webpack) and [vue-loader](https://github.com/vuejs/vue-loader) for Hot Module Replacement
+  * Use of [webpack](https://github.com/webpack/webpack) and [vue-loader](https://github.com/vuejs/vue-loader) with Hot Module Replacement
   * HTML/CSS/JS pre-processor support with [vue-loader](https://github.com/vuejs/vue-loader/)
   * ES6 with [`stage-0`](https://babeljs.io/docs/plugins/preset-stage-0/) by default
   * ESLint (support for [`standard`](https://github.com/feross/standard) and [`airbnb-base`](https://github.com/airbnb/javascript))*
