@@ -42,8 +42,8 @@
 {{/isEnabled}}
 {{#isEnabled plugins 'vuex'}}
   import store from 'src/vuex/store'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
-{{/isEnabled}}
 
+{{/isEnabled}}
   export default {
 {{#isEnabled plugins 'vue-router'}}
 {{else}}

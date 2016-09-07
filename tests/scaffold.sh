@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 # Scaffold boilerplate with given templateName
 cd "$PWD/tests"
