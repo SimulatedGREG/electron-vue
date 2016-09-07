@@ -8,5 +8,5 @@ node scaffold.js "$1"
 cd "$PWD/builds/$1"
 npm install
 
-# Run webpack to check for bundling errors
-npm run pack
+# Run webpack and build electron
+npm run build
