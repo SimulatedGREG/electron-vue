@@ -12,6 +12,7 @@
 ##### Tell me about your development environment.
   * Node version:
   * NPM version:
+  * vue-cli version: (if necessary)
   * Operating System:
 
 #### *If you are looking to suggest an enhancement or feature, then feel free to remove everything above.*
