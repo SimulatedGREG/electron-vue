@@ -43,7 +43,7 @@ npm run dev
 ```
 
 ### Next Steps
-Make sure to take a look at the [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/). Here you will find useful information about configuration, project structure, and building your app.
+Make sure to take a look at the [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/). Here you will find useful information about configuration, project structure, and building your app. There's also a handy [FAQs](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/faqs.html) section.
 
 ### Contributing
 Wanting to submit a pull request? Make sure to read [this](docs/contributing.md) first.
