@@ -14,7 +14,7 @@
   "links": {
     "sharing": {
       "facebook": false,
-      "twitter": false
+      "twitter": true
     }
   }
 }

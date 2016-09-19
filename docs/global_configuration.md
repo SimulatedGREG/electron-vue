@@ -23,7 +23,7 @@ electron-vue uses the [webpack](https://github.com/webpack/webpack) module loade
     asar: true,
     dir: path.join(__dirname, 'app'),
     icon: path.join(__dirname, 'app/icons/icon'),
-    ignore: /node_modules|src|main.html|icons/,
+    ignore: /node_modules|src|index.ejs|icons/,
     name: pkg.name,
     out: path.join(__dirname, 'builds'),
     overwrite: true,
