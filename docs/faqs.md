@@ -10,6 +10,9 @@ Your `app/src` contains error(s). Check console, fix errors, then refresh electr
 ### Why is `vue-devtools`/`devtron` missing?
 Make sure to close and reopen the developer tools panel on first launch if they are missing. Also check your terminal to make sure they were installed successfully.
 
+### Where do I put Static Assets?
+**[Using Static Assets](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/using_the_file_structure.html#using-static-assets)**
+
 ### Why are my main process modules missing in production builds?
 
 #### TL;DR

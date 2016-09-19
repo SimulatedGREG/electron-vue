@@ -13,8 +13,11 @@ Lint all your `app/src`'s JS & Vue component files.
 ### `npm run lint:fix`
 Lint all your `app/src`'s JS & Vue component files and attempt to fix issues.
 
+##### NOTE
+Linting errors found within Vue component files cannot be automatically corrected. This is a architectural issue with `eslint`'s plugin system. **[More information.](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/faqs.html)**
+
 ### `npm run pack`
-Run webpack in production. Although this command is available, there may not be very many cases where it is need as `npm run build` will do this before hand.
+Runs webpack in production. Although this command is available, there may not be many cases where it is need as `npm run build` will do this before hand.
 
 ### `npm run vue:route`, `npm run vuex:module`
 See [**Vue Accessories**](vue_accessories.md) for more info.
