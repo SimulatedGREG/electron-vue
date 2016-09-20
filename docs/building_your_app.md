@@ -1,5 +1,5 @@
 # Building your app
- electron-vue makes use of [electron-userland/electron-packager](https://github.com/electron-userland/electron-packager) to produce builds and are then saved to `builds`.
+electron-vue makes use of [electron-packager](https://github.com/electron-userland/electron-packager) to produce builds and are then saved to `builds`.
 
 ## Defaults
 ```js
@@ -22,22 +22,22 @@
     icon: path.join(__dirname, '../app/icons/icon'),
 
     // Ignore files that would bloat final build size
-    ignore: /node_modules|src|main.html/,
+    ignore: /node_modules|src|index.ejs|icons/,
 
     // `config.js` name
     name: config.name,
 
-    // Save builds to `releases`
+    // Save builds to `builds`
     out: path.join(__dirname, '../builds'),
 
     // Overwrite existing builds
     overwrite: true,
 
     // Environment variable that sets platform
-    platform: 'all'
+    platform: process.env.PLATFORM_TARGET || 'all'
 }
   ```
- Further customizations can be made at `config.js` in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options).
+Further customization can be made at `config.js` in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options).
 
 
 #### Building for all platforms
@@ -48,7 +48,7 @@ npm run build
 #### Building for a specific platform
  Platforms include `darwin`, `mas`, `linux` and `win32`.
 ```bash
-npm run build:darwin # builds for darwin (OS X)
+npm run build:darwin # builds for darwin (macOS)
 ```
 
 #### Cleaning

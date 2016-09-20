@@ -31,7 +31,7 @@ electron-vue
 │  │  ├─ main.js
 │  │  └─ routes.js
 │  ├─ electron.js
-│  ├─ main.ejs
+│  ├─ index.ejs
 │  └─ package.json
 ├─ builds
 ├─ node_modules
