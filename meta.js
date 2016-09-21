@@ -19,6 +19,12 @@ module.exports = {
       message: 'Which version of Vue.js would you like installed?',
       choices: ['1.x', 'next']
     },
+    plugins: {
+      type: 'checkbox',
+      message: 'Select which Vue plugins to install',
+      choices: ['vue-electron', 'vue-resource', 'vue-router', 'vuex'],
+      default: ['vue-electron', 'vue-resource', 'vue-router', 'vuex']
+    },
     eslint: {
       type: 'confirm',
       require: true,
@@ -47,11 +53,10 @@ module.exports = {
         }
       ]
     },
-    plugins: {
-      type: 'checkbox',
-      message: 'Select which Vue plugins to install',
-      choices: ['vue-electron', 'vue-resource', 'vue-router', 'vuex'],
-      default: ['vue-electron', 'vue-resource', 'vue-router', 'vuex']
+    unit: {
+      type: 'confirm',
+      message: 'Setup Unit testing with Karma + Jasmine?',
+      required: true
     }
   },
   helpers: {
@@ -95,6 +100,7 @@ module.exports = {
     'app/src/vuex/**/*': 'plugins[\'vuex\']',
     'tasks/vue/**/*': 'plugins[\'vue-router\']',
     'tasks/vuex/**/*': 'plugins[\'vuex\']',
+    'test/unit/**/*': 'unit',
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint'
   },
