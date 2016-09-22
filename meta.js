@@ -55,8 +55,13 @@ module.exports = {
     },
     unit: {
       type: 'confirm',
-      message: 'Setup Unit testing with Karma + Jasmine?',
+      message: 'Setup unit testing with Karma + Jasmine?',
       required: true
+    },
+    e2e: {
+      type: 'confirm',
+      message: 'Setup end-to-end testing with Spectron + Mocha?',
+      require: true
     }
   },
   helpers: {
@@ -100,6 +105,7 @@ module.exports = {
     'app/src/vuex/**/*': 'plugins[\'vuex\']',
     'tasks/vue/**/*': 'plugins[\'vue-router\']',
     'tasks/vuex/**/*': 'plugins[\'vuex\']',
+    'test/e2e/**/*': 'e2e',
     'test/unit/**/*': 'unit',
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint'

@@ -10,6 +10,9 @@
     "build:mas": "cross-env PLATFORM_TARGET=mas node tasks/release.js",
     "build:win32": "cross-env PLATFORM_TARGET=win32 node tasks/release.js",
     "dev": "node tasks/runner.js",
+    {{#if e2e}}
+    "e2e": "npm run pack && mocha test/e2e",
+    {{/if}}
     {{#if eslint}}
     "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter app",
     "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix app",
@@ -70,6 +73,13 @@
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.8.0",
     "webpack-merge": "^0.14.1",
+    {{/if}}
+    {{#if e2e}}
+    "babel-register": "^6.14.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "require-dir": "^0.3.0",
+    "spectron": "^3.4.0",
     {{/if}}
     "style-loader": "^0.13.1",
     "tree-kill": "^1.1.0",
