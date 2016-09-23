@@ -25,7 +25,7 @@ my-project
 Inside this directory is where actual tests are written. Thanks to the power of webpack, you have full access to ES2015 and supported loaders.
 
 #### `index.js`
-This is the entry file used by `karma-webpack`. The purpose of this file to gather all test and source code in a "one-shot" manner.
+This is the entry file used by `karma-webpack`. The purpose of this file is to gather all test and source code in a "one-shot" manner.
 
 #### `karma.conf.js`
 Here you will find the actual `karma` configuration, set up with spec/coverage reporters. Further customization can be made in accordance to the [official karma documentation](http://karma-runner.github.io/1.0/config/configuration-file.html).

@@ -19,5 +19,15 @@ Linting errors found within Vue component files cannot be automatically correcte
 ### `npm run pack`
 Runs webpack in production. Although this command is available, there may not be many cases where it is need as `npm run build` will do this before hand.
 
+### `npm run unit`
+Run unit tests with Karma + Jasmine. More information on **[Unit testing](unittesting.md)**.
+
+### `npm run e2e`
+Run end-to-end tests with Spectron + Mocha. More information on **[End-to-end testing](end-to-end_testing.md)**.
+
+
+### `npm test`
+Runs both `npm run unit` and `npm run e2e`. More information on **[Testing](testing.md)**.
+
 ### `npm run vue:route`, `npm run vuex:module`
 See [**Vue Accessories**](vue_accessories.md) for more info.

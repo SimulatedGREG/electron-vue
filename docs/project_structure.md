@@ -20,9 +20,9 @@ As mentioned above, we need to make sure our native npm modules are built agains
 ```
 electron-vue
 ├─ app
-│  ├─ dist
-│  ├─ icons
-│  ├─ node_modules
+│  ├─ dist/
+│  ├─ icons/
+│  ├─ node_modules/
 │  ├─ src
 │  │  ├─ components
 │  │  ├─ vuex
@@ -33,11 +33,20 @@ electron-vue
 │  ├─ electron.js
 │  ├─ index.ejs
 │  └─ package.json
-├─ builds
-├─ node_modules
+├─ builds/
+├─ node_modules/
 └─ tasks
 |  ├─ vue
 |  └─ vuex
+└─ test
+|  ├─ e2e
+│  │  ├─ specs/
+│  │  ├─ index.js
+│  │  └─ utils.js
+|  ├─ unit
+│  │  ├─ specs/
+│  │  ├─ index.js
+│  │  └─ utils.js
 └─ config.js
 └─ package.json
 └─ webpack.config.js
@@ -45,7 +54,7 @@ electron-vue
 #### Production builds
 ```
 app.asar
-├─ dist
+├─ dist/
 │  ├─ build.js
 │  └─ index.html
 ├─ electron.js
