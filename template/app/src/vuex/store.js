@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 {{#if_eq vueVersion 'next'}}
-import actions from './actions'
-import getters from './getters'
+import * as actions from './actions'
+import * as getters from './getters'
 {{/if_eq}}
 import modules from './modules'
 
