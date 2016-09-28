@@ -30,7 +30,8 @@ Things you'll find in this boilerplate...
 \*Customizable during vue-cli scaffolding
 
 ### Getting Started
-This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app.
+This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. The use of node `v5.10.0` or higher is required as certain ES2015 are used in dependencies and scripts. But the use of `6.x` is recommended for its extra performance benefits.
+
 ```bash
 # Install vue-cli and scaffold boilerplate
 npm install -g vue-cli
