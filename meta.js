@@ -19,6 +19,12 @@ module.exports = {
       message: 'Which version of Vue.js would you like installed?',
       choices: ['2.x', '1.x']
     },
+    plugins: {
+      type: 'checkbox',
+      message: 'Select which Vue plugins to install',
+      choices: ['vue-electron', 'vue-resource', 'vue-router', 'vuex'],
+      default: ['vue-electron', 'vue-resource', 'vue-router', 'vuex']
+    },
     eslint: {
       type: 'confirm',
       require: true,
@@ -46,12 +52,6 @@ module.exports = {
           short: 'none'
         }
       ]
-    },
-    plugins: {
-      type: 'checkbox',
-      message: 'Select which Vue plugins to install',
-      choices: ['vue-electron', 'vue-resource', 'vue-router', 'vuex'],
-      default: ['vue-electron', 'vue-resource', 'vue-router', 'vuex']
     }
   },
   helpers: {
