@@ -12,7 +12,7 @@ If you are unfamiliar with how the HTMLWebpackPlugin works, then I'd encourage y
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <app></app>
+    <div id="app"></div>
     <!-- webpack builds are automatically injected -->
   </body>
 </html>
@@ -28,7 +28,7 @@ If you are unfamiliar with how the HTMLWebpackPlugin works, then I'd encourage y
     <link href="styles.css" rel="stylesheet">
   </head>
   <body>
-    <app></app>
+    <div id="app"></div>
     <!-- webpack builds are automatically injected -->
     <script type="text/javascript" src="build.js"></script>
   </body>

@@ -1,7 +1,7 @@
 # Vue Accessories
 
-### Use of Vue.js at `1.x.x` or `2.x.x`
-During project scaffolding you have the option to install Vue.js at `^1.0.26` or `next`. Using `next` will in turn use `vue-router` & `vuex` at `next` as well. If you are wanting to give `2.x.x` a shot make sure to check out the breaking changes [here](https://github.com/vuejs/vue/issues/2873).
+### Use of Vue.js at `2.x.x` or `1.x.x`
+During project scaffolding you have the option to install Vue.js at `^2.0.1` or `^1.0.28`. Whether you are up to date with `vue@^2.0.1`, or still sticking with `vue@^1.0.28` for a bit longer, all scaffolded plugins will be compatible.
 
 ### Ready to use vue plugins
 electron-vue comes packed with the following vue plugins that can be installed during project scaffolding...
