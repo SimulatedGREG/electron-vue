@@ -1,5 +1,7 @@
 'use strict'
 
+const BRANCH_NAME = process.env.BRANCH_NAME
+const SEMAPHORE_REPO_SLUG = process.env.SEMAPHORE_REPO_SLUG
 const templateName = process.argv[2]
 
 const suppose = require('suppose')
@@ -18,13 +20,13 @@ setTimeout(() => {
 
 function generate (key, build) {
   console.log(`${YELLOW}Generating \`${key}\`${END}`)
-  suppose('vue', ['init', 'simulatedgreg/electron-vue', key], { debug: process.stdout })
+  suppose('vue', ['init', `${SEMAPHORE_REPO_SLUG}#${BRANCH_NAME}`, key], { debug: process.stdout })
     .when(/Application Name/g).respond(build[0])
     .when(/Project description/g).respond(build[1])
     .when(/version/g).respond(build[2])
-    .when(/ESLint/g).respond(build[3])
-    .when(/config/g).respond(build[4])
-    .when(/plugins/g).respond(build[5])
+    .when(/plugins/g).respond(build[3])
+    .when(/ESLint/g).respond(build[4])
+    .when(/config/g).respond(build[5])
     .when(/author/g).respond(build[6])
   .on('error', err => {
     console.log(err.message)

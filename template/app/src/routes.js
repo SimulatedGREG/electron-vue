@@ -1,4 +1,4 @@
-{{#if_eq vueVersion 'next'}}
+{{#if_eq vueVersion '2.x'}}
 export default [
   {
     path: '/',

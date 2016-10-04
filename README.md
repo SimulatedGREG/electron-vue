@@ -14,7 +14,7 @@ The aim of this project is to remove the need of manually setting up electron ap
 #### Check out the documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
 
 Things you'll find in this boilerplate...
-  * Support for both Vue.js at `1.x.x` and `2.x.x` (using `next`)*
+  * Support for both Vue.js at `2.x.x` and `1.x.x`*
   * Basic project structure
   * Detailed [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/)
   * Project scaffolding using [vue-cli](https://github.com/vuejs/vue-cli)
@@ -25,12 +25,13 @@ Things you'll find in this boilerplate...
   * Use of [webpack](https://github.com/webpack/webpack) and [vue-loader](https://github.com/vuejs/vue-loader) with Hot Module Replacement
   * HTML/CSS/JS pre-processor support with [vue-loader](https://github.com/vuejs/vue-loader/)
   * ES6 with [`stage-0`](https://babeljs.io/docs/plugins/preset-stage-0/) by default
-  * ESLint (support for [`standard`](https://github.com/feross/standard) and [`airbnb-base`](https://github.com/airbnb/javascript))*
+  * ESLint (with support for [`standard`](https://github.com/feross/standard) and [`airbnb-base`](https://github.com/airbnb/javascript))*
 
 \*Customizable during vue-cli scaffolding
 
 ### Getting Started
-This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app.
+This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. The use of node `v5.10.0` or higher is required as certain ES2015 are used in dependencies and scripts. But the use of `6.x` is recommended for its extra performance benefits.
+
 ```bash
 # Install vue-cli and scaffold boilerplate
 npm install -g vue-cli

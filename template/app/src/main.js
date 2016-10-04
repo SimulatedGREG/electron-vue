@@ -24,7 +24,7 @@ Vue.use(Router)
 Vue.config.debug = true
 
 {{#isEnabled plugins 'vue-router'}}
-{{#if_eq vueVersion 'next'}}
+{{#if_eq vueVersion '2.x'}}
 const router = new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes
@@ -52,7 +52,7 @@ router.start(App, 'app')
 import App from './App'
 
 /* eslint-disable no-new */
-{{#if_eq vueVersion 'next'}}
+{{#if_eq vueVersion '2.x'}}
 new Vue({
   ...App
 }).$mount('#app')

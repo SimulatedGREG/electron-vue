@@ -24,13 +24,13 @@ For more information about vue-router click [here](https://github.com/vuejs/vue-
 
 Routes are held in `app/src/routes.js` and defined like so...
 ```js
-// vue@^1.0.26
+// vue@^1.0.28
 '/<routePath>': {
   component: Vue.component('<routeName>', require('./components/<routeName>View')),
   name: '<routeName>'
 }
 
-// vue@next
+// vue@^2.0.1
 {
   path: '<routePath>',
   name: '<routeName>',

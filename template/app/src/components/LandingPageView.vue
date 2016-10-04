@@ -7,7 +7,7 @@
 
 <template>
   <div>
-    <img src="{{#if_eq vueVersion 'next'}}./{{/if_eq}}LandingPageView/assets/logo.png" alt="electron-vue">
+    <img src="{{#if_eq vueVersion '2.x'}}./{{/if_eq}}LandingPageView/assets/logo.png" alt="electron-vue">
     <h1>Welcome.</h1>
 {{#isEnabled plugins 'vue-router'}}
     <current-page></current-page>
