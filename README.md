@@ -26,6 +26,7 @@ Things you'll find in this boilerplate...
   * HTML/CSS/JS pre-processor support with [vue-loader](https://github.com/vuejs/vue-loader/)
   * ES6 with [`stage-0`](https://babeljs.io/docs/plugins/preset-stage-0/) by default
   * ESLint (with support for [`standard`](https://github.com/feross/standard) and [`airbnb-base`](https://github.com/airbnb/javascript))*
+  * Unit & End-to-end Testing
 
 \*Customizable during vue-cli scaffolding
 

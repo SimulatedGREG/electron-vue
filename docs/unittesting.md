@@ -1,6 +1,6 @@
 # Unit testing
 
-electron-vue makes use of the [Karma](https://karma-runner.github.io/1.0/index.html) test runner and the [Jasmine](http://jasmine.github.io/2.5/introduction.html) test framework for unit testing.
+electron-vue makes use of the [Karma](https://karma-runner.github.io/1.0/index.html) test runner and the [Mocha](https://mochajs.org/) test framework (with [Chai](http://chaijs.com/)) for unit testing.
 
 ### Running tests
 ```bash
