@@ -18,12 +18,19 @@
     "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix app",
     {{/if}}
     "pack": "cross-env NODE_ENV=production webpack -p --progress --colors",
-    "postinstall": "{{#if eslint}}npm run lint:fix && {{/if}}cd app && npm install"{{#isEnabled plugins 'vue-router'}},
+    {{#testing unit e2e}}
+    "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}",
+    {{/testing}}
     {{#if unit}}
     "unit": "karma start test/unit/karma.conf.js",
     {{/if}}
-    "vue:route": "node tasks/vue/route.js"{{/isEnabled}}{{#isEnabled plugins 'vuex'}},
-    "vuex:module": "node tasks/vuex/module.js"{{/isEnabled}}
+    {{#isEnabled plugins 'vue-router'}}
+    "vue:route": "node tasks/vue/route.js",
+    {{/isEnabled}}
+    {{#isEnabled plugins 'vuex'}}
+    "vuex:module": "node tasks/vuex/module.js",
+    {{/isEnabled}}
+    "postinstall": "{{#if eslint}}npm run lint:fix && {{/if}}cd app && npm install"
   },
   "author": "Greg Holguin <simulatedgreg@gmail.com>",
   "license": "MIT",
