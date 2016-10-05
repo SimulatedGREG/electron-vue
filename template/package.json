@@ -64,11 +64,11 @@
     {{#if unit}}
     "inject-loader": "^2.0.1",
     "isparta-loader": "^2.0.0",
-    "jasmine-core": "^2.5.2",
     "karma": "^1.3.0",
+    "karma-chai": "^0.1.0",
     "karma-coverage": "^1.1.1",
     "karma-electron": "^4.1.1",
-    "karma-jasmine": "^1.0.2",
+    "karma-mocha": "^1.2.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "0.0.26",
     "karma-webpack": "^1.8.0",
@@ -76,11 +76,13 @@
     {{/if}}
     {{#if e2e}}
     "babel-register": "^6.14.0",
-    "chai": "^3.5.0",
-    "mocha": "^3.0.2",
     "require-dir": "^0.3.0",
     "spectron": "^3.4.0",
     {{/if}}
+    {{#testing unit e2e}}
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    {{/testing}}
     "style-loader": "^0.13.1",
     "tree-kill": "^1.1.0",
     "url-loader": "^0.5.7",

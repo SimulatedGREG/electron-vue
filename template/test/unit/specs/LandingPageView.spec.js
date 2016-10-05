@@ -4,7 +4,7 @@ import LandingPageView from 'src/components/LandingPageView'
 describe('LandingPageView.vue', () => {
   it('should render correct contents', () => {
     const vm = new Vue({
-      {{#if_eq vueVersion 'next'}}
+      {{#if_eq vueVersion '2.x'}}
       el: document.createElement('div'),
       render: h => h(LandingPageView)
       {{else}}
@@ -16,6 +16,7 @@ describe('LandingPageView.vue', () => {
       `
       {{/if_eq}}
     }).$mount()
-    expect(vm.$el.querySelector('h1').textContent).toContain('Welcome.')
+
+    expect(vm.$el.querySelector('h1').textContent).to.contain('Welcome.')
   })
 })

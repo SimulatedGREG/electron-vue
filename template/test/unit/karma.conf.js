@@ -59,7 +59,7 @@ module.exports = config => {
         flags: ['--show']
       }
     },
-    frameworks: ['jasmine'],
+    frameworks: ['mocha', 'chai'],
     files: ['./index.js'],
     preprocessors: {
       './index.js': ['webpack', 'sourcemap']

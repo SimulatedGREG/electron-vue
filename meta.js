@@ -61,7 +61,7 @@ module.exports = {
     },
     unit: {
       type: 'confirm',
-      message: 'Setup unit testing with Karma + Jasmine?',
+      message: 'Setup unit testing with Karma + Mocha?',
       required: true
     },
     e2e: {
@@ -107,6 +107,11 @@ module.exports = {
       }
 
       return output
+    },
+    testing (unit, e2e, opts) {
+      if (unit || e2e) {
+        return opts.fn(this)
+      }
     }
   },
   filters: {
