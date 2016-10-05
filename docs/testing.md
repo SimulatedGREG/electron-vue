@@ -12,3 +12,9 @@ More information on **[Unit testing](unittesting.md)**.
 npm run e2e
 ```
 More information on **[End-to-end testing](end-to-end_testing.md)**.
+
+#### Running all tests
+```bash
+npm test
+```
+
