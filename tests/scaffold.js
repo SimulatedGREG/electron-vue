@@ -20,6 +20,7 @@ setTimeout(() => {
 
 function generate (key, build) {
   console.log(`${YELLOW}Generating \`${key}\`${END}`)
+
   suppose('vue', ['init', `${SEMAPHORE_REPO_SLUG}#${BRANCH_NAME}`, key], { debug: process.stdout })
     .when(/Application Name/g).respond(build[0])
     .when(/Project description/g).respond(build[1])
@@ -27,7 +28,9 @@ function generate (key, build) {
     .when(/plugins/g).respond(build[3])
     .when(/ESLint/g).respond(build[4])
     .when(/config/g).respond(build[5])
-    .when(/author/g).respond(build[6])
+    .when(/unit/g).respond(build[6])
+    .when(/end-to-end/g).respond(build[7])
+    .when(/author/g).respond(build[8])
   .on('error', err => {
     console.log(err.message)
   })
