@@ -26,12 +26,14 @@ Things you'll find in this boilerplate...
   * HTML/CSS/JS pre-processor support with [vue-loader](https://github.com/vuejs/vue-loader/)
   * ES6 with [`stage-0`](https://babeljs.io/docs/plugins/preset-stage-0/) by default
   * ESLint (with support for [`standard`](https://github.com/feross/standard) and [`airbnb-base`](https://github.com/airbnb/javascript))*
-  * Unit & End-to-end Testing
+  * Unit Testing (with Karma + Mocha)*
+  * End-to-end Testing (with Spectron + Mocha)*
+
 
 \*Customizable during vue-cli scaffolding
 
 ### Getting Started
-This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. The use of node `v5.10.0` or higher is required as certain ES2015 are used in dependencies and scripts. But the use of `6.x` is recommended for its extra performance benefits.
+This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. The use of node `v5.10.0` or higher is required as certain ES6 are used in dependencies and scripts. But the use of `6.x` is recommended for its extra performance benefits.
 
 ```bash
 # Install vue-cli and scaffold boilerplate
