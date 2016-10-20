@@ -1,4 +1,3 @@
-import { expect } from 'chai'
 import utils from '../utils'
 
 import { name } from '../../../config'

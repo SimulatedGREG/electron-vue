@@ -42,7 +42,7 @@ webpackConfig.module.loaders.some((loader, i) => {
 
 module.exports = config => {
   config.set({
-    browsers: ['customElectron'],
+    browsers: ['visibleElectron'],
     client: {
       useIframe: false
     },
@@ -54,7 +54,7 @@ module.exports = config => {
       ]
     },
     customLaunchers: {
-      'customElectron': {
+      'visibleElectron': {
         base: 'Electron',
         flags: ['--show']
       }
