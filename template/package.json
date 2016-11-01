@@ -14,7 +14,7 @@
     "e2e": "npm run pack && mocha test/e2e",
     {{/if}}
     {{#if eslint}}
-    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter app",
+    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter app{{#testing unit e2e}} test{{/testing}}",
     "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix app{{#testing unit e2e}} test{{/testing}}",
     {{/if}}
     "pack": "cross-env NODE_ENV=production webpack -p --progress --colors",
