@@ -9,5 +9,8 @@ node scaffold.js "$1"
 cd "$PWD/builds/$1"
 npm install
 
+# Run unit/e2e testing
+npm test
+
 # Run webpack and build electron
 npm run build
