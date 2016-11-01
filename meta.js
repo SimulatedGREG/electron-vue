@@ -122,6 +122,7 @@ module.exports = {
     'tasks/vuex/**/*': 'plugins[\'vuex\']',
     'test/e2e/**/*': 'e2e',
     'test/unit/**/*': 'unit',
+    'test/.eslintrc': 'e2e || unit',
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint'
   },
