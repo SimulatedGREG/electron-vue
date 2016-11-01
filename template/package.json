@@ -15,7 +15,7 @@
     {{/if}}
     {{#if eslint}}
     "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter app",
-    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix app",
+    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix app{{#testing unit e2e}} test{{/testing}}",
     {{/if}}
     "pack": "cross-env NODE_ENV=production webpack -p --progress --colors",
     {{#testing unit e2e}}

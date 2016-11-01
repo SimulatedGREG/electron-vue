@@ -18,7 +18,7 @@ my-project
 │  │  ├─ specs
 │  │  │  └─ LandingPageView.spec.js
 │  │  ├─ index.js
-│  │  └─ karma.conf.js
+└─ └─ └─ karma.conf.js
 ```
 
 **For the most part, you can ignore both `index.js` and `karma.conf.js` and focus solely on writing `specs/`.**

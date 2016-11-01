@@ -1,0 +1,14 @@
+{
+  "env": {
+    "mocha": true
+  },
+  "globals": {
+    "assert": true,
+    "expect": true,
+    "should": true
+  }{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},
+  "rules": {
+    "func-names": 0,
+    "prefer-arrow-callback": 0
+  }{{/if_eq}}{{/if}}
+}

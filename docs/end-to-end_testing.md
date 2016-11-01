@@ -1,6 +1,6 @@
 # End-to-end testing
 
-electron-vue makes use of [Spectron](http://electron.atom.io/spectron/) and the [Mocha](https://mochajs.org/) test framework for end-to-end testing.
+electron-vue makes use of [Spectron](http://electron.atom.io/spectron/) and the [Mocha](https://mochajs.org/) (with [Chai](http://chaijs.com/)) test framework for end-to-end testing. Mocha & Chai APIs, including `expect`, `should`, and `assert`, are made available in global scope.
 
 ### Running tests
 ```bash
@@ -19,7 +19,7 @@ my-project
 │  │  ├─ specs
 │  │  │  └─ Launch.spec.js
 │  │  ├─ index.js
-│  │  └─ utils.js
+└─ └─ └─ utils.js
 ```
 
 **For the most part, you can ignore `index.js` and focus solely on writing `specs/`.**
