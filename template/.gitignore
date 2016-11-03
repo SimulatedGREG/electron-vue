@@ -2,6 +2,7 @@
 app/dist/index.html
 app/dist/build.js
 builds/*
+coverage
 node_modules
 npm-debug.log
 npm-debug.log.*
