@@ -20,7 +20,6 @@ function pack () {
   pack.on('exit', code => build())
 }
 
-
 /**
  * Use electron-packager to build electron app
  */
@@ -29,7 +28,7 @@ function build () {
 
   console.log('\x1b[34mBuilding electron app(s)...\n\x1b[0m')
   packager(options, (err, appPaths) => {
-    if(err) {
+    if (err) {
       console.error('\x1b[31mError from `electron-packager` when building app...\x1b[0m')
       console.error(err)
     } else {
