@@ -2,7 +2,9 @@
 app/dist/index.html
 app/dist/build.js
 builds/*
+{{#if unit}}
 coverage
+{{/if}}
 node_modules
 npm-debug.log
 npm-debug.log.*
