@@ -32,3 +32,5 @@ At this point things should successfully install, but if not then you will need 
 
 #### On the subject of electron
 electron-vue requires the use of electron `>= v1.2.3`. The `v1.2.3` release adds support for more [`chrome.*` APIs](https://github.com/electron/electron/releases/tag/v1.2.3) that `vue-devtools` depends upon. If you are needing a previous release of electron before `v1.2.3`, then you will need to manually uninstall [`electron-devtools-installer`](https://github.com/SimulatedGREG/electron-vue/blob/master/template/package.json#L36) from `./package.json` and revert `./app/electron.js` to a previous version found [here](https://github.com/SimulatedGREG/electron-vue/commit/e7175ee0337f3af36de49aef10cf58a64d75a220). 
+
+Although optional, it is recommended to lock in your electron version after scaffolding your project. This helps prevent other developers working on the same project developing on different versions. Electron makes releases quite often so features are always subject to change. [More Info](http://electron.atom.io/docs/tutorial/electron-versioning/).
