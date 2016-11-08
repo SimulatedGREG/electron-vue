@@ -46,7 +46,7 @@ npm install
 npm run dev
 ```
 
-##### Are you a Windows Users?
+##### Are you a Windows User?
 Make sure to check out [**A Note for Windows Users**](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/getting_started.html#a-note-for-windows-users) to make sure you have all the necessary build tools needed for electron and other dependencies.
 
 ### Next Steps
