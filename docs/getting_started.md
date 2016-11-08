@@ -16,7 +16,6 @@ npm run dev
 
 When running `npm install` a post install script is also executed, which will `npm install` inside the `app` directory as well.
 
-
 > Why is there another `package.json`?
 
 electron-vue uses a two package.json setup. Find out more [here](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/project_structure.html).
