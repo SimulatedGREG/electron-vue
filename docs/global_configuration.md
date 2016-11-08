@@ -2,7 +2,7 @@
 
 electron-vue uses the [webpack](https://github.com/webpack/webpack) module loader system for pre-processing, bundling, and building your app. The default settings are rather common and should meet most of your needs. An additional `config.js` is provided in the root directory for quick adjustments. Further customization can be made by directly adjusting `webpack.config.js`.
 
-#### ``config.js``
+#### `config.js`
 ```js
 {
   // Name of electron app
@@ -23,7 +23,7 @@ electron-vue uses the [webpack](https://github.com/webpack/webpack) module loade
     asar: true,
     dir: path.join(__dirname, 'app'),
     icon: path.join(__dirname, 'app/icons/icon'),
-    ignore: /node_modules|src|index.ejs|icons/,
+    ignore: /\b(node_modules|src|index\.ejs|icons)\b/,
     name: pkg.name,
     out: path.join(__dirname, 'builds'),
     overwrite: true,

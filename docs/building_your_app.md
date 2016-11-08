@@ -22,7 +22,7 @@ electron-vue makes use of [electron-packager](https://github.com/electron-userla
     icon: path.join(__dirname, '../app/icons/icon'),
 
     // Ignore files that would bloat final build size
-    ignore: /node_modules|src|index.ejs|icons/,
+    ignore: /\b(node_modules|src|index\.ejs|icons)\b/,
 
     // `config.js` name
     name: config.name,
