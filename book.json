@@ -16,5 +16,8 @@
       "facebook": false,
       "twitter": true
     }
+  },
+  "styles": {
+    "website": "./docs/website.css"
   }
 }
