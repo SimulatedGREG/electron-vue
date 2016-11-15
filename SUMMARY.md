@@ -16,6 +16,5 @@
    * [Unit testing](docs/unittesting.md)
    * [End-to-end testing](docs/end-to-end_testing.md)
 * [FAQs](docs/faqs.md)
-* [TODOs](docs/todos.md)
 * [Contributing](docs/contributing.md)
 

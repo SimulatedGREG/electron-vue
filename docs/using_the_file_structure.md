@@ -47,7 +47,7 @@ electron-vue takes advantage of vuex's module structure to create multiple data 
 Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `app/src/vuex/modules/index.js` does the dirty work for us! This little script let's `app/src/vuex/store.js` import all of our modules in one-shot.
 
 ## Using Static assets
-Sometimes your don't want webpack to bundle some of your assets. Let's say you have a large sprite collection, but your app loads the images in on-demand. You don't webpack to bundle every single sprite if only a few might be used at a time.
+Sometimes your don't want webpack to bundle some of your assets. Let's say you have a large sprite collection, but your app loads the images in on-demand. You don't want webpack to bundle every single sprite if only a few might be used at a time.
 
 When using static assets, let's place them inside the `app/dist` folder. Essentially everything webpack produces in production builds lives in this folder, so everything inside here will be **included** in final builds.
 
