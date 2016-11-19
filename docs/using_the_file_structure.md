@@ -39,6 +39,9 @@ Routes are held in `app/src/routes.js` and defined like so...
 ```
 ...where both `<routePath>` and `<routeName>` are variables. These routes are imported to `app/src/main.js` and are then attached to the component tree using the `<router-view></router-view>` directive in `app/src/App.vue`.
 
+#### Notice
+When using `vue-router`, refrain from using [**HTML5 History Mode**](http://router.vuejs.org/en/essentials/history-mode.html). This mode is strictly meant for serving files over the `http` protocol and does not work properly with the `file` protocol that electron serves files with. The default `hash` mode is what you will need.
+
 ### vuex modules
 Describing vuex is not the easiest thing to do, so please read [this](http://vuex.vuejs.org/en/intro.html) for a better understanding of what problem it tries to solve and how it works.
 
