@@ -2,7 +2,7 @@
 set -e
 
 # Scaffold boilerplate with given templateName
-cd "$PWD/tests"
+cd "$PWD/tests/builds"
 node scaffold.js "$1"
 
 # Install dependecies
@@ -14,3 +14,7 @@ npm test
 
 # Run webpack and build electron
 npm run build
+
+# Clean up current scaffold
+cd ..
+rm -rf "$1"
