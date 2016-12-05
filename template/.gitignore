@@ -1,6 +1,7 @@
 .DS_Store
 app/dist/index.html
 app/dist/build.js
+app/dist/styles.css
 builds/*
 {{#if unit}}
 coverage
