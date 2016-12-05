@@ -2,7 +2,7 @@
 set -e
 
 # Scaffold boilerplate with given templateName
-cd "$PWD/tests/builds"
+cd "$PWD/tests"
 node scaffold.js "$1"
 
 # Install dependecies

@@ -9,6 +9,8 @@ const template = require('./builds.json')[templateName]
 const YELLOW = '\x1b[33m'
 const END = '\x1b[0m'
 
+process.chdir(process.cwd() + '/builds')
+
 generate(templateName, template)
 
 setTimeout(() => {
