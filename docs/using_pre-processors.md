@@ -30,6 +30,6 @@ So...
 </style>
 ```
 
-The same principals apply for just about any other pre-processor. So maybe you need coffeescript for your JS? Simply installed the [coffeescript-loader](https://github.com/webpack/coffee-loader) and apply the `lang="coffeescript"` attribute to your `<script>` tag.
+The same principles apply for just about any other pre-processor. So maybe you need coffeescript for your JS? Simply installed the [coffeescript-loader](https://github.com/webpack/coffee-loader) and apply the `lang="coffeescript"` attribute to your `<script>` tag.
 
 For more advanced use of this feature please head over to the [vue-loader documentation](http://vue-loader.vuejs.org/en/configurations/pre-processors.html) for more information.
