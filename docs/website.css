@@ -4,7 +4,7 @@ code,
 nav,
 h1, h2, h3,
 h4, h5, h6 {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: 'Roboto Mono', sans-serif !important;
 }
 
 section h1:after,
@@ -37,7 +37,9 @@ nav > ul > li:nth-child(1) > a:before {
 
 pre,
 p > code,
-li code {
+li code,
+h1 code, h2 code, h3 code,
+h4 code, h5 code, h6 code {
   background-color: rgba(255,255,255,.75) !important;
   border-radius: 8px;
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
