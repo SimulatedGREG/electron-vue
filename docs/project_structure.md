@@ -82,7 +82,7 @@ All modules within the dependency tree of `app/src/main.js` will be bundled with
 
 > What about bundling my main process?
 
-~~There is currently no plan to support main process bundling as hot-reloading is not stable enough _yet_ for node processes. ~~
+~~There is currently no plan to support main process bundling as hot-reloading is not stable enough _yet_ for node processes.~~
 
 There are currently major plans to support main process modules and those features can be tracked from the [GitHub Project](https://github.com/SimulatedGREG/electron-vue/projects/2).
 
