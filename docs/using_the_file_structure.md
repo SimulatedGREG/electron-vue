@@ -4,7 +4,7 @@ electron-vue does its best to not force a particular project structure, but does
 ## On the subject of `vue` and `vuex`
 
 ### vue components
-If you are unfamiliar with Vue components, please give [this](http://vuejs.org/guide/application.html#Single-File-Components) a read. Using components gives our large complex applications more organization. Each component has the ability to encapsulate its own CSS, template, and JavaScript functionality.
+If you are unfamiliar with Vue components, please give [this](http://vuejs.org/v2/guide/single-file-components.html) a read. Using components gives our large complex applications more organization. Each component has the ability to encapsulate its own CSS, template, and JavaScript functionality.
 
 Components are stored in `app/src/components`. When creating child components, place them inside a new folder with the name of its parent component.
 ```
