@@ -24,18 +24,6 @@ Vue.use(Router)
 Vue.config.debug = true
 
 {{#isEnabled plugins 'vue-router'}}
-{{#if_eq vueVersion '2.x'}}
-const router = new Router({
-  scrollBehavior: () => ({ y: 0 }),
-  routes
-})
-
-/* eslint-disable no-new */
-new Vue({
-  router,
-  ...App
-}).$mount('#app')
-{{else}}
 const router = new Router()
 
 router.map(routes)
@@ -47,19 +35,12 @@ router.redirect({
 })
 
 router.start(App, 'app')
-{{/if_eq}}
 {{else}}
 import App from './App'
 
 /* eslint-disable no-new */
-{{#if_eq vueVersion '2.x'}}
-new Vue({
-  ...App
-}).$mount('#app')
-{{else}}
 new Vue({
   el: 'body',
   components: { App }
 })
-{{/if_eq}}
 {{/isEnabled}}

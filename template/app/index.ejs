@@ -5,11 +5,7 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    {{#if_eq vueVersion '2.x'}}
-    <div id="app"></div>
-    {{else}}
     <app></app>
-    {{/if_eq}}
     <!-- webpack builds are automatically injected -->
   </body>
 </html>
