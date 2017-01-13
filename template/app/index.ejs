@@ -6,11 +6,12 @@
   </head>
   <body>
     <div id="app"></div>
-    <script>
-      if (process.env.NODE_ENV === 'development') {
-        require('module').globalPaths.push('/Users/gregholguin/Desktop/webpack2/app/node_modules')
-      }
-    </script>
+    <% if (htmlWebpackPlugin.options.appModules) { %>
+      <!-- Add `app/node_modules` to global paths so `require` works properly in development -->
+      <script>
+        require('module').globalPaths.push('<%= htmlWebpackPlugin.options.appModules %>')
+      </script>
+    <% } %>
     <!-- webpack builds are automatically injected -->
   </body>
 </html>

@@ -69,7 +69,10 @@ let config = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './app/index.ejs',
-      title: settings.name
+      title: settings.name,
+      appModules: process.env.NODE_ENV !== 'production'
+        ? path.resolve(__dirname, 'app/node_modules')
+        : false,
     }),
     new webpack.NoEmitOnErrorsPlugin()
   ],
