@@ -65,7 +65,7 @@
     "eslint-plugin-import": "^1.8.1",
     {{/if_eq}}
     {{/eslint}}
-    "extract-text-webpack-plugin": "^1.0.1",
+    "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.8.5",
     "html-webpack-plugin": "^2.16.1",
     "json-loader": "^0.5.4",
@@ -98,8 +98,8 @@
     "vue-html-loader": "^1.2.2",
     "vue-loader": "^9.5.1",
     "vue-style-loader": "^1.0.0",
-    "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1"
+    "webpack": "^2.2.0-rc.4",
+    "webpack-dev-server": "^2.2.0-rc.0"
   },
   "dependencies": {}
 }

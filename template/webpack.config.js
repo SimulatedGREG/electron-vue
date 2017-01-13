@@ -10,22 +10,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 let config = {
   devtool: '#eval-source-map',
-  {{#if eslint}}
-  eslint: {
-    formatter: require('eslint-friendly-formatter')
-  },
-  {{/if}}
   entry: {
     build: path.join(__dirname, 'app/src/main.js')
   },
+  externals: Object.keys(pkg.dependencies || {}),
   module: {
-{{#if eslint}}
-    preLoaders: [],
-{{/if}}
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+        loader: ExtractTextPlugin.extract({
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader'
+        })
       },
       {
         test: /\.html$/,
@@ -42,7 +38,13 @@ let config = {
       },
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
+        options: {
+          loaders: {
+            sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
+            scss: 'vue-style-loader!css-loader!sass-loader'
+          }
+        }
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -69,30 +71,22 @@ let config = {
       template: './app/index.ejs',
       title: settings.name
     }),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   output: {
     filename: '[name].js',
+    libraryTarget: 'commonjs2',
     path: path.join(__dirname, 'app/dist')
   },
   resolve: {
     alias: {
       'components': path.join(__dirname, 'app/src/components'),
-      'src': path.join(__dirname, 'app/src')
+      'src': path.join(__dirname, 'app/src'),
+      'vuex': path.join(__dirname, 'app/src/vuex')
     },
-    extensions: ['', '.js', '.vue', '.json', '.css'],
-    fallback: [path.join(__dirname, 'app/node_modules')]
+    extensions: ['.js', '.vue', '.json', '.css']
   },
-  resolveLoader: {
-    root: path.join(__dirname, 'node_modules')
-  },
-  target: 'electron-renderer',
-  vue: {
-    loaders: {
-      sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
-      scss: 'vue-style-loader!css-loader!sass-loader'
-    }
-  }
+  target: 'electron-renderer'
 }
 
 {{#if eslint}}
@@ -101,15 +95,13 @@ if (process.env.NODE_ENV !== 'production') {
    * Apply ESLint
    */
   if (settings.eslint) {
-    config.module.preLoaders.push(
+    config.module.rules.push(
       {
-        test: /\.js$/,
+        test: /\.(js|vue)$/,
         loader: 'eslint-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.vue$/,
-        loader: 'eslint-loader'
+        enforce: 'pre',
+        exclude: /node_modules/,
+        options: { formatter: require('eslint-friendly-formatter') }
       }
     )
   }
@@ -126,7 +118,9 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
     }),
-    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
+    }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false

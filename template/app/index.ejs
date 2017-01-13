@@ -6,6 +6,11 @@
   </head>
   <body>
     <div id="app"></div>
+    <script>
+      if (process.env.NODE_ENV === 'development') {
+        require('module').globalPaths.push('/Users/gregholguin/Desktop/webpack2/app/node_modules')
+      }
+    </script>
     <!-- webpack builds are automatically injected -->
   </body>
 </html>
