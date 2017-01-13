@@ -13,12 +13,6 @@ module.exports = {
       message: 'Project description',
       default: 'An electron-vue project'
     },
-    vueVersion: {
-      type: 'list',
-      required: true,
-      message: 'Which version of Vue.js would you like installed?',
-      choices: ['2.x', '1.x']
-    },
     plugins: {
       type: 'checkbox',
       message: 'Select which Vue plugins to install',
@@ -75,13 +69,13 @@ module.exports = {
       if (list[check]) return opts.fn(this)
       else return opts.inverse(this)
     },
-    deps (plugins, version) {
+    deps (plugins) {
       let output = ''
       let dependencies = {
         'vue-electron': '^1.0.0',
         'vue-resource': '^1.0.3',
-        'vue-router': version === '2.x' ? '^2.0.0' : '^0.7.13',
-        'vuex': version === '2.x' ? '^2.0.0' : '^1.0.0'
+        'vue-router': '^2.0.0',
+        'vuex': '^2.0.0'
       }
 
       if (Object.keys(plugins).length > 0) output += ',\n'
@@ -90,21 +84,6 @@ module.exports = {
         output += `    "${p}": "${dependencies[p]}"`
         if (i !== Object.keys(plugins).length - 1) output += ',\n'
       })
-
-      return output
-    },
-    ver (version, module) {
-      let output = ''
-
-      if (module === 'core') {
-        output += '"vue": "'
-        output += (version === '2.x') ? '^2.0.1' : '^1.0.28'
-        output += '"'
-      } else {
-        output += '"vue-loader": "'
-        output += (version === '2.x') ? '^9.5.1' : '^8.5.2'
-        output += '",'
-      }
 
       return output
     },

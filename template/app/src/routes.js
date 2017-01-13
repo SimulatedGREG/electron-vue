@@ -1,4 +1,3 @@
-{{#if_eq vueVersion '2.x'}}
 export default [
   {
     path: '/',
@@ -10,13 +9,3 @@ export default [
     redirect: '/'
   }
 ]
-{{else}}
-import Vue from 'vue'
-
-export default {
-  '/': {
-    component: Vue.component('landing-page', require('./components/LandingPageView')),
-    name: 'landing-page'
-  }
-}
-{{/if_eq}}

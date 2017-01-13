@@ -4,7 +4,7 @@
   "description": "{{ description }}",
   "main": "electron.js",
   "dependencies": {
-    {{ver vueVersion 'core'}}{{deps plugins vueVersion}}
+    "vue": "^2.0.1"{{deps plugins}}
   },
   "devDependencies": {},
   "author": "{{ author }}"

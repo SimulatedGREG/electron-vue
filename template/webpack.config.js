@@ -88,11 +88,6 @@ let config = {
   },
   target: 'electron-renderer',
   vue: {
-    {{#if_eq vueVersion '1.x'}}
-    autoprefixer: {
-      browsers: ['last 2 Chrome versions']
-    },
-    {{/if_eq}}
     loaders: {
       sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
       scss: 'vue-style-loader!css-loader!sass-loader'
