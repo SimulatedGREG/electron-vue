@@ -84,10 +84,13 @@ let config = {
   resolve: {
     alias: {
       'components': path.join(__dirname, 'app/src/components'),
-      'src': path.join(__dirname, 'app/src'),
-      'vuex': path.join(__dirname, 'app/src/vuex')
+      'src': path.join(__dirname, 'app/src')
     },
-    extensions: ['.js', '.vue', '.json', '.css']
+    extensions: ['.js', '.vue', '.json', '.css'],
+    modules: [
+      path.join(__dirname, 'app/node_modules'),
+      path.join(__dirname, 'node_modules')
+    ]
   },
   target: 'electron-renderer'
 }

@@ -9,11 +9,6 @@ const projectRoot = path.resolve(__dirname, '../../app')
 
 let webpackConfig = merge(baseConfig, {
   devtool: '#inline-source-map',
-  vue: {
-    loaders: {
-      js: 'isparta'
-    }
-  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"testing"'
@@ -21,24 +16,30 @@ let webpackConfig = merge(baseConfig, {
   ]
 })
 
-// no need for app entry during tests
+// don't treat dependencies as externals
 delete webpackConfig.entry
+delete webpackConfig.externals
+delete webpackConfig.output.libraryTarget
 
 // make sure isparta loader is applied before eslint
-webpackConfig.module.preLoaders = webpackConfig.module.preLoaders || []
-webpackConfig.module.preLoaders.unshift({
+webpackConfig.module.rules.unshift({
   test: /\.js$/,
-  loader: 'isparta',
+  loader: 'isparta-loader',
+  enforce: 'pre',
   include: path.resolve(projectRoot, 'src')
 })
 
 // only apply babel for test files when using isparta
-webpackConfig.module.loaders.some((loader, i) => {
-  if (loader.loader === 'babel') {
+webpackConfig.module.rules.some(loader => {
+  if (loader.loader === 'babel-loader') {
     loader.include = path.resolve(projectRoot, '../test/unit')
     return true
   }
 })
+
+// apply vue option to apply isparta-loader on js
+webpackConfig.module.rules
+  .find(({ loader }) => loader === 'vue-loader').options.loaders.js = 'isparta-loader'
 
 module.exports = config => {
   config.set({
