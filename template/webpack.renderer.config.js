@@ -1,5 +1,7 @@
 'use strict'
 
+process.env.BABEL_ENV = 'renderer'
+
 const path = require('path')
 const pkg = require('./app/package.json')
 const settings = require('./config.js')
@@ -8,10 +10,10 @@ const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-let config = {
+let rendererConfig = {
   devtool: '#eval-source-map',
   entry: {
-    build: path.join(__dirname, 'app/src/main.js')
+    renderer: path.join(__dirname, 'app/src/renderer/main.js')
   },
   externals: Object.keys(pkg.dependencies || {}),
   module: {
@@ -83,8 +85,8 @@ let config = {
   },
   resolve: {
     alias: {
-      'components': path.join(__dirname, 'app/src/components'),
-      'src': path.join(__dirname, 'app/src')
+      'components': path.join(__dirname, 'app/src/renderer/components'),
+      'renderer': path.join(__dirname, 'app/src/renderer')
     },
     extensions: ['.js', '.vue', '.json', '.css'],
     modules: [
@@ -101,7 +103,7 @@ if (process.env.NODE_ENV !== 'production') {
    * Apply ESLint
    */
   if (settings.eslint) {
-    config.module.rules.push(
+    rendererConfig.module.rules.push(
       {
         test: /\.(js|vue)$/,
         loader: 'eslint-loader',
@@ -112,15 +114,15 @@ if (process.env.NODE_ENV !== 'production') {
     )
   }
 }
-
 {{/if}}
+
 /**
- * Adjust config for production settings
+ * Adjust rednererConfig for production settings
  */
 if (process.env.NODE_ENV === 'production') {
-  config.devtool = ''
+  rendererConfig.devtool = ''
 
-  config.plugins.push(
+  rendererConfig.plugins.push(
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
     }),
@@ -135,4 +137,4 @@ if (process.env.NODE_ENV === 'production') {
   )
 }
 
-module.exports = config
+module.exports = rendererConfig

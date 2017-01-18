@@ -19,12 +19,6 @@ module.exports = {
       choices: ['vue-electron', 'vue-resource', 'vue-router', 'vuex'],
       default: ['vue-electron', 'vue-resource', 'vue-router', 'vuex']
     },
-    plugins: {
-      type: 'checkbox',
-      message: 'Select which Vue plugins to install',
-      choices: ['vue-electron', 'vue-resource', 'vue-router', 'vuex'],
-      default: ['vue-electron', 'vue-resource', 'vue-router', 'vuex']
-    },
     eslint: {
       type: 'confirm',
       require: true,

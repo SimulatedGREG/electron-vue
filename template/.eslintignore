@@ -1,6 +1,5 @@
 app/node_modules/**
 app/dist/**
-app/electron.js
 {{#testing unit e2e}}
 test/unit/coverage/**
 test/unit/*.js
