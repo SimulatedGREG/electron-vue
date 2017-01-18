@@ -6,7 +6,7 @@ electron-vue does its best to not force a particular project structure, but does
 ### vue components
 If you are unfamiliar with Vue components, please give [this](http://vuejs.org/v2/guide/single-file-components.html) a read. Using components gives our large complex applications more organization. Each component has the ability to encapsulate its own CSS, template, and JavaScript functionality.
 
-Components are stored in `app/src/components`. When creating child components, place them inside a new folder with the name of its parent component.
+Components are stored in `app/src/renderer/components`. When creating child components, place them inside a new folder with the name of its parent component.
 ```
 app/src/components
 ├─ ParentComponentA
@@ -22,22 +22,15 @@ Assets can also be organized in this manner. If a particular component needs an 
 ### vue routes
 For more information about vue-router click [here](https://github.com/vuejs/vue-router). In short, I'd encourage the use of vue-router as creating a Single Page Application is much more practical when making electron apps. Do you really want to manage a bunch of BrowserWindows or static page navigation? Probably not.
 
-Routes are held in `app/src/routes.js` and defined like so...
+Routes are held in `app/src/renderer/routes.js` and defined like so...
 ```js
-// vue@^1.0.28
-'/<routePath>': {
-  component: Vue.component('<routeName>', require('./components/<routeName>View')),
-  name: '<routeName>'
-}
-
-// vue@^2.0.1
 {
   path: '<routePath>',
   name: '<routeName>',
   component: require('components/<routeName>View')
 }
 ```
-...where both `<routePath>` and `<routeName>` are variables. These routes are imported to `app/src/main.js` and are then attached to the component tree using the `<router-view></router-view>` directive in `app/src/App.vue`.
+...where both `<routePath>` and `<routeName>` are variables. These routes are imported to `app/src/renderer/main.js` and are then attached to the component tree using the `<router-view></router-view>` directive in `app/src/renderer/App.vue`.
 
 #### Notice
 When using `vue-router`, refrain from using [**HTML5 History Mode**](http://router.vuejs.org/en/essentials/history-mode.html). This mode is strictly meant for serving files over the `http` protocol and does not work properly with the `file` protocol that electron serves files with. The default `hash` mode is what you will need.
@@ -45,9 +38,9 @@ When using `vue-router`, refrain from using [**HTML5 History Mode**](http://rout
 ### vuex modules
 Describing vuex is not the easiest thing to do, so please read [this](http://vuex.vuejs.org/en/intro.html) for a better understanding of what problem it tries to solve and how it works.
 
-electron-vue takes advantage of vuex's module structure to create multiple data stores and are saved in `app/src/vuex/modules`.
+electron-vue takes advantage of vuex's module structure to create multiple data stores and are saved in `app/src/renderer/vuex/modules`.
 
-Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `app/src/vuex/modules/index.js` does the dirty work for us! This little script let's `app/src/vuex/store.js` import all of our modules in one-shot.
+Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `app/src/vuex/modules/index.js` does the dirty work for us! This little script let's `app/src/renderer/vuex/store.js` import all of our modules in one-shot.
 
 ## Using Static assets
 Sometimes your don't want webpack to bundle some of your assets. Let's say you have a large sprite collection, but your app loads the images in on-demand. You don't want webpack to bundle every single sprite if only a few might be used at a time.

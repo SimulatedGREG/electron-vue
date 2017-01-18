@@ -16,7 +16,7 @@ The aim of this project is to remove the need of manually setting up electron ap
 
 Things you'll find in this boilerplate...
 
-* Support for both Vue.js at `2.x.x` and `1.x.x`\*
+* Support for both Vue.js at `2.x.x` and `1.x.x`
 * Basic project structure
 * Detailed [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/)
 * Project scaffolding using [vue-cli](https://github.com/vuejs/vue-cli)
@@ -46,6 +46,12 @@ vue init simulatedgreg/electron-vue my-project
 cd my-project
 npm install
 npm run dev
+```
+
+##### Wanting to use Vue 1?
+Just point to the `1.0` branch. Please note that electron-vue has officially deprecated `vue@^1` and documentation reflects those changes. [**Legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs).
+```bash
+vue init simulatedgreg/electron-vue#1.0 my-project
 ```
 
 ##### Are you a Windows User?
