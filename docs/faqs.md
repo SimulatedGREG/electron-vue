@@ -13,14 +13,6 @@ Make sure to close and reopen the developer tools panel on first launch if they 
 ### Where do I put Static Assets?
 **[Using Static Assets](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/using_the_file_structure.html#using-static-assets)**
 
-### Why are my main process modules missing in production builds?
-
-#### TL;DR
-electron-vue only bundles the renderer process and `node_modules` are ignored in production builds.
-
-##### [Long answer](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/project_structure.html#on-the-subject-of-webpack-bundling)
-##### [Potential workaround](https://github.com/SimulatedGREG/electron-vue/issues/22)
-
 ### Why did `npm run lint` end with an error?
 
 The default nature of eslint is to print linting errors to console, and if there is any found the script will end with a non-zero exit (which produces npm errors). This is normal behavior. 

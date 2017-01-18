@@ -1,7 +1,5 @@
 # Vue Accessories
 
-### Use of Vue.js at `2.x.x` or `1.x.x`
-During project scaffolding you have the option to install Vue.js at `^2.0.1` or `^1.0.28`. Whether you are up to date with `vue@^2.0.1`, or still sticking with `vue@^1.0.28` for a bit longer, all scaffolded plugins will be compatible.
 
 ### Ready to use vue plugins
 electron-vue comes packed with the following vue plugins that can be installed during project scaffolding...

@@ -17,7 +17,13 @@ Lint all your `app/src`'s JS & Vue component files and attempt to fix issues.
 Linting errors found within Vue component files cannot be automatically corrected. This is a architectural issue with `eslint`'s plugin system. **[More information.](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/faqs.html#why-didnt-npm-run-lintfix-fix-all-my-linting-errors)**
 
 ### `npm run pack`
-Runs webpack in production. Although this command is available, there may not be many cases where it is need as `npm run build` will do this before hand.
+Run both `npm run pack:main` & `npm run pack:renderer`. Although these commands are available, there may not be many cases where it is need as `npm run build` will do this before hand.
+
+### `npm run pack:main`
+Run webpack to bundle `main` process source code.
+
+### `npm run pack:renderer`
+Run webpack to bundle `renderer` process source code.
 
 ### `npm run unit`
 Run unit tests with Karma + Jasmine. More information on **[Unit testing](unittesting.md)**.

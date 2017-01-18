@@ -10,6 +10,7 @@ If you are unfamiliar with how the HTMLWebpackPlugin works, then I'd encourage y
   <head>
     <meta charset="utf-8">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <%= ... %>
   </head>
   <body>
     <div id="app"></div>
