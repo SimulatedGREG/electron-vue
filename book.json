@@ -7,7 +7,7 @@
   ],
   "pluginsConfig": {
     "edit-link": {
-      "base": "https://github.com/SimulatedGREG/electron-vue/tree/master/docs",
+      "base": "https://github.com/SimulatedGREG/electron-vue/tree/master",
       "label": "Edit This Page"
     },
     "github": {
