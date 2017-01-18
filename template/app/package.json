@@ -4,7 +4,7 @@
   "description": "{{ description }}",
   "main": "./dist/main.js",
   "dependencies": {
-    "vue": "^2.0.1"{{deps plugins}}
+    "vue": "^2.1.10"{{deps plugins}}
   },
   "devDependencies": {},
   "author": "{{ author }}"

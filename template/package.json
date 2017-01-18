@@ -101,7 +101,7 @@
     "vue-html-loader": "^1.2.2",
     "vue-loader": "^10.0.2",
     "vue-style-loader": "^1.0.0",
-    "vue-template-compiler": "^2.1.8",
+    "vue-template-compiler": "^2.1.10",
     "webpack": "^2.2.0",
     "webpack-dev-server": "^2.2.0"
   },
