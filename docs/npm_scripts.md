@@ -2,7 +2,7 @@
 To help eliminate redundant tasks around the development process, please take note of some of the NPM scripts available to you. The following commands should be ran from your project's root directory.
 
 ### `npm run build`
-Make quick builds using electron-packager. More info can be found in the [**Building your app**](building_your_app.md) section.
+Build app for production and package. More info can be found in the [**Building your app**](building_your_app.md) section.
 
 ### `npm run dev`
 Run app in development.

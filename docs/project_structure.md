@@ -23,6 +23,7 @@ As mentioned above, we need to make sure our native npm modules are built agains
 ## File tree
 
 #### During development
+**Note**: Some files/folders may differ based on the settings choosen during `vue-cli` scaffolding.
 
 ```
 electron-vue
@@ -31,16 +32,12 @@ electron-vue
 │  ├─ icons/
 │  ├─ node_modules/
 │  ├─ src
-│  │  ├─ main
-│  │  │  ├─ components
-│  │  │  ├─ vuex
-│  │  │  │  └─ modules
-│  │  │  ├─ App.vue
-│  │  │  ├─ main.js
-│  │  │  └─ routes.js
-│  │  ├─ renderer
-│  │  │  ├─ entry.js
-│  │  │  └─ index.js
+│  │  ├─ components
+│  │  ├─ vuex
+│  │  │  └─ modules
+│  │  ├─ App.vue
+│  │  ├─ main.js
+│  │  └─ routes.js
 │  ├─ electron.js
 │  ├─ index.ejs
 │  └─ package.json
@@ -60,8 +57,7 @@ electron-vue
 │  │  └─ utils.js
 └─ config.js
 └─ package.json
-└─ webpack.main.config.js
-└─ webpack.renderer.config.js
+└─ webpack.config.js
 ```
 
 #### Production builds
@@ -69,11 +65,31 @@ electron-vue
 ```
 app.asar
 ├─ dist/
-│  ├─ main.js
-│  ├─ renderer.js
+│  ├─ build.js
 │  └─ index.html
-├─ node_modules
+├─ electron.js
 └─ package.json
 ```
 
+##### Notice
+
+`node_modules` are ignored in production builds
+
 As you can probably tell, almost everything is stripped down in final production builds. This is almost mandatory when distributing electron apps, as you do not want your users to download bloated software with a large file size.
+
+#### On the subject of webpack bundling
+
+All modules within the dependency tree of `app/src/main.js` will be bundled with webpack. In other words, webpack will **only** bundle your renderer process JavaScript.
+
+> What about bundling my main process?
+
+~~There is currently no plan to support main process bundling as hot-reloading is not stable enough _yet_ for node processes.~~
+
+There are currently major plans to support main process modules and those features can be tracked from the [GitHub Project](https://github.com/SimulatedGREG/electron-vue/projects/2).
+
+Without hot-reloading, developing in the main process would require restarting your electron app every time you want to run new code. In my opinion, find another way to accomplish your task in the renderer process or wait for future support that will be coming soon.
+
+> Is there a current workaround?
+
+Yes, but it can be cumbersome when building in production. Check [this issue](https://github.com/SimulatedGREG/electron-vue/issues/22) for more information.
+
