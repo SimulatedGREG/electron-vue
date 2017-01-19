@@ -9,14 +9,14 @@ npm run build
 ```
 
 #### Building unpacked directory
-Using for quick testing.
+Useful for quick testing.
 
 ```bash
 npm run build:dir
 ```
 
 #### Cleaning
-Delete all builds from `builds`.
+Delete all builds from `dist`.
 
 ```bash
 npm run build:clean

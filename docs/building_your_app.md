@@ -8,5 +8,5 @@ If you are new to packaging electron apps and just need to create simple executa
 
 ## [electron-builder](using-electron-builder.md)
 
-If you are looking to create full installers, auto-update support, or rebuilding native node modules, then electron-builder is what you will need.
+If you are looking for full installers, auto-update support, or rebuilding native node modules, then electron-builder is what you will need.
 

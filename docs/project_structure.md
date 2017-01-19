@@ -20,6 +20,11 @@ Here you should install modules that you only need during development. Items inc
 
 As mentioned above, we need to make sure our native npm modules are built against electron. To do that, we can use [electron/electron-rebuild](https://github.com/electron/electron-rebuild).
 
+## On the subject of the `main` process
+During development you may notice `app/src/main/entry.js`. This file is specially for development and enables the use of ES6+ features for the `main` process. This file should not have to be modified. 
+
+Upon building, webpack will step in and create a bundle with `app/src/main/index.js` as its entry file with the same `babel` settings.
+
 ## File tree
 
 #### During development
@@ -71,25 +76,4 @@ app.asar
 └─ package.json
 ```
 
-##### Notice
-
-`node_modules` are ignored in production builds
-
 As you can probably tell, almost everything is stripped down in final production builds. This is almost mandatory when distributing electron apps, as you do not want your users to download bloated software with a large file size.
-
-#### On the subject of webpack bundling
-
-All modules within the dependency tree of `app/src/main.js` will be bundled with webpack. In other words, webpack will **only** bundle your renderer process JavaScript.
-
-> What about bundling my main process?
-
-~~There is currently no plan to support main process bundling as hot-reloading is not stable enough _yet_ for node processes.~~
-
-There are currently major plans to support main process modules and those features can be tracked from the [GitHub Project](https://github.com/SimulatedGREG/electron-vue/projects/2).
-
-Without hot-reloading, developing in the main process would require restarting your electron app every time you want to run new code. In my opinion, find another way to accomplish your task in the renderer process or wait for future support that will be coming soon.
-
-> Is there a current workaround?
-
-Yes, but it can be cumbersome when building in production. Check [this issue](https://github.com/SimulatedGREG/electron-vue/issues/22) for more information.
-
