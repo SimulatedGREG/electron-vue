@@ -3,12 +3,17 @@
   "version": "0.0.0",
   "description": "{{ description }}",
   "scripts": {
+    {{#if_eq builder 'packager'}}
     "build": "node tasks/release.js",
     "build:clean": "cross-env PLATFORM_TARGET=clean node tasks/release.js",
     "build:darwin": "cross-env PLATFORM_TARGET=darwin node tasks/release.js",
     "build:linux": "cross-env PLATFORM_TARGET=linux node tasks/release.js",
     "build:mas": "cross-env PLATFORM_TARGET=mas node tasks/release.js",
     "build:win32": "cross-env PLATFORM_TARGET=win32 node tasks/release.js",
+    {{else}}
+    "build": "npm run pack && build",
+    "build:dir": "npm run pack && build --dir",
+    {{/if_eq}}
     "dev": "node tasks/runner.js",
     {{#if e2e}}
     "e2e": "npm run pack && mocha test/e2e",
@@ -34,6 +39,45 @@
     {{/isEnabled}}
     "postinstall": "{{#if eslint}}npm run lint:fix && {{/if}}cd app && npm install"
   },
+  {{#if_eq builder 'builder'}}
+  "build": {
+    "productName": "ElectronVue",
+    "appId": "org.simulatedgreg.electron-vue",
+    "category": "public.app-category.tools",
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "files": [
+      "dist/",
+      "node_modules/",
+      "package.json"
+    ],
+    "mac": {
+      "icon": "app/icons/icon.icns"
+    },
+    "win": {
+      "icon": "app/icons/icon.ico"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ]
+    }
+  },
+{{/if_eq}}
   "author": "Greg Holguin <simulatedgreg@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -50,7 +94,11 @@
     "devtron": "^1.1.0",
     "electron": "^1.3.1",
     "electron-devtools-installer": "^2.0.1",
-    "electron-packager": "^8.0.0",
+    {{#if_eq builder 'packager'}}
+    "electron-packager": "^8.5.0",
+    {{else}}
+    "electron-builder": "^11.4.4",
+    {{/if_eq}}
     "electron-rebuild": "^1.1.3",
     {{#eslint}}
     "babel-eslint": "^7.0.0",

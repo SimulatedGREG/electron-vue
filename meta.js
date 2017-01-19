@@ -56,6 +56,22 @@ module.exports = {
       type: 'confirm',
       message: 'Setup end-to-end testing with Spectron + Mocha?',
       require: true
+    },
+    builder: {
+      type: 'list',
+      message: 'What packager would you like to use?',
+      choices: [
+        {
+          name: 'electron-packager (https://github.com/electron-userland/electron-packager)',
+          value: 'packager',
+          short: 'packager'
+        },
+        {
+          name: 'electron-builder (https://github.com/electron-userland/electron-builder)',
+          value: 'builder',
+          short: 'builder'
+        }
+      ]
     }
   },
   helpers: {
@@ -66,10 +82,10 @@ module.exports = {
     deps (plugins) {
       let output = ''
       let dependencies = {
-        'vue-electron': '^1.0.0',
+        'vue-electron': '^1.0.6',
         'vue-resource': '^1.0.3',
-        'vue-router': '^2.0.0',
-        'vuex': '^2.0.0'
+        'vue-router': '^2.1.2',
+        'vuex': '^2.1.1'
       }
 
       if (Object.keys(plugins).length > 0) output += ',\n'
@@ -91,10 +107,12 @@ module.exports = {
     'app/src/routes.js': 'plugins[\'vue-router\']',
     'app/src/components/LandingPageView/CurrentPage.vue': 'plugins[\'vue-router\']',
     'app/src/vuex/**/*': 'plugins[\'vuex\']',
+    'builds/**/*': 'builder === \'packager\'',
     'tasks/vue/**/*': 'plugins[\'vue-router\']',
     'tasks/vuex/**/*': 'plugins[\'vuex\']',
     'test/e2e/**/*': 'e2e',
     'test/unit/**/*': 'unit',
+    'tasks/release.js': 'builder === \'packager\'',
     'test/.eslintrc': 'e2e || unit',
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint'
