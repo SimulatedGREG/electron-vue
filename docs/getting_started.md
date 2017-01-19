@@ -1,7 +1,7 @@
 # Getting Started
  
 ## Scaffolding
-This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. The use of node `v5.10.0` or higher is required as certain ES2015 are used in dependencies and scripts. But the use of `6.x` is recommended for its extra performance benefits.
+This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. Certain dependencies and scripts use ES6 specific features so the use of `node@^6.5.0` or higher is recommended.
 
 ```bash
 # Install vue-cli and scaffold boilerplate
@@ -21,9 +21,9 @@ When running `npm install` a post install script is also executed, which will `n
 electron-vue uses a **two `package.json`** setup. Find out more [here](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/project_structure.html).
 
 #### On the subject of electron
-electron-vue requires the use of electron `>= v1.2.3`. The `v1.2.3` release adds support for more [`chrome.*` APIs](https://github.com/electron/electron/releases/tag/v1.2.3) that `vue-devtools` depends upon. If you are needing a previous release of electron before `v1.2.3`, then you will need to manually uninstall [`electron-devtools-installer`](https://github.com/SimulatedGREG/electron-vue/blob/master/template/package.json#L36) from `./package.json` and revert `./app/electron.js` to a previous version found [here](https://github.com/SimulatedGREG/electron-vue/commit/e7175ee0337f3af36de49aef10cf58a64d75a220). 
+electron-vue requires the use of `electron@^1.2.3`. The `v1.2.3` release adds support for more [`chrome.*` APIs](https://github.com/electron/electron/releases/tag/v1.2.3) that `vue-devtools` depends upon. If you are needing a previous release of electron before `v1.2.3`, then you will need to manually uninstall [`electron-devtools-installer`](https://github.com/SimulatedGREG/electron-vue/blob/master/template/package.json#L36) from `./package.json` and revert `./app/electron.js` to a previous version found [here](https://github.com/SimulatedGREG/electron-vue/commit/e7175ee0337f3af36de49aef10cf58a64d75a220). Please note that doing so will no longer enable you to have `vue-devtools` for development. 
 
-Although optional, it is recommended to lock in your electron version after scaffolding your project. This helps prevent other developers working on the same project developing on different versions. Electron makes releases quite often so features are always subject to change. [More Info](http://electron.atom.io/docs/tutorial/electron-versioning/).
+Although optional, it is recommended to lock in your electron version after scaffolding your project. This helps prevent other developers working on the same project from developing on a different version. Electron makes releases quite often so features are always subject to change. [More Info](http://electron.atom.io/docs/tutorial/electron-versioning/).
 
 #### A note for Windows Users
 If you run into errors during `npm install` about `node-gyp`, then you most likely do not have the proper build tools installed on your system. Build tools include items like Python and Visual Studio. Thanks to [@felixrieseberg](https://github.com/felixrieseberg), there are a few packages to help simplify this process.

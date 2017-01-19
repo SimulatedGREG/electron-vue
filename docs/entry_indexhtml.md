@@ -1,7 +1,7 @@
 # Entry `index.html`
 electron-vue makes use of **[html-webpack-plugin](https://github.com/ampedandwired/html-webpack-plugin)** to create the `index.html` in production builds. During development you will find a `index.ejs` in the `app/src` directory. It is here where you can make changes to your entry HTML file.
 
-If you are unfamiliar with how the HTMLWebpackPlugin works, then I'd encourage you take a look at its documentation. But in short, this plugin will automatically inject production assets including `build.js` and `styles.css` into the final `index.html`.
+If you are unfamiliar with how the HTMLWebpackPlugin works, then I'd encourage you take a look at its [documentation](https://www.npmjs.com/package/html-webpack-plugin). But in short, this plugin will automatically inject production assets including `renderer.js` and `styles.css` into the final `index.html`.
 
 ### `index.ejs` during development
 ```html
@@ -31,7 +31,7 @@ If you are unfamiliar with how the HTMLWebpackPlugin works, then I'd encourage y
   <body>
     <div id="app"></div>
     <!-- webpack builds are automatically injected -->
-    <script type="text/javascript" src="build.js"></script>
+    <script type="text/javascript" src="renderer.js"></script>
   </body>
 </html>
 ```

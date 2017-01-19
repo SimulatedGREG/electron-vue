@@ -10,7 +10,7 @@
 
 ## Overview
 
-The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding, `webpack` and `vue-loader`, and some of the most used plugins like `vue-router`, `vuex`, and more.
+The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding, `webpack` with `vue-loader`, `electron-packager` or `electron-builder`, and some of the most used plugins like `vue-router`, `vuex`, and more.
 
 #### Check out the documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
 
@@ -22,8 +22,8 @@ Things you'll find in this boilerplate...
 * Project scaffolding using [vue-cli](https://github.com/vuejs/vue-cli)
 * Ready to use Vue plugins \([vue-electron](https://github.com/SimulatedGREG/vue-electron),  [vue-resource](https://github.com/vuejs/vue-resource), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex)\)\*
 * Installed [vue-devtools](https://github.com/vuejs/vue-devtools) and [devtron](https://github.com/electron/devtron) tools for development
-* Ability to easily package your electron app using [electron-packager](https://github.com/electron-userland/electron-packager) or [electron-builder](https://github.com/electron-userland/electron-builder)
-* Handy NPM scripts
+* Ability to easily package your electron app using [electron-packager](https://github.com/electron-userland/electron-packager) or [electron-builder](https://github.com/electron-userland/electron-builder)*
+* Handy [NPM scripts](npm_scripts.md)
 * Use of [webpack](https://github.com/webpack/webpack) and [vue-loader](https://github.com/vuejs/vue-loader) with Hot Module Replacement
 * HTML/CSS/JS pre-processor support with [vue-loader](https://github.com/vuejs/vue-loader/)
 * ES6 with [`stage-0`](https://babeljs.io/docs/plugins/preset-stage-0/) by default
@@ -35,7 +35,7 @@ Things you'll find in this boilerplate...
 
 ### Getting Started
 
-This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. The use of node `v5.10.0` or higher is required as certain ES6 are used in dependencies and scripts. But the use of `6.x` is recommended for its extra performance benefits.
+This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. Certain dependencies and scripts use ES6 specific features so the use of `node@^6.5.0` or higher is recommended.
 
 ```bash
 # Install vue-cli and scaffold boilerplate
@@ -49,7 +49,9 @@ npm run dev
 ```
 
 ##### Wanting to use Vue 1?
-Just point to the `1.0` branch. Please note that electron-vue has officially deprecated `vue@^1` and documentation reflects those changes. [**Legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs).
+
+Just point to the `1.0` branch. Please note that electron-vue has officially deprecated `vue@^1` and documentation reflects those changes. Use the [**legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs) if you are using Vue 1.
+
 ```bash
 vue init simulatedgreg/electron-vue#1.0 my-project
 ```

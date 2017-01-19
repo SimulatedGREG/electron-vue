@@ -1,6 +1,6 @@
 # Using pre-processors
 
-One of the great benefits of using [vue-loader](https://github.com/vuejs/vue-loader) with [webpack](https://github.com/webpack/webpack) is the ability to pre-processor your HTML/CSS/JS directly in your Vue components files without much effort at all. For more information about this check **[here](http://vuejs.org/guide/application.html#Single-File-Components)**.
+One of the great benefits of using [vue-loader](https://github.com/vuejs/vue-loader) with [webpack](https://github.com/webpack/webpack) is the ability to pre-process your HTML/CSS/JS directly in your Vue components files without much effort at all. For more information about this check **[here](http://vuejs.org/guide/application.html#Single-File-Components)**.
 
 ## Use Case
 Let's say we need to use Sass/SCSS for pre-processing our CSS. Firstly, we need to install the proper webpack loader to handle this syntax.
@@ -10,7 +10,7 @@ Let's say we need to use Sass/SCSS for pre-processing our CSS. Firstly, we need 
 npm install --save-dev sass-loader node-sass
 ```
 
-Once the loader we need is installed, everything is pretty much finished. vue-loader will magically take care of the rest. Now we can easily add `lang="sass"` or `lang="scss"` to our Vue component files. Notice we also installed `node-sass` as it is a dependent package for `sass-loader`.
+Once the loader we need is installed, everything is pretty much finished. `vue-loader` will magically take care of the rest. Now we can easily add `lang="sass"` or `lang="scss"` to our Vue component files. Notice we also installed `node-sass` as it is a dependent package for `sass-loader`.
 
 #### Applying the `lang` attribute
 So...

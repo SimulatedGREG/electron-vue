@@ -2,7 +2,7 @@
 To help eliminate redundant tasks around the development process, please take note of some of the NPM scripts available to you. The following commands should be ran from your project's root directory.
 
 ### `npm run build`
-Build app for production and package. More info can be found in the [**Building your app**](building_your_app.md) section.
+Build your app for production and package. More info can be found in the [**Building your app**](building_your_app.md) section.
 
 ### `npm run dev`
 Run app in development.
@@ -33,7 +33,7 @@ Run end-to-end tests with Spectron + Mocha. More information on **[End-to-end te
 
 
 ### `npm test`
-Runs both `npm run unit` and `npm run e2e`. More information on **[Testing](testing.md)**.
+Runs both `npm run unit` & `npm run e2e`. More information on **[Testing](testing.md)**.
 
 ### `npm run vue:route`, `npm run vuex:module`
 See [**Vue Accessories**](vue_accessories.md) for more info.

@@ -1,5 +1,5 @@
 # Using the file structure
-electron-vue does its best to not force a particular project structure, but does try to follow common Vue practices in regards to organizing components, routes, and vuex modules. The documentation below describes common practices used in the original project structure.
+electron-vue does its best to not force a particular project structure, but does try to follow common Vue & Electron practices. The documentation below describes common practices used in the original project structure.
 
 ## On the subject of `vue` and `vuex`
 
@@ -32,15 +32,15 @@ Routes are held in `app/src/renderer/routes.js` and defined like so...
 ```
 ...where both `<routePath>` and `<routeName>` are variables. These routes are imported to `app/src/renderer/main.js` and are then attached to the component tree using the `<router-view></router-view>` directive in `app/src/renderer/App.vue`.
 
-#### Notice
+##### Notice
 When using `vue-router`, refrain from using [**HTML5 History Mode**](http://router.vuejs.org/en/essentials/history-mode.html). This mode is strictly meant for serving files over the `http` protocol and does not work properly with the `file` protocol that electron serves files with. The default `hash` mode is what you will need.
 
 ### vuex modules
-Describing vuex is not the easiest thing to do, so please read [this](http://vuex.vuejs.org/en/intro.html) for a better understanding of what problem it tries to solve and how it works.
+Describing `vuex` is not the easiest thing to do, so please read [this](http://vuex.vuejs.org/en/intro.html) for a better understanding of what problem it tries to solve and how it works.
 
-electron-vue takes advantage of vuex's module structure to create multiple data stores and are saved in `app/src/renderer/vuex/modules`.
+electron-vue takes advantage of `vuex`'s module structure to create multiple data stores and are saved in `app/src/renderer/vuex/modules`.
 
-Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `app/src/vuex/modules/index.js` does the dirty work for us! This little script let's `app/src/renderer/vuex/store.js` import all of our modules in one-shot.
+Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `app/src/renderer/vuex/modules/index.js` does the dirty work for us! This little script let's `app/src/renderer/vuex/store.js` import all of our modules in one-shot.
 
 ## Using Static assets
 Sometimes your don't want webpack to bundle some of your assets. Let's say you have a large sprite collection, but your app loads the images in on-demand. You don't want webpack to bundle every single sprite if only a few might be used at a time.
@@ -49,7 +49,7 @@ When using static assets, let's place them inside the `app/dist` folder. Essenti
 
 
 #### Use Case
-Let's say I have a component that loads an image, but I don't know the image's path until I do some other tasks first. To keep things simple, let's just use a `$data` variable to bind our `<img>`'s src.
+Let's say I have a component that loads an image, but the image's path isn't known until some other task is completed. To keep things simple, let's just use a `$data` variable to bind our `<img>`'s src.
 
 ```html
 <template>
@@ -65,3 +65,9 @@ Let's say I have a component that loads an image, but I don't know the image's p
 </script>
 ```
 Here webpack will not bundle the `unsplash.png` image and the app will look inside the `app/dist` directory for the asset.
+
+
+## On the subject of the `main` process
+```
+// TODO
+```
