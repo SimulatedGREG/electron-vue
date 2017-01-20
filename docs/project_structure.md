@@ -1,6 +1,6 @@
 # Project Structure
 
-When it comes to making electron apps, project structure is a little different. The documentation below attempts to explain how the boilerplate works and the differences when the app is packaged.
+When it comes to making electron apps, project structure is a little different. The documentation below attempts to explain how the boilerplate works and the differences when the app is built.
 
 ## Using two `package.json`'s
 
@@ -11,15 +11,15 @@ Yes, you read that right. There are **two** `package.json` files. Here's why...
 
 #### `./package.json` is for all your development needs
 
-Here you should install modules that you only need during development. Items include scripts, pre-processors, module loaders, etc. In this boilerplate all of the `webpack` dependencies are saved here and **will not** be published in the final production package.
+Here you should install modules that you only need during development. Items include scripts, pre-processors, module loaders, etc. In this boilerplate all of the `webpack` dependencies are saved here and **will not** be published in final production builds.
 
 #### `./app/package.json` is for your actual electron app
 
-**This **`package.json`** is your app's manifest.** Here you should install all your dependencies needed in your final app. It is inside this `app` folder that `electron-packager`/`electron-builder` creates production packages.
+**This **`package.json`** is your app's manifest.** Here you should install all your dependencies needed in your final app. It is inside this `app` folder that `electron-packager`/`electron-builder` will create final production builds.
 
 ##### Installing Native NPM modules
 
-As mentioned above, we need to make sure our native npm modules are built against electron. To do that, we can use [electron/electron-rebuild](https://github.com/electron/electron-rebuild). If you are using `electron-builder` to package your app, then you shouldn't have to worry about this step.
+As mentioned above, we need to make sure our native npm modules are built against electron. To do that, we can use [electron/electron-rebuild](https://github.com/electron/electron-rebuild). If you are using `electron-builder` to build your app, then you shouldn't have to worry about this step.
 
 ## On the subject of the `main` process
 During development you may notice `app/src/main/entry.js`. This file is used specially for development and enables the use of ES6+ features for the `main` process. This file should not have to be modified. 
@@ -81,4 +81,4 @@ app.asar
 └─ package.json
 ```
 
-As you can probably tell, almost everything is stripped down in final production packages. This is almost mandatory when distributing electron apps, as you do not want your users to download bloated software with a large file size.
+As you can probably tell, almost everything is stripped down in final production builds. This is almost mandatory when distributing electron apps, as you do not want your users to download bloated software with a large file size.
