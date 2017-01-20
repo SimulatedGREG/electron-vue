@@ -29,7 +29,7 @@
     "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}",
     {{/testing}}
     {{#if unit}}
-    "unit": "cross-env BABEL_ENV=testing karma start test/unit/karma.conf.js",
+    "unit": "cross-env BABEL_ENV=testing-unit karma start test/unit/karma.conf.js",
     {{/if}}
     {{#isEnabled plugins 'vue-router'}}
     "vue:route": "node tasks/vue/route.js",
