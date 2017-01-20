@@ -104,9 +104,9 @@ module.exports = {
     }
   },
   filters: {
-    'app/src/routes.js': 'plugins[\'vue-router\']',
-    'app/src/components/LandingPageView/CurrentPage.vue': 'plugins[\'vue-router\']',
-    'app/src/vuex/**/*': 'plugins[\'vuex\']',
+    'app/src/renderer/routes.js': 'plugins[\'vue-router\']',
+    'app/src/renderer/components/LandingPageView/CurrentPage.vue': 'plugins[\'vue-router\']',
+    'app/src/renderer/vuex/**/*': 'plugins[\'vuex\']',
     'builds/**/*': 'builder === \'packager\'',
     'tasks/vue/**/*': 'plugins[\'vue-router\']',
     'tasks/vuex/**/*': 'plugins[\'vuex\']',
