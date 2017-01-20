@@ -27,14 +27,31 @@
 
 <template>
   <div id="#app">
+    {{#isEnabled plugins 'vue-router'}}
     <router-view></router-view>
+    {{else}}
+    <landing-page></landing-page>
+    {{/isEnabled}}
   </div>
 </template>
 
 <script>
-  import store from 'renderer/vuex/store'
-
+{{#isEnabled plugins 'vue-router'}}
+{{else}}
+  import LandingPage from './components/LandingPageView'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
+{{/isEnabled}}
+{{#isEnabled plugins 'vuex'}}
+  import store from 'src/vuex/store'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
+{{/isEnabled}}
   export default {
-    store
-  }
+{{#isEnabled plugins 'vue-router'}}
+{{else}}
+    components: {
+      LandingPage{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}
+    }{{#isEnabled plugins 'vuex'}},{{else}}{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}{{/isEnabled}}
+{{/isEnabled}}
+{{#isEnabled plugins 'vuex'}}
+    store{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}
+{{/isEnabled}}
+  }{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
 </script>
