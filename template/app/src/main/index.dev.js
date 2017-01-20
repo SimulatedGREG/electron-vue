@@ -1,7 +1,8 @@
 /**
  * This file is used specifically and only for development. It enables the use of ES6+
- * features for the main process and installs `electron-debug`. There shouldn't be any
- * need to modify this file, but it can be used to extend your development environment.
+ * features for the main process and installs `electron-debug` & `vue-devtools`. There
+ * shouldn't be any need to modify this file, but it can be used to extend your
+ * development environment.
  */
 
 // Set babel `env` and install `babel-register`
