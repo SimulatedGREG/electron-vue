@@ -1,5 +1,5 @@
 # Testing
-electron-vue supports both unit testing and end-to-end testing. During `vue-cli` scaffolding you will have the option to include testing support.
+electron-vue supports both unit testing and end-to-end testing for the `renderer` process. During `vue-cli` scaffolding you will have the option to include testing support.
 
 ## [Unit testing](unittesting.md)
 Run unit tests with Karma + Mocha
