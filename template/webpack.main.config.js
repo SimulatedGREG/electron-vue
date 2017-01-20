@@ -22,6 +22,10 @@ let mainConfig = {
       {
         test: /\.json$/,
         loader: 'json-loader'
+      },
+      {
+        test: /\.node$/,
+        loader: 'node-loader'
       }
     ]
   },
@@ -46,7 +50,7 @@ let mainConfig = {
     })
   ],
   resolve: {
-    extensions: ['.js', '.json'],
+    extensions: ['.js', '.json', '.node'],
     modules: [
       path.join(__dirname, 'app/node_modules')
     ]

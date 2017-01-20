@@ -40,6 +40,10 @@ let rendererConfig = {
         loader: 'json-loader'
       },
       {
+        test: /\.node$/,
+        loader: 'node-loader'
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
@@ -54,7 +58,7 @@ let rendererConfig = {
         loader: 'url-loader',
         query: {
           limit: 10000,
-          name: 'imgs/[name].[hash:7].[ext]'
+          name: 'imgs/[name].[ext]'
         }
       },
       {
@@ -62,7 +66,7 @@ let rendererConfig = {
         loader: 'url-loader',
         query: {
           limit: 10000,
-          name: 'fonts/[name].[hash:7].[ext]'
+          name: 'fonts/[name].[ext]'
         }
       }
     ]
@@ -88,7 +92,7 @@ let rendererConfig = {
       'components': path.join(__dirname, 'app/src/renderer/components'),
       'renderer': path.join(__dirname, 'app/src/renderer')
     },
-    extensions: ['.js', '.vue', '.json', '.css'],
+    extensions: ['.js', '.vue', '.json', '.css', '.node'],
     modules: [
       path.join(__dirname, 'app/node_modules'),
       path.join(__dirname, 'node_modules')
