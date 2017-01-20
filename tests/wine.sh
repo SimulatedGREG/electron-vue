@@ -9,3 +9,6 @@ sudo apt-get -y install ttf-mscorefonts-installer
 
 # Install wine for win32 building support
 sudo apt-get -y install wine
+
+# Install `electron-builder` dependencies
+sudo apt-get install --no-install-recommends -y icnsutils graphicsmagick xz-utils
