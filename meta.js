@@ -59,7 +59,7 @@ module.exports = {
     },
     builder: {
       type: 'list',
-      message: 'What packager would you like to use?',
+      message: 'What build tool would you like to use?',
       choices: [
         {
           name: 'electron-packager (https://github.com/electron-userland/electron-packager)',

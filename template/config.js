@@ -31,12 +31,10 @@ let config = {
     out: path.join(__dirname, 'builds'),
     overwrite: true,
     platform: process.env.PLATFORM_TARGET || 'all'
-  }
-{{/if_eq}}
-
+  }{{/if_eq}}
 }
-{{#if_eq builder 'packager'}}
 
+{{#if_eq builder 'packager'}}
 config.building.name = config.name
 
 {{/if_eq}}
