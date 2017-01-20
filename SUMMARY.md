@@ -10,6 +10,8 @@
     * [Using pre-processors](docs/using_pre-processors.md)
 * [Project Structure](docs/project_structure.md)
     * [Using the file structure](docs/using_the_file_structure.md)
+        * [Renderer Process](docs/renderer-process.md)
+        * [Main Process](docs/main-process.md)
     * [Using CSS frameworks](docs/using_css_frameworks.md)
 * [Building your app](docs/building_your_app.md)
     * [Using electron-packager](docs/using-electron-packager.md)

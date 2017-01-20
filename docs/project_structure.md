@@ -78,6 +78,7 @@ app.asar
 │  ├─ main.js
 │  ├─ renderer.js
 │  └─ index.html
+└─ node_modules/
 └─ package.json
 ```
 

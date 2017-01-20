@@ -19,7 +19,7 @@ Your `app/src` contains error(s). Check console, fix errors, then refresh electr
 Make sure to close and reopen the developer tools panel on first launch if they are missing. Also check your terminal to make sure they were installed successfully.
 
 ## Where do I put Static Assets?
-**[Using Static Assets](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/using_the_file_structure.html#using-static-assets)**
+**[Using Static Assets](renderer-process.md#using-static-assets)**
 
 ## Why did `npm run lint` end with an error?
 

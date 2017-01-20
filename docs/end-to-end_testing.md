@@ -16,8 +16,7 @@ Before running end-to-end tests, a `npm run pack` is called to create a producti
 my-project
 ├─ test
 |  ├─ e2e
-│  │  ├─ specs
-│  │  │  └─ Launch.spec.js
+│  │  ├─ specs/
 │  │  ├─ index.js
 └─ └─ └─ utils.js
 ```
@@ -38,4 +37,4 @@ Here you will find generic functions that could be of use throughout your `specs
 Spectron is the official [electron](http://electron.atom.io) testing framework that uses both [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) and [WebDriverIO](http://webdriver.io/) for manipulating DOM elements.
 
 #### Using WebDriverIO
-As stated in the Spectron [documentation](https://github.com/electron/spectron#client), access to [WebDriverIO APIs](http://webdriver.io/api.html) can be accessed through `this.app.client`. Because electron-vue uses Mocha, the context of `this` is shared between `afterEach`, `beforeEach`, and `it`. One thing to note is that ES2015 arrow functions cannot not be used in certain situations as the context of `this` will be overwritten ([more info](https://mochajs.org/#arrow-functions)).
+As stated in the Spectron [documentation](https://github.com/electron/spectron#client), access to [WebDriverIO APIs](http://webdriver.io/api.html) can be accessed through `this.app.client`. Because electron-vue uses Mocha, the context of `this` is shared between `afterEach`, `beforeEach`, and `it`. Because of this, it is important to note that ES2015 arrow functions cannot not be used in certain situations as the context of `this` will be overwritten ([more info](https://mochajs.org/#arrow-functions)).

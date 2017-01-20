@@ -15,8 +15,7 @@ npm run unit
 my-project
 ├─ test
 |  ├─ unit
-│  │  ├─ specs
-│  │  │  └─ LandingPageView.spec.js
+│  │  ├─ specs/
 │  │  ├─ index.js
 └─ └─ └─ karma.conf.js
 ```
