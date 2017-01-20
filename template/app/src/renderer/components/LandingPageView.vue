@@ -1,10 +1,3 @@
-<style scoped>
-  img {
-    margin-top: -25px;
-    width: 450px;
-  }
-</style>
-
 <template>
   <div>
     <img src="./LandingPageView/assets/logo.png" alt="electron-vue">
@@ -34,3 +27,10 @@
     name: 'landing-page'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}
   }{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
 </script>
+
+<style scoped>
+  img {
+    margin-top: -25px;
+    width: 450px;
+  }
+</style>
