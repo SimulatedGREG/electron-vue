@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <title>{{ name }}</title>
     <% if (htmlWebpackPlugin.options.appModules) { %>
       <!-- Add `app/node_modules` to global paths so `require` works properly in development -->
       <script>

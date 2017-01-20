@@ -32,6 +32,7 @@ let rendererConfig = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        include: [ path.resolve(__dirname, 'app/src/renderer') ],
         exclude: /node_modules/
       },
       {
@@ -71,7 +72,6 @@ let rendererConfig = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './app/index.ejs',
-      title: settings.name,
       appModules: process.env.NODE_ENV !== 'production'
         ? path.resolve(__dirname, 'app/node_modules')
         : false,

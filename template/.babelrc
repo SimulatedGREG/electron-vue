@@ -1,8 +1,10 @@
 {
+  "comments": false,
   "env": {
 {{#if unit}}
     "testing": {
-      "presets": ["es2015", "stage-0"]
+      "presets": ["es2015", "stage-0"],
+      "plugins": ["istanbul"]
     },
 {{/if}}
     "main": {
