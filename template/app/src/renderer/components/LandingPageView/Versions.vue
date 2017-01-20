@@ -5,14 +5,14 @@
 </template>
 
 <script>
-  import os from 'os'
+  import os from 'os'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
 
   export default {
-    data () {
+    data{{#if eslint}}{{#if_eq eslintConfig 'standard'}} {{/if_eq}}{{/if}}() {
       return {
         platform: os.platform(),
-        versions: process.versions
-      }
-    }
-  }
+        versions: process.versions{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}
+      }{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
+    }{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}
+  }{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
 </script>
