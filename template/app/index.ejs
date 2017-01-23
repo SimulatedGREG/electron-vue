@@ -6,7 +6,7 @@
     <% if (htmlWebpackPlugin.options.appModules) { %>
       <!-- Add `app/node_modules` to global paths so `require` works properly in development -->
       <script>
-        require('module').globalPaths.push('<%= htmlWebpackPlugin.options.appModules %>')
+        require('module').globalPaths.push('<%= htmlWebpackPlugin.options.appModules.replace(/\\/g, '\\\\') %>')
       </script>
     <% } %>
   </head>
