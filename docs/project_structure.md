@@ -22,7 +22,7 @@ Here you should install modules that you only need during development. Items inc
 As mentioned above, we need to make sure our native npm modules are built against electron. To do that, we can use [electron/electron-rebuild](https://github.com/electron/electron-rebuild). If you are using `electron-builder` to build your app, then you shouldn't have to worry about this step.
 
 ## On the subject of the `main` process
-During development you may notice `app/src/main/entry.js`. This file is used specially for development and enables the use of ES6+ features for the `main` process. This file should not have to be modified. 
+During development you may notice `app/src/main/index.dev.js`. This file is used specially for development and enables the use of ES6+ features for the `main` process. This file should not have to be modified. 
 
 Upon building, webpack will step in and create a bundle with `app/src/main/index.js` as its entry file with the same `babel` settings.
 
@@ -39,7 +39,7 @@ electron-vue
 │  ├─ node_modules/
 │  ├─ src
 │  │  ├─ main
-│  │  │  ├─ entry.js
+│  │  │  ├─ index.dev.js
 │  │  │  └─ index.js
 │  │  └─ renderer
 │  │  │  ├─ components

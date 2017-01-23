@@ -14,7 +14,7 @@ If you are unfamiliar with Vue components, please give [this](http://vuejs.org/v
 
 Components are stored in `app/src/renderer/components`. When creating child components, place them inside a new folder with the name of its parent component.
 ```
-app/src/components
+app/src/renderer/components
 ├─ ParentComponentA
 │  ├─ assets
 │  |  └─ logo.png
