@@ -27,8 +27,4 @@ The default nature of eslint is to print linting errors to console, and if there
 
 ## Why didn't `npm run lint:fix` fix all my linting errors?
 
-#### TL;DR
-The *fix* flag for eslint is not perfect and the `eslint-plugin-html` is not able to fix linting errors found in Vue component files.
-
-##### Long Answer
-Although the eslint feature for fixing linting errors is great, it is not perfect. In most cases all syntax errors will be resolved and corrected in your JS files. On the other hand, those linting errors found in your Vue component files are a different story. electron-vue takes use of the `eslint-plugin-html` in order to fully parse Vue component files, but eslint plugins are currently lacking the ability to auto-fix. For more information check out this **[issue](https://github.com/eslint/eslint/issues/5121)**.
+The `--fix` flag for eslint is not perfect and `eslint-plugin-html@^1.0.0` is not able to fix linting errors found in Vue component files. Simply updating to `eslint-plugin-html@^2.0.0` will to enable `--fix` support within Vue component files.
