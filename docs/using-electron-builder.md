@@ -52,7 +52,6 @@ Further customization can be made at `package.json` in accordance to `electron-b
   },
   "linux": {
     "target": [
-      "deb",
       "AppImage"
     ]
   }
