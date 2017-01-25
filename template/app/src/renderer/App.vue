@@ -11,22 +11,22 @@
 <script>
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
-  import LandingPage from 'components/LandingPageView'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
+  import LandingPage from 'components/LandingPageView'
 {{/isEnabled}}
 {{#isEnabled plugins 'vuex'}}
-  import store from 'renderer/vuex/store'{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
+  import store from 'renderer/vuex/store'
 {{/isEnabled}}
   export default {
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
     components: {
-      LandingPage{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}
-    }{{#isEnabled plugins 'vuex'}},{{else}}{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}{{/isEnabled}}
+      LandingPage
+    }{{#isEnabled plugins 'vuex'}},{{/isEnabled}}
 {{/isEnabled}}
 {{#isEnabled plugins 'vuex'}}
-    store{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},{{/if_eq}}{{/if}}
+    store
 {{/isEnabled}}
-  }{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}};{{/if_eq}}{{/if}}
+  }
 </script>
 
 <style>

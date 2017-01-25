@@ -22,6 +22,7 @@ function createWindow () {
     mainWindow = null
   })
 
+  // eslint-disable-next-line no-console
   console.log('mainWindow opened')
 }
 
