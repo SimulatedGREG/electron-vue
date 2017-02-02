@@ -17,6 +17,8 @@ let config = {
   eslint: true,
 
 {{/if}}
+  //image path for use with url-loader
+  imgPath: 'imgs/[path][name].[ext]',
   // webpack-dev-server port
   port: 9080{{#if_eq builder 'packager'}},
 
