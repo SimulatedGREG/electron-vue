@@ -3,6 +3,7 @@ app/dist/index.html
 app/dist/build.js
 app/dist/styles.css
 builds/*
+dist/*
 {{#if unit}}
 coverage
 {{/if}}
