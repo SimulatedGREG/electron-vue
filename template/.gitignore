@@ -1,13 +1,16 @@
 .DS_Store
 app/dist/index.html
-app/dist/build.js
+app/dist/main.js
+app/dist/renderer.js
 app/dist/styles.css
 builds/*
+{{#if_eq builder 'builder'}}
 dist/*
+{{/if_eq}}
 {{#if unit}}
 coverage
 {{/if}}
-node_modules
+node_modules/
 npm-debug.log
 npm-debug.log.*
 thumbs.db
