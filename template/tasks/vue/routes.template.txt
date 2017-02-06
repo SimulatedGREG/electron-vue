@@ -2,4 +2,4 @@
     path: '/{{routeName}}',
     component: require('./components/{{routeName}}View'),
     name: '{{routeName}}'
-  }
+  },

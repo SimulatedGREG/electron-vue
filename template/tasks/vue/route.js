@@ -20,10 +20,8 @@ let routesTemplate = fs.readFileSync(
   'utf8'
 )
 
-routes[routes.length - 3] = routes[routes.length - 3] + ','
-
 routes.splice(
-  routes.length - 2,
+  routes.length - 6,
   0,
   routesTemplate
   .replace(/{{routeName}}/g, routeName)
