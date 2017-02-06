@@ -3,16 +3,18 @@
 const fs = require('fs')
 const path = require('path')
 
-let moduleName = process.argv[2]
-let template = fs.readFileSync(
+const moduleName = process.argv[2]
+const modulePath = path.join(__dirname, `../../app/src/renderer/vuex/modules/${moduleName}.js`)
+
+const template = fs.readFileSync(
   path.join(__dirname, 'module.template.txt'),
   'utf8'
 )
 
 fs.writeFileSync(
-  path.join(__dirname, `../../app/src/vuex/modules/${moduleName}.js`),
+  modulePath,
   template
 )
 
 console.log(`\n\x1b[33m[vuex]\x1b[0m  module "${moduleName}" has been created`)
-console.log(path.join(__dirname, `../../app/src/vuex/modules/${moduleName}.js`))
+console.log(modulePath)
