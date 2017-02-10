@@ -5,6 +5,7 @@ const path = require('path')
 
 const routeName = process.argv[2]
 const rendererPath = path.join(__dirname, '../../app//src/renderer')
+const t = (string, obj) => string.replace(/\{{2}\s*([$A-Z_][0-9A-Z_$]*)\s*\}{2}/ig, (match, key) => obj[key] || '')
 
 let routes = fs.readFileSync(
   path.join(rendererPath, 'routes.js'),
@@ -23,9 +24,9 @@ let routesTemplate = fs.readFileSync(
 routes.splice(
   routes.length - 6,
   0,
-  routesTemplate
-  .replace(/{{routeName}}/g, routeName)
-  .replace(/\n$/, '')
+  t(routesTemplate, {
+    routeName
+  }).replace(/\n$/, '')
 )
 
 fs.writeFileSync(
