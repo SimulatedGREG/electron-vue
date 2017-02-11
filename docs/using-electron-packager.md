@@ -1,6 +1,6 @@
 # Using [electron-packager](https://github.com/electron-userland/electron-packager)
 
-All builds produced by `electron-builder` can be found within the `builds` folder.
+All builds produced by `electron-packager` can be found within the `builds` folder.
 
 #### Building for all platforms
 
