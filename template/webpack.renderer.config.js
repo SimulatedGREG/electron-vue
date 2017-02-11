@@ -12,6 +12,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 let rendererConfig = {
   devtool: '#eval-source-map',
+  devServer: { overlay: true },
   entry: {
     renderer: path.join(__dirname, 'app/src/renderer/main.js')
   },
