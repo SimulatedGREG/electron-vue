@@ -121,7 +121,7 @@ if (process.env.NODE_ENV !== 'production') {
 {{/if}}
 
 /**
- * Adjust rednererConfig for production settings
+ * Adjust rendererConfig for production settings
  */
 if (process.env.NODE_ENV === 'production') {
   rendererConfig.devtool = ''
