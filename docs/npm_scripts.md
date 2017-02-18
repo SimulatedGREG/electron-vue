@@ -34,6 +34,3 @@ Run end-to-end tests with Spectron + Mocha. More information on **[End-to-end te
 
 ### `npm test`
 Runs both `npm run unit` & `npm run e2e`. More information on **[Testing](testing.md)**.
-
-### `npm run vue:route`, `npm run vuex:module`
-See [**Vue Accessories**](vue_accessories.md) for more info.
