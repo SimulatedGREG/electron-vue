@@ -31,12 +31,6 @@
     {{#if unit}}
     "unit": "cross-env BABEL_ENV=testing-unit karma start test/unit/karma.conf.js",
     {{/if}}
-    {{#isEnabled plugins 'vue-router'}}
-    "vue:route": "node tasks/vue/route.js",
-    {{/isEnabled}}
-    {{#isEnabled plugins 'vuex'}}
-    "vuex:module": "node tasks/vuex/module.js",
-    {{/isEnabled}}
     "postinstall": "{{#if eslint}}npm run lint:fix && {{/if}}cd app && npm install"
   },
   {{#if_eq builder 'builder'}}
