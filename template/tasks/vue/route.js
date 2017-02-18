@@ -5,7 +5,7 @@ const path = require('path')
 
 let routeName = process.argv[2]
 let routes = fs.readFileSync(
-  path.join(__dirname, '../../app/src/routes.js'),
+  path.join(__dirname, '../../app/src/renderer/routes.js'),
   'utf8'
 ).split('\n')
 let routeTemplate = fs.readFileSync(
@@ -27,20 +27,20 @@ routes.splice(
 )
 
 fs.writeFileSync(
-  path.join(__dirname, `../../app/src/components/${routeName}View.vue`),
+  path.join(__dirname, `../../app/src/renderer/components/${routeName}View.vue`),
   routeTemplate
 )
 
-fs.mkdirSync(path.join(__dirname, `../../app/src/components/${routeName}View`))
+fs.mkdirSync(path.join(__dirname, `../../app/src/renderer/components/${routeName}View`))
 
 fs.writeFileSync(
-  path.join(__dirname, '../../app/src/routes.js'),
+  path.join(__dirname, '../../app/src/renderer/routes.js'),
   routes.join('\n')
 )
 
 console.log(`\n\x1b[33m[vue]\x1b[0m  route "${routeName}" has been created`)
 console.log('  [ \n' + [
-  '    ' + path.join(__dirname, `../../app/src/components/${routeName}View.vue`),
-  path.join(__dirname, `../../app/src/components/${routeName}View`),
-  path.join(__dirname, '../../app/src/routes.js'),
+  '    ' + path.join(__dirname, `../../app/src/renderer/components/${routeName}View.vue`),
+  path.join(__dirname, `../../app/src/renderer/components/${routeName}View`),
+  path.join(__dirname, '../../app/src/renderer/routes.js'),
 ].join(',\n    ') + '\n  ]')
