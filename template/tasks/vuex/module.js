@@ -10,9 +10,9 @@ let template = fs.readFileSync(
 )
 
 fs.writeFileSync(
-  path.join(__dirname, `../../app/src/vuex/modules/${moduleName}.js`),
+  path.join(__dirname, `../../app/src/renderer/vuex/modules/${moduleName}.js`),
   template
 )
 
 console.log(`\n\x1b[33m[vuex]\x1b[0m  module "${moduleName}" has been created`)
-console.log(path.join(__dirname, `../../app/src/vuex/modules/${moduleName}.js`))
+console.log(path.join(__dirname, `../../app/src/renderer/vuex/modules/${moduleName}.js`))
