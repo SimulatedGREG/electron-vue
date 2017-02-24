@@ -25,10 +25,10 @@ let config = {
   building: {
     arch: 'x64',
     asar: true,
-    dir: path.join(__dirname, 'app'),
-    icon: path.join(__dirname, 'app/icons/icon'),
-    ignore: /\b(src|index\.ejs|icons)\b/,
-    out: path.join(__dirname, 'builds'),
+    dir: path.join(__dirname, '../'),
+    icon: path.join(__dirname, '../build/icons/icon'),
+    ignore: /\b(src|test|electron-vue|gitignore|README|yarn)\b/,
+    out: path.join(__dirname, '../build'),
     overwrite: true,
     platform: process.env.PLATFORM_TARGET || 'all'
   }{{/if_eq}}

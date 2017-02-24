@@ -2,36 +2,37 @@
   "name": "{{ name }}",
   "version": "0.0.0",
   "description": "{{ description }}",
+  "main": "./dist/main.js",
   "scripts": {
     {{#if_eq builder 'packager'}}
-    "build": "node tasks/release.js",
-    "build:clean": "cross-env PLATFORM_TARGET=clean node tasks/release.js",
-    "build:darwin": "cross-env PLATFORM_TARGET=darwin node tasks/release.js",
-    "build:linux": "cross-env PLATFORM_TARGET=linux node tasks/release.js",
-    "build:mas": "cross-env PLATFORM_TARGET=mas node tasks/release.js",
-    "build:win32": "cross-env PLATFORM_TARGET=win32 node tasks/release.js",
+    "build": "node .electron-vue/release.js",
+    "build:clean": "cross-env PLATFORM_TARGET=clean node .electron-vue/release.js",
+    "build:darwin": "cross-env PLATFORM_TARGET=darwin node .electron-vue/release.js",
+    "build:linux": "cross-env PLATFORM_TARGET=linux node .electron-vue/release.js",
+    "build:mas": "cross-env PLATFORM_TARGET=mas node .electron-vue/release.js",
+    "build:win32": "cross-env PLATFORM_TARGET=win32 node .electron-vue/release.js",
     {{else}}
     "build": "npm run pack && build",
     "build:dir": "npm run pack && build --dir",
     {{/if_eq}}
-    "dev": "node tasks/runner.js",
+    "dev": "node .electron-vue/runner.js",
     {{#if e2e}}
     "e2e": "npm run pack && mocha test/e2e",
     {{/if}}
     {{#if eslint}}
-    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter app{{#testing unit e2e}} test{{/testing}}",
-    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix app{{#testing unit e2e}} test{{/testing}}",
+    "lint": "eslint -c .electron-vue/.eslintrc.js --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --ignore-path .electron-vue/.eslintignore src{{#testing unit e2e}} test{{/testing}}",
+    "lint:fix": "eslint -c .electron-vue/.eslintrc.js --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix --ignore-path .electron-vue/.eslintignore src{{#testing unit e2e}} test{{/testing}}",
     {{/if}}
     "pack": "npm run pack:main && npm run pack:renderer",
-    "pack:main": "cross-env NODE_ENV=production webpack -p --progress --colors --config webpack.main.config.js",
-    "pack:renderer": "cross-env NODE_ENV=production webpack -p --progress --colors --config webpack.renderer.config.js",
+    "pack:main": "webpack -p --progress --colors --config .electron-vue/webpack.main.config.js",
+    "pack:renderer": "webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
     {{#testing unit e2e}}
     "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}",
     {{/testing}}
     {{#if unit}}
     "unit": "cross-env BABEL_ENV=testing-unit karma start test/unit/karma.conf.js",
     {{/if}}
-    "postinstall": "{{#if eslint}}npm run lint:fix && {{/if}}cd app && npm install"
+    "postinstall": "{{#if eslint}}npm run lint:fix{{/if}}"
   },
   {{#if_eq builder 'builder'}}
   "build": {
@@ -71,8 +72,11 @@
     }
   },
 {{/if_eq}}
-  "author": "Greg Holguin <simulatedgreg@gmail.com>",
+  "author": "{{ author }}",
   "license": "MIT",
+  "dependencies": {
+    "vue": "^2.1.10"{{deps plugins}}
+  },
   "devDependencies": {
     "babel-core": "^6.8.0",
     "babel-loader": "^6.2.4",
@@ -145,6 +149,5 @@
     "vue-template-compiler": "^2.1.10",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
-  },
-  "dependencies": {}
+  }
 }

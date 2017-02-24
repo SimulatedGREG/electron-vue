@@ -1,6 +1,6 @@
 'use strict'
 
-const config = require('../config')
+const config = require('./config')
 const exec = require('child_process').exec
 const treeKill = require('tree-kill')
 
@@ -35,7 +35,7 @@ function run (command, color, name) {
      */
     if (/Compiled/g.test(data.toString().trim().replace(/\n/g, '\n' + repeat(' ', command.length + 2))) && !isElectronOpen) {
       console.log(`${BLUE}Starting electron...\n${END}`)
-      run('cross-env NODE_ENV=development electron app/src/main/index.dev.js', BLUE, 'electron')
+      run('cross-env NODE_ENV=development electron src/main/index.dev.js', BLUE, 'electron')
       isElectronOpen = true
     }
   })
@@ -53,4 +53,4 @@ function exit (code) {
 }
 
 console.log(`${YELLOW}Starting webpack-dev-server...\n${END}`)
-run(`webpack-dev-server --hot --colors --config webpack.renderer.config.js --port ${config.port} --content-base app/dist`, YELLOW, 'webpack')
+run(`webpack-dev-server --hot --colors --config .electron-vue/webpack.renderer.config.js --port ${config.port} --content-base dist/static`, YELLOW, 'webpack')

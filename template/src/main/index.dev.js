@@ -12,7 +12,8 @@ process.env.NODE_ENV = 'development'
 process.env.BABEL_ENV = 'main'
 
 require('babel-register')({
-  ignore: /node_modules/
+  ignore: /node_modules/,
+  extends: require('path').resolve(__dirname, '../../.electron-vue/.babelrc')
 })
 
 // Install `electron-debug` with `devtron`

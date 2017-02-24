@@ -3,29 +3,34 @@
 process.env.BABEL_ENV = 'main'
 
 const path = require('path')
-const pkg = require('./app/package.json')
+const pkg = require('../package.json')
 const settings = require('./config.js')
 const webpack = require('webpack')
 
 let mainConfig = {
   entry: {
-    main: path.join(__dirname, 'app/src/main/index.js')
+    main: path.join(__dirname, '../src/main/index.js')
   },
   externals: Object.keys(pkg.dependencies || {}),
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+          options: {
+            extends: path.resolve(__dirname, '.babelrc')
+          }
+        },
         exclude: /node_modules/
       },
       {
         test: /\.json$/,
-        loader: 'json-loader'
+        use: 'json-loader'
       },
       {
         test: /\.node$/,
-        loader: 'node-loader'
+        use: 'node-loader'
       }
     ]
   },
@@ -36,7 +41,7 @@ let mainConfig = {
   output: {
     filename: '[name].js',
     libraryTarget: 'commonjs2',
-    path: path.join(__dirname, 'app/dist')
+    path: path.join(__dirname, '../dist')
   },
   plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
@@ -52,7 +57,7 @@ let mainConfig = {
   resolve: {
     extensions: ['.js', '.json', '.node'],
     modules: [
-      path.join(__dirname, 'app/node_modules')
+      path.join(__dirname, '../node_modules')
     ]
   },
   target: 'electron-main'
