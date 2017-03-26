@@ -1,4 +1,4 @@
-[![](../images/logo.png)](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html)
+[![](../images/logo.png)](https://simulatedgreg.gitbooks.io/electron-vue/content/en/index.html)
 
 > The boilerplate for making electron apps built with vue \(pretty much what it sounds like\).
 
@@ -12,13 +12,13 @@
 
 The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding, `webpack` with `vue-loader`, `electron-packager` or `electron-builder`, and some of the most used plugins like `vue-router`, `vuex`, and more.
 
-#### Check out the documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
+#### Check out the documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/en/index.html).
 
 Things you'll find in this boilerplate...
 
 * Support for both Vue.js at `2.x.x` and `1.x.x`
 * Basic project structure
-* Detailed [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/)
+* Detailed [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/en/)
 * Project scaffolding using [vue-cli](https://github.com/vuejs/vue-cli)
 * Ready to use Vue plugins \([vue-electron](https://github.com/SimulatedGREG/vue-electron),  [vue-resource](https://github.com/vuejs/vue-resource), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex)\)\*
 * Installed [vue-devtools](https://github.com/vuejs/vue-devtools) and [devtron](https://github.com/electron/devtron) tools for development
@@ -62,7 +62,7 @@ Make sure to check out [**A Note for Windows Users**](https://simulatedgreg.gitb
 
 ### Next Steps
 
-Make sure to take a look at the [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/). Here you will find useful information about configuration, project structure, and building your app. There's also a handy [FAQs](https://simulatedgreg.gitbooks.io/electron-vue/content/docs/faqs.html) section.
+Make sure to take a look at the [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/en/). Here you will find useful information about configuration, project structure, and building your app. There's also a handy [FAQs](https://simulatedgreg.gitbooks.io/electron-vue/content/en/faqs.html) section.
 
 ### Future Plans
 
@@ -70,5 +70,5 @@ Be up to date with new features and improvements by checking on the [GitHub Proj
 
 ### Contributing
 
-Wanting to submit a pull request? Make sure to read [this](docs/en/docs/contributing.md) first.
+Wanting to submit a pull request? Make sure to read [this](contributing.md) first.
 
