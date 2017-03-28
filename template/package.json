@@ -20,8 +20,8 @@
     "e2e": "npm run pack && mocha test/e2e",
     {{/if}}
     {{#if eslint}}
-    "lint": "eslint -c .electron-vue/.eslintrc.js --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --ignore-path .electron-vue/.eslintignore src{{#testing unit e2e}} test{{/testing}}",
-    "lint:fix": "eslint -c .electron-vue/.eslintrc.js --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix --ignore-path .electron-vue/.eslintignore src{{#testing unit e2e}} test{{/testing}}",
+    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter src{{#testing unit e2e}} test{{/testing}}",
+    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix src{{#testing unit e2e}} test{{/testing}}",
     {{/if}}
     "pack": "npm run pack:main && npm run pack:renderer",
     "pack:main": "webpack -p --progress --colors --config .electron-vue/webpack.main.config.js",

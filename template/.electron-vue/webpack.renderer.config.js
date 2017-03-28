@@ -32,12 +32,7 @@ let rendererConfig = {
       },
       {
         test: /\.js$/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            extends: path.resolve(__dirname, '.babelrc')
-          }
-        },
+        use: 'babel-loader',
         include: [ path.resolve(__dirname, '../src/renderer') ],
         exclude: /node_modules/
       },
@@ -126,7 +121,6 @@ if (process.env.NODE_ENV !== 'production') {
         use: {
           loader: 'eslint-loader',
           options: {
-            configFile: path.resolve(__dirname, '.eslintrc.js'),
             formatter: require('eslint-friendly-formatter')
           }
         }

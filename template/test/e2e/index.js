@@ -5,8 +5,7 @@ process.env.BABEL_ENV = 'testing-e2e'
 
 // Enable use of es2015 on required files
 require('babel-register')({
-  ignore: /node_modules/,
-  extends: require('path').resolve(__dirname, '../../.electron-vue/.babelrc')
+  ignore: /node_modules/
 })
 
 // Attach Chai APIs to global scope

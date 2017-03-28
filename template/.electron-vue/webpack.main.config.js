@@ -16,12 +16,7 @@ let mainConfig = {
     rules: [
       {
         test: /\.js$/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            extends: path.resolve(__dirname, '.babelrc')
-          }
-        },
+        use: 'babel-loader',
         exclude: /node_modules/
       },
       {
