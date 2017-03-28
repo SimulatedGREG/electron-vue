@@ -60,12 +60,13 @@
       "package.json"
     ],
     "mac": {
-      "icon": "app/icons/icon.icns"
+      "icon": "build/icons/icon.icns"
     },
     "win": {
-      "icon": "app/icons/icon.ico"
+      "icon": "build/icons/icon.ico"
     },
     "linux": {
+      "icon": "build/icons/icon.png",
       "target": [
         "AppImage"
       ]
