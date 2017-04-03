@@ -1,4 +1,4 @@
-[![](docs/images/logo.png)](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html)
+[![](../images/logo.png)](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html)
 
 > The boilerplate for making electron apps built with vue \(pretty much what it sounds like\).
 
@@ -23,7 +23,7 @@ Things you'll find in this boilerplate...
 * Ready to use Vue plugins \([vue-electron](https://github.com/SimulatedGREG/vue-electron),  [vue-resource](https://github.com/vuejs/vue-resource), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex)\)\*
 * Installed [vue-devtools](https://github.com/vuejs/vue-devtools) and [devtron](https://github.com/electron/devtron) tools for development
 * Ability to easily package your electron app using [electron-packager](https://github.com/electron-userland/electron-packager) or [electron-builder](https://github.com/electron-userland/electron-builder)*
-* Handy [NPM scripts](docs/en/docs/npm_scripts.md)
+* Handy [NPM scripts](npm_scripts.md)
 * Use of [webpack](https://github.com/webpack/webpack) and [vue-loader](https://github.com/vuejs/vue-loader) with Hot Module Replacement
 * HTML/CSS/JS pre-processor support with [vue-loader](https://github.com/vuejs/vue-loader/)
 * ES6 with [`stage-0`](https://babeljs.io/docs/plugins/preset-stage-0/) by default
@@ -70,5 +70,5 @@ Be up to date with new features and improvements by checking on the [GitHub Proj
 
 ### Contributing
 
-Wanting to submit a pull request? Make sure to read [this](docs/en/docs/contributing.md) first.
+Wanting to submit a pull request? Make sure to read [this](contributing.md) first.
 
