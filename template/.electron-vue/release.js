@@ -24,7 +24,7 @@ function pack () {
  * Use electron-packager to build electron app
  */
 function build () {
-  let options = require('../config').building
+  let options = require('./config').building
 
   console.log('\x1b[34mBuilding electron app(s)...\n\x1b[0m')
   packager(options, (err, appPaths) => {

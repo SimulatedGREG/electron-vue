@@ -1,5 +1,4 @@
-app/node_modules/**
-app/dist/**
+build/dist/**
 {{#testing unit e2e}}
 test/unit/coverage/**
 test/unit/*.js

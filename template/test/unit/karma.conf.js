@@ -4,8 +4,8 @@ const path = require('path')
 const merge = require('webpack-merge')
 const webpack = require('webpack')
 
-const baseConfig = require('../../webpack.renderer.config')
-const projectRoot = path.resolve(__dirname, '../../app')
+const baseConfig = require('../../.electron-vue/webpack.renderer.config')
+const projectRoot = path.resolve(__dirname, '../../src/renderer')
 
 let webpackConfig = merge(baseConfig, {
   devtool: '#inline-source-map',

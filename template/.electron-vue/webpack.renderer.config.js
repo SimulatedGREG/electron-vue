@@ -3,7 +3,7 @@
 process.env.BABEL_ENV = 'renderer'
 
 const path = require('path')
-const pkg = require('./app/package.json')
+const pkg = require('../package.json')
 const settings = require('./config.js')
 const webpack = require('webpack')
 
@@ -14,7 +14,7 @@ let rendererConfig = {
   devtool: '#eval-source-map',
   devServer: { overlay: true },
   entry: {
-    renderer: path.join(__dirname, 'app/src/renderer/main.js')
+    renderer: path.join(__dirname, '../src/renderer/main.js')
   },
   externals: Object.keys(pkg.dependencies || {}),
   module: {
@@ -33,7 +33,7 @@ let rendererConfig = {
       {
         test: /\.js$/,
         use: 'babel-loader',
-        include: [ path.resolve(__dirname, 'app/src/renderer') ],
+        include: [ path.resolve(__dirname, '../src/renderer') ],
         exclude: /node_modules/
       },
       {
@@ -82,9 +82,9 @@ let rendererConfig = {
     new ExtractTextPlugin('styles.css'),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './app/index.ejs',
-      appModules: process.env.NODE_ENV !== 'production'
-        ? path.resolve(__dirname, 'app/node_modules')
+      template: path.resolve(__dirname, '../src/index.ejs'),
+      nodeModules: process.env.NODE_ENV !== 'production'
+        ? path.resolve(__dirname, '../node_modules')
         : false,
     }),
     new webpack.NoEmitOnErrorsPlugin()
@@ -92,17 +92,16 @@ let rendererConfig = {
   output: {
     filename: '[name].js',
     libraryTarget: 'commonjs2',
-    path: path.join(__dirname, 'app/dist')
+    path: path.join(__dirname, '../dist')
   },
   resolve: {
     alias: {
-      'components': path.join(__dirname, 'app/src/renderer/components'),
-      'renderer': path.join(__dirname, 'app/src/renderer')
+      'components': path.join(__dirname, '../src/renderer/components'),
+      'renderer': path.join(__dirname, '../src/renderer')
     },
     extensions: ['.js', '.vue', '.json', '.css', '.node'],
     modules: [
-      path.join(__dirname, 'app/node_modules'),
-      path.join(__dirname, 'node_modules')
+      path.join(__dirname, '../node_modules')
     ]
   },
   target: 'electron-renderer'
@@ -147,6 +146,9 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
+      },
+      output: {
+        comments: false
       }
     })
   )

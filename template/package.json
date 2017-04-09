@@ -2,36 +2,37 @@
   "name": "{{ name }}",
   "version": "0.0.0",
   "description": "{{ description }}",
+  "main": "./dist/main.js",
   "scripts": {
     {{#if_eq builder 'packager'}}
-    "build": "node tasks/release.js",
-    "build:clean": "cross-env PLATFORM_TARGET=clean node tasks/release.js",
-    "build:darwin": "cross-env PLATFORM_TARGET=darwin node tasks/release.js",
-    "build:linux": "cross-env PLATFORM_TARGET=linux node tasks/release.js",
-    "build:mas": "cross-env PLATFORM_TARGET=mas node tasks/release.js",
-    "build:win32": "cross-env PLATFORM_TARGET=win32 node tasks/release.js",
+    "build": "node .electron-vue/release.js",
+    "build:clean": "cross-env PLATFORM_TARGET=clean node .electron-vue/release.js",
+    "build:darwin": "cross-env PLATFORM_TARGET=darwin node .electron-vue/release.js",
+    "build:linux": "cross-env PLATFORM_TARGET=linux node .electron-vue/release.js",
+    "build:mas": "cross-env PLATFORM_TARGET=mas node .electron-vue/release.js",
+    "build:win32": "cross-env PLATFORM_TARGET=win32 node .electron-vue/release.js",
     {{else}}
     "build": "npm run pack && build",
     "build:dir": "npm run pack && build --dir",
     {{/if_eq}}
-    "dev": "node tasks/runner.js",
+    "dev": "node .electron-vue/runner.js",
     {{#if e2e}}
     "e2e": "npm run pack && mocha test/e2e",
     {{/if}}
     {{#if eslint}}
-    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter app{{#testing unit e2e}} test{{/testing}}",
-    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix app{{#testing unit e2e}} test{{/testing}}",
+    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter src{{#testing unit e2e}} test{{/testing}}",
+    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix src{{#testing unit e2e}} test{{/testing}}",
     {{/if}}
     "pack": "npm run pack:main && npm run pack:renderer",
-    "pack:main": "cross-env NODE_ENV=production webpack -p --progress --colors --config webpack.main.config.js",
-    "pack:renderer": "cross-env NODE_ENV=production webpack -p --progress --colors --config webpack.renderer.config.js",
+    "pack:main": "webpack -p --progress --colors --config .electron-vue/webpack.main.config.js",
+    "pack:renderer": "webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
     {{#testing unit e2e}}
     "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}",
     {{/testing}}
     {{#if unit}}
     "unit": "cross-env BABEL_ENV=testing-unit karma start test/unit/karma.conf.js",
     {{/if}}
-    "postinstall": "{{#if eslint}}npm run lint:fix && {{/if}}cd app && npm install"
+    "postinstall": "{{#if eslint}}npm run lint:fix{{/if}}"
   },
   {{#if_eq builder 'builder'}}
   "build": {
@@ -53,36 +54,43 @@
         }
       ]
     },
+    "directories": {
+      "output": "build"
+    },
     "files": [
       "dist/",
       "node_modules/",
       "package.json"
     ],
     "mac": {
-      "icon": "app/icons/icon.icns"
+      "icon": "build/icons/icon.icns"
     },
     "win": {
-      "icon": "app/icons/icon.ico"
+      "icon": "build/icons/icon.ico"
     },
     "linux": {
+      "icon": "build/icons/icon.png",
       "target": [
         "AppImage"
       ]
     }
   },
 {{/if_eq}}
-  "author": "Greg Holguin <simulatedgreg@gmail.com>",
-  "license": "MIT",
+  "author": "{{ author }}",
+  "license": null,
+  "dependencies": {
+    "vue": "^2.2.2"{{deps plugins}}
+  },
   "devDependencies": {
-    "babel-core": "^6.8.0",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-runtime": "^6.8.0",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-stage-0": "^6.5.0",
-    "babel-register": "^6.18.0",
+    "babel-register": "^6.2.0",
     "babel-runtime": "^6.6.1",
     "cross-env": "^3.1.4",
-    "css-loader": "^0.26.1",
+    "css-loader": "^0.27.3",
     "del": "^2.2.1",
     "devtron": "^1.1.0",
     "electron": "^1.3.1",
@@ -101,7 +109,7 @@
     "eslint-loader": "^1.3.0",
     "eslint-plugin-html": "^2.0.0",
     {{#if_eq eslintConfig 'standard'}}
-    "eslint-config-standard": "^6.2.1",
+    "eslint-config-standard": "^7.1.0",
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.1",
     {{/if_eq}}
@@ -111,21 +119,21 @@
     {{/if_eq}}
     {{/eslint}}
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
-    "file-loader": "^0.9.0",
+    "file-loader": "^0.10.1",
     "html-webpack-plugin": "^2.16.1",
     "json-loader": "^0.5.4",
     {{#if unit}}
-    "babel-plugin-istanbul": "^3.1.2",
-    "inject-loader": "^2.0.1",
+    "babel-plugin-istanbul": "^4.1.1",
+    "inject-loader": "^3.0.0",
     "karma": "^1.3.0",
     "karma-chai": "^0.1.0",
     "karma-coverage": "^1.1.1",
     "karma-electron": "^5.1.1",
     "karma-mocha": "^1.2.0",
     "karma-sourcemap-loader": "^0.3.7",
-    "karma-spec-reporter": "0.0.26",
+    "karma-spec-reporter": "0.0.30",
     "karma-webpack": "^2.0.1",
-    "webpack-merge": "^2.4.0",
+    "webpack-merge": "^4.1.0",
     {{/if}}
     {{#if e2e}}
     "require-dir": "^0.3.0",
@@ -135,16 +143,14 @@
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
     {{/testing}}
-    "style-loader": "^0.13.1",
+    "style-loader": "^0.16.0",
     "tree-kill": "^1.1.0",
     "url-loader": "^0.5.7",
-    "vue-hot-reload-api": "^2.0.7",
     "vue-html-loader": "^1.2.2",
-    "vue-loader": "^10.0.2",
-    "vue-style-loader": "^1.0.0",
-    "vue-template-compiler": "^2.1.10",
+    "vue-loader": "^11.3.3",
+    "vue-style-loader": "^2.0.4",
+    "vue-template-compiler": "^2.2.2",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
-  },
-  "dependencies": {}
+  }
 }
