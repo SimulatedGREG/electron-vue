@@ -1,9 +1,9 @@
 import Vue from 'vue'
+{{#isEnabled plugins 'axios'}}
+import axios from 'axios'
+{{/isEnabled}}
 {{#isEnabled plugins 'vue-electron'}}
 import Electron from 'vue-electron'
-{{/isEnabled}}
-{{#isEnabled plugins 'vue-resource'}}
-import Resource from 'vue-resource'
 {{/isEnabled}}
 {{#isEnabled plugins 'vue-router'}}
 import Router from 'vue-router'
@@ -12,11 +12,15 @@ import App from './App'
 import routes from './routes'
 {{/isEnabled}}
 
+{{#isEnabled plugins 'axios'}}
+Vue.http = axios
+Object.defineProperties(Vue.prototype, {
+  http: { get () { return axios } },
+  $http: { get () { return axios } }
+})
+{{/isEnabled}}
 {{#isEnabled plugins 'vue-electron'}}
 Vue.use(Electron)
-{{/isEnabled}}
-{{#isEnabled plugins 'vue-resource'}}
-Vue.use(Resource)
 {{/isEnabled}}
 {{#isEnabled plugins 'vue-router'}}
 Vue.use(Router)

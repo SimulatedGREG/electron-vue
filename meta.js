@@ -16,8 +16,8 @@ module.exports = {
     plugins: {
       type: 'checkbox',
       message: 'Select which Vue plugins to install',
-      choices: ['vue-electron', 'vue-resource', 'vue-router', 'vuex'],
-      default: ['vue-electron', 'vue-resource', 'vue-router', 'vuex']
+      choices: ['axios', 'vue-electron', 'vue-router', 'vuex'],
+      default: ['axios', 'vue-electron', 'vue-router', 'vuex']
     },
     eslint: {
       type: 'confirm',
@@ -82,8 +82,8 @@ module.exports = {
     deps (plugins) {
       let output = ''
       let dependencies = {
+        'axios': '^0.16.1',
         'vue-electron': '^1.0.6',
-        'vue-resource': '^1.0.3',
         'vue-router': '^2.1.2',
         'vuex': '^2.1.1'
       }
@@ -104,15 +104,13 @@ module.exports = {
     }
   },
   filters: {
-    'app/src/renderer/routes.js': 'plugins[\'vue-router\']',
-    'app/src/renderer/components/LandingPageView/CurrentPage.vue': 'plugins[\'vue-router\']',
-    'app/src/renderer/vuex/**/*': 'plugins[\'vuex\']',
+    'src/renderer/routes.js': 'plugins[\'vue-router\']',
+    'src/renderer/components/LandingPageView/CurrentPage.vue': 'plugins[\'vue-router\']',
+    'src/renderer/vuex/**/*': 'plugins[\'vuex\']',
     'builds/**/*': 'builder === \'packager\'',
-    'tasks/vue/**/*': 'plugins[\'vue-router\']',
-    'tasks/vuex/**/*': 'plugins[\'vuex\']',
     'test/e2e/**/*': 'e2e',
     'test/unit/**/*': 'unit',
-    'tasks/release.js': 'builder === \'packager\'',
+    '.electron-vue/release.js': 'builder === \'packager\'',
     'test/.eslintrc': 'e2e || unit',
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint'
