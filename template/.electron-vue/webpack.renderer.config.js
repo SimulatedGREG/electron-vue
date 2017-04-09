@@ -16,7 +16,7 @@ let rendererConfig = {
   entry: {
     renderer: path.join(__dirname, '../src/renderer/main.js')
   },
-  externals: Object.keys(pkg.dependencies || {}),
+  externals: Object.keys(pkg.dependencies || {}).filter(d => !['vue'].includes(d)),
   module: {
     rules: [
       {
@@ -96,8 +96,8 @@ let rendererConfig = {
   },
   resolve: {
     alias: {
-      'components': path.join(__dirname, '../src/renderer/components'),
-      'renderer': path.join(__dirname, '../src/renderer')
+      '@': path.join(__dirname, '../src/renderer'),
+      'vue$': 'vue/dist/vue.esm.js'
     },
     extensions: ['.js', '.vue', '.json', '.css', '.node'],
     modules: [

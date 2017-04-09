@@ -11,10 +11,10 @@
 <script>
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
-  import LandingPage from 'components/LandingPageView'
+  import LandingPage from '@/components/LandingPageView'
 {{/isEnabled}}
 {{#isEnabled plugins 'vuex'}}
-  import store from 'renderer/vuex/store'
+  import store from '@/vuex/store'
 {{/isEnabled}}
   export default {
 {{#isEnabled plugins 'vue-router'}}
