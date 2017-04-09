@@ -77,7 +77,7 @@
   },
 {{/if_eq}}
   "author": "{{ author }}",
-  "license": "MIT",
+  "license": null,
   "dependencies": {
     "vue": "^2.2.2"{{deps plugins}}
   },
