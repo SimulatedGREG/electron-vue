@@ -7,7 +7,7 @@ const pkg = require('../package.json')
 const settings = require('./config.js')
 const webpack = require('webpack')
 
-const BabiliWebpackPlugin = reuqire('babili-webpack-plugin')
+const BabiliWebpackPlugin = require('babili-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
