@@ -7,6 +7,8 @@ const pkg = require('../package.json')
 const settings = require('./config.js')
 const webpack = require('webpack')
 
+const BabiliWebpackPlugin = reuqire('babili-webpack-plugin')
+
 let mainConfig = {
   entry: {
     main: path.join(__dirname, '../src/main/index.js')
@@ -39,14 +41,10 @@ let mainConfig = {
     path: path.join(__dirname, '../dist')
   },
   plugins: [
+    new BabiliWebpackPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
     })
   ],
   resolve: {

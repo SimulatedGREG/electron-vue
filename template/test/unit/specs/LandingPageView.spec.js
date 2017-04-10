@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import LandingPageView from 'renderer/components/LandingPageView'
+import LandingPageView from '@/components/LandingPageView'
 
 describe('LandingPageView.vue', () => {
   it('should render correct contents', () => {

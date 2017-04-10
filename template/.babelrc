@@ -3,13 +3,25 @@
   "env": {
 {{#if unit}}
     "testing-unit": {
-      "presets": ["es2015", "stage-0"],
+      "presets": [
+        ["env", {
+          "useBuiltIns": true,
+          "targets": { "node": 7 }
+        }],
+        "stage-0"
+      ],
       "plugins": ["istanbul"]
     },
 {{/if}}
 {{#if e2e}}
     "testing-e2e": {
-      "presets": ["es2015", "stage-0"]
+      "presets": [
+        ["env", {
+          "useBuiltIns": true,
+          "targets": { "node": 7 }
+        }],
+        "stage-0"
+      ]
     },
 {{/if}}
     "main": {
