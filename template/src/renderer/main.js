@@ -13,11 +13,7 @@ import routes from './routes'
 {{/isEnabled}}
 
 {{#isEnabled plugins 'axios'}}
-Vue.http = axios
-Object.defineProperties(Vue.prototype, {
-  http: { get () { return axios } },
-  $http: { get () { return axios } }
-})
+Vue.http = Vue.prototype.$http = axios
 {{/isEnabled}}
 {{#isEnabled plugins 'vue-electron'}}
 Vue.use(Electron)
