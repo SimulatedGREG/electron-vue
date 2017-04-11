@@ -24,8 +24,8 @@
     "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix src{{#testing unit e2e}} test{{/testing}}",
     {{/if}}
     "pack": "npm run pack:main && npm run pack:renderer",
-    "pack:main": "webpack --progress --colors --config .electron-vue/webpack.main.config.js",
-    "pack:renderer": "webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
+    "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
+    "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
     {{#testing unit e2e}}
     "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}",
     {{/testing}}

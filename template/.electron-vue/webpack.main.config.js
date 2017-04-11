@@ -41,7 +41,10 @@ let mainConfig = {
     path: path.join(__dirname, '../dist')
   },
   plugins: [
-    new BabiliWebpackPlugin(),
+    new BabiliWebpackPlugin({
+      removeConsole: true,
+      removeDebugger: true
+    }),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
