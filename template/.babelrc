@@ -1,8 +1,8 @@
 {
   "comments": false,
   "env": {
-{{#if unit}}
-    "testing-unit": {
+{{#testing unit e2e}}
+    "test": {
       "presets": [
         ["env", {
           "useBuiltIns": true,
@@ -12,18 +12,7 @@
       ],
       "plugins": ["istanbul"]
     },
-{{/if}}
-{{#if e2e}}
-    "testing-e2e": {
-      "presets": [
-        ["env", {
-          "useBuiltIns": true,
-          "targets": { "node": 7 }
-        }],
-        "stage-0"
-      ]
-    },
-{{/if}}
+{{/testing}}
     "main": {
       "presets": [
         ["env", {
