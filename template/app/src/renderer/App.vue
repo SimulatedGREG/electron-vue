@@ -1,5 +1,5 @@
 <template>
-  <div id="#app">
+  <div id="app">
     {{#isEnabled plugins 'vue-router'}}
     <router-view></router-view>
     {{else}}
