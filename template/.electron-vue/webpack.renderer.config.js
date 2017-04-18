@@ -9,11 +9,11 @@ const webpack = require('webpack')
 
 const BabiliWebpackPlugin = require('babili-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 let rendererConfig = {
   devtool: '#eval-source-map',
-  devServer: { overlay: true },
   entry: {
     renderer: path.join(__dirname, '../src/renderer/main.js')
   },
@@ -81,6 +81,7 @@ let rendererConfig = {
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),
+    new FriendlyErrorsPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, '../src/index.ejs'),
@@ -88,6 +89,7 @@ let rendererConfig = {
         ? path.resolve(__dirname, '../node_modules')
         : false,
     }),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],
   output: {

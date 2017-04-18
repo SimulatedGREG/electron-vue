@@ -15,7 +15,7 @@
     "build": "npm run pack && build",
     "build:dir": "npm run pack && build --dir",
     {{/if_eq}}
-    "dev": "node .electron-vue/runner.js",
+    "dev": "node .electron-vue/index.js",
     {{#if e2e}}
     "e2e": "npm run pack && mocha test/e2e",
     {{/if}}
@@ -90,6 +90,7 @@
     "babel-register": "^6.2.0",
     "babel-runtime": "^6.6.1",
     "babili-webpack-plugin": "^0.0.11",
+    "chalk": "^1.1.3",
     "cross-env": "^3.1.4",
     "css-loader": "^0.27.3",
     "del": "^2.2.1",
@@ -97,6 +98,7 @@
     "electron": "^1.3.1",
     "electron-debug": "^1.1.0",
     "electron-devtools-installer": "^2.0.1",
+    "friendly-errors-webpack-plugin": "^1.6.1",
     {{#if_eq builder 'packager'}}
     "electron-packager": "^8.5.0",
     {{else}}
@@ -144,6 +146,7 @@
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
     {{/testing}}
+    "ora": "^1.2.0",
     "style-loader": "^0.16.0",
     "tree-kill": "^1.1.0",
     "url-loader": "^0.5.7",
@@ -152,6 +155,7 @@
     "vue-style-loader": "^2.0.4",
     "vue-template-compiler": "^2.2.2",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0"
+    "webpack-dev-server": "^2.3.0",
+    "webpack-hot-middleware": "^2.18.0"
   }
 }
