@@ -7,6 +7,9 @@ const webpack = require('webpack')
 const baseConfig = require('../../webpack.renderer.config')
 const projectRoot = path.resolve(__dirname, '../../app')
 
+// Set BABEL_ENV to use proper preset config
+process.env.BABEL_ENV = 'testing-unit'
+
 let webpackConfig = merge(baseConfig, {
   devtool: '#inline-source-map',
   plugins: [
