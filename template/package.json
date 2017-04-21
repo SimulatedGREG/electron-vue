@@ -30,7 +30,7 @@
     "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}",
     {{/testing}}
     {{#if unit}}
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js",
+    "unit": "karma start test/unit/karma.conf.js",
     {{/if}}
     "postinstall": "{{#if eslint}}npm run lint:fix{{/if}}"
   },
