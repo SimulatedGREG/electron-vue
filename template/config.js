@@ -21,7 +21,7 @@ let config = {
   port: 9080{{#if_eq builder 'packager'}},
 
   // electron-packager options
-  // Docs: https://simulatedgreg.gitbooks.io/electron-vue/content/docs/building_your_app.html
+  // Docs: https://simulatedgreg.gitbooks.io/electron-vue/content/en/building_your_app.html
   building: {
     arch: 'x64',
     asar: true,
