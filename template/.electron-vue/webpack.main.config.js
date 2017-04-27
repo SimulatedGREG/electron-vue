@@ -4,7 +4,6 @@ process.env.BABEL_ENV = 'main'
 
 const path = require('path')
 const pkg = require('../package.json')
-const settings = require('./config.js')
 const webpack = require('webpack')
 
 const BabiliWebpackPlugin = require('babili-webpack-plugin')
@@ -45,15 +44,20 @@ let mainConfig = {
       removeConsole: true,
       removeDebugger: true
     }),
-    new webpack.NoEmitOnErrorsPlugin(),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"production"'
-    })
+    new webpack.NoEmitOnErrorsPlugin()
   ],
   resolve: {
     extensions: ['.js', '.json', '.node']
   },
   target: 'electron-main'
+}
+
+if (process.env.NODE_ENV === 'production') {
+  mainConfig.plugins.push(
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"production"'
+    })
+  )
 }
 
 module.exports = mainConfig

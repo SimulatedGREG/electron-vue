@@ -1,20 +1,14 @@
 /**
- * This file is used specifically and only for development. It enables the use of ES6+
- * features for the main process and installs `electron-debug` & `vue-devtools`. There
- * shouldn't be any need to modify this file, but it can be used to extend your
- * development environment.
+ * This file is used specifically and only for development. It installs
+ * `electron-debug` & `vue-devtools`. There shouldn't be any need to
+ *  modify this file, but it can be used to extend your development
+ *  environment.
  */
 
 /* eslint-disable no-console */
 
-// Set babel `env` and install `babel-register`
+// Set environment for development
 process.env.NODE_ENV = 'development'
-process.env.BABEL_ENV = 'main'
-
-require('babel-register')({
-  ignore: /node_modules/,
-  extends: require('path').resolve(__dirname, '../../.electron-vue/.babelrc')
-})
 
 // Install `electron-debug` with `devtron`
 require('electron-debug')({ showDevTools: true })

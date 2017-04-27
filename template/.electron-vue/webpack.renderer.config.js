@@ -81,13 +81,15 @@ let rendererConfig = {
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),
-    new FriendlyErrorsPlugin(),
+    new FriendlyErrorsPlugin({
+      clearConsole: false
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, '../src/index.ejs'),
       nodeModules: process.env.NODE_ENV !== 'production'
         ? path.resolve(__dirname, '../node_modules')
-        : false,
+        : false
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
