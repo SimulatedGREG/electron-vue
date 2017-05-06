@@ -15,12 +15,14 @@ const Multispinner = require('multispinner')
 {{#if_eq builder 'packager'}}const buildConfig = require('./build.config'){{/if_eq}}
 const mainConfig = require('./webpack.main.config')
 const rendererConfig = require('./webpack.renderer.config')
+const webConfig = require('./webpack.web.config')
 
 const doneLog = chalk.bgGreen.white(' DONE ') + ' '
 const errorLog = chalk.bgRed.white(' ERROR ') + ' '
 const okayLog = chalk.bgBlue.white(' OKAY ') + ' '
 
 if (process.env.BUILD_TARGET === 'clean') clean()
+else if (process.env.BUILD_TARGET === 'web') web()
 else build()
 
 function clean () {
@@ -30,7 +32,7 @@ function clean () {
 }
 
 function build () {
-  del.sync(['dist/*', '!.gitkeep'])
+  del.sync(['dist/electron/*', '!.gitkeep'])
 
   const tasks = ['main', 'renderer']
   const m = new Multispinner(tasks, {
@@ -88,4 +90,18 @@ function bundleApp () {
     }
   })
 }
+
 {{/if_eq}}
+function web () {
+  del.sync(['dist/web/*', '!.gitkeep'])
+  webpack(webConfig, (err, stats) => {
+    if (err || stats.hasErrors()) process.exit(1)
+    else {
+      console.log(`${doneLog} web build complete\n`)
+      console.log(stats.toString({
+        chunks: false,
+        colors: true
+      }))
+    }
+  })
+}

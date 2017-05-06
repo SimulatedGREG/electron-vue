@@ -2,9 +2,6 @@ import Vue from 'vue'
 {{#isEnabled plugins 'axios'}}
 import axios from 'axios'
 {{/isEnabled}}
-{{#isEnabled plugins 'vue-electron'}}
-import Electron from 'vue-electron'
-{{/isEnabled}}
 {{#isEnabled plugins 'vue-router'}}
 import Router from 'vue-router'
 
@@ -16,7 +13,7 @@ import routes from './routes'
 Vue.http = Vue.prototype.$http = axios
 {{/isEnabled}}
 {{#isEnabled plugins 'vue-electron'}}
-Vue.use(Electron)
+if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 {{/isEnabled}}
 {{#isEnabled plugins 'vue-router'}}
 Vue.use(Router)

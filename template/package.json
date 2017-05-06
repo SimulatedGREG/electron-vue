@@ -2,7 +2,7 @@
   "name": "{{ name }}",
   "version": "0.0.0",
   "description": "{{ description }}",
-  "main": "./dist/main.js",
+  "main": "./dist/electron/main.js",
   "scripts": {
     {{#if_eq builder 'packager'}}
     "build": "node .electron-vue/build.js",
@@ -15,6 +15,7 @@
     "build": "node .electron-vue/build.js && build",
     "build:dir": "node .electron-vue/build.js && build --dir",
     {{/if_eq}}
+    "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js",
     "dev": "node .electron-vue/dev-runner.js",
     {{#if e2e}}
     "e2e": "npm run pack && mocha test/e2e",
@@ -58,7 +59,7 @@
       "output": "build"
     },
     "files": [
-      "dist/",
+      "dist/electron",
       "node_modules/",
       "package.json"
     ],
