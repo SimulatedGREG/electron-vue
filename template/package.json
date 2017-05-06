@@ -5,12 +5,12 @@
   "main": "./dist/main.js",
   "scripts": {
     {{#if_eq builder 'packager'}}
-    "build": "node .electron-vue/release.js",
-    "build:clean": "cross-env PLATFORM_TARGET=clean node .electron-vue/release.js",
-    "build:darwin": "cross-env PLATFORM_TARGET=darwin node .electron-vue/release.js",
-    "build:linux": "cross-env PLATFORM_TARGET=linux node .electron-vue/release.js",
-    "build:mas": "cross-env PLATFORM_TARGET=mas node .electron-vue/release.js",
-    "build:win32": "cross-env PLATFORM_TARGET=win32 node .electron-vue/release.js",
+    "build": "node .electron-vue/build.js",
+    "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
+    "build:darwin": "cross-env BUILD_TARGET=darwin node .electron-vue/build.js",
+    "build:linux": "cross-env BUILD_TARGET=linux node .electron-vue/build.js",
+    "build:mas": "cross-env BUILD_TARGET=mas node .electron-vue/build.js",
+    "build:win32": "cross-env BUILD_TARGET=win32 node .electron-vue/build.js",
     {{else}}
     "build": "npm run pack && build",
     "build:dir": "npm run pack && build --dir",
@@ -146,6 +146,7 @@
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
     {{/testing}}
+    "multispinner": "^0.2.1",
     "ora": "^1.2.0",
     "style-loader": "^0.16.0",
     "tree-kill": "^1.1.0",
