@@ -1,9 +1,8 @@
 'use strict'
 
-process.env.BABEL_ENV = 'renderer'
+process.env.BABEL_ENV = 'web'
 
 const path = require('path')
-const pkg = require('../package.json')
 const settings = require('./config.js')
 const webpack = require('webpack')
 
@@ -12,12 +11,11 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-let rendererConfig = {
+let webConfig = {
   devtool: '#eval-source-map',
   entry: {
-    renderer: path.join(__dirname, '../src/renderer/main.js')
+    web: path.join(__dirname, '../src/renderer/main.js')
   },
-  externals: Object.keys(pkg.dependencies || {}).filter(d => !['vue'].includes(d)),
   module: {
     rules: [
       {
@@ -91,31 +89,32 @@ let rendererConfig = {
         ? path.resolve(__dirname, '../node_modules')
         : false
     }),
+    new webpack.DefinePlugin({
+      'process.env.IS_WEB': 'true'
+    }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin()
   ],
   output: {
     filename: '[name].js',
-    libraryTarget: 'commonjs2',
-    path: path.join(__dirname, '../dist/electron')
+    path: path.join(__dirname, '../dist/web')
   },
   resolve: {
     alias: {
       '@': path.join(__dirname, '../src/renderer'),
       'vue$': 'vue/dist/vue.esm.js'
     },
-    extensions: ['.js', '.vue', '.json', '.css', '.node']
+    extensions: ['.js', '.vue', '.json', '.css']
   },
-  target: 'electron-renderer'
+  target: 'web'
 }
 
-{{#if eslint}}
 if (process.env.NODE_ENV !== 'production') {
   /**
    * Apply ESLint
    */
   if (settings.eslint) {
-    rendererConfig.module.rules.push(
+    webConfig.module.rules.push(
       {
         test: /\.(js|vue)$/,
         enforce: 'pre',
@@ -130,15 +129,14 @@ if (process.env.NODE_ENV !== 'production') {
     )
   }
 }
-{{/if}}
 
 /**
- * Adjust rendererConfig for production settings
+ * Adjust webConfig for production settings
  */
 if (process.env.NODE_ENV === 'production') {
-  rendererConfig.devtool = ''
+  webConfig.devtool = ''
 
-  rendererConfig.plugins.push(
+  webConfig.plugins.push(
     new BabiliWebpackPlugin({
       removeConsole: true,
       removeDebugger: true
@@ -152,4 +150,4 @@ if (process.env.NODE_ENV === 'production') {
   )
 }
 
-module.exports = rendererConfig
+module.exports = webConfig
