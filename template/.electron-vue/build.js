@@ -4,17 +4,21 @@ process.env.NODE_ENV = 'production'
 
 const chalk = require('chalk')
 const del = require('del')
-const ora = require('ora')
+{{#if_eq builder 'packager'}}
 const packager = require('electron-packager')
+{{else}}
+const { spawn } = require('child_process')
+{{/if_eq}}
 const webpack = require('webpack')
 const Multispinner = require('multispinner')
 
-const buildConfig = require('./build.config')
+{{#if_eq builder 'packager'}}const buildConfig = require('./build.config'){{/if_eq}}
 const mainConfig = require('./webpack.main.config')
 const rendererConfig = require('./webpack.renderer.config')
 
 const doneLog = chalk.bgGreen.white(' DONE ') + ' '
 const errorLog = chalk.bgRed.white(' ERROR ') + ' '
+const okayLog = chalk.bgBlue.white(' OKAY ') + ' '
 
 if (process.env.BUILD_TARGET === 'clean') clean()
 else build()
@@ -30,7 +34,7 @@ function build () {
 
   const tasks = ['main', 'renderer']
   const m = new Multispinner(tasks, {
-    preText: 'build',
+    preText: 'building',
     postText: 'process'
   })
 
@@ -39,7 +43,8 @@ function build () {
   m.on('success', () => {
     process.stdout.write('\x1B[2J\x1B[0f')
     console.log(`\n\n${results}`)
-    bundleApp()
+    console.log(`${okayLog}take it away ${chalk.yellow('`electron-{{builder}}`')}\n`)
+    {{#if_eq builder 'packager'}}bundleApp(){{else}}process.exit(){{/if_eq}}
   })
 
   pack(mainConfig).then(result => {
@@ -72,21 +77,15 @@ function pack (config) {
   })
 }
 
+{{#if_eq builder 'packager'}}
 function bundleApp () {
-  const m = new Multispinner(['package electron'], { clear: true })
-
-  m.on('success', () => {
-    process.stdout.write('\x1B[2J\x1B[0f')
-    console.log(`${doneLog}Building complete`)
-  })
-
   packager(buildConfig, (err, appPaths) => {
     if (err) {
-      m.error('package electron')
-      console.log(`\n${errorLog}${chalk.yello('`electron-packager`')} says...\n`)
+      console.log(`\n${errorLog}${chalk.yellow('`electron-packager`')} says...\n`)
       console.log(err)
     } else {
-      m.success('package electron')
+      console.log(`${doneLog}build(s) complete\n`)
     }
   })
 }
+{{/if_eq}}

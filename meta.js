@@ -107,10 +107,9 @@ module.exports = {
     'src/renderer/routes.js': 'plugins[\'vue-router\']',
     'src/renderer/components/LandingPageView/CurrentPage.vue': 'plugins[\'vue-router\']',
     'src/renderer/vuex/**/*': 'plugins[\'vuex\']',
-    'builds/**/*': 'builder === \'packager\'',
     'test/e2e/**/*': 'e2e',
     'test/unit/**/*': 'unit',
-    '.electron-vue/release.js': 'builder === \'packager\'',
+    '.electron-vue/build.config.js': 'builder === \'packager\'',
     'test/.eslintrc': 'e2e || unit',
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint'

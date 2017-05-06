@@ -12,8 +12,8 @@
     "build:mas": "cross-env BUILD_TARGET=mas node .electron-vue/build.js",
     "build:win32": "cross-env BUILD_TARGET=win32 node .electron-vue/build.js",
     {{else}}
-    "build": "npm run pack && build",
-    "build:dir": "npm run pack && build --dir",
+    "build": "node .electron-vue/build.js && build",
+    "build:dir": "node .electron-vue/build.js && build --dir",
     {{/if_eq}}
     "dev": "node .electron-vue/dev-runner.js",
     {{#if e2e}}
