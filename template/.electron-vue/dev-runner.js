@@ -93,7 +93,7 @@ function startMain () {
 
 let electronProcess = null
 function startElectron() {
-  electronProcess = spawn(electron, [path.join(__dirname, '../dist/main.js')])
+  electronProcess = spawn(electron, [path.join(__dirname, '../dist/electron/main.js')])
   electronProcess.stdout.on('data', data => {
     if (Array.from(data).length > 0)
       console.log(chalk.black.bgBlue(' ELECTRON ') + '  ' + data.toString().trim())
