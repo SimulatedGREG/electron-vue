@@ -70,10 +70,7 @@
       "icon": "build/icons/icon.ico"
     },
     "linux": {
-      "icon": "build/icons/icon.png",
-      "target": [
-        "AppImage"
-      ]
+      "icon": "build/icons"
     }
   },
 {{/if_eq}}

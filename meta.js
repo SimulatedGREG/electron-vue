@@ -112,7 +112,9 @@ module.exports = {
     '.electron-vue/build.config.js': 'builder === \'packager\'',
     'test/.eslintrc': 'e2e || unit',
     '.eslintignore': 'eslint',
-    '.eslintrc.js': 'eslint'
+    '.eslintrc.js': 'eslint',
+    'appveyor.yml': 'builder === \'builder\'',
+    '.travis.yml': 'builder === \'builder\''
   },
   completeMessage: `---
 

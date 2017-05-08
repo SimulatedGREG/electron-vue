@@ -1,6 +1,6 @@
 .DS_Store
 dist/
-build/
+build/*
 !build/icons
 {{#if unit}}
 coverage

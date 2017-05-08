@@ -1,0 +1,28 @@
+version: 0.1.{build}
+
+branches:
+  only:
+    - master
+
+platform:
+  - x64
+
+cache:
+  - node_modules
+  - '%APPDATA%\npm-cache'
+  - '%USERPROFILE%\.electron'
+
+init:
+  - git config --global core.autocrlf input
+
+install:
+  - ps: Install-Product node 7 x64
+  - git reset --hard HEAD
+  - npm install yarn -g
+  - yarn
+  - node --version
+
+build_script:
+  - yarn run build
+
+test: off
