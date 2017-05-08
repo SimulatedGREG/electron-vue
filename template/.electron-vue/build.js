@@ -86,7 +86,7 @@ function bundleApp () {
       console.log(`\n${errorLog}${chalk.yellow('`electron-packager`')} says...\n`)
       console.log(err)
     } else {
-      console.log(`${doneLog}build(s) complete\n`)
+      console.log(`\n${doneLog}build(s) complete\n`)
     }
   })
 }
