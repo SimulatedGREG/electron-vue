@@ -21,9 +21,6 @@ function createWindow () {
   mainWindow.on('closed', () => {
     mainWindow = null
   })
-
-  // eslint-disable-next-line no-console
-  console.log('mainWindow opened')
 }
 
 app.on('ready', createWindow)
@@ -39,3 +36,21 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+
+//-------------------------------------------------------------------------
+// Auto Updater
+//
+// Uncomment the following code below and install `electron-updater` to
+// support auto updating. Code Signing with valid certificates is REQUIRED.
+//-------------------------------------------------------------------------
+
+// import { autoUpdater } from 'electron-updater'
+
+// autoUpdater.on('update-downloaded', () => {
+//   autoUpdater.quitAndInstall()
+// })
+
+// app.on('ready', () => {
+//   if (process.env.NODE_ENV === 'production') autoUpdater.checkForUpdates()
+// })
