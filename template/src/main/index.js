@@ -37,7 +37,7 @@ app.on('activate', () => {
   }
 })
 
-
+{{#if_eq builder 'bulider'}}
 //-------------------------------------------------------------------------
 // Auto Updater
 //
@@ -54,3 +54,4 @@ app.on('activate', () => {
 // app.on('ready', () => {
 //   if (process.env.NODE_ENV === 'production') autoUpdater.checkForUpdates()
 // })
+{{/if_eq}}
