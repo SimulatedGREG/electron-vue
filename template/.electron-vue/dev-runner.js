@@ -42,7 +42,7 @@ function startRenderer () {
     const server = new WebpackDevServer(
       compiler,
       {
-        contentBase: path.join(__dirname, '../dist/static'),
+        contentBase: path.join(__dirname, '../'),
         quiet: true,
         stats: { colors: true },
         setup (app, ctx) {
