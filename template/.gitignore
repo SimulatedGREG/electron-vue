@@ -1,5 +1,6 @@
 .DS_Store
-dist/
+dist/electron/*
+dist/web/*
 build/*
 !build/icons
 {{#if unit}}
