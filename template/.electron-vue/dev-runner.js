@@ -15,18 +15,22 @@ const rendererConfig = require('./webpack.renderer.config')
 let electronProcess = null
 let hotMiddleware
 
-function logStats (proc, stats) {
+function logStats (proc, data) {
   let log = ''
 
   log += chalk.yellow.bold(`┏ ${proc} Process ${new Array((19 - proc.length) + 1).join('-')}`)
   log += '\n\n'
 
-  stats.toString({
-    colors: true,
-    chunks: false
-  }).split(/\r?\n/).forEach(line => {
-    log += '  ' + line + '\n'
-  })
+  if (typeof data === 'object') {
+    data.toString({
+      colors: true,
+      chunks: false
+    }).split(/\r?\n/).forEach(line => {
+      log += '  ' + line + '\n'
+    })
+  } else {
+    log += `  ${data}\n`
+  }
 
   log += '\n' + chalk.yellow.bold(`┗ ${new Array(28 + 1).join('-')}`) + '\n'
 
@@ -77,6 +81,12 @@ function startMain () {
     mainConfig.entry.main = [path.join(__dirname, '../src/main/index.dev.js')].concat(mainConfig.entry.main)
 
     const compiler = webpack(mainConfig)
+
+    compiler.plugin('watch-run', (compilation, done) => {
+      logStats('Main', chalk.white.bold('compiling...'))
+      hotMiddleware.publish({ action: 'compiling' })
+      done()
+    })
 
     compiler.watch({}, (err, stats) => {
       if (err) {
