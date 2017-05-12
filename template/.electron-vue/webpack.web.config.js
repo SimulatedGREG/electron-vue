@@ -9,11 +9,10 @@ const webpack = require('webpack')
 const BabiliWebpackPlugin = require('babili-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 let webConfig = {
-  devtool: '#eval-source-map',
+  devtool: '#cheap-module-eval-source-map',
   entry: {
     web: path.join(__dirname, '../src/renderer/main.js')
   },
@@ -80,9 +79,6 @@ let webConfig = {
   },
   plugins: [
     new ExtractTextPlugin('styles.css'),
-    new FriendlyErrorsPlugin({
-      clearConsole: false
-    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, '../src/index.ejs'),

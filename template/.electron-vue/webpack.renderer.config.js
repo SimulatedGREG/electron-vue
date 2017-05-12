@@ -12,12 +12,22 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+/**
+ * List of node_modules to include in webpack bundle
+ *
+ * Require for specific packages like Vue UI libraries
+ * that provide pure *.vue files that need compiling
+ */
+let whiteListedModules = []
+
 let rendererConfig = {
-  devtool: '#eval-source-map',
+  devtool: '#cheap-module-eval-source-map',
   entry: {
     renderer: path.join(__dirname, '../src/renderer/main.js')
   },
-  externals: Object.keys(pkg.dependencies || {}).filter(d => !['vue'].includes(d)),
+  externals: [
+    ...Object.keys(pkg.dependencies || {}).filter(d => !whiteListedModules.includes(d))
+  ],
   module: {
     rules: [
       {
