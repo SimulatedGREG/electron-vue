@@ -2,40 +2,31 @@ import Vue from 'vue'
 {{#isEnabled plugins 'axios'}}
 import axios from 'axios'
 {{/isEnabled}}
-{{#isEnabled plugins 'vue-router'}}
-import Router from 'vue-router'
 
 import App from './App'
-import routes from './routes'
+{{#isEnabled plugins 'vue-router'}}
+import router from './router'
+{{/isEnabled}}
+{{#isEnabled plugins 'vuex'}}
+import store from './store'
 {{/isEnabled}}
 
-{{#isEnabled plugins 'axios'}}
-Vue.http = Vue.prototype.$http = axios
-{{/isEnabled}}
 {{#isEnabled plugins 'vue-electron'}}
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 {{/isEnabled}}
-{{#isEnabled plugins 'vue-router'}}
-Vue.use(Router)
+{{#isEnabled plugins 'axios'}}
+Vue.http = Vue.prototype.$http = axios
 {{/isEnabled}}
-Vue.config.debug = true
-
-{{#isEnabled plugins 'vue-router'}}
-const router = new Router({
-  scrollBehavior: () => ({ y: 0 }),
-  routes
-})
+Vue.config.productionTip = true
 
 /* eslint-disable no-new */
 new Vue({
+  components: { App },
+  {{#isEnabled plugins 'vue-router'}}
   router,
-  ...App
+  {{/isEnabled}}
+  {{#isEnabled plugins 'vue-router'}}
+  store,
+  {{/isEnabled}}
+  template: '<App/>'
 }).$mount('#app')
-{{else}}
-import App from './App'
-
-/* eslint-disable no-new */
-new Vue({
-  ...App
-}).$mount('#app')
-{{/isEnabled}}

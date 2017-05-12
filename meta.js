@@ -106,7 +106,8 @@ module.exports = {
   filters: {
     'src/renderer/routes.js': 'plugins[\'vue-router\']',
     'src/renderer/components/LandingPageView/CurrentPage.vue': 'plugins[\'vue-router\']',
-    'src/renderer/vuex/**/*': 'plugins[\'vuex\']',
+    'src/renderer/router/**/*': 'plugins[\'vue-router\']',
+    'src/renderer/store/**/*': 'plugins[\'vuex\']',
     'test/e2e/**/*': 'e2e',
     'test/unit/**/*': 'unit',
     '.electron-vue/build.config.js': 'builder === \'packager\'',

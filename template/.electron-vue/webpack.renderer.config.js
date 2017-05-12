@@ -17,7 +17,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
  * Require for specific packages like Vue UI libraries
  * that provide pure *.vue files that need compiling
  */
-let whiteListedModules = []
+let whiteListedModules = ['vue']
 
 let rendererConfig = {
   devtool: '#cheap-module-eval-source-map',

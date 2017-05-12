@@ -12,19 +12,15 @@
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
   import LandingPage from '@/components/LandingPageView'
-{{/isEnabled}}
-{{#isEnabled plugins 'vuex'}}
-  import store from '@/vuex/store'
+
 {{/isEnabled}}
   export default {
+    name: '{{ name }}'{{#isEnabled plugins 'vue-router'}}{{else}},{{/isEnabled}}
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
     components: {
       LandingPage
-    }{{#isEnabled plugins 'vuex'}},{{/isEnabled}}
-{{/isEnabled}}
-{{#isEnabled plugins 'vuex'}}
-    store
+    }
 {{/isEnabled}}
   }
 </script>
