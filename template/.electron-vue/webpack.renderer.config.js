@@ -4,7 +4,6 @@ process.env.BABEL_ENV = 'renderer'
 
 const path = require('path')
 const pkg = require('../package.json')
-const settings = require('./config.js')
 const webpack = require('webpack')
 
 const BabiliWebpackPlugin = require('babili-webpack-plugin')
@@ -30,6 +29,19 @@ let rendererConfig = {
   ],
   module: {
     rules: [
+{{#if eslint}}
+      {
+        test: /\.(js|vue)$/,
+        enforce: 'pre',
+        exclude: /node_modules/,
+        use: {
+          loader: 'eslint-loader',
+          options: {
+            formatter: require('eslint-friendly-formatter')
+          }
+        }
+      },
+{{/if}}
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
@@ -114,29 +126,6 @@ let rendererConfig = {
   },
   target: 'electron-renderer'
 }
-
-{{#if eslint}}
-if (process.env.NODE_ENV !== 'production') {
-  /**
-   * Apply ESLint
-   */
-  if (settings.eslint) {
-    rendererConfig.module.rules.push(
-      {
-        test: /\.(js|vue)$/,
-        enforce: 'pre',
-        exclude: /node_modules/,
-        use: {
-          loader: 'eslint-loader',
-          options: {
-            formatter: require('eslint-friendly-formatter')
-          }
-        }
-      }
-    )
-  }
-}
-{{/if}}
 
 /**
  * Adjust rendererConfig for production settings

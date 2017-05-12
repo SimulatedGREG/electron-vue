@@ -4,7 +4,7 @@ import { app, BrowserWindow } from 'electron'
 
 let mainWindow
 const winURL = process.env.NODE_ENV === 'development'
-  ? `http://localhost:${require('../../.electron-vue/config').port}`
+  ? `http://localhost:9080`
   : `file://${__dirname}/index.html`
 
 function createWindow () {
