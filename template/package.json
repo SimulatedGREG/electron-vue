@@ -146,7 +146,6 @@
     "mocha": "^3.0.2",
     {{/testing}}
     "multispinner": "^0.2.1",
-    "ora": "^1.2.0",
     "style-loader": "^0.16.0",
     "tree-kill": "^1.1.0",
     "url-loader": "^0.5.7",
