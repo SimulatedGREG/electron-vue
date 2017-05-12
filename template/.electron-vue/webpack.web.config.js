@@ -3,7 +3,6 @@
 process.env.BABEL_ENV = 'web'
 
 const path = require('path')
-const settings = require('./config.js')
 const webpack = require('webpack')
 
 const BabiliWebpackPlugin = require('babili-webpack-plugin')
