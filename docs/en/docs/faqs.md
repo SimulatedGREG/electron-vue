@@ -1,6 +1,6 @@
 # FAQs
 
-* Why is my electron app blank after running `npm run dev`?
+* [Why is my electron app blank after running `npm run dev`?](#why-is-my-electron-app-blank-after-running-npm-run-dev)
 * [Why does my electron app show a file explorer?](#why-does-my-electron-app-show-a-file-explorer)
 * [Why is `vue-devtools`/`devtron` missing?](#why-is-vue-devtoolsdevtron-missing)
 * [Where do I put Static Assets?](#where-do-i-put-static-assets)
@@ -35,6 +35,4 @@ Make sure to close and reopen the developer tools panel on first launch if they 
 ## Why did `npm run lint` end with an error?
 
 The default nature of eslint is to print linting errors to console, and if there is any found the script will end with a non-zero exit \(which produces npm errors\). This is normal behavior.
-
-
 

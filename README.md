@@ -1,22 +1,35 @@
-[![](docs/images/logo.png)](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html)
+<div align="center">
+<br>
+<img width="500" src="/docs/images/logo.png" alt="electron-vue">
+<br>
+<br>
+</div>
 
-> The boilerplate for making electron apps built with vue \(pretty much what it sounds like\).
+<p align="center" color="#6a737d">
+The boilerplate for making electron apps built with vue (pretty much what it sounds like).
+</p>
 
-[![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
+<div align="center">
+
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
+</div>
+
+<div align="center">
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
+[![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
+</div>
 
 ## Overview
 
 The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding, `webpack` with `vue-loader`, `electron-packager` or `electron-builder`, and some of the most used plugins like `vue-router`, `vuex`, and so much more.
 
-#### Check out the documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
+#### Check out the detailed documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
 
 Things you'll find in this boilerplate...
 
-* Basic project structure with **single **`package.json` setup
+* Basic project structure with **single** `package.json` setup
 * Detailed [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/)
 * Project scaffolding using [vue-cli](https://github.com/vuejs/vue-cli)
 * Ready to use Vue plugins \([axios](https://github.com/mzabriskie/axios), [vue-electron](https://github.com/SimulatedGREG/vue-electron), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex)\)\*
@@ -65,7 +78,7 @@ Make sure to check out [**A Note for Windows Users**](https://simulatedgreg.gitb
 
 Make sure to take a look at the [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/). Here you will find useful information about configuration, project structure, and building your app. There's also a handy [FAQs](https://simulatedgreg.gitbooks.io/electron-vue/content/en/faqs.html) section.
 
-### Contributing
 
-Wanting to submit a pull request? Make sure to read [this](docs/en/docs/contributing.md) first.
+## Made with electron-vue
+Take a look at some of the amazing projects built with electron-vue. Want to have your own project listed? Feel free to submit a pull request.
 
