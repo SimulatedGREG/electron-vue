@@ -5,7 +5,7 @@ electron-vue makes use of [Spectron](http://electron.atom.io/spectron/) and the 
 ### Running tests
 
 ```bash
-# Begins Mocha
+# Begin Mocha
 npm run e2e
 ```
 
@@ -36,7 +36,7 @@ This file acts as the main entry to Mocha and gathers all tests written in `spec
 
 #### `utils.js`
 
-Here you will find generic functions that could be of use throughout your `specs/`. Base functions include a `beforeEach` and `afterEach` that handle the electron process.
+Here you will find generic functions that could be of use throughout your `specs/`. Base functions include a `beforeEach` and `afterEach` that handle the electron creation/destruction process.
 
 ### On the subject of Spectron
 
@@ -44,5 +44,5 @@ Spectron is the official [electron](http://electron.atom.io) testing framework t
 
 #### Using WebDriverIO
 
-As stated in the Spectron [documentation](https://github.com/electron/spectron#client), access to [WebDriverIO APIs](http://webdriver.io/api.html) can be accessed through `this.app.client`. Because electron-vue uses Mocha, the context of `this` is shared between `afterEach`, `beforeEach`, and `it`. Because of this, it is important to note that ES2015 arrow functions cannot not be used in certain situations as the context of `this` will be overwritten \([more info](https://mochajs.org/#arrow-functions)\).
+As stated in the Spectron [documentation](https://github.com/electron/spectron#client), access to [WebDriverIO APIs](http://webdriver.io/api.html) can be accessed through `this.app.client`. Since electron-vue uses Mocha, the context of `this` is shared between `afterEach`, `beforeEach`, and `it`. Because of this, it is important to note that ES2015 arrow functions cannot not be used in certain situations as the context of `this` will be overwritten \([more info](https://mochajs.org/#arrow-functions)\).
 
