@@ -1,4 +1,4 @@
-# Using [electron-packager](https://github.com/electron-userland/electron-packager)
+# Using [`electron-packager`](https://github.com/electron-userland/electron-packager)
 
 All builds produced by `electron-packager` can be found within the `build` folder.
 
@@ -33,7 +33,7 @@ If you are wanting to build for Windows **with a custom icon** using a non-Windo
 
 ### Default building configurations
 
-Further customization can be made at **`.electron-vue/build.config.js`** in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options).
+Further customization can be made at `.electron-vue/build.config.js` in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options).
 
 ```js
 {

@@ -1,4 +1,4 @@
-# Using [electron-builder](https://github.com/electron-userland/electron-builder)
+# Using [`electron-builder`](https://github.com/electron-userland/electron-builder)
 
 All builds produced by `electron-builder` can be found within the `build` directory.
 
@@ -18,7 +18,7 @@ npm run build:dir
 
 ### Default building configurations
 
-Further customization can be made at **`package.json`** in accordance to `electron-builders`'s options found [here](https://github.com/electron-userland/electron-builder/wiki/Options).
+Further customization can be made at `package.json` in accordance to `electron-builders`'s options found [here](https://github.com/electron-userland/electron-builder/wiki/Options).
 
 ```js
 "build": {
