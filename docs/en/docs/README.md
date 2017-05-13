@@ -1,16 +1,26 @@
-<p align="center">
-  <br>
-  <img width="400" src="/docs/images/logo.png" alt="electron-vue">
-  <br>
-  <br>
-> The boilerplate for making electron apps built with vue \(pretty much what it sounds like\).
+<div align="center">
+<br>
+<img width="400" src="/docs/images/logo.png" alt="electron-vue">
+<br>
+<br>
+</div>
 
-[![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
+<blockquote align="center">
+The boilerplate for making electron apps built with vue (pretty much what it sounds like).
+</blockquote>
+
+
+<div align="center">
+
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
+</div>
+
+<div align="center">
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
-</p>
+[![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
+</div>
 
 ## Overview
 
