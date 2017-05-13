@@ -1,6 +1,6 @@
 # Using Pre-Processors
 
-One of the great benefits of using [vue-loader](https://github.com/vuejs/vue-loader) with [webpack](https://github.com/webpack/webpack) is the ability to pre-process your HTML/CSS/JS directly in your Vue components files without much effort at all. For more information about this check [**here**](https://vuejs.org/v2/guide/single-file-components.html).
+One of the great benefits of using [`vue-loader`](https://github.com/vuejs/vue-loader) with [`webpack`](https://github.com/webpack/webpack) is the ability to pre-process your HTML/CSS/JS directly in your Vue components files without much effort at all. For more information about this check [**here**](https://vuejs.org/v2/guide/single-file-components.html).
 
 ## Use Case
 
