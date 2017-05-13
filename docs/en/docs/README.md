@@ -5,10 +5,9 @@
 <br>
 </div>
 
-<blockquote align="center">
+<p align="center" color="#6a737d">
 The boilerplate for making electron apps built with vue (pretty much what it sounds like).
-</blockquote>
-
+</p>
 
 <div align="center">
 
