@@ -1,6 +1,6 @@
 # Using [electron-builder](https://github.com/electron-userland/electron-builder)
 
-All builds produced by `electron-builder` can be found within the `dist` folder.
+All builds produced by `electron-builder` can be found within the `build` directory.
 
 #### Building
 
@@ -9,7 +9,8 @@ npm run build
 ```
 
 #### Building unpacked directory
-Useful for quick testing.
+
+Produce simple executable without full installer. Useful for quick testing.
 
 ```bash
 npm run build:dir
@@ -17,10 +18,10 @@ npm run build:dir
 
 ### Default building configurations
 
-Further customization can be made at `package.json` in accordance to `electron-builders`'s options found [here](https://github.com/electron-userland/electron-builder/wiki/Options).
+Further customization can be made at **`package.json`** in accordance to `electron-builders`'s options found [here](https://github.com/electron-userland/electron-builder/wiki/Options).
 
 ```js
-{
+"build": {
   "productName": "ElectronVue",
   "appId": "org.simulatedgreg.electron-vue",
   "category": "public.app-category.tools",
@@ -39,23 +40,25 @@ Further customization can be made at `package.json` in accordance to `electron-b
       }
     ]
   },
+  "directories": {
+    "output": "build"
+  },
   "files": [
-    "dist/",
+    "dist/electron",
     "node_modules/",
     "package.json"
   ],
   "mac": {
-    "icon": "app/icons/icon.icns"
+    "icon": "build/icons/icon.icns"
   },
   "win": {
-    "icon": "app/icons/icon.ico"
+    "icon": "build/icons/icon.ico"
   },
   "linux": {
-    "target": [
-      "AppImage"
-    ]
+    "icon": "build/icons"
   }
 }
 ```
+
 
 
