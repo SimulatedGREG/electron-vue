@@ -1,8 +1,10 @@
 # Using [electron-packager](https://github.com/electron-userland/electron-packager)
 
-All builds produced by `electron-packager` can be found within the `builds` folder.
+All builds produced by `electron-packager` can be found within the `build` folder.
 
 #### Building for all platforms
+
+Please know that not all Operating Systems can build for all other platforms.
 
 ```bash
 npm run build
@@ -19,7 +21,7 @@ npm run build:darwin
 
 #### Cleaning
 
-Delete all builds from `builds`.
+Delete all builds from `build`.
 
 ```bash
 npm run build:clean
@@ -31,7 +33,7 @@ If you are wanting to build for Windows **with a custom icon** using a non-Windo
 
 ### Default building configurations
 
-Further customization can be made at `config.js` in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options).
+Further customization can be made at **`.electron-vue/build.config.js`** in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options).
 
 ```js
 {
@@ -42,31 +44,31 @@ Further customization can be made at `config.js` in accordance to `electron-pack
     asar: true,
 
     // Directory of the app
-    dir: path.join(__dirname, '../app'),
+    dir: path.join(__dirname, '../'),
 
     // Set electron app icon
-    // Change default icon in `app/icons`
     // File extensions are added based on platform
     //
     // If building for Linux, please read
     // https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#icon
-    icon: path.join(__dirname, '../app/icons/icon'),
+    icon: path.join(__dirname, '../build/icons/icon'),
 
     // Ignore files that would bloat final build size
-    ignore: /\b(src|index\.ejs|icons)\b/,
+    ignore: /(^\/(src|test|\.[a-z]+|README|yarn|static|dist\/web))|\.gitkeep/,
 
-    // `config.js` name
-    name: config.name,
+    // Application name
+    name: 'my-app',
 
     // Save builds to `builds`
-    out: path.join(__dirname, '../builds'),
+    out: path.join(__dirname, '../build'),
 
     // Overwrite existing builds
     overwrite: true,
 
     // Environment variable that sets platform
-    platform: process.env.PLATFORM_TARGET || 'all'
+    platform: process.env.BUILD_TARGET || 'all'
 }
 ```
+
 
 
