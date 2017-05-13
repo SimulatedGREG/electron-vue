@@ -1,4 +1,4 @@
-# Building your app
+# Building Your App
 
 electron-vue supports both [electron-packager](https://github.com/electron-userland/electron-packager) and [electron-builder](https://github.com/electron-userland/electron-builder) to build and distribute your production ready apps. Both builders are backed by the amazing [electron-userland](https://github.com/electron-userland) community and each have detailed documentation. During `vue-cli` scaffolding you will be asked which builder you will want to use.
 
