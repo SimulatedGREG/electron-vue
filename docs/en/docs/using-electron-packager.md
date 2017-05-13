@@ -56,9 +56,6 @@ Further customization can be made at `.electron-vue/build.config.js` in accordan
     // Ignore files that would bloat final build size
     ignore: /(^\/(src|test|\.[a-z]+|README|yarn|static|dist\/web))|\.gitkeep/,
 
-    // Application name
-    name: 'my-app',
-
     // Save builds to `builds`
     out: path.join(__dirname, '../build'),
 
