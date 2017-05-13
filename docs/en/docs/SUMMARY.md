@@ -13,7 +13,7 @@
   * [NPM Scripts](npm_scripts.md)
   * [Using CSS Frameworks](using_css_frameworks.md)
   * [Using Pre-Processors](using_pre-processors.md)
-  * [Saving/Reading Local Files](savingreading-local-files.md)
+  * [Read & Write Local Files](savingreading-local-files.md)
 * [Building Your App](building_your_app.md)
   * [Using electron-packager](using-electron-packager.md)
   * [Using electron-builder](using-electron-builder.md)
