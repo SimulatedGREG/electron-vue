@@ -1,4 +1,4 @@
-[![](/docs/images/logo.png)](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html)
+![](/docs/images/logo.png)
 
 > The boilerplate for making electron apps built with vue \(pretty much what it sounds like\).
 
