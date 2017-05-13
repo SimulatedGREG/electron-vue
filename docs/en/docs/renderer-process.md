@@ -48,19 +48,19 @@ When using `vue-router`, refrain from using [**HTML5 History Mode**](http://rout
 
 Describing `vuex` is not the easiest thing to do, so please read [this](http://vuex.vuejs.org/en/intro.html) for a better understanding of what problem it tries to solve and how it works.
 
-electron-vue takes advantage of `vuex`'s module structure to create multiple data stores and are saved in `app/src/renderer/vuex/modules`.
+electron-vue takes advantage of `vuex`'s module structure to create multiple data stores and are saved in `src/renderer/store/modules`.
 
-Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `app/src/renderer/vuex/modules/index.js` does the dirty work for us! This little script let's `app/src/renderer/vuex/store.js` import all of our modules in one-shot.
+Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `src/renderer/store/modules/index.js` does the dirty work for us! This little script let's `src/renderer/store/index.js` import all of our modules in a one-shot manner.
 
 # Using Static assets
 
 Sometimes your don't want webpack to bundle some of your assets. Let's say you have a large sprite collection, but your app loads the images in on-demand. You don't want webpack to bundle every single sprite if only a few might be used at a time.
 
-When using static assets, let's place them inside the `app/dist` folder. Essentially everything webpack produces in production builds lives in this folder, so everything inside here will be **included** in final builds.
+When using static assets, let's place them inside the `static/` folder. During the build step, `webpack` will copy all assets in the `static/` directory and add them to the production build.
 
 #### Use Case
 
-Let's say I have a component that loads an image, but the image's path isn't known until some other task is completed. To keep things simple, let's just use a `$data` variable to bind our `<img>`'s src.
+Let's say I have a component that loads an image, but the image's path isn't known until some other task is completed. To keep things simple, let's just use a `data` variable to bind our `<img>`'s src.
 
 ```html
 <template>
@@ -70,11 +70,11 @@ Let's say I have a component that loads an image, but the image's path isn't kno
 <script>
   export default {
     data () {
-      return { imageUrl: 'imgs/unsplash.png' }
+      return { imageUrl: 'static/imgs/unsplash.png' }
     }
   }
 </script>
 ```
 
-Here webpack will not bundle the `unsplash.png` image and the app will look inside the `app/dist` directory for the asset.
+Here `webpack` will not bundle the `unsplash.png` image and the app will look inside the `static/imgs/unsplash.png` directory for the asset.
 
