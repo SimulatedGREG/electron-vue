@@ -10,16 +10,16 @@
 
 ## Overview
 
-The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding, `webpack` with `vue-loader`, `electron-packager` or `electron-builder`, and some of the most used plugins like `vue-router`, `vuex`, and more.
+The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding, `webpack` with `vue-loader`, `electron-packager` or `electron-builder`, and some of the most used plugins like `vue-router`, `vuex`, and so much more.
 
 #### Check out the documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
 
 Things you'll find in this boilerplate...
 
-* Basic project structure with single `package.json` setup
+* Basic project structure with **single **`package.json` setup
 * Detailed [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/)
 * Project scaffolding using [vue-cli](https://github.com/vuejs/vue-cli)
-* Ready to use Vue plugins \([vue-electron](https://github.com/SimulatedGREG/vue-electron),  [vue-resource](https://github.com/vuejs/vue-resource), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex)\)\*
+* Ready to use Vue plugins \([axios](https://github.com/mzabriskie/axios), [vue-electron](https://github.com/SimulatedGREG/vue-electron), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex)\)\*
 * Installed [vue-devtools](https://github.com/vuejs/vue-devtools) and [devtron](https://github.com/electron/devtron) tools for development
 * Ability to easily package your electron app using [electron-packager](https://github.com/electron-userland/electron-packager) or [electron-builder](https://github.com/electron-userland/electron-builder)\*
 * Ability to produce web output for browsers
@@ -36,7 +36,7 @@ Things you'll find in this boilerplate...
 
 ### Getting Started
 
-This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. Certain dependencies and scripts use ES6 specific features so the use of `node@^6.5.0` or higher is recommended. The use of the [`yarn`](https://yarnpkg.org) package manager is also highly encouraged as it handles dependencies much better and can help reduce final build size.
+This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. The use of `node@^6.5.0` or higher is recommended. electron-vue also officially recommends the [`yarn`](https://yarnpkg.org) package manager as it handles dependencies much better and can help reduce final build size.
 
 ```bash
 # Install vue-cli and scaffold boilerplate
@@ -51,7 +51,7 @@ yarn run dev # or npm run dev
 
 ##### Wanting to use Vue 1?
 
-Just point to the `1.0` branch. Please note that electron-vue has officially deprecated `vue@^1` and documentation reflects those changes. Use the [**legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs) if you are using Vue 1.
+Just point to the `1.0` branch. Please note that electron-vue has officially deprecated `vue@^1` , so project structure, features, and documentation reflect those changes. Use the [**legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs) if you are using Vue 1.
 
 ```bash
 vue init simulatedgreg/electron-vue#1.0 my-project
@@ -64,10 +64,6 @@ Make sure to check out [**A Note for Windows Users**](https://simulatedgreg.gitb
 ### Next Steps
 
 Make sure to take a look at the [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/). Here you will find useful information about configuration, project structure, and building your app. There's also a handy [FAQs](https://simulatedgreg.gitbooks.io/electron-vue/content/en/faqs.html) section.
-
-### Future Plans
-
-Be up to date with new features and improvements by checking on the [GitHub Project](https://github.com/SimulatedGREG/electron-vue/projects/2).
 
 ### Contributing
 
