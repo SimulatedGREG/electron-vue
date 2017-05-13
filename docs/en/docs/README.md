@@ -1,6 +1,6 @@
 ![](/docs/images/logo.png)
 
-> The boilerplate for making electron apps built with vue \(pretty much what it sounds like\).
+> The boilerplate for making electron applications built with vue \(pretty much what it sounds like\).
 
 [![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
 

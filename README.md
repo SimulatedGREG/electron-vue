@@ -6,7 +6,7 @@
 </div>
 
 <p align="center" color="#6a737d">
-The boilerplate for making electron apps built with vue (pretty much what it sounds like).
+The boilerplate for making electron applications built with vue (pretty much what it sounds like).
 </p>
 
 <div align="center">
