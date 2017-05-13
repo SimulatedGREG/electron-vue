@@ -40,7 +40,7 @@ When using pre-processors for CSS, it's very beneficial to make use of global va
 
 This example demonstrates how to apply a `globals.scss` to all Vue component files. This documentation assumes you have already setup `sass-loader` in your development environment \([more info](using_pre-processors.md)\).
 
-#### Define Your Globals
+#### Define your globals
 
 **src/renderer/globals.scss**
 
@@ -49,7 +49,7 @@ $brand-primary: blue;
 $brand-accent: turquoise;
 ```
 
-#### Inject `globals.scss` Directly Into `node-sass`
+#### Inject `globals.scss` directly into `node-sass`
 
 Edit the `vue-loader` config in **.electron-vue/webpack.renderer.config.js**
 
@@ -60,7 +60,7 @@ loaders: {
 }
 ```
 
-#### Use Your Globals
+#### Use your globals
 
 **SomeComponent.vue**
 
