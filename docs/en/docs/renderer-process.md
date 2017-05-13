@@ -26,7 +26,7 @@ src/renderer/components
 
 ### vue routes
 
-For more information about vue-router click [here](https://github.com/vuejs/vue-router). In short, I'd encourage the use of vue-router as creating a Single Page Application is much more practical when making electron apps. Do you really want to manage a bunch of BrowserWindows or static page navigation? Probably not.
+For more information about `vue-router` click [here](https://github.com/vuejs/vue-router). In short, it is encouraged to use `vue-router` as creating a Single Page Application is much more practical when making electron apps. Do you really want to manage a bunch of BrowserWindows or static page navigation? Probably not.
 
 Routes are held in `src/renderer/router/index.js` and defined like so...
 
@@ -52,9 +52,9 @@ electron-vue takes advantage of `vuex`'s module structure to create multiple dat
 
 Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `src/renderer/store/modules/index.js` does the dirty work for us! This little script let's `src/renderer/store/index.js` import all of our modules in a one-shot manner.
 
-# Using Static assets
+# Using Static Assets
 
-Sometimes your don't want webpack to bundle some of your assets. Let's say you have a large sprite collection, but your app loads the images in on-demand. You don't want webpack to bundle every single sprite if only a few might be used at a time.
+Sometimes your don't want `webpack` to bundle some of your assets. Let's say you have a large sprite collection, but your app loads the images in on-demand. `webpack` does not need to bundle every single sprite if only a few might be used at a time.
 
 When using static assets, let's place them inside the `static/` folder. During the build step, `webpack` will copy all assets in the `static/` directory and add them to the production build.
 
@@ -70,6 +70,7 @@ Let's say I have a component that loads an image, but the image's path isn't kno
 <script>
   export default {
     data () {
+      // notice the url starts with `static/`
       return { imageUrl: 'static/imgs/unsplash.png' }
     }
   }
