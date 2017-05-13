@@ -1,10 +1,10 @@
 # NPM Scripts
 
-To help eliminate redundant tasks around the development process, please take note of some of the NPM scripts available to you. The following commands should be ran from your project's root directory.
+To help eliminate redundant tasks around the development process, please take note of some of the NPM scripts available to you. The following commands should be ran from your project's root directory. And of course, you can run any of the below commands using `yarn run <command>`
 
 ### `npm run build`
 
-Build your app for production and package. More info can be found in the [**Building your app**](building_your_app.md) section.
+Build your app for production and package. More info can be found in the [**Building Your App**](building_your_app.md) section.
 
 ### `npm run dev`
 
@@ -12,11 +12,11 @@ Run app in development.
 
 ### `npm run lint`
 
-Lint all your `app/src`'s JS & Vue component files.
+Lint all your `src/`'s JS & Vue component files.
 
 ### `npm run lint:fix`
 
-Lint all your `app/src`'s JS & Vue component files and attempt to fix issues.
+Lint all your `src/`'s JS & Vue component files and attempt to fix issues.
 
 ### `npm run pack`
 
@@ -32,11 +32,11 @@ Run webpack to bundle `renderer` process source code.
 
 ### `npm run unit`
 
-Run unit tests with Karma + Jasmine. More information on [**Unit testing**](unittesting.md).
+Run unit tests with Karma + Jasmine. More information on [**Unit Testing**](unittesting.md).
 
 ### `npm run e2e`
 
-Run end-to-end tests with Spectron + Mocha. More information on [**End-to-end testing**](end-to-end_testing.md).
+Run end-to-end tests with Spectron + Mocha. More information on [**End-to-end Testing**](end-to-end_testing.md).
 
 ### `npm test`
 
