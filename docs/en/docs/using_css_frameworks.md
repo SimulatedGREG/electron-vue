@@ -20,6 +20,16 @@ Then inside `src/renderer/main.js` let's add this line.
 import 'bulma/css/bulma.css'
 ```
 
+Alternatively, you can also include `bulma` from inside a component file.
+
+**App.vue**
+
+```html
+<style>
+  @import "~bulma/css/bulma.css";
+</style>
+```
+
 Now webpack will know to bundle `bulma` into our app and make it available in our production builds.
 
 # Using Sass/SCSS globals
@@ -30,7 +40,7 @@ When using pre-processors for CSS, it's very beneficial to make use of global va
 
 This example demonstrates how to apply a `globals.scss` to all Vue component files. This documentation assumes you have already setup `sass-loader` in your development environment \([more info](using_pre-processors.md)\).
 
-#### Define your globals
+#### Define Your Globals
 
 **src/renderer/globals.scss**
 
@@ -39,7 +49,7 @@ $brand-primary: blue;
 $brand-accent: turquoise;
 ```
 
-#### Inject `globals.scss` directly into `node-sass`
+#### Inject `globals.scss` Directly Into `node-sass`
 
 Edit the `vue-loader` config in **.electron-vue/webpack.renderer.config.js**
 
@@ -50,7 +60,7 @@ loaders: {
 }
 ```
 
-#### Use your globals
+#### Use Your Globals
 
 **SomeComponent.vue**
 

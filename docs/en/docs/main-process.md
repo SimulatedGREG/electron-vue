@@ -10,7 +10,7 @@ Since the `main` process is essentially a full node environment, there is no ini
 
 #### `src/main/index.js`
 
-This file is you app's main file, the file in which `electron` boots with, and is also used as `webpack`'s entry file. All `main` process development should start from here.
+This file is you app's main file, the file in which `electron` boots with, and is also used as `webpack`'s entry file. All `main` process work should start from here.
 
 #### `app/src/main/index.dev.js`
 
