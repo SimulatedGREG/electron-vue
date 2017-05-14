@@ -1,3 +1,8 @@
+/**
+ * The file enables `@/store/index.js` to import all vuex modules
+ * in a one-shot manner. There should be no reason to edit this.
+ */
+
 const files = require.context('.', false, /\.js$/)
 const modules = {}
 

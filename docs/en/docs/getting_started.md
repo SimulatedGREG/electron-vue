@@ -11,7 +11,7 @@ vue init simulatedgreg/electron-vue my-project
 
 # Install dependencies and run your app
 cd my-project
-yarn install # or npm install
+yarn # or npm install
 yarn run dev # or npm run dev
 ```
 
