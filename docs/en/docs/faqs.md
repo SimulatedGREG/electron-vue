@@ -5,6 +5,7 @@
 * [Why is `vue-devtools`/`devtron` missing?](#why-is-vue-devtoolsdevtron-missing)
 * [Where do I put Static Assets?](#where-do-i-put-static-assets)
 * [Why did `npm run lint` end with an error?](#why-did-npm-run-lint-end-with-an-error)
+* [Why can't I load my app in a web browser?](#why-cant-i-load-my-app-in-a-web-browser)
 
 ---
 
@@ -12,7 +13,7 @@
 
 #### TL;DR
 
-Make sure you don't have a personal proxy setup that could tamper with `webpack-dev-server`.
+Make sure you don't have a personal **proxy** setup that could tamper with `webpack-dev-server`.
 
 ## Why does my electron app show a file explorer?
 
@@ -35,4 +36,10 @@ Make sure to close and reopen the developer tools panel on first launch if they 
 ## Why did `npm run lint` end with an error?
 
 The default nature of eslint is to print linting errors to console, and if there is any found the script will end with a non-zero exit \(which produces npm errors\). This is normal behavior.
+
+## Why can't I load my app in a web browser?
+
+[\#195](https://github.com/SimulatedGREG/electron-vue/issues/195)
+
+
 
