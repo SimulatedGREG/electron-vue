@@ -117,14 +117,18 @@ module.exports = {
     'appveyor.yml': 'builder === \'builder\'',
     '.travis.yml': 'builder === \'builder\''
   },
-  completeMessage: `---
-
-All set. More configurations can be made at \x1b[33m{{destDirName}}/config.js\x1b[0m.
-
-Make sure to check out the documentation for this boilerplate at \x1b[33mhttps://simulatedgreg.gitbooks.io/electron-vue/content/index.html\x1b[0m.
-
-Next steps:
-  1. \x1b[34mcd {{destDirName}}\x1b[0m
-  2. \x1b[34mnpm install\x1b[0m
-  3. \x1b[34mnpm run dev\x1b[0m`
+  completeMessage: [
+    '---',
+    '',
+    'All set. Welcome to your new electron-vue project!',
+    '',
+    'Make sure to check out the documentation for this boilerplate at',
+    '',
+    '  \x1b[33mhttps://simulatedgreg.gitbooks.io/electron-vue/content/\x1b[0m.',
+    '',
+    '',
+    'Next Steps:\n{{^inPlace}}\n\n  \x1b[33m$\x1b[0m cd {{destDirName}}{{/inPlace}}',
+    '  \x1b[33m$\x1b[0m yarn (or `npm install`)',
+    '  \x1b[33m$\x1b[0m yarn run dev (or `npm run dev`)',
+  ].join('\n')
 }

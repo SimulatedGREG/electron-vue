@@ -25,7 +25,7 @@ new Vue({
   {{#isEnabled plugins 'vue-router'}}
   router,
   {{/isEnabled}}
-  {{#isEnabled plugins 'vue-router'}}
+  {{#isEnabled plugins 'vuex'}}
   store,
   {{/isEnabled}}
   template: '<App/>'
