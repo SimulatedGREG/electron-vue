@@ -92,9 +92,9 @@ function bundleApp () {
   packager(buildConfig, (err, appPaths) => {
     if (err) {
       console.log(`\n${errorLog}${chalk.yellow('`electron-packager`')} says...\n`)
-      console.log(err)
+      console.log(err + '\n')
     } else {
-      console.log(`\n${doneLog}build(s) complete\n`)
+      console.log(`\n${doneLog}building complete (build/)\n`)
     }
   })
 }
@@ -103,13 +103,14 @@ function bundleApp () {
 function web () {
   del.sync(['dist/web/*', '!.gitkeep'])
   webpack(webConfig, (err, stats) => {
-    if (err || stats.hasErrors()) process.exit(1)
-    else {
-      console.log(`${doneLog} web build complete\n`)
-      console.log(stats.toString({
-        chunks: false,
-        colors: true
-      }))
-    }
+    if (err || stats.hasErrors()) console.log(err)
+    else console.log(`${doneLog}web build complete (dist/web/)\n`)
+
+    console.log(stats.toString({
+      chunks: false,
+      colors: true
+    }))
+
+    process.exit()
   })
 }

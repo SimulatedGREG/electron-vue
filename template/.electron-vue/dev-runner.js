@@ -39,8 +39,6 @@ function logStats (proc, data) {
 
 function startRenderer () {
   return new Promise((resolve, reject) => {
-    let rendererConfig = require('./webpack.renderer.config')
-
     rendererConfig.entry.renderer = [path.join(__dirname, 'dev-client')].concat(rendererConfig.entry.renderer)
 
     const compiler = webpack(rendererConfig)
@@ -77,7 +75,6 @@ function startRenderer () {
 
 function startMain () {
   return new Promise((resolve, reject) => {
-    let mainConfig = require('./webpack.main.config')
     mainConfig.entry.main = [path.join(__dirname, '../src/main/index.dev.js')].concat(mainConfig.entry.main)
 
     const compiler = webpack(mainConfig)
@@ -106,7 +103,7 @@ function startMain () {
   })
 }
 
-function startElectron() {
+function startElectron () {
   electronProcess = spawn(electron, [path.join(__dirname, '../dist/electron/main.js')])
   electronProcess.stdout.on('data', data => {
     let log = ''

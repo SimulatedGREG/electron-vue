@@ -40,9 +40,17 @@
   },
   {{#if_eq builder 'builder'}}
   "build": {
-    "productName": "ElectronVue",
+    "productName": "{{ name }}",
     "appId": "org.simulatedgreg.electron-vue",
     "category": "public.app-category.tools",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "dist/electron",
+      "node_modules/",
+      "package.json"
+    ],
     "dmg": {
       "contents": [
         {
@@ -58,14 +66,6 @@
         }
       ]
     },
-    "directories": {
-      "output": "build"
-    },
-    "files": [
-      "dist/electron",
-      "node_modules/",
-      "package.json"
-    ],
     "mac": {
       "icon": "build/icons/icon.icns"
     },

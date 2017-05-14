@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>{{ name }}</title>
     <% if (htmlWebpackPlugin.options.nodeModules) { %>
-      <!-- Add `app/node_modules` to global paths so `require` works properly in development -->
+      <!-- Add `node_modules/` to global paths so `require` works properly in development -->
       <script>
         require('module').globalPaths.push('<%= htmlWebpackPlugin.options.nodeModules.replace(/\\/g, '\\\\') %>')
       </script>
