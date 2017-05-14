@@ -3,7 +3,7 @@
 process.env.BABEL_ENV = 'main'
 
 const path = require('path')
-const pkg = require('../package.json')
+const { dependencies } = require('../package.json')
 const webpack = require('webpack')
 
 const BabiliWebpackPlugin = require('babili-webpack-plugin')
@@ -12,7 +12,9 @@ let mainConfig = {
   entry: {
     main: path.join(__dirname, '../src/main/index.js')
   },
-  externals: Object.keys(pkg.dependencies || {}),
+  externals: [
+    ...Object.keys(dependencies || {})
+  ],
   module: {
     rules: [
 {{#if eslint}}

@@ -1,5 +1,8 @@
 {
   "name": "{{ name }}",
+{{#if_eq builder 'packager'}}
+  "productName": "{{ name }}",
+{{/if_eq}}
   "version": "0.0.0",
   "description": "{{ description }}",
   "main": "./dist/electron/main.js",

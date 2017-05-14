@@ -2,6 +2,7 @@
 
 process.env.NODE_ENV = 'production'
 
+const { say } = require('cfonts')
 const chalk = require('chalk')
 const del = require('del')
 {{#if_eq builder 'packager'}}
@@ -32,6 +33,13 @@ function clean () {
 }
 
 function build () {
+  say('lets-build', {
+    font: 'simple3d',
+    colors: ['yellow'],
+    space: false
+  })
+  console.log()
+
   del.sync(['dist/electron/*', '!.gitkeep'])
 
   const tasks = ['main', 'renderer']
