@@ -62,3 +62,22 @@ Further customization can be made at `package.json` in accordance to `electron-b
 
 
 
+## Automated Deployments using CI
+
+When using electron-vue's `electron-builder` configuration, you are also provided a `appveyor.yml` and `.travis.yml` for automated deployments. Both config files are setup for building your electron application and pushing artifacts to a GitHub release, Bintray, etc. Travis CI is used to build both `linux` and `darwin` \(macOS\) while AppVeyor is used to build `win32`. Both services are free for OSS projects.
+
+#### Setting up Travis CI
+
+1. Create an account over at [Travis CI](https://travis-ci.org/getting_started)
+2. Activate your GitHub repository that has your electron-vue project
+3. Visit [https://github.com/settings/tokens](https://github.com/settings/tokens) and hit **Generate new token**
+   1. Set a **Token description**
+   2. Check the **public\_repo**
+4. Copy your new token and save for later
+5. Open your repository settings on Travis CI to add new **Environment Variable**
+   1. Set the name of the variable to `GH_TOKEN`
+   2. Set the value of the variable to the GitHub access your just created
+   3. Hit **Add** to save the variable
+
+At this point, everything should be setup and Travis CI/AppVeyor will watch for any pushes to your `master` branch. When a push is made, Travis CI/AppVeyor will then clone down your repository to its server and begin the build process. During the final stages, `electron-builder` with see the `GH_TOKEN` environment variable and create a draft release and upload the artifacts to your public GitHub repository. From this point, you can edit the draft release and public it to the world.
+
