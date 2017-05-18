@@ -14,7 +14,7 @@
 
 If you are unfamiliar with Vue components, please give [this](http://vuejs.org/v2/guide/single-file-components.html) a read. Using components gives our large complex applications more organization. Each component has the ability to encapsulate its own CSS, template, and JavaScript functionality.
 
-Components are stored in `src/renderer/components`. When creating child components, place them inside a new folder with the name of its parent component.
+Components are stored in `src/renderer/components`. When creating child components, a common organization practice is to place them inside a new folder with the name of its parent component.
 
 ```
 src/renderer/components
@@ -26,7 +26,7 @@ src/renderer/components
 
 ### vue routes
 
-For more information about `vue-router` click [here](https://github.com/vuejs/vue-router). In short, it is encouraged to use `vue-router` as creating a Single Page Application is much more practical when making electron apps. Do you really want to manage a bunch of BrowserWindows or static page navigation? Probably not.
+For more information about `vue-router` click [here](https://github.com/vuejs/vue-router). In short, it is encouraged to use `vue-router` as creating a Single Page Application is much more practical when making electron applications. Do you really want to manage a bunch of BrowserWindows or static page navigation? Probably not.
 
 Routes are held in `src/renderer/router/index.js` and defined like so...
 

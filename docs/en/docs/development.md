@@ -7,7 +7,7 @@ yarn run dev # or npm run dev
 ```
 
 ...and boom! You now have a running electron-vue app.  
-![](/docs/images/landing-page.png)
+![](/docs/images/landing-page.jpg)
 
 This boilerplate comes with a few landing-page components that are easily removable.
 

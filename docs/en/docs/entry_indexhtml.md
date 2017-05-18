@@ -41,9 +41,9 @@ If you are unfamiliar with how the HTMLWebpackPlugin works, then I'd encourage y
 
 ### On the subject of using CDNs
 
-Although the benefits of using assets served from a CDN can be great for your app's final application size, I would advised against using them. The main reason being is that by doing so you would be assuming the app always has access to the internet, which is not always the case for Electron apps. This becomes a rather major issue with CSS frameworks like bootstrap, as your app will quickly become an un-styled mess.
+Although the benefits of using assets served from a CDN can be great for your app's final file size, I would advised against using them. The main reason being is that by doing so you would be assuming the app always has access to the internet, which is not always the case for Electron apps. This becomes a rather major issue with CSS frameworks like bootstrap, as your app will quickly become an un-styled mess.
 
 > "I don't care, I still want to use a CDN"
 
-If you are determined to still use a CDN, then you can still do so by adding the tags to your `index.ejs` file. Just make sure to set up proper UI/UX flows for when you app is offline.
+If you are determined to still use a CDN, then you can still do so by adding the tags to your `src/index.ejs` file. Just make sure to set up proper UI/UX flows for when you app is offline.
 

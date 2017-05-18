@@ -21,15 +21,17 @@ If you are familiar with `vue-resource`, then `axios` will feel very familiar as
 
 > The vue plugin that attaches electron APIs to the Vue object, making them accessible to all components.
 
-A simple `vue` plugin that makes electron API easily accesseable through `this.$electron`, no longer needed to import `electron` into every component.
+A simple `vue` plugin that makes electron APsI easily accessible with`this.$electron`, no longer needing to import `electron` into every component necessary.
 
 ### [`vue-router`](https://github.com/vuejs/vue-router)
 
 > `vue-router` is the official router for [Vue.js](http://vuejs.org/). It deeply integrates with Vue.js core to make building Single Page Applications with Vue.js a breeze.
 
+The provided project structure should feel familiar to the setup provided in the official `vuejs-templates/webpack` boilerplate. 
+
 ### [`vuex`](https://github.com/vuejs/vuex)
 
 > Vuex is a **state management pattern + library **for Vue.js applications. It serves as a centralized store for all the components in an application, with rules ensuring that the state can only be mutated in a predictable fashion.
 
-
+The provided project structure is rather bare but does encourage the use of `vuex`'s module pattern to help organize your data stores. The extra `@/store/modules/index.js` let's your vuex store `import` all modules in a one-shot manner.
 

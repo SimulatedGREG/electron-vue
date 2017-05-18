@@ -8,7 +8,7 @@ There was a time not too long ago where a two `package.json` setup was neccessar
 
 #### `dependencies`
 
-These dependencies **will** be included in your final production app. So if you application needs a certain module in production installed it here!
+These dependencies **will** be included in your final production app. So if you application needs a certain module to function, then installed it here!
 
 #### `devDependencies`
 

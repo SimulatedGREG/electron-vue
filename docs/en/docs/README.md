@@ -32,11 +32,11 @@ Things you'll find in this boilerplate...
 * Unit Testing \(with Karma + Mocha\)\*
 * End-to-end Testing \(with Spectron + Mocha\)\*
 
-\*Customizable during vue-cli scaffolding
+\*Customizable during `vue-cli` scaffolding
 
 ### Getting Started
 
-This boilerplate was built as a template for [vue-cli](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. The use of `node@^6.5.0` or higher is recommended. electron-vue also officially recommends the [`yarn`](https://yarnpkg.org) package manager as it handles dependencies much better and can help reduce final build size.
+This boilerplate was built as a template for [`vue-cli`](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. The use of `node@^6.5.0` or higher is recommended. electron-vue also officially recommends the [`yarn`](https://yarnpkg.org) package manager as it handles dependencies much better and can help reduce final build size.
 
 ```bash
 # Install vue-cli and scaffold boilerplate
