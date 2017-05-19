@@ -16,7 +16,7 @@ Produce simple executable without full installer. Useful for quick testing.
 npm run build:dir
 ```
 
-### Default building configurations
+### Default building configuration
 
 Further customization can be made at `package.json` in accordance to `electron-builders`'s options found [here](https://github.com/electron-userland/electron-builder/wiki/Options).
 
