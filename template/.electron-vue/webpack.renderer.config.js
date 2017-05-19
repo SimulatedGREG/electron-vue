@@ -14,7 +14,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 /**
  * List of node_modules to include in webpack bundle
  *
- * Require for specific packages like Vue UI libraries
+ * Required for specific packages like Vue UI libraries
  * that provide pure *.vue files that need compiling
  */
 let whiteListedModules = ['vue']

@@ -17,7 +17,7 @@ if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 {{#isEnabled plugins 'axios'}}
 Vue.http = Vue.prototype.$http = axios
 {{/isEnabled}}
-Vue.config.productionTip = true
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
