@@ -31,7 +31,5 @@ The following documentation attempts to explain how migrating your project _shou
 5. Run project in development mode \(`yarn run dev` or `npm run dev`\)
 6. Watch console for errors to fix
 
-Just as previously mentioned above, there isn't a full proof method for migrating to a new scaffold, but these are typically going to be the major steps to get you nearly all the way there.
-
-
+Just as previously mentioned above, there isn't a full proof method for migrating to a new scaffold, but these are typically going to be the major steps to get you nearly all the way there. Make sure to check out the rest of the documentation as it will always reflect the current version of electron-vue.
 
