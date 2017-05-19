@@ -20,6 +20,9 @@
 * [Testing](testing.md)
   * [Unit Testing](unittesting.md)
   * [End-to-End Testing](end-to-end_testing.md)
-* [FAQs](faqs.md)
-* [Contributing](contributing.md)
+* Miscellaneous
+  * [Contributing](contributing.md)
+  * [FAQs](faqs.md)
+
+
 
