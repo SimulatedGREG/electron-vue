@@ -67,16 +67,16 @@ When using electron-vue's `electron-builder` configuration, you are also provide
 #### Setting up Travis CI/AppVeyor
 
 1. Create an account over at [Travis CI](https://travis-ci.org/getting_started) / [AppVeyor](https://www.appveyor.com/)
-2. Activate your GitHub repository that has your electron-vue project is on
+2. Link your GitHub repository that has your electron-vue project
 3. Visit [https://github.com/settings/tokens](https://github.com/settings/tokens) and hit **Generate new token **\(the same token can be used for both Travis CI & AppVeyor\)
    1. Set a **Token description**
    2. Check the **public\_repo **scope
-   3. Hit **Generator token**
+   3. Hit **Generate token**
 4. Copy your new token and save for later
 5. Open your repository settings on Travis CI / AppVeyor to add a new **Environment Variable**
-   1. Set the name of the variable to **`GH_TOKEN`**
-   2. Set the value of the variable to the GitHub access token your just created
+   1. Set the name of the variable to `GH_TOKEN`
+   2. Set the value of the variable to the GitHub access token you just created
    3. **Save** the new variable and ensure encryption is enabled
 
-At this point, everything should be setup. Travis CI/AppVeyor be default will watch for any pushes to your `master` branch. When a push is made, Travis CI/AppVeyor will then clone down your repository to its server and begin the build process. During the final stages, `electron-builder` with see the `GH_TOKEN` environment variable and create a draft release and upload the artifacts to your public GitHub repository. From this point, you can edit the draft release and then publish it to the world.
+At this point, everything should be setup. Travis CI/AppVeyor by default will watch for any pushes to your `master` branch. When a push is made, Travis CI/AppVeyor will then clone down your repository to its server and begin the build process. During the final stages, `electron-builder` with see the `GH_TOKEN` environment variable and create a draft release and upload the artifacts to your public GitHub repository. From this point, you can edit the draft release and then publish it to the world.
 
