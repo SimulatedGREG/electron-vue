@@ -1,4 +1,4 @@
-# New Releases & Migration Guide
+# New Releases
 
 electron-vue has evolved greatly over the past year and has introduced many new fantastic features. Development is not planned to end anytime soon. The only down side to new bells & whistles every now and then is having your project stuck on an older scaffold. Since electron-vue takes advantage of `vue-cli` there unfortunately isn't a structured way to _version_ the boilerplate and make it _updatable_.
 
@@ -19,3 +19,6 @@ Major updates of electron-vue will be made through GitHub Milestones and will in
   * Full support for `main` process bundling
   * Rewrite of development and build scripts
   * Migration to `babili` to remove the need of transpiling down completely to ES5
+
+
+
