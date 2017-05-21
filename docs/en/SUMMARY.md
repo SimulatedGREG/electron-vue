@@ -22,7 +22,7 @@
   * [End-to-End Testing](end-to-end_testing.md)
 * Meta
   * [FAQs](faqs.md)
-  * [New Releases](/docs/en/docs/new-releases.md)
+  * [New Releases](new-releases.md)
   * [Migration Guide](migration-guide.md)
   * [Contributing](contributing.md)
 
