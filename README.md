@@ -63,17 +63,17 @@ yarn # or npm install
 yarn run dev # or npm run dev
 ```
 
+##### Are you a Windows User?
+
+Make sure to check out [**A Note for Windows Users**](https://simulatedgreg.gitbooks.io/electron-vue/content/en/getting_started.html#a-note-for-windows-users) to make sure you have all the necessary build tools needed for electron and other dependencies.
+
 ##### Wanting to use Vue 1?
 
-Just point to the `1.0` branch. Please note that electron-vue has officially deprecated `vue@^1` , so project structure, features, and documentation reflect those changes. Use the [**legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs) if you are using Vue 1.
+Just point to the `1.0` branch. Please note that electron-vue has officially deprecated the usage of `vue@^1`, so project structure, features, and documentation will reflect those changes ([**legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs)).
 
 ```bash
 vue init simulatedgreg/electron-vue#1.0 my-project
 ```
-
-##### Are you a Windows User?
-
-Make sure to check out [**A Note for Windows Users**](https://simulatedgreg.gitbooks.io/electron-vue/content/en/getting_started.html#a-note-for-windows-users) to make sure you have all the necessary build tools needed for electron and other dependencies.
 
 ### Next Steps
 
