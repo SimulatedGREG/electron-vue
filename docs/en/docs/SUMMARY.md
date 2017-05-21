@@ -22,6 +22,7 @@
   * [End-to-End Testing](end-to-end_testing.md)
 * [Meta](miscellaneous.md)
   * [FAQs](faqs.md)
-  * [New Releases & Migration Guide](migration-guide.md)
+  * [New Releases](migration-guide.md)
+  * [Migration Guide](migration-guide.md)
   * [Contributing](contributing.md)
 

@@ -56,7 +56,7 @@ Make sure to check out [**A Note for Windows Users**](https://simulatedgreg.gitb
 
 ##### Wanting to use Vue 1?
 
-Just point to the `1.0` branch. Please note that electron-vue has officially deprecated the usage of `vue@^1`, so project structure, features, and documentation will reflect those changes ([**legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs)).
+Just point to the `1.0` branch. Please note that electron-vue has officially deprecated the usage of `vue@^1`, so project structure, features, and documentation will reflect those changes \([**legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs)\).
 
 ```bash
 vue init simulatedgreg/electron-vue#1.0 my-project
@@ -79,7 +79,6 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**Dynamoc**](https://github.com/ieiayaobb/dynamoc): Dynamoc is a GUI client for dynamodb-local, dynalite and AWS dynamodb
 * [**Dockeron**](https://github.com/dockeron/dockeron): A dockeron project, built on Electron + Vue.js for Docker
 * [**Easysubs**](https://github.com/matiastucci/easysubs): Download subtitles in a very fast and simple way
-
 
 
 
