@@ -20,9 +20,12 @@
 * [Testing](testing.md)
   * [Unit Testing](unittesting.md)
   * [End-to-End Testing](end-to-end_testing.md)
-* [Meta](miscellaneous.md)
+* Meta
   * [FAQs](faqs.md)
-  * [New Releases](migration-guide.md)
+  * [New Releases](/docs/en/docs/new-releases.md)
+
   * [Migration Guide](migration-guide.md)
   * [Contributing](contributing.md)
+
+
 
