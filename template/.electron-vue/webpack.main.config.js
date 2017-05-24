@@ -55,10 +55,6 @@ let mainConfig = {
     path: path.join(__dirname, '../dist/electron')
   },
   plugins: [
-    new BabiliWebpackPlugin({
-      removeConsole: true,
-      removeDebugger: true
-    }),
     new webpack.NoEmitOnErrorsPlugin()
   ],
   resolve: {
@@ -67,8 +63,15 @@ let mainConfig = {
   target: 'electron-main'
 }
 
+/**
+ * Adjust mainConfig for production settings
+ */
 if (process.env.NODE_ENV === 'production') {
-  mainConfig.plugins.push(
+  rendererConfig.plugins.push(
+    new BabiliWebpackPlugin({
+      removeConsole: true,
+      removeDebugger: true
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
     })
