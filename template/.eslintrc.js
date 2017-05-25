@@ -14,6 +14,9 @@ module.exports = {
   {{#if_eq eslintConfig 'airbnb'}}
   extends: 'airbnb-base',
   {{/if_eq}}
+  globals: {
+    __static: true
+  },
   plugins: [
     'html'
   ],

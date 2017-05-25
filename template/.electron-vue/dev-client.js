@@ -9,7 +9,7 @@ hotClient.subscribe(event => {
   }
 
   /**
-   * Notify browser when `main` process is compiling,
+   * Notify `mainWindow` when `main` process is compiling,
    * giving notice for an expected reload of the `electron` process
    */
   if (event.action === 'compiling') {

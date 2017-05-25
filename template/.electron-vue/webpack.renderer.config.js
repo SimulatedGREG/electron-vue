@@ -128,6 +128,17 @@ let rendererConfig = {
 }
 
 /**
+ * Adjust mainConfig for development settings
+ */
+if (process.env.NODE_ENV !== 'production') {
+  rendererConfig.plugins.push(
+    new webpack.DefinePlugin({
+      '__static': `"${path.join(__dirname, '../static')}"`
+    })
+  )
+}
+
+/**
  * Adjust rendererConfig for production settings
  */
 if (process.env.NODE_ENV === 'production') {
