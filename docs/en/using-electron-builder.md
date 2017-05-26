@@ -82,5 +82,5 @@ At this point, everything should be setup. Travis CI/AppVeyor by default will wa
 
 #### Auto Updating
 
-Enabling your application to receive automatic updates is a super nice feature to have, but know that [**Code Signing**](https://github.com/electron-userland/electron-builder/wiki/Code-Signing) is required. You can setup code signing by adding a few more environment variables based on what `electron-builder` needs described [here](https://github.com/electron-userland/electron-builder/wiki/Code-Signing). Once you have your certificates setup, you can then comment out the chunk of code at the bottom of `src/main/index.js` to enable auto updating. It really is that simple.
+Enabling your application to receive automatic updates is a super nice feature to have, but know that [**Code Signing**](https://github.com/electron-userland/electron-builder/wiki/Code-Signing) is required. You can setup code signing by adding a few more environment variables based on what `electron-builder` needs described [here](https://github.com/electron-userland/electron-builder/wiki/Code-Signing). Once you have your certificates setup, you can then install `electron-updater` and comment out the chunk of code at the bottom of `src/main/index.js` to enable auto updating.
 
