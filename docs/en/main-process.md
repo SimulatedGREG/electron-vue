@@ -20,7 +20,7 @@ This file is used specifically and only for development as it installs `electron
 
 Since the `main` process is bundled using webpack, the use of `__dirname` & `__filename` **will not** provide an expected value in production.
 
-Referring to [**Project Structure**](project_sturcture.md), you'll notice that in production the `main.js` is placed inside the `dist/electron` folder. Based on this knowledge, use `__dirname` & `__filename` accordingly.
+Referring to [**Project Structure**](project_sturcture.md), you'll notice that in production the `main.js` is placed inside the `dist/electron` folder. Based on this knowledge, use `__dirname` & `__filename` accordingly. If you are needing a path to your `static/` directory, make sure to read up on [**Using Static Assets**](/using-static-assets.md) to learn about the `__static` variable.
 
 ```
 app.asar
