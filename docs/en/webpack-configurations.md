@@ -1,6 +1,6 @@
 # Webpack Configurations
 
-electron-vue comes packed with three separate webpack config files located in the `.electron-vue/` directory. Aside for the optional use of the `web` output, both `main` and `renderer` are similar in setup. Both make use of `babel-preset-env` to target `node@7` features, removing the need to transpile completely to ES5, and treat all modules as `externals`.
+electron-vue comes packed with three separate webpack config files located in the `.electron-vue/` directory. Aside for the optional use of the `web` output, both `main` and `renderer` are similar in setup. Both make use of `babel-preset-env` to target `node@7` features and only polyfill what's needed, use `babili`, and treat all modules as `externals`.
 
 ### `.electron-vue/webpack.main.config.js`
 
