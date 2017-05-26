@@ -49,5 +49,5 @@ console.log(fileContents)
 
 Please note that in production all files are packed with `asar` by default as it is highly recommended. Because of this, assets within the `static/` folder can only be accessed within `electron` since it is aware of this behavior. So if you are planning to distribute files to your users that can for example open in a external program, you would first need to copy those assets from your application into the user's document space or desktop. From there you could use the [`shell.openItem()`](https://electron.atom.io/docs/api/shell/#shellopenitemfullpath) electron API to open those assets.
 
-An alternative method to this situation would be to configure `electron-packager`/`electron-builder` to set specific files to "unpack" from the `asar` archive. electron-vue has no plans to support this method; any issues related to this or how to set this up will be closed.
+An alternative method to this situation would be to configure `electron-packager`/`electron-builder` to set specific files to "unpack" from the `asar` archive in production. electron-vue has no plans to support this method; any issues related to this or how to set this up will be closed.
 
