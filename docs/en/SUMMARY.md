@@ -13,7 +13,7 @@
   * [NPM Scripts](npm_scripts.md)
   * [Using CSS Frameworks](using_css_frameworks.md)
   * [Using Pre-Processors](using_pre-processors.md)
-  * [Using Static Assets](/docs/en/using-static-assets.md)
+  * [Using Static Assets](using-static-assets.md)
   * [Read & Write Local Files](savingreading-local-files.md)
 * [Building Your App](building_your_app.md)
   * [Using electron-packager](using-electron-packager.md)

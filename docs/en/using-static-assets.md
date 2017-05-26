@@ -1,8 +1,6 @@
 # Using Static Assets
 
-Sometimes your don't want `webpack` to bundle some of your assets. Let's say you have a large sprite collection, but your app loads the images in on-demand. `webpack` does not need to bundle every single sprite if only a few might be used at a time.
-
-When using static assets, let's place them inside the `static/` folder. During the build step, `webpack` will copy all assets in the `static/` directory and add them to the production build.
+If you have used the official `vuejs-templates/webpack` boilerplate before, then you should be familiar with the `static/` directory. It is here where you can place static assets that both the `main` and `renderer` process can use. Using these assets with your Vue application is simple, but usage with `fs` and other modules that need a full path can be a little difficult. Thankfully, there's a handy `__static` variable 
 
 #### Use Case within `src` tags in Vue
 
@@ -23,7 +21,7 @@ Let's say I have a component that loads an image, but the image's path isn't kno
 </script>
 ```
 
-Here `webpack` will not bundle the `unsplash.png` image and the app will look inside the `static/imgs/unsplash.png` directory for the asset.
+Here `webpack` will not bundle the `unsplash.png` image and the app will look inside the `static/imgs/unsplash.png` directory for the asset. This is simple thanks to `vue-loader` doing most of the dirty work for us.
 
 #### Use Case in JS with `path` and `__static`
 
