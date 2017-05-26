@@ -44,7 +44,7 @@ app.on('activate', () => {
     createWindow()
   }
 })
-{{#if_eq builder 'bulider'}}
+{{#if_eq builder 'builder'}}
 
 /**
  * Auto Updater
