@@ -31,7 +31,7 @@ Make sure to close and reopen the developer tools panel on first launch if they 
 
 ## Where do I put Static Assets?
 
-[**Using Static Assets**](renderer-process.md#using-static-assets)
+[**Using Static Assets**](/using-static-assets.md)
 
 ## Why did `npm run lint` end with an error?
 
@@ -40,6 +40,4 @@ The default nature of eslint is to print linting errors to console, and if there
 ## Why can't I load my app in a web browser?
 
 [\#195](https://github.com/SimulatedGREG/electron-vue/issues/195)
-
-
 
