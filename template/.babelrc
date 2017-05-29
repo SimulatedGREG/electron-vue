@@ -23,8 +23,7 @@
     "renderer": {
       "presets": [
         ["env", {
-          "modules": false,
-          "useBuiltIns": true
+          "modules": false
         }],
         "stage-0"
       ]
