@@ -130,6 +130,22 @@ function startElectron () {
       )
     }
   })
+  electronProcess.stderr.on('data', data => {
+    let log = ''
+    data = data.toString().split(/\r?\n/)
+    data.forEach(line => {
+      log += `  ${line}\n`
+    })
+    if (/[0-9A-z]+/.test(data[0])) {
+      console.log(
+        chalk.red.bold('┏ Electron -------------------') +
+        '\n\n' +
+        log +
+        chalk.red.bold('┗ ----------------------------') +
+        '\n'
+      )
+    }
+  })
 
   electronProcess.on('close', () => {
     if (!manualRestart) process.exit()
