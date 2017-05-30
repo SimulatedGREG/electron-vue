@@ -100,7 +100,6 @@ function web () {
   del.sync(['dist/web/*', '!.gitkeep'])
   webpack(webConfig, (err, stats) => {
     if (err || stats.hasErrors()) console.log(err)
-    else console.log(`${doneLog}\n`)
 
     console.log(stats.toString({
       chunks: false,
