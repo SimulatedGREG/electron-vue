@@ -29,7 +29,7 @@ else build()
 
 function clean () {
   del.sync(['build/*', '!build/icons', '!build/icons/icon.*'])
-  console.log(`\n${doneLog}${chalk.yellow('`build`')} directory cleaned\n`)
+  console.log(`\n${doneLog}\n`)
   process.exit()
 }
 
@@ -90,7 +90,7 @@ function bundleApp () {
       console.log(`\n${errorLog}${chalk.yellow('`electron-packager`')} says...\n`)
       console.log(err + '\n')
     } else {
-      console.log(`\n${doneLog}building complete (build/)\n`)
+      console.log(`\n${doneLog}\n`)
     }
   })
 }
@@ -100,7 +100,7 @@ function web () {
   del.sync(['dist/web/*', '!.gitkeep'])
   webpack(webConfig, (err, stats) => {
     if (err || stats.hasErrors()) console.log(err)
-    else console.log(`${doneLog}web build complete (dist/web/)\n`)
+    else console.log(`${doneLog}\n`)
 
     console.log(stats.toString({
       chunks: false,
