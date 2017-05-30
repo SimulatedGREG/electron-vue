@@ -59,10 +59,6 @@ let rendererConfig = {
         exclude: /node_modules/
       },
       {
-        test: /\.json$/,
-        use: 'json-loader'
-      },
-      {
         test: /\.node$/,
         use: 'node-loader'
       },
@@ -71,6 +67,7 @@ let rendererConfig = {
         use: {
           loader: 'vue-loader',
           options: {
+            extractCSS: true,
             loaders: {
               sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
               scss: 'vue-style-loader!css-loader!sass-loader'
