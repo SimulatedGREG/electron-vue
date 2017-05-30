@@ -164,8 +164,8 @@ module.exports = {
   },
   complete (data) {
     getCurrentSHA(data.author).then(sha => {
-      let path = !data.inPlace ? data.destDirName : __dirname
-      appendSHALink(sha, path)
+      let path = !data.inPlace ? data.destDirName : null
+      if (path !== null) appendSHALink(sha, path)
       console.log([
         '\n---',
         '',
@@ -176,7 +176,7 @@ module.exports = {
         '  \x1b[33mhttps://simulatedgreg.gitbooks.io/electron-vue/content/\x1b[0m.',
         '',
         '',
-        `Next Steps:\n${data.inPlace ? '\n\n  \x1b[33m$\x1b[0m cd ' + data.destDirName : ''}`,
+        `Next Steps:\n${!data.inPlace ? '\n  \x1b[33m$\x1b[0m cd ' + data.destDirName : ''}`,
         '  \x1b[33m$\x1b[0m yarn (or `npm install`)',
         '  \x1b[33m$\x1b[0m yarn run dev (or `npm run dev`)'
       ].join('\n'))
