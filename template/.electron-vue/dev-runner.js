@@ -13,6 +13,7 @@ const mainConfig = require('./webpack.main.config')
 const rendererConfig = require('./webpack.renderer.config')
 
 let electronProcess = null
+let manualRestart = false
 let hotMiddleware
 
 function logStats (proc, data) {
@@ -94,8 +95,14 @@ function startMain () {
       logStats('Main', stats)
 
       if (electronProcess && electronProcess.kill) {
-        electronProcess.kill()
+        manualRestart = true
+        process.kill(electronProcess.pid)
+        electronProcess = null
         startElectron()
+
+        setTimeout(() => {
+          manualRestart = false
+        }, 5000)
       }
 
       resolve()
@@ -124,8 +131,8 @@ function startElectron () {
     }
   })
 
-  electronProcess.on('exit', (code, signal) => {
-    if (signal !== 'SIGTERM') process.exit()
+  electronProcess.on('close', () => {
+    if (!manualRestart) process.exit()
   })
 }
 
