@@ -1,5 +1,50 @@
 'use strict'
 
+const { join } = require('path')
+const { readFileSync, writeFileSync } = require('fs')
+const { get } = require('https')
+
+function getCurrentSHA (author) {
+  return new Promise((resolve, reject) => {
+    let isBranch = process.argv[2].indexOf('#') > -1
+
+    get({
+      host: 'api.github.com',
+      path: `/repos/simulatedgreg/electron-vue/commits${isBranch ? '?sha=' + process.argv[2].split('#')[1] : ''}`,
+      headers: {
+        'User-Agent': author
+      }
+    }, res => {
+      res.setEncoding('utf8')
+      let rawData = ''
+
+      res.on('data', chunk => {
+        rawData += chunk
+      })
+      res.on('end', () => {
+        try {
+          let parsed = JSON.parse(rawData)
+          resolve(parsed[0].sha)
+        } catch (e) {
+          reject(e)
+        }
+      })
+    }).on('error', e => {
+      reject(e)
+    })
+  })
+}
+
+function appendSHALink (sha, destDirName) {
+  let readmePath = join(destDirName, '/README.md')
+  let md = readFileSync(readmePath, 'utf8')
+  md = md.replace(
+    ' using',
+    `@[${sha.substring(0, 7)}](https://github.com/SimulatedGREG/electron-vue/tree/${sha}) using`
+  )
+  writeFileSync(readmePath, md, 'utf8')
+}
+
 module.exports = {
   prompts: {
     name: {
@@ -117,18 +162,25 @@ module.exports = {
     'appveyor.yml': 'builder === \'builder\'',
     '.travis.yml': 'builder === \'builder\''
   },
-  completeMessage: [
-    '---',
-    '',
-    'All set. Welcome to your new electron-vue project!',
-    '',
-    'Make sure to check out the documentation for this boilerplate at',
-    '',
-    '  \x1b[33mhttps://simulatedgreg.gitbooks.io/electron-vue/content/\x1b[0m.',
-    '',
-    '',
-    'Next Steps:\n{{^inPlace}}\n\n  \x1b[33m$\x1b[0m cd {{destDirName}}{{/inPlace}}',
-    '  \x1b[33m$\x1b[0m yarn (or `npm install`)',
-    '  \x1b[33m$\x1b[0m yarn run dev (or `npm run dev`)',
-  ].join('\n')
+  complete (data) {
+    getCurrentSHA(data.author).then(sha => {
+      appendSHALink(sha, data.destDirName)
+      console.log([
+        '\n---',
+        '',
+        'All set. Welcome to your new electron-vue project!',
+        '',
+        'Make sure to check out the documentation for this boilerplate at',
+        '',
+        '  \x1b[33mhttps://simulatedgreg.gitbooks.io/electron-vue/content/\x1b[0m.',
+        '',
+        '',
+        `Next Steps:\n${data.inPlace ? '\n\n  \x1b[33m$\x1b[0m cd ' + data.destDirName : ''}`,
+        '  \x1b[33m$\x1b[0m yarn (or `npm install`)',
+        '  \x1b[33m$\x1b[0m yarn run dev (or `npm run dev`)'
+      ].join('\n'))
+    }, () => {
+      console.log('\x1b[33mwarning\x1b[0m Failed to append commit SHA on README.md')
+    })
+  }
 }
