@@ -129,8 +129,8 @@ module.exports = {
       let dependencies = {
         'axios': '^0.16.1',
         'vue-electron': '^1.0.6',
-        'vue-router': '^2.1.2',
-        'vuex': '^2.1.1'
+        'vue-router': '^2.5.3',
+        'vuex': '^2.3.1'
       }
 
       if (Object.keys(plugins).length > 0) output += ',\n'
@@ -164,7 +164,8 @@ module.exports = {
   },
   complete (data) {
     getCurrentSHA(data.author).then(sha => {
-      appendSHALink(sha, data.destDirName)
+      let path = !data.inPlace ? data.destDirName : __dirname
+      appendSHALink(sha, path)
       console.log([
         '\n---',
         '',
