@@ -19,3 +19,7 @@ Major updates of electron-vue will be made through GitHub Milestones and will in
   * Full support for `main` process bundling
   * Rewrite of development and build scripts
   * Migration to `babili` to remove the need of transpiling down completely to ES5
+  * Support for `static/` assets when using modules that require a full path \([`__static`](/using-static-assets.md)\)
+
+
+

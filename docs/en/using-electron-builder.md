@@ -24,7 +24,6 @@ Further customization can be made at `package.json` in accordance to `electron-b
 "build": {
   "productName": "ElectronVue",
   "appId": "org.simulatedgreg.electron-vue",
-  "category": "public.app-category.tools",
   "dmg": {
     "contents": [
       {
