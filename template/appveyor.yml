@@ -1,3 +1,6 @@
+{{#testing unit e2e}}
+# Commented sections below can be used to run tests on the CI server
+{{/testing}}
 version: 0.1.{build}
 
 branches:
@@ -25,7 +28,6 @@ install:
 
 build_script:
 {{#testing unit e2e}}
-  # Uncomment to include testing
   #- yarn test
 {{/testing}}
   - yarn run build

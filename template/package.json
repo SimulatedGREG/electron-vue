@@ -4,7 +4,9 @@
   "productName": "{{ name }}",
 {{/if_eq}}
   "version": "0.0.0",
+  "author": "{{ author }}",
   "description": "{{ description }}",
+  "license": null,
   "main": "./dist/electron/main.js",
   "scripts": {
     {{#if_eq builder 'packager'}}
@@ -76,8 +78,6 @@
     }
   },
 {{/if_eq}}
-  "author": "{{ author }}",
-  "license": null,
   "dependencies": {
     "vue": "^2.3.3"{{deps plugins}}
   },

@@ -1,3 +1,6 @@
+{{#testing unit e2e}}
+# Commented sections below can be used to run tests on the CI server
+{{/testing}}
 osx_image: xcode8
 sudo: required
 dist: trusty
@@ -19,7 +22,6 @@ addons:
     - libgnome-keyring-dev
     - icnsutils
 {{#testing unit e2e}}
-    # Uncomment to include testing
     #- xvfb
 {{/testing}}
 before_install:
@@ -29,7 +31,6 @@ before_install:
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install --no-install-recommends -y icnsutils graphicsmagick xz-utils; fi
 install:
 {{#testing unit e2e}}
-# Uncomment to include testing
 #- export DISPLAY=':99.0'
 #- Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
 {{/testing}}
@@ -39,9 +40,6 @@ install:
 - npm install -g xvfb-maybe
 - yarn
 script:
-{{#testing unit e2e}}
-# Uncomment to include testing
-{{/testing}}
 {{#unit}}
 #- xvfb-maybe node_modules/.bin/karma start test/unit/karma.conf.js
 {{/unit}}

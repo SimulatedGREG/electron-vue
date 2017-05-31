@@ -3,7 +3,7 @@
 // Set BABEL_ENV to use proper env config
 process.env.BABEL_ENV = 'test'
 
-// Enable use of es2015+ on required files
+// Enable use of ES6+ on required files
 require('babel-register')({
   ignore: /node_modules/
 })

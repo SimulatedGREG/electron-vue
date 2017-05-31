@@ -1,4 +1,5 @@
-### Found an issue or bug? Tell me all about!
+#### Found an issue or bug with electron-vue? Tell me all about it!
+Questions regarding how to use `electron` or `vue` are likely to be closed as they are not direct issues with this boilerplate. Please seek solutions from official documentation or their respective communities. 
 
 ##### Describe the issue / bug.
 \#
