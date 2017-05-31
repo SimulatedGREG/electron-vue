@@ -10,7 +10,7 @@
 
 ## Overview
 
-The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding, `webpack` with `vue-loader`, `electron-packager` or `electron-builder`, and some of the most used plugins like `vue-router`, `vuex`, and so much more.
+The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding, `webpack` with `vue-loader`, `electron-packager` or `electron-builder`, some of the most used plugins like `vue-router`, `vuex`, and so much more.
 
 #### Check out the documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
 
@@ -26,7 +26,7 @@ Things you'll find in this boilerplate...
 * Ability to produce web output for browsers
 * Handy [NPM scripts](docs/en/docs/npm_scripts.md)
 * Use of [webpack](https://github.com/webpack/webpack) and [vue-loader](https://github.com/vuejs/vue-loader) with Hot Module Replacement
-* Process restarting when working in main process
+* Process restarting when working in electron's `main` process
 * HTML/CSS/JS pre-processor support with [vue-loader](https://github.com/vuejs/vue-loader/)
 * ES6 with [`stage-0`](https://babeljs.io/docs/plugins/preset-stage-0/) by default
 * Use of [`babili`](https://github.com/babel/babili) to remove the need of transpiling completely down to ES5
@@ -38,7 +38,7 @@ Things you'll find in this boilerplate...
 
 ### Getting Started
 
-This boilerplate was built as a template for [`vue-cli`](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. The use of `node@^7` or higher is required. electron-vue also officially recommends the [`yarn`](https://yarnpkg.org) package manager as it handles dependencies much better and can help reduce final build size.
+This boilerplate was built as a template for [`vue-cli`](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. The use of `node@^7` or higher is required. electron-vue also officially recommends the [`yarn`](https://yarnpkg.org) package manager as it handles dependencies much better and can help reduce final build size with `yarn clean`.
 
 ```bash
 # Install vue-cli and scaffold boilerplate
