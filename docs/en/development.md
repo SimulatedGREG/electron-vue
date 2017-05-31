@@ -1,6 +1,8 @@
 # Development
 
-## Starting the app
+### Starting the development setup
+
+After you have installed dependencies with `yarn` or `npm install`, then run...
 
 ```bash
 yarn run dev # or npm run dev

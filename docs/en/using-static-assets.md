@@ -23,11 +23,11 @@ Let's say I have a component that loads an image, but the image's path isn't kno
 </script>
 ```
 
-Here `webpack` will not bundle the `unsplash.png` image and the app will look inside the `static/imgs/unsplash.png` directory for the asset. Thanks to `vue-loader` for doing most of the dirty work for us.
+Here `webpack` will not bundle the `unsplash.png` image and the application will look inside the `static/imgs/unsplash.png` directory for the asset. Thanks to `vue-loader`, all of the dirty work is done for us.
 
 ### Use Case within JS with `fs`,`path` and `__static`
 
-Let's say we have a static asset that we need to read into our application using `fs`, but how do we get a proper path to the `static/` directory? electron-vue provides a global variable named `__static` that will yield a proper path to the `static/` directory in both development and production. Here's how we can use it to read a file.
+Let's say we have a static asset that we need to read into our application using `fs`, but how do we get a reliable path, in both development and production, to the `static/` directory? electron-vue provides a global variable named `__static` that will yield a proper path to the `static/` directory. Here's how we can use it to read a file.
 
 **static/someFile.txt**
 

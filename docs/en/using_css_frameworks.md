@@ -4,7 +4,7 @@ Although this may seem like a no brainer, I'd suggest you import your third-part
 
 ## Use Case
 
-Say you want to use [bootstrap](http://getbootstrap.com/), [bulma](http://bulma.io/), or [materialize](http://materializecss.com/) for your electron app. Go ahead and install from your library from `npm` like you normally would, but instead of attaching the asset to `index.ejs` we will import the CSS in our JavaScript, specifically in `src/renderer/main.js`.
+Say you want to use [bootstrap](http://getbootstrap.com/), [bulma](http://bulma.io/), or [materialize](http://materializecss.com/) for your application. Go ahead and install your library from `npm` like you normally would, but instead of attaching the asset to `index.ejs` we will import the CSS in our JavaScript, specifically in `src/renderer/main.js`.
 
 #### Example
 
@@ -30,5 +30,5 @@ Alternatively, you can also include `bulma` from inside a component file.
 </style>
 ```
 
-Now webpack will know to bundle `bulma` into our app and make it available in our production builds.
+Now `webpack` will know to load in `bulma` for our application and make it available in our production builds.
 

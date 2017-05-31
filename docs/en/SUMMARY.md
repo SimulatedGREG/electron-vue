@@ -9,7 +9,7 @@
   * [Webpack Configurations](webpack-configurations.md)
 * [Development](development.md)
   * [Entry index.html](entry_indexhtml.md)
-  * [Vue Accessories](vue_accessories.md)
+  * [Vue Plugins](vue_accessories.md)
   * [NPM Scripts](npm_scripts.md)
   * [Using CSS Frameworks](using_css_frameworks.md)
   * [Using Pre-Processors](using_pre-processors.md)
@@ -26,6 +26,4 @@
   * [New Releases](new-releases.md)
   * [Migration Guide](migration-guide.md)
   * [Contributing](contributing.md)
-
-
 

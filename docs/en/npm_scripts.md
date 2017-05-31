@@ -12,15 +12,15 @@ Run app in development.
 
 ### `npm run lint`
 
-Lint all your `src/`'s JS & Vue component files.
+Lint all your `src/`'s and `test/`'s JS & Vue component files.
 
 ### `npm run lint:fix`
 
-Lint all your `src/`'s JS & Vue component files and attempt to fix issues.
+Lint all your `src/`'s and `test/`'s JS & Vue component files and attempt to fix issues.
 
 ### `npm run pack`
 
-Run both `npm run pack:main` & `npm run pack:renderer`. Although these commands are available, there may not be many cases where it is need as `npm run build` will do this before hand.
+Run both `npm run pack:main` & `npm run pack:renderer`. Although these commands are available, there are not many cases where you will need to manually do this as `npm run build` will handle this step.
 
 ### `npm run pack:main`
 

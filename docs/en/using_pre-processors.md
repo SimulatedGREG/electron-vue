@@ -4,7 +4,7 @@ One of the great benefits of using [`vue-loader`](https://github.com/vuejs/vue-l
 
 ## Use Case
 
-Let's say we need to use Sass/SCSS for pre-processing our CSS. Firstly, we need to install the proper `webpack` loader to handle this syntax.
+Let's say we need to use Sass/SCSS for pre-processing our CSS. First, we need to install the proper `webpack` loader to handle this syntax.
 
 #### Installing `sass-loader`
 
