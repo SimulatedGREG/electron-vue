@@ -14,7 +14,7 @@
 
 If you are unfamiliar with Vue components, please give [this](http://vuejs.org/v2/guide/single-file-components.html) a read. Using components gives our large complex applications more organization. Each component has the ability to encapsulate its own CSS, template, and JavaScript functionality.
 
-Components are stored in `src/renderer/components`. When creating child components, a common organization practice is to place them inside a new folder with the name of its parent component.
+Components are stored in `src/renderer/components`. When creating child components, a common organization practice is to place them inside a new folder with the name of its parent component. This is especially useful when coordinating different routes.
 
 ```
 src/renderer/components
@@ -26,7 +26,7 @@ src/renderer/components
 
 ### vue routes
 
-For more information about `vue-router` click [here](https://github.com/vuejs/vue-router). In short, it is encouraged to use `vue-router` as creating a Single Page Application is much more practical when making electron applications. Do you really want to manage a bunch of BrowserWindows or static page navigation? Probably not.
+For more information about `vue-router` click [here](https://github.com/vuejs/vue-router). In short, it is encouraged to use `vue-router` as creating a Single Page Application is much more practical when making electron applications. Do you really want to manage a bunch of BrowserWindows and then communicating information between everything? Probably not.
 
 Routes are held in `src/renderer/router/index.js` and defined like so...
 
@@ -42,7 +42,7 @@ Routes are held in `src/renderer/router/index.js` and defined like so...
 
 ##### Notice
 
-When using `vue-router`, refrain from using [**HTML5 History Mode**](http://router.vuejs.org/en/essentials/history-mode.html). This mode is strictly meant for serving files over the `http` protocol and does not work properly with the `file` protocol that electron serves files with. The default `hash` mode is what you will need.
+When using `vue-router`, do not use [**HTML5 History Mode**](http://router.vuejs.org/en/essentials/history-mode.html). This mode is strictly meant for serving files over the `http` protocol and does not work properly with the `file` protocol that electron serves files with in production builds. The default `hash` mode is just what we need.
 
 ### vuex modules
 
@@ -50,4 +50,5 @@ Describing `vuex` is not the easiest thing to do, so please read [this](http://v
 
 electron-vue takes advantage of `vuex`'s module structure to create multiple data stores and are saved in `src/renderer/store/modules`.
 
-Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `src/renderer/store/modules/index.js` does the dirty work for us! This little script let's `src/renderer/store/index.js` import all of our modules in a one-shot manner.
+Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `src/renderer/store/modules/index.js` does the dirty work for us! This little script let's `src/renderer/store/index.js` import all of our modules in a one-shot manner. If all that didn't make since, just know you can easily duplicate the given `Counter.js` module and it will be loaded in "magically".
+

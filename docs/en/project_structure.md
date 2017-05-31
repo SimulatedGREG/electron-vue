@@ -1,6 +1,6 @@
 # Project Structure
 
-When it comes to making electron apps, project structure is a little different. If you have used the official [`vuejs-templates/webpack`](https://github.com/vuejs-templates/webpack) setup before, then the structure should feel quite familiar. The documentation below attempts to explain how the boilerplate works and the differences when the app is built.
+When it comes to making electron apps, project structure is a little different. If you have used the official [`vuejs-templates/webpack`](https://github.com/vuejs-templates/webpack) setup before, then the structure should feel quite familiar. The documentation in this section attempts to explain a general overview of how the boilerplate works and the differences when your application in built.
 
 ### Single `package.json` Setup
 
