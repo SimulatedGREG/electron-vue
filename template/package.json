@@ -119,7 +119,7 @@
     "eslint-plugin-standard": "^3.0.1",
     {{/if_eq}}
     {{#if_eq eslintConfig 'airbnb'}}
-    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-config-airbnb-base": "^11.2.0",
     "eslint-import-resolver-webpack": "^0.8.1",
     "eslint-plugin-import": "^2.2.0",
     {{/if_eq}}
@@ -143,7 +143,7 @@
     {{/if}}
     {{#if e2e}}
     "require-dir": "^0.3.0",
-    "spectron": "^3.6.4",
+    "spectron": "^3.7.1",
     {{/if}}
     {{#testing unit e2e}}
     "chai": "^4.0.0",
