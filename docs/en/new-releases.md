@@ -4,16 +4,16 @@ electron-vue has evolved greatly over the past year and has introduced many new 
 
 Major updates of electron-vue will be made through GitHub Milestones and will include many new features, bugfixes, etc. These milestones are not usually planned, but arise as feature requests add up in the issue tracker.
 
-##### Past Milestones
+### Past Milestones
 
-* [Multiplex](https://github.com/SimulatedGREG/electron-vue/milestone/1?closed=1)
+#### [Multiplex](https://github.com/SimulatedGREG/electron-vue/milestone/1?closed=1)
   * Migration to `webpack` 2
   * Support for `electron-builder`
   * Support for `main` process bundling
   * General bugfixing
   
   
-* [Minimize](https://github.com/SimulatedGREG/electron-vue/issues/171)
+#### [Minimize](https://github.com/SimulatedGREG/electron-vue/issues/171)
   * Migration to single `package.json` structure
   * Travis CI / AppVeyor configs for `electron-builder` users
   * Minimal web output of `renderer` process
