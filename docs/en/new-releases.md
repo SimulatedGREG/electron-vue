@@ -11,6 +11,8 @@ Major updates of electron-vue will be made through GitHub Milestones and will in
   * Support for `electron-builder`
   * Support for `main` process bundling
   * General bugfixing
+  
+  
 * [Minimize](https://github.com/SimulatedGREG/electron-vue/issues/171)
   * Migration to single `package.json` structure
   * Travis CI / AppVeyor configs for `electron-builder` users
