@@ -8,5 +8,5 @@ If you are new to making electron applications or just need to create simple exe
 
 ## [`electron-builder`](using-electron-builder.md)
 
-If you are looking for full installers, auto-update support, CI building with Travis CI & AppVeyor, or rebuilding native node modules, then `electron-builder` is what you will need.
+If you are looking for full installers, auto-update support, CI building with Travis CI & AppVeyor, or automation of rebuilding native node modules, then `electron-builder` is what you will need.
 

@@ -33,7 +33,7 @@ If you are wanting to build for Windows **with a custom icon** using a non-Windo
 
 ### Default building configurations
 
-Further customization can be made at `.electron-vue/build.config.js` in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options).
+Further customization can be made at `.electron-vue/build.config.js` in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options). The name applied to your built application is set with the `productName` value in your `package.json`.
 
 ```js
 {
