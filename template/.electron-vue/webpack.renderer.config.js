@@ -67,7 +67,7 @@ let rendererConfig = {
         use: {
           loader: 'vue-loader',
           options: {
-            extractCSS: true,
+            extractCSS: process.env.NODE_ENV === 'production',
             loaders: {
               sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
               scss: 'vue-style-loader!css-loader!sass-loader'
