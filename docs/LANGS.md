@@ -1,1 +1,1 @@
-* [English](docs/en)
+* [English](en/)

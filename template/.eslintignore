@@ -1,5 +1,3 @@
-app/node_modules/**
-app/dist/**
 {{#testing unit e2e}}
 test/unit/coverage/**
 test/unit/*.js

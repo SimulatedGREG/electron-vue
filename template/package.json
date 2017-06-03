@@ -1,43 +1,57 @@
 {
   "name": "{{ name }}",
+{{#if_eq builder 'packager'}}
+  "productName": "{{ name }}",
+{{/if_eq}}
   "version": "0.0.0",
+  "author": "{{ author }}",
   "description": "{{ description }}",
+  "license": null,
+  "main": "./dist/electron/main.js",
   "scripts": {
     {{#if_eq builder 'packager'}}
-    "build": "node tasks/release.js",
-    "build:clean": "cross-env PLATFORM_TARGET=clean node tasks/release.js",
-    "build:darwin": "cross-env PLATFORM_TARGET=darwin node tasks/release.js",
-    "build:linux": "cross-env PLATFORM_TARGET=linux node tasks/release.js",
-    "build:mas": "cross-env PLATFORM_TARGET=mas node tasks/release.js",
-    "build:win32": "cross-env PLATFORM_TARGET=win32 node tasks/release.js",
+    "build": "node .electron-vue/build.js",
+    "build:darwin": "cross-env BUILD_TARGET=darwin node .electron-vue/build.js",
+    "build:linux": "cross-env BUILD_TARGET=linux node .electron-vue/build.js",
+    "build:mas": "cross-env BUILD_TARGET=mas node .electron-vue/build.js",
+    "build:win32": "cross-env BUILD_TARGET=win32 node .electron-vue/build.js",
     {{else}}
-    "build": "npm run pack && build",
-    "build:dir": "npm run pack && build --dir",
+    "build": "node .electron-vue/build.js && build",
+    "build:dir": "node .electron-vue/build.js && build --dir",
     {{/if_eq}}
-    "dev": "node tasks/runner.js",
+    "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
+    "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js",
+    "dev": "node .electron-vue/dev-runner.js",
     {{#if e2e}}
     "e2e": "npm run pack && mocha test/e2e",
     {{/if}}
     {{#if eslint}}
-    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter app{{#testing unit e2e}} test{{/testing}}",
-    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix app{{#testing unit e2e}} test{{/testing}}",
+    "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter src{{#testing unit e2e}} test{{/testing}}",
+    "lint:fix": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter --fix src{{#testing unit e2e}} test{{/testing}}",
     {{/if}}
     "pack": "npm run pack:main && npm run pack:renderer",
-    "pack:main": "cross-env NODE_ENV=production webpack -p --progress --colors --config webpack.main.config.js",
-    "pack:renderer": "cross-env NODE_ENV=production webpack -p --progress --colors --config webpack.renderer.config.js",
+    "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
+    "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
     {{#testing unit e2e}}
     "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}",
     {{/testing}}
     {{#if unit}}
     "unit": "karma start test/unit/karma.conf.js",
     {{/if}}
-    "postinstall": "{{#if eslint}}npm run lint:fix && {{/if}}cd app && npm install"
+    "postinstall": "{{#if eslint}}npm run lint:fix{{/if}}"
   },
   {{#if_eq builder 'builder'}}
   "build": {
-    "productName": "ElectronVue",
+    "productName": "{{ name }}",
     "appId": "org.simulatedgreg.electron-vue",
-    "category": "public.app-category.tools",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "dist/electron",
+      "node_modules/",
+      "package.json"
+    ],
     "dmg": {
       "contents": [
         {
@@ -53,98 +67,97 @@
         }
       ]
     },
-    "files": [
-      "dist/",
-      "node_modules/",
-      "package.json"
-    ],
     "mac": {
-      "icon": "app/icons/icon.icns"
+      "icon": "build/icons/icon.icns"
     },
     "win": {
-      "icon": "app/icons/icon.ico"
+      "icon": "build/icons/icon.ico"
     },
     "linux": {
-      "target": [
-        "AppImage"
-      ]
+      "icon": "build/icons"
     }
   },
 {{/if_eq}}
-  "author": "Greg Holguin <simulatedgreg@gmail.com>",
-  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.3.3"{{deps plugins}}
+  },
   "devDependencies": {
-    "babel-core": "^6.8.0",
-    "babel-loader": "^6.2.4",
-    "babel-plugin-transform-runtime": "^6.8.0",
-    "babel-preset-es2015": "^6.6.0",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-env": "^1.3.3",
     "babel-preset-stage-0": "^6.5.0",
-    "babel-register": "^6.18.0",
-    "babel-runtime": "^6.6.1",
-    "cross-env": "^3.1.4",
-    "css-loader": "^0.26.1",
+    "babel-register": "^6.2.0",
+    "babili-webpack-plugin": "^0.1.1",
+    "cfonts": "^1.1.3",
+    "chalk": "^1.1.3",
+    "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.0.0",
+    "css-loader": "^0.28.4",
     "del": "^2.2.1",
     "devtron": "^1.1.0",
-    "electron": "^1.3.1",
+    "electron": "^1.7.2",
     "electron-debug": "^1.1.0",
     "electron-devtools-installer": "^2.0.1",
     {{#if_eq builder 'packager'}}
     "electron-packager": "^8.5.0",
     {{else}}
-    "electron-builder": "^11.4.4",
+    "electron-builder": "^18.1.0",
     {{/if_eq}}
     "electron-rebuild": "^1.1.3",
     {{#eslint}}
     "babel-eslint": "^7.0.0",
     "eslint": "^3.13.1",
-    "eslint-friendly-formatter": "^2.0.5",
+    "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.3.0",
     "eslint-plugin-html": "^2.0.0",
     {{#if_eq eslintConfig 'standard'}}
-    "eslint-config-standard": "^6.2.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-node": "^4.2.2",
     "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1",
+    "eslint-plugin-standard": "^3.0.1",
     {{/if_eq}}
     {{#if_eq eslintConfig 'airbnb'}}
-    "eslint-config-airbnb-base": "^3.0.1",
-    "eslint-plugin-import": "^1.8.1",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-import-resolver-webpack": "^0.8.1",
+    "eslint-plugin-import": "^2.2.0",
     {{/if_eq}}
     {{/eslint}}
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
-    "file-loader": "^0.9.0",
+    "file-loader": "^0.11.1",
     "html-webpack-plugin": "^2.16.1",
     "json-loader": "^0.5.4",
     {{#if unit}}
-    "babel-plugin-istanbul": "^3.1.2",
-    "inject-loader": "^2.0.1",
+    "babel-plugin-istanbul": "^4.1.1",
+    "inject-loader": "^3.0.0",
     "karma": "^1.3.0",
     "karma-chai": "^0.1.0",
     "karma-coverage": "^1.1.1",
     "karma-electron": "^5.1.1",
     "karma-mocha": "^1.2.0",
     "karma-sourcemap-loader": "^0.3.7",
-    "karma-spec-reporter": "0.0.26",
+    "karma-spec-reporter": "^0.0.31",
     "karma-webpack": "^2.0.1",
-    "webpack-merge": "^2.4.0",
+    "webpack-merge": "^4.1.0",
     {{/if}}
     {{#if e2e}}
     "require-dir": "^0.3.0",
-    "spectron": "^3.4.0",
+    "spectron": "^3.7.1",
     {{/if}}
     {{#testing unit e2e}}
-    "chai": "^3.5.0",
+    "chai": "^4.0.0",
     "mocha": "^3.0.2",
     {{/testing}}
-    "style-loader": "^0.13.1",
-    "tree-kill": "^1.1.0",
+    "multispinner": "^0.2.1",
+    "style-loader": "^0.18.1",
     "url-loader": "^0.5.7",
-    "vue-hot-reload-api": "^2.0.7",
     "vue-html-loader": "^1.2.2",
-    "vue-loader": "^10.0.2",
-    "vue-style-loader": "^1.0.0",
-    "vue-template-compiler": "^2.1.10",
+    "vue-loader": "^12.2.1",
+    "vue-style-loader": "^3.0.1",
+    "vue-template-compiler": "^2.3.3",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.3.0"
-  },
-  "dependencies": {}
+    "webpack-dev-server": "^2.3.0",
+    "webpack-hot-middleware": "^2.18.0"
+  }
 }

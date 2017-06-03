@@ -4,8 +4,11 @@ const path = require('path')
 const merge = require('webpack-merge')
 const webpack = require('webpack')
 
-const baseConfig = require('../../webpack.renderer.config')
-const projectRoot = path.resolve(__dirname, '../../app')
+const baseConfig = require('../../.electron-vue/webpack.renderer.config')
+const projectRoot = path.resolve(__dirname, '../../src/renderer')
+
+// Set BABEL_ENV to use proper preset config
+process.env.BABEL_ENV = 'test'
 
 // Set BABEL_ENV to use proper preset config
 process.env.BABEL_ENV = 'testing-unit'
@@ -23,14 +26,6 @@ let webpackConfig = merge(baseConfig, {
 delete webpackConfig.entry
 delete webpackConfig.externals
 delete webpackConfig.output.libraryTarget
-
-// only apply babel for test files when using isparta
-webpackConfig.module.rules.some(rule => {
-  if (rule.use === 'babel-loader') {
-    rule.include.push(path.resolve(projectRoot, '../test/unit'))
-    return true
-  }
-})
 
 // apply vue option to apply isparta-loader on js
 webpackConfig.module.rules

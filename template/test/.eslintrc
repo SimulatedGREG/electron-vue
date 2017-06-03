@@ -5,7 +5,8 @@
   "globals": {
     "assert": true,
     "expect": true,
-    "should": true
+    "should": true,
+    "__static": true
   }{{#if eslint}}{{#if_eq eslintConfig 'airbnb'}},
   "rules": {
     "func-names": 0,

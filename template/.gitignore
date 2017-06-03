@@ -1,12 +1,8 @@
 .DS_Store
-app/dist/index.html
-app/dist/main.js
-app/dist/renderer.js
-app/dist/styles.css
-builds/*
-{{#if_eq builder 'builder'}}
-dist/*
-{{/if_eq}}
+dist/electron/*
+dist/web/*
+build/*
+!build/icons
 {{#if unit}}
 coverage
 {{/if}}
