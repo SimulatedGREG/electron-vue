@@ -24,7 +24,7 @@ Things you'll find in this boilerplate...
 * Ability to easily package your application using [electron-packager](https://github.com/electron-userland/electron-packager) or [electron-builder](https://github.com/electron-userland/electron-builder)\*
 * `appveyor.yml` and `.travis.yml` configurations for automated deployments with [electron-builder](https://github.com/electron-userland/electron-builder)\*
 * Ability to produce web output for browsers
-* Handy [NPM scripts](docs/en/docs/npm_scripts.md)
+* Handy [NPM scripts](/npm_scripts.md)
 * Use of [webpack](https://github.com/webpack/webpack) and [vue-loader](https://github.com/vuejs/vue-loader) with Hot Module Replacement
 * Process restarting when working in electron's `main` process
 * HTML/CSS/JS pre-processor support with [vue-loader](https://github.com/vuejs/vue-loader/)
