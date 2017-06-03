@@ -7,7 +7,7 @@
 * [Why did `npm run lint` end with an error?](#why-did-npm-run-lint-end-with-an-error)
 * [Why can't I load my app in a web browser?](#why-cant-i-load-my-app-in-a-web-browser)
 * [How do I import `jquery`?](#how-do-import-jquery)
-* How can I debug the `main` process?
+* [How can I debug the `main` process?](#how-can-i-debug-the-main-process)
 
 ---
 
@@ -52,5 +52,4 @@ If you are wanting to use `bootstrap`, I'm going to have to stop you right there
 When using `electron@^1.7.2` you can open up Google Chrome, head to `chrome://inspect`, and then pop open the remote electron process while your application is running in development mode.
 
 [Electron Documentation](https://github.com/electron/electron/blob/master/docs/tutorial/debugging-main-process.md)
-
 
