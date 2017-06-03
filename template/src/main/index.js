@@ -2,13 +2,13 @@
 'use strict'
 
 {{/if_eq}}
-import { app, BrowserWindow } from 'electron' {{#if_eq eslintConfig 'airbnb'}}// eslint-disable-line{{/if_eq}}
+import { app, BrowserWindow } from 'electron'{{#if_eq eslintConfig 'airbnb'}} // eslint-disable-line{{/if_eq}}
 
 /**
  * Set `__static` path to static files in production
  */
 if (process.env.NODE_ENV !== 'development') {
-  global.__static = require('path').join(__dirname, '/static') {{#if_eq eslintConfig 'airbnb'}}// eslint-disable-line{{/if_eq}}
+  global.__static = require('path').join(__dirname, '/static'){{#if_eq eslintConfig 'airbnb'}} // eslint-disable-line{{/if_eq}}
 }
 
 let mainWindow

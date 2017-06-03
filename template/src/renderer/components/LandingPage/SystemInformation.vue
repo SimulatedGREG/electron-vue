@@ -5,11 +5,11 @@
 {{#isEnabled plugins 'vue-router'}}
       <div class="item">
         <div class="name">Path:</div>
-        <div class="value">\{{ $route.path }}</div>
+        <div class="value">\{{ path }}</div>
       </div>
       <div class="item">
         <div class="name">Route Name:</div>
-        <div class="value">\{{ $route.name }}</div>
+        <div class="value">\{{ name }}</div>
       </div>
 {{/isEnabled}}
       <div class="item">
@@ -37,7 +37,13 @@
     data () {
       return {
         electron: process.versions['atom-shell'],
+        {{#isEnabled plugins 'vue-router'}}
+        name: 'landing-page',
+        {{/isEnabled}}
         node: process.versions.node,
+        {{#isEnabled plugins 'vue-router'}}
+        path: '/',
+        {{/isEnabled}}
         platform: require('os').platform(),
         vue: require('vue/package.json').version
       }
