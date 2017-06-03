@@ -21,7 +21,7 @@ If you are unfamiliar with how this plugin works, then I'd encourage you take a 
 </html>
 ```
 
-### `index.html` in production \(no minified\)
+### `index.html` in production \(non-minified\)
 
 ```html
 <!DOCTYPE html>
@@ -33,7 +33,6 @@ If you are unfamiliar with how this plugin works, then I'd encourage you take a 
   </head>
   <body>
     <div id="app"></div>
-    <!-- webpack builds are automatically injected -->
     <script type="text/javascript" src="renderer.js"></script>
   </body>
 </html>
