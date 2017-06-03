@@ -1,5 +1,9 @@
 const path = require('path')
 
+/**
+ * `electron-packager` options
+ * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-electron-packager.html
+ */
 module.exports = {
   arch: 'x64',
   asar: true,

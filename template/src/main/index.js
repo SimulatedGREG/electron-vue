@@ -6,6 +6,7 @@ import { app, BrowserWindow } from 'electron'{{#if_eq eslintConfig 'airbnb'}} //
 
 /**
  * Set `__static` path to static files in production
+ * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
  */
 if (process.env.NODE_ENV !== 'development') {
   global.__static = require('path').join(__dirname, '/static'){{#if_eq eslintConfig 'airbnb'}} // eslint-disable-line{{/if_eq}}
@@ -53,6 +54,7 @@ app.on('activate', () => {
  *
  * Uncomment the following code below and install `electron-updater` to
  * support auto updating. Code Signing with a valid certificate is required.
+ * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-electron-builder.html#auto-updating
  */
 
 /*

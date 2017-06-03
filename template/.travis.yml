@@ -1,5 +1,6 @@
 {{#testing unit e2e}}
 # Commented sections below can be used to run tests on the CI server
+# https://simulatedgreg.gitbooks.io/electron-vue/content/en/testing.html#on-the-subject-of-ci-testing
 {{/testing}}
 osx_image: xcode8
 sudo: required
