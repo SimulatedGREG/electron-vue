@@ -1,6 +1,6 @@
 # NPM Scripts
 
-To help eliminate redundant tasks around the development process, please take note of some of the NPM scripts available to you. The following commands should be ran from your project's root directory. And of course, you can run any of the below commands using `yarn run <command>`
+To help eliminate redundant tasks around the development process, please take note of some of the NPM scripts available to you. The following commands should be ran from your project's root directory. And of course, you can run any of the below commands using `yarn run <command>`.
 
 ### `npm run build`
 
