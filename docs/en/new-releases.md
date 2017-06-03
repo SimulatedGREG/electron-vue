@@ -18,7 +18,7 @@ Major updates of electron-vue will be made through GitHub Milestones and will in
 * Migration to single `package.json` structure
 * Travis CI / AppVeyor configs for `electron-builder` users
 * Minimal web output of `renderer` process
-* Migration to `axiox`
+* Migration to `axios`
 * Full support for `main` process bundling
 * Rewrite of development and build scripts
 * Migration to `babili` to remove the need of transpiling down completely to ES5
