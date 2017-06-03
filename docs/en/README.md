@@ -1,4 +1,4 @@
-![](/docs/images/logo.png)
+![](../images/logo.png)
 
 > The boilerplate for making electron applications built with vue \(pretty much what it sounds like\).
 
