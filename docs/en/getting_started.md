@@ -27,5 +27,5 @@ The first item we need to check is our npm version and ensure that it is not out
 
 Once that is complete, we can then continue to setup the needed build tools. Using [`windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools), most of the dirty work is done for us. Installing this globally will in turn setup Visual C++ packages, Python, and more.
 
-At this point things should successfully install, but if not then you will need a clean installation of Visual Studio. Please note that these are not direct problems with electron-vue itself \(Windows can be difficult sometimes ¯\_\(ツ\)\_/¯\).
+At this point things should successfully install, but if not then you will need a clean installation of Visual Studio. Please note that these are not direct problems with electron-vue itself \(Windows can be difficult sometimes ¯\\\_\(ツ\)\_/¯\).
 
