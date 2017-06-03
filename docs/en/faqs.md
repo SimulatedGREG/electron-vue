@@ -7,6 +7,7 @@
 * [Why did `npm run lint` end with an error?](#why-did-npm-run-lint-end-with-an-error)
 * [Why can't I load my app in a web browser?](#why-cant-i-load-my-app-in-a-web-browser)
 * [How do I import `jquery`?](#how-do-import-jquery)
+* How can I debug the `main` process?
 
 ---
 
@@ -45,4 +46,11 @@ The default nature of eslint is to print linting errors to console, and if there
 ## How do import `jquery`?
 
 If you are wanting to use `bootstrap`, I'm going to have to stop you right there. Using both `vue` and `jquery` in the same environment is a bad practice and leads to the two frameworks colliding with each other. I would highly recommend using a `bootstrap` alternative that uses `vue` for its JavaScript functionality. Some recommendations include [`bootstrap-vue`](https://github.com/bootstrap-vue/bootstrap-vue) and [`vue-strap`](https://github.com/yuche/vue-strap). For whatever reason you must use `jquery`, seek guidance from `webpack`'s documentation about the `ProvidePlugin` or see [\#192](https://github.com/SimulatedGREG/electron-vue/issues/192).
+
+## How can I debug the `main` process?
+
+When using `electron@^1.7.2` you can open up Google Chrome, head to `chrome://inspect`, and then pop open the remote electron process while your application is running in development mode.
+
+[Electron Documentation](https://github.com/electron/electron/blob/master/docs/tutorial/debugging-main-process.md)
+
 
