@@ -10,9 +10,6 @@ const projectRoot = path.resolve(__dirname, '../../src/renderer')
 // Set BABEL_ENV to use proper preset config
 process.env.BABEL_ENV = 'test'
 
-// Set BABEL_ENV to use proper preset config
-process.env.BABEL_ENV = 'testing-unit'
-
 let webpackConfig = merge(baseConfig, {
   devtool: '#inline-source-map',
   plugins: [

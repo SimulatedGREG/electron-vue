@@ -146,6 +146,7 @@
     "spectron": "^3.7.1",
     {{/if}}
     {{#testing unit e2e}}
+    "babel-plugin-istanbul": "^4.1.1",
     "chai": "^4.0.0",
     "mocha": "^3.0.2",
     {{/testing}}
