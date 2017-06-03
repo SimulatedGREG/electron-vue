@@ -50,7 +50,7 @@ my-project
 app.asar
 ├─ dist
 │  └─ electron
-│     ├─ <assets>/
+│     ├─ static/
 │     ├─ index.html
 │     ├─ main.js
 │     └─ renderer.js
