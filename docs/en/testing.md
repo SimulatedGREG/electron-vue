@@ -1,6 +1,6 @@
 # Testing
 
-electron-vue supports both unit testing and end-to-end testing for the `renderer` process. During `vue-cli` scaffolding you will have the option to include testing support.
+electron-vue supports both unit testing and end-to-end testing for the `renderer` process and is heavily inspired by the testing setup provided with the official `vuejs-templates/webpack` boilerplate. During `vue-cli` scaffolding you will have the option to include testing support.
 
 ## [Unit testing](unittesting.md)
 
