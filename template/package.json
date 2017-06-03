@@ -129,7 +129,6 @@
     "html-webpack-plugin": "^2.16.1",
     "json-loader": "^0.5.4",
     {{#if unit}}
-    "babel-plugin-istanbul": "^4.1.1",
     "inject-loader": "^3.0.0",
     "karma": "^1.3.0",
     "karma-chai": "^0.1.0",
