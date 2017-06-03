@@ -28,7 +28,7 @@ src/renderer/components
 
 For more information about `vue-router` click [here](https://github.com/vuejs/vue-router). In short, it is encouraged to use `vue-router` as creating a Single Page Application is much more practical when making electron applications. Do you really want to manage a bunch of BrowserWindows and then communicating information between everything? Probably not.
 
-Routes are held in `src/renderer/router/index.js` and defined like so...
+Routes are held in `src/renderer/routes.js` and defined like so...
 
 ```js
 {
