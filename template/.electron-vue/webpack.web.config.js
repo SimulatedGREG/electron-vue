@@ -17,6 +17,7 @@ let webConfig = {
   },
   module: {
     rules: [
+{{#if eslint}}
       {
         test: /\.(js|vue)$/,
         enforce: 'pre',
@@ -28,6 +29,7 @@ let webConfig = {
           }
         }
       },
+{{/eslint}}
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
