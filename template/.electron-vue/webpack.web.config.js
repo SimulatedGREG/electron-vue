@@ -94,6 +94,13 @@ let webConfig = {
       },
       nodeModules: false
     }),
+    new CopyWebpackPlugin([
+      {
+        from: path.join(__dirname, '../static'),
+        to: path.join(__dirname, '../dist/web/static'),
+        ignore: ['.*']
+      }
+    ]),
     new webpack.DefinePlugin({
       'process.env.IS_WEB': 'true'
     }),
