@@ -29,7 +29,7 @@ let webConfig = {
           }
         }
       },
-{{/eslint}}
+{{/if}}
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
