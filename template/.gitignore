@@ -11,3 +11,14 @@ npm-debug.log
 npm-debug.log.*
 thumbs.db
 !.gitkeep
+### Vim template
+# swap
+[._]*.s[a-w][a-z]
+[._]s[a-w][a-z]
+# session
+Session.vim
+# temporary
+.netrwhist
+*~
+# auto-generated tag files
+tags
