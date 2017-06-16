@@ -31,7 +31,7 @@
       {{#if settings}}
       <div class="item">
         <div class="name">Custom Setting:</div>
-        <div class="value">\{{ settings.customSetting }}</div>
+        <div class="value">\{{ customSetting }}</div>
       </div>
       {{/if}}
     </div>
@@ -41,6 +41,16 @@
 <script>
   export default {
     data () {
+      {{#if settings}}
+      let settings = require('electron').remote.getGlobal('settings')
+      let customSetting
+      if (settings) {
+        customSetting = settings.customSetting
+      } else {
+        customSetting = 'missing setting'
+      }
+
+      {{/if}}
       return {
         electron: process.versions['atom-shell'],
         {{#isEnabled plugins 'vue-router'}}
@@ -51,8 +61,10 @@
         path: '/',
         {{/isEnabled}}
         platform: require('os').platform(),
-        vue: require('vue/package.json').version,
-        settings: require('electron').remote.getGlobal('settings')
+        {{#if settings}}
+        customSetting: customSetting,
+        {{/if}}
+        vue: require('vue/package.json').version
       }
     }
   }
