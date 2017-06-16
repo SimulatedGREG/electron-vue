@@ -28,6 +28,12 @@
         <div class="name">Platform:</div>
         <div class="value">\{{ platform }}</div>
       </div>
+      {{#if settings}}
+      <div class="item">
+        <div class="name">Custom Setting:</div>
+        <div class="value">\{{ settings.customSetting }}</div>
+      </div>
+      {{/if}}
     </div>
   </div>
 </template>
@@ -45,7 +51,8 @@
         path: '/',
         {{/isEnabled}}
         platform: require('os').platform(),
-        vue: require('vue/package.json').version
+        vue: require('vue/package.json').version,
+        settings: require('electron').remote.getGlobal('settings')
       }
     }
   }

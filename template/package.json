@@ -79,6 +79,9 @@
   },
 {{/if_eq}}
   "dependencies": {
+    {{#if settings}}
+    "standard-settings": "^1.1.8",
+    {{/if}}
     "vue": "^2.3.3"{{deps plugins}}
   },
   "devDependencies": {

@@ -33,6 +33,10 @@ function createWindow () {
     mainWindow = null
   })
 }
+{{#if settings}}
+
+global.settings = require('standard-settings').getSettings()
+{{/if}}
 
 app.on('ready', createWindow)
 
