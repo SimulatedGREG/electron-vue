@@ -18,6 +18,7 @@
 * [Building Your App](building_your_app.md)
   * [Using electron-packager](using-electron-packager.md)
   * [Using electron-builder](using-electron-builder.md)
+* [Settings](settings.md)
 * [Testing](testing.md)
   * [Unit Testing](unittesting.md)
   * [End-to-End Testing](end-to-end_testing.md)
