@@ -1,7 +1,7 @@
 # Settings
 
 Settings can be anything that needs to be set when running app, when it's built and packaged.  
-I can be the url of a server, the color of background, the size of a window, ...
+It can be the url of a server, the color of background, the size of a window, ...
 
 ## Usage
 
@@ -16,6 +16,7 @@ For this example, we will use
     }
   }
 }
+```
 
 In your code, get the setting with 
 
