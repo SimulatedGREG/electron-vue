@@ -6,7 +6,13 @@ const path = require('path')
  */
 module.exports = {
   arch: 'x64',
+  {{#if settings}}
+  asar: {
+    unpackDir: 'settings'
+  },
+  {{else}}
   asar: true,
+  {{/if}}
   dir: path.join(__dirname, '../'),
   icon: path.join(__dirname, '../build/icons/icon'),
   ignore: /(^\/(src|test|\.[a-z]+|README|yarn|static|dist\/web))|\.gitkeep/,

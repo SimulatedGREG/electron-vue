@@ -117,6 +117,11 @@ module.exports = {
           short: 'builder'
         }
       ]
+    },
+    settings: {
+      type: 'confirm',
+      message: 'Setup settings with standard-settings?',
+      require: true
     }
   },
   helpers: {
@@ -160,7 +165,8 @@ module.exports = {
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint',
     'appveyor.yml': 'builder === \'builder\'',
-    '.travis.yml': 'builder === \'builder\''
+    '.travis.yml': 'builder === \'builder\'',
+    'settings/**': 'settings'
   },
   complete (data) {
     getCurrentSHA(data.author).then(sha => {
