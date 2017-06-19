@@ -7,13 +7,13 @@ node scaffold.js "$1"
 
 # Install dependecies
 cd "$PWD/builds/$1"
-npm install
+yarn
 
 # Run unit/e2e testing
-npm test
+yarn test
 
 # Run webpack and build electron
-npm run build
+yarn run build
 
 # Clean up current scaffold
 cd ..
