@@ -63,6 +63,31 @@ $ service_api_url="https://myserver.com" ./my-app/my-app
 $ ./my-app/my-app -- --service.api.url "https://myserver.com"
 ```
 
-## More info on settings
+## Settings for window and chromium flags
+
+You can use settings to change window options and chromium flags.
+For example, if you want a 1920x1080 window with pinch disabled, webSecurity disabled, and overswipe history disabled, you can add this to your settings:
+
+```
+{
+  "window" : {
+    "width": 1920,
+    "height": 1080,
+    "webPreferences": {
+      "webSecurity": false
+    }
+  },
+  "appendSwitch": {
+    "--disable-pinch": ""
+  },
+  "appendArgument": [
+    "--overscroll-history-navigation=0"
+  ]
+}
+
+```
+## More info on standard-settings
 
 To know more about `standard-settings` and the overriding settings system, check [standard-settings](https://github.com/soixantecircuits/standard-settings)
+
+
