@@ -80,6 +80,7 @@
 {{/if_eq}}
   "dependencies": {
     {{#if settings}}
+    "assignment": "^2.2.1",
     "standard-settings": "^1.1.8",
     {{/if}}
     "vue": "^2.3.3"{{deps plugins}}
