@@ -1,11 +1,9 @@
 <template>
-  <div id="app">
-    {{#isEnabled plugins 'vue-router'}}
-    <router-view></router-view>
-    {{else}}
-    <landing-page></landing-page>
-    {{/isEnabled}}
-  </div>
+  {{#isEnabled plugins 'vue-router'}}
+  <router-view></router-view>
+  {{else}}
+  <landing-page></landing-page>
+  {{/isEnabled}}
 </template>
 
 <script>
