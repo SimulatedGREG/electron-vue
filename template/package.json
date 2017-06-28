@@ -16,8 +16,8 @@
     "build:mas": "cross-env BUILD_TARGET=mas node .electron-vue/build.js",
     "build:win32": "cross-env BUILD_TARGET=win32 node .electron-vue/build.js",
     {{else}}
-    "build": "node .electron-vue/build.js && build",
-    "build:dir": "node .electron-vue/build.js && build --dir",
+    "build": "node .electron-vue/build.js && electron-builder",
+    "build:dir": "node .electron-vue/build.js && electron-builder --dir",
     {{/if_eq}}
     "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
     "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js",
@@ -48,9 +48,7 @@
       "output": "build"
     },
     "files": [
-      "dist/electron",
-      "node_modules/",
-      "package.json"
+      "dist/electron/**/*"
     ],
     "dmg": {
       "contents": [
@@ -101,10 +99,10 @@
     "electron-devtools-installer": "^2.0.1",
     {{#if_eq builder 'packager'}}
     "electron-packager": "^8.5.0",
-    {{else}}
-    "electron-builder": "^18.1.0",
-    {{/if_eq}}
     "electron-rebuild": "^1.1.3",
+    {{else}}
+    "electron-builder": "^19.10.0",
+    {{/if_eq}}
     {{#eslint}}
     "babel-eslint": "^7.0.0",
     "eslint": "^3.13.1",
