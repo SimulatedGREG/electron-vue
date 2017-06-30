@@ -107,14 +107,14 @@ module.exports = {
       message: 'What build tool would you like to use?',
       choices: [
         {
-          name: 'electron-packager (https://github.com/electron-userland/electron-packager)',
-          value: 'packager',
-          short: 'packager'
-        },
-        {
           name: 'electron-builder (https://github.com/electron-userland/electron-builder)',
           value: 'builder',
           short: 'builder'
+        },
+        {
+          name: 'electron-packager (https://github.com/electron-userland/electron-packager)',
+          value: 'packager',
+          short: 'packager'
         }
       ]
     }
