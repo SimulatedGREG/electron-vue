@@ -12,12 +12,12 @@ electron アプリケーションの作成に関しては、プロジェクト�
 
 #### `devDependencies`
 
-これらの依存関係は最終的な本番アプリケーションに含まれ**ません **。ビルドスクリプトや`webpack` ローダーなどの開発に必要な特定のモジュールをインストールします。
+これらの依存関係は最終的な本番アプリケーションに含まれ**ません**。ビルドスクリプトや`webpack` ローダーなどの開発に必要な特定のモジュールをインストールします。
 
 #### ネイティブ NPM モジュールのインストール
 
-ネイティブ npm モジュールが electron に対してビルドされていることを確認する必要があります。それをするためには、 [`electron-rebuild`](https://github.com/electron/electron-rebuild) を使用できます。しかし、単純化のため、これらのタスクをうまく処理するビルドツールに [`electron-builder`](https://github.com/electron-userland/electron-builder)  を使用することを非常にお勧めします。
+ネイティブ npm モジュールが electron に対してビルドされていることを確認する必要があります。それをするためには、 [`electron-rebuild`](https://github.com/electron/electron-rebuild) を使用できます。しかし、単純化のため、これらのタスクをうまく処理するビルドツールに [`electron-builder`](https://github.com/electron-userland/electron-builder)  を使用することを強くお勧めします。
 
 ### `main` プロセスについて
 
-開発中に `src/main/index.dev.js` に気付くかもしれません。このファイルは特に開発のために使用され、開発ツールのインストールにも使用されます。このファイルを変更する必要はありませんが、開発の必要に応じて拡張するために使用することができます。ビルド時、 `webpack` は `src/main/index.js` 自身をエントリーファイルとしてバンドルを作成します。
+開発中に `src/main/index.dev.js` に気付くかもしれません。このファイルは特に開発のために使用され、開発ツールのインストールにも使用されます。このファイルを変更する必要はありませんが、開発の必要に応じて拡張するために使用することができます。ビルド時、`webpack` は `src/main/index.js` 自身をエントリーファイルとしてバンドルを作成します。

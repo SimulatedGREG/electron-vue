@@ -1,6 +1,6 @@
 # エンドツーエンドテスト
 
-electron-vue はエンドツーエンドテストのために [Spectron](http://electron.atom.io/spectron/) とテストフレームワークの [Mocha](https://mochajs.org/) ([Chai](http://chaijs.com/) と一緒に) を利用しています。test framework for end-to-end testing. Mocha と Chai の APIは、`expect`、`should`、`assert`を含め、グローバルスコープで利用可能です。
+electron-vue はエンドツーエンドテストのために [Spectron](http://electron.atom.io/spectron/) とテストフレームワークの [Mocha](https://mochajs.org/) ([Chai](http://chaijs.com/) と一緒に) を利用しています。Mocha と Chai の APIは、`expect`、`should`、`assert`を含め、グローバルスコープで利用可能です。
 
 ### テストの実行
 
@@ -36,7 +36,7 @@ my-project
 
 #### `utils.js`
 
-ここでは、 `specs/` 全体で使用することができる汎用関数を見つけることができます。基本関数には、 electron の作成/破壊プロセスを処理する `beforeEach` と `afterEach` が含まれます。
+ここでは、`specs/` 全体で使用することができる汎用関数を見つけることができます。基本関数には、 electron の作成/破壊プロセスを処理する `beforeEach` と `afterEach` が含まれます。
 
 ### Spectron について
 
@@ -44,4 +44,4 @@ Spectron は 公式の [electron](http://electron.atom.io) テストフレーム
 
 #### WebDriverIO の使用
 
-Spectron の[ドキュメント](https://github.com/electron/spectron#client)に記載されている通り、[WebDriverIO API](http://webdriver.io/api.html) へのアクセスは `this.app.client` を通してすることができます。 electron-vue は Mocha を使用しているため、`this` のコンテキストは `afterEach`、`beforeEach`、`it` の間で共有されます。このため、 ES2015 のアロー関数は、`this` のコンテキストが上書きされるため、特定の状況では使用できないことに注意することが重要です([詳細](https://mochajs.org/#arrow-functions))。
+Spectron の[ドキュメント](https://github.com/electron/spectron#client)に記載されている通り、[WebDriverIO API](http://webdriver.io/api.html) へのアクセスは `this.app.client` を通してすることができます。 electron-vue は Mocha を使用しているため、`this` のコンテキストは `afterEach`、`beforeEach`、`it` の間で共有されます。このため、ES2015 のアロー関数は、`this` のコンテキストが上書きされるため、特定の状況では使用できないことに注意することが重要です([詳細はこちら](https://mochajs.org/#arrow-functions))。

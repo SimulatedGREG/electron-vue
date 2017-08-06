@@ -4,7 +4,7 @@
 
 ## ユースケース
 
-アプリケーションに [bootstrap](http://getbootstrap.com/) 、 [bulma](http://bulma.io/) 、 [materialize](http://materializecss.com/) を使いたいとします。いつも通り `npm` からインストールしますが、 `index.ejs` に追加する代わりに、 JavaScript 、特に `src/renderer/main.js` に CSS をインポートします。
+アプリケーションに [bootstrap](http://getbootstrap.com/) 、 [bulma](http://bulma.io/) 、 [materialize](http://materializecss.com/) を使いたいとします。いつも通り `npm` からインストールしますが、 `index.ejs` に追加する代わりに、JavaScript 、特に `src/renderer/main.js` に CSS をインポートします。
 
 #### 例
 

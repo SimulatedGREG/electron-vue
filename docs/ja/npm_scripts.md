@@ -20,7 +20,7 @@
 
 ### `npm run pack`
 
-`npm run pack:main` と `npm run pack:renderer` の両方を実行します。これらのコマンドは利用可能ですが、 `npm run build` がこのステップを処理するため、手動で実行する場面はそれほど多くありません。
+`npm run pack:main` と `npm run pack:renderer` の両方を実行します。これらのコマンドは利用可能ですが、`npm run build` がこのステップを処理するため、手動で実行する場面はそれほど多くありません。
 
 ### `npm run pack:main`
 
@@ -32,11 +32,11 @@
 
 ### `npm run unit`
 
-Karma + Jasmine でユニットテストを実行します。詳細は[**ユニットテスト**](unittesting.md)を参照してください。
+Karma と Jasmine でユニットテストを実行します。詳細は[**ユニットテスト**](unittesting.md)を参照してください。
 
 ### `npm run e2e`
 
-Spectron + Mocha でE2Eテストを実行します。詳細は[**E2Eテスト**](end-to-end_testing.md)を参照してください。
+Spectron と Mocha でE2Eテストを実行します。詳細は[**E2Eテスト**](end-to-end_testing.md)を参照してください。
 
 ### `npm test`
 

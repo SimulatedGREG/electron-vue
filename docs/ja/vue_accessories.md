@@ -4,7 +4,7 @@ electron-vue には `vue-cli` でのスキャフォールディングの間に�
 
 - [axios ](https://github.com/mzabriskie/axios)(web リクエスト)
 - [vue-electron](https://github.com/SimulatedGREG/vue-electron) (electron API を Vue オブジェクトに付け加える)
-- [vue-router](https://github.com/vuejs/vue-router) (SPA のルーティング)
+- [vue-router](https://github.com/vuejs/vue-router) (シングルページアプリケーションのルーティング)
 - [vuex](https://github.com/vuejs/vuex) (Flux にインスパイアされたアプリケーションアーキテクチャ)
 
 ---
@@ -23,7 +23,7 @@ electron API に `this.$electron` で簡単にアクセスできるようにす�
 
 ### [`vue-router`](https://github.com/vuejs/vue-router)
 
-> `vue-router`  は [Vue.js](http://vuejs.org/) 公式のルーターです。Vue.js で SPA を構築するために Vue.js のコアと深く結びついています。
+> `vue-router`  は [Vue.js](http://jp.vuejs.org/) 公式のルーターです。Vue.js でシングルページアプリケーションを構築するために Vue.js のコアと深く結びついています。
 
 提供されるプロジェクト構造は公式で提供されている `vuejs-templates/webpack` のボイラープレートの設定と似ているため馴染みやすいでしょう。
 

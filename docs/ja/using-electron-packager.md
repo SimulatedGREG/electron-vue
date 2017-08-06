@@ -33,7 +33,7 @@ Windows 以外のプラットフォームを使用して**カスタムアイコ�
 
 ### デフォルトのビルド構成
 
-[ここ](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options) に記載のある `electron-packager` のオプションの通りに `.electron-vue/build.config.js` でさらなるカスタマイズが可能です。ビルドされたアプリケーションに適用される名前は `package.json` の `productName` の値が設定されます。
+[こちら](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options) に記載のある `electron-packager` のオプションの通りに `.electron-vue/build.config.js` でさらなるカスタマイズが可能です。ビルドされたアプリケーションに適用される名前は `package.json` の `productName` の値が設定されます。
 
 ```js
 {

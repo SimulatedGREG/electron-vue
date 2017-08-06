@@ -8,6 +8,7 @@
 yarn run dev # or npm run dev
 ```
 
-...そしてやりました！electron-vue アプリケーションの実行に成功しました。<br>![](../images/landing-page.jpg)
+...そしてやりました！electron-vue アプリケーションの実行に成功しました。
+![](../images/landing-page.jpg)
 
 このボイラープレートには、簡単に取り外し可能なランディングページがいくつか付属しています。

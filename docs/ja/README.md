@@ -21,9 +21,9 @@
 - [vue-cli](https://github.com/vuejs/vue-cli) を使用したプロジェクトスキャフォールディング
 - Vue プラグイン ([axios](https://github.com/mzabriskie/axios), [vue-electron](https://github.com/SimulatedGREG/vue-electron), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex))を使用する準備ができています*
 - 開発のために [vue-devtools](https://github.com/vuejs/vue-devtools) や [devtron](https://github.com/electron/devtron) ツールのインストール
-- [electron-packager](https://github.com/electron-userland/electron-packager) や [electron-builder](https://github.com/electron-userland/electron-builder)を使用して簡単にアプリケーションをパッケージングする機能*
+- [electron-packager](https://github.com/electron-userland/electron-packager) や [electron-builder](https://github.com/electron-userland/electron-builder) を使用して簡単にアプリケーションをパッケージングする機能*
 - [electron-builder](https://github.com/electron-userland/electron-builder) による自動デプロイのための `appveyor.yml` と `.travis.yml` の設定*
-- ブラウザ用のWeb出力を生成する機能
+- ブラウザ用の Web 出力を生成する機能
 - 便利な [NPM scripts](/npm_scripts.md)
 - Hot Module Replacement を伴う [webpack](https://github.com/webpack/webpack) と [vue-loader](https://github.com/vuejs/vue-loader) の使用
 - electron の `main` プロセスで動いているプロセスの再起動
@@ -31,14 +31,14 @@
 - ES6 のデフォルトは [`stage-0`](https://babeljs.io/docs/plugins/preset-stage-0/) です
 - ES5 へトランスパイルする必要をなくすために [`babili`](https://github.com/babel/babili) の使用
 - ESLint ([`standard`](https://github.com/feross/standard) と [`airbnb-base`](https://github.com/airbnb/javascript) スタイルのサポート)*
-- (Karma + Mocha を使用した)ユニットテスト*
-- (Spectron + Mocha を使用した) End-to-end テスト*
+- (Karma と Mocha を使用した)ユニットテスト*
+- (Spectron と Mocha を使用した)エンドツーエンドテスト*
 
 *の箇所は `vue-cli` のスキャフォールディング中にカスタマイズ可能です
 
 ### はじめに
 
-このボイラープレートは [`vue-cli`](https://github.com/vuejs/vue-cli) のテンプレートとして作成され、スキャフォールディングされたアプリケーションをカスタマイズするためのオプションが含まれています。 `node@^7` かそれ以上のバージョンを使用する必要があります。 electron-vue はパッケージマネージャの [`yarn`](https://yarnpkg.org) を公式に推奨しています。 依存関係をよりよく処理し、 `yarn clean` により最終的なビルドサイズを減らすことができます。
+このボイラープレートは [`vue-cli`](https://github.com/vuejs/vue-cli) のテンプレートとして作成され、スキャフォールディングされたアプリケーションをカスタマイズするためのオプションが含まれています。`node@^7` かそれ以上のバージョンを使用する必要があります。electron-vue はパッケージマネージャの [`yarn`](https://yarnpkg.org) を公式に推奨しています。依存関係をよりよく処理し、`yarn clean` により最終的なビルドサイズを減らすことができます。
 
 ```bash
 # vue-cli をインストールしボイラープレートをスキャフォールディングします
@@ -52,11 +52,11 @@ yarn run dev # or npm run dev
 
 ##### Windows ユーザーですか?
 
-[**Windows ユーザーのための注意**](https://simulatedgreg.gitbooks.io/electron-vue/content/en/getting_started.html#a-note-for-windows-users)を確認し、 electron や他の依存関係で必要なビルドツールが全てあることを確認してください。
+[**Windows ユーザーのための注意**](https://simulatedgreg.gitbooks.io/electron-vue/content/ja/getting_started.html#a-note-for-windows-users)を確認し、electron や他の依存関係で必要なビルドツールが全てあることを確認してください。
 
 ##### Vue 1 を使いたいですか?
 
-`1.0`  ブランチを参照してください。 electron-vue は `vue@^1` の使用を公式に推奨していないため、プロジェクトの構造、機能やドキュメントは これらの変更を反映していることに注意してください([**旧版のドキュメント**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs))。
+`1.0`  ブランチを参照してください。electron-vue は `vue@^1` の使用を公式に推奨していないため、プロジェクトの構造、機能やドキュメントは これらの変更を反映していることに注意してください([**旧版のドキュメント**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs))。
 
 ```bash
 vue init simulatedgreg/electron-vue#1.0 my-project
@@ -64,7 +64,7 @@ vue init simulatedgreg/electron-vue#1.0 my-project
 
 ### 次のステップ
 
-[ドキュメント](https://simulatedgreg.gitbooks.io/electron-vue/content/) を確認してください。こちらから設定、プロジェクト構造、アプリケーションのビルドに関する有益な情報を得ることができます。便利な [FAQs](https://simulatedgreg.gitbooks.io/electron-vue/content/en/faqs.html) セクションもあります。
+[ドキュメント](https://simulatedgreg.gitbooks.io/electron-vue/content/) を確認してください。こちらから設定、プロジェクト構造、アプリケーションのビルドに関する有益な情報を得ることができます。便利な [FAQ](https://simulatedgreg.gitbooks.io/electron-vue/content/ja/faqs.html) セクションもあります。
 
 ## electron-vue で作られたもの
 

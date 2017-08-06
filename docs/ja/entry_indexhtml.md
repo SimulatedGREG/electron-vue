@@ -1,6 +1,6 @@
 #  `index.html`
 
-electron-vue は本番ビルドで `index.html` を作成するために [**`html-webpack-plugin`**](https://github.com/ampedandwired/html-webpack-plugin) を使用します。開発中は `src/` ディレクトリの`index.ejs` があります。ここではエントリーとなる HTML ファイルを変更することができます。
+electron-vue は本番ビルドで `index.html` を作成するために [**`html-webpack-plugin`**](https://github.com/ampedandwired/html-webpack-plugin) を使用します。開発中は `src/` ディレクトリの`index.ejs` となります。ここではエントリーとなる HTML ファイルを変更することができます。
 
 このプラグインがどのように動作するかわからない場合は、その[ドキュメント](https://www.npmjs.com/package/html-webpack-plugin)を見ることを勧めます。しかし要するに、このプラグインは自動的に `renderer.js` と `styles.css`  を含む本番アセットを最終的にファイルサイズを小さくし、 `index.html` に挿入します。
 
@@ -16,7 +16,7 @@ electron-vue は本番ビルドで `index.html` を作成するために [**`htm
   </head>
   <body>
     <div id="app"></div>
-    <!-- webpack builds are automatically injected -->
+    <!-- webpack ビルドが自動的に注入されます -->
   </body>
 </html>
 ```
@@ -44,4 +44,4 @@ CDN から提供されるアセットを利用することは、アプリケー�
 
 > "私は気にしません、それでも CDN を使いたいです"
 
-それでも CDN を利用すると決めた場合は、 `src/index.ejs` ファイルにタグを追加することでできます。ただアプリケーションがオフラインの時に UI/UX フローを適切に設定してください。
+それでも CDN を利用すると決めた場合は、 `src/index.ejs` ファイルにタグを追加することでできます。ただアプリケーションがオフラインの時の UI/UX フローを適切に設定してください。

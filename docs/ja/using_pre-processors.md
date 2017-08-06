@@ -1,6 +1,6 @@
 # プリプロセッサの使用
 
-[`webpack`](https://github.com/webpack/webpack) で [`vue-loader`](https://github.com/vuejs/vue-loader) を使用することの大きな利点の一つは、特に努力せずに Vue コンポーネントファイル内で HTML/CSS/JS を直接前もって処理できることです。詳細は[**こちら**](https://vuejs.org/v2/guide/single-file-components.html)を確認してください。
+[`webpack`](https://github.com/webpack/webpack) で [`vue-loader`](https://github.com/vuejs/vue-loader) を使用することの大きな利点の一つは、特に努力せずに Vue コンポーネントファイル内で HTML/CSS/JS を直接前もって処理できることです。詳細は[**こちら**](https://jp.vuejs.org/v2/guide/single-file-components.html)を確認してください。
 
 ## ユースケース
 
@@ -38,7 +38,7 @@ npm install --save-dev sass-loader node-sass
 
 他のプリプロセッサにも同じ原則が適用されます。JS に coffeescript が必要かもしれませんね？[coffeescript-loader](https://github.com/webpack/coffee-loader) をインストールして、 `<script>` タグに `lang="coffeescript"` 属性を適用するだけです。
 
-この機能の高度な使い方については [vue-loader のドキュメント](http://vue-loader.vuejs.org/en/configurations/pre-processors.html)を参照してください。
+この機能の高度な使い方については [vue-loader のドキュメント](http://vue-loader.vuejs.org/ja/configurations/pre-processors.html)を参照してください。
 
 ## Sass/SCSS のグローバル使用
 

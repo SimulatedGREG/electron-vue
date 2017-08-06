@@ -34,8 +34,8 @@ my-project
 
 #### `karma.conf.js`
 
-ここでは、スペック/カバレッジレポーターで設定された実際の `karma`  構成を見つけることができます。さらなるカスタマイズは[公式の karma のドキュメント](http://karma-runner.github.io/1.0/config/configuration-file.html)に従って行うことができます。
+ここでは、スペック/カバレッジレポーターで設定された実際の `karma` 構成を見つけることができます。さらなるカスタマイズは[公式の karma のドキュメント](http://karma-runner.github.io/1.0/config/configuration-file.html)に従って行うことができます。
 
 ### 依存関係のモック化
 
-electron-vue にはデフォルトでインストールされた [`inject-loader`](https://github.com/plasticine/inject-loader) が付属しています。Vue コンポーネントファイルでの使用については、[`vue-loader` のドキュメントのモックでテストする](http://vue-loader.vuejs.org/en/workflow/testing-with-mocks.html)を参照してください。
+electron-vue にはデフォルトでインストールされた [`inject-loader`](https://github.com/plasticine/inject-loader) が付属しています。Vue コンポーネントファイルでの使用については、[`vue-loader` のドキュメントのモックを使用したテスト](http://vue-loader.vuejs.org/ja/workflow/testing-with-mocks.html)を参照してください。
