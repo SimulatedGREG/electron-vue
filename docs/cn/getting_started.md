@@ -15,7 +15,7 @@ yarn # 或者 npm install
 yarn run dev # 或者 npm run dev
 ```
 
-#### 关于 electron 的问题
+#### 关于 electron
 
 虽然是可选的，仍旧建议在通过脚手架创建你的项目之后锁定你 electron 的版本。这样可以防止在同一项目上工作的其他开发者使用不同的版本进行开发。electron 经常发布新版本，所以一些功能特性总是会发生相应的变化。[更多信息](http://electron.atom.io/docs/tutorial/electron-versioning/)。
 
