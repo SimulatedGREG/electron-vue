@@ -93,3 +93,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**Dynamoc**](https://github.com/ieiayaobb/dynamoc): Dynamoc is a GUI client for dynamodb-local, dynalite and AWS dynamodb
 * [**Dockeron**](https://github.com/dockeron/dockeron): A dockeron project, built on Electron + Vue.js for Docker
 * [**Easysubs**](https://github.com/matiastucci/easysubs): Download subtitles in a very fast and simple way
+* [**adminScheduler**](https://github.com/danieltoorani/adminScheduler): An application leveraging electron for cross platform compatibility, Vue.js for lightning fast UI and full-calendar.io to deliver a premium calendar interface.
