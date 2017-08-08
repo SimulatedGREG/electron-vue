@@ -7,7 +7,7 @@
   * [渲染器进程](renderer-process.md)
   * [主进程](main-process.md)
   * [Webpack 配置](webpack-configurations.md)
-* [Development](development.md)
+* [开发](development.md)
   * [入口 index.html](entry_indexhtml.md)
   * [Vue 插件](vue_accessories.md)
   * [NPM 脚本](npm_scripts.md)

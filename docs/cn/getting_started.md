@@ -17,7 +17,7 @@ yarn run dev # 或者 npm run dev
 
 #### 关于 electron 的问题
 
-虽然是可选的，仍旧建议在通过脚手架创建你的项目之后锁定你 electron 的版本。这样可以防止在同一项目上工作的其他开发者使用不同的版本进行开发。electron 经常发布新版本，所以一些功能特性总是会发生相应的变化。[更多信息](http://electron.atom.io/docs/tutorial/electron-versioning/)。
+虽然是可选的，仍旧建议在创建你的项目之后锁定你 electron 的版本。这样可以防止在同一项目上工作的其他开发者使用不同的版本进行开发。electron 经常发布新版本，所以一些功能特性总是会发生相应的变化。[更多信息](http://electron.atom.io/docs/tutorial/electron-versioning/)。
 
 
 #### Windows 用户注意事项
@@ -26,6 +26,6 @@ yarn run dev # 或者 npm run dev
 
 我们需要检查的第一项是我们的 npm 版本，并确保它不是过时的。这个可以使用 [`npm-windows-upgrade`](https://github.com/felixrieseberg/npm-windows-upgrade) 来完成。如果你使用 `yarn`，则可以跳过此项检查。
 
-若上一项检查完成，我们可以继续设置所需的构建工具。使用 [`windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools) 来为我们完成大部分烦人的工作。在全局下安装此工具将依次设置 Visual C++ 软件包、Python 等等。
+若上一项检查完成，我们可以继续设置所需的构建工具。使用 [`windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools) 来为我们完成大部分烦人的工作。全局安装此工具将依次设置 Visual C++ 软件包、Python 等等。
 
-到现在为止，所有工具都应该成功安装了，可是如果没有，那么你就会需要安装一个干净的 Visual Studio。请注意，这些并不是 electron-vue 自身的问题 \(Windows 有时候可能会很难用 ¯\\\_\(ツ\)\_/¯\)。
+到现在为止，所有工具都应该成功安装了，如果没有，那么你就会需要安装一个干净的 Visual Studio。请注意，这些并不是 electron-vue 自身的问题 \(Windows 有时候可能会很难用 ¯\\\_\(ツ\)\_/¯\)。
