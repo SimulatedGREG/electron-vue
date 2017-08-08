@@ -58,7 +58,7 @@ yarn run dev # 或者 npm run dev
 
 ##### 希望使用 Vue 1？
 
-只需指向 `1.0` 分支即可。请注意，electron-vue 已经正式废除了 `vue@^1` 的使用，因此项目结构、功能和文档也将将反映这些更改 \([**遗留文档**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs)\)。
+只需指向 `1.0` 分支即可。请注意，electron-vue 已经正式废除了 `vue@^1` 的使用，因此项目结构、功能和文档也将反映这些更改 \([**遗留文档**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs)\)。
 
 ```bash
 vue init simulatedgreg/electron-vue#1.0 my-project
@@ -78,6 +78,6 @@ vue init simulatedgreg/electron-vue#1.0 my-project
 * [**Forrest**](https://github.com/stefanjudis/forrest): 一个 npm 脚本的桌面客户端
 * [**miikun**](https://github.com/hiro0218/miikun): 一个简单的 Markdown 编辑器
 * [**Dakika**](https://github.com/Madawar/Dakika): A minute taking application that makes writing minutes a breeze
-* [**Dynamoc**](https://github.com/ieiayaobb/dynamoc): Dynamoc 是一个为了 dynamodb-local、 dynalite 和 AWS dynamodb 的图形化界面客户端
-* [**Dockeron**](https://github.com/dockeron/dockeron): Dockeron 项目, 基于 Electron + Vue.js 为了 Docker
+* [**Dynamoc**](https://github.com/ieiayaobb/dynamoc): Dynamoc 是一个 dynamodb-local、 dynalite 和 AWS dynamodb 的图形化界面客户端
+* [**Dockeron**](https://github.com/dockeron/dockeron): Dockeron 项目, 基于 Electron + Vue.js 的 Docker 桌面客户端
 * [**Easysubs**](https://github.com/matiastucci/easysubs): 快速简单地下载字幕
