@@ -110,6 +110,7 @@
     "eslint-loader": "^1.9.0",
     "eslint-plugin-html": "^3.1.1",
     {{#if_eq eslintConfig 'standard'}}
+    "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
