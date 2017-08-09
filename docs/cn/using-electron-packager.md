@@ -1,6 +1,6 @@
 # 使用 [`electron-packager`](https://github.com/electron-userland/electron-packager)
 
-所有 `electron-packager` 生成的都见文件都可以在 `build` 文件夹中找到。
+所有 `electron-packager` 生成的文件都可以在 `build` 文件夹中找到。
 
 #### 针对所有平台的构建
 
