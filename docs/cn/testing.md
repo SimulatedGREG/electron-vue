@@ -26,4 +26,4 @@ npm test
 
 ### 关于 CI 测试
 
-如果你决定在脚手架时使用 `electron-builder` 作为构建工具，那么你可以轻松地在针对 `darwin`、`linux` 和 `win32` 的 Travis CI 以及 AppVeyor 上轻松测试应用程序。在 `.travis.yml` 和 `appveyor.yml` 两者之间，你会发现注释掉的部分，你可以快速取消注释以启用测试。确保在 [**使用CI的自动化部署**](/using-electron-builder.md#automated-deployments-using-ci) 上阅读更多信息。
+如果你决定在脚手架时使用 `electron-builder` 作为构建工具，那么你可以轻松地在针对 `darwin`、`linux` 和 `win32` 的 Travis CI 以及 AppVeyor 上轻松测试应用程序。在 `.travis.yml` 和 `appveyor.yml` 两者之间，你会发现注释掉的部分，你可以快速取消注释以启用测试。确保在 [**使用 CI 的自动化部署**](/using-electron-builder.md#automated-deployments-using-ci) 上阅读更多信息。
