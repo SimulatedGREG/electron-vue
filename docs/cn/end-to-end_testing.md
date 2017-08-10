@@ -1,6 +1,6 @@
 # 端对端测试
 
-electron-vue 使用 [Spectron](http://electron.atom.io/spectron/) 和 [Mocha](https://mochajs.org/) \(与 [Chai](http://chaijs.com/)\) 作为测试框架，进行端到端测试。包括 `expect`、`should` 以及 `assert` 在内的 Mocha 和 Chai 的 API 在全局范围内可用。
+electron-vue 使用 [Spectron](http://electron.atom.io/spectron/) 和 [Mocha](https://mochajs.org/) \(与 [Chai](http://chaijs.com/)\) 作为端到端测试的框架。包括 `expect`、`should` 以及 `assert` 在内的 Mocha 和 Chai 的 API 在全局范围内可用。
 
 ### 运行测试
 
@@ -24,7 +24,7 @@ my-project
 └─ └─ └─ utils.js
 ```
 
-**在大多数情况下，你可以忽略** `index.js` **，并专注于编写** `specs/` **。**
+**在大多数情况下，你可以忽略** `index.js` **，只专注于编写** `specs/` **。**
 
 #### `specs/`
 
@@ -32,7 +32,7 @@ my-project
 
 #### `index.js`
 
-这是 Mocha 入口文件，并收集编写在 `specs/` 内的所有测试代码用于测试。
+这是 Mocha 入口文件，并收集在 `specs/` 内的所有测试代码用于测试。
 
 #### `utils.js`
 
@@ -44,4 +44,4 @@ Spectron 是使用 [ChromeDriver](https://sites.google.com/a/chromium.org/chrome
 
 #### WebDriverIO 的使用
 
-如 Spectron 的 [文档](https://github.com/electron/spectron#client) 中所述，可以通过访问 `this.app.client` 来访问 [WebDriverIO APIs](http://webdriver.io/api.html)。 由于 electron-vue 使用了 Mocha，`this` 在 `afterEach`、`beforeEach` 和 `it` 之间共享。 因此，重要的是要注意，ES2015 的箭头函数不能在某些情况下使用，因为 `this` 的语境将被覆盖 \([更多信息](https://mochajs.org/#arrow-functions)\)。
+如 Spectron 的 [文档](https://github.com/electron/spectron#client) 中所述，可以通过访问 `this.app.client` 来访问 [WebDriverIO APIs](http://webdriver.io/api.html)。 由于 electron-vue 使用了 Mocha，`this` 在 `afterEach`、`beforeEach` 和 `it` 之间共享。 因此，值得注意的是，ES2015 的箭头函数不能在某些情况下使用，因为 `this` 的语境将被覆盖 \([更多信息](https://mochajs.org/#arrow-functions)\)。
