@@ -23,5 +23,3 @@ electron-vue 的主要更新将通过 GitHub 的 里程碑 (Milestones) 进行�
 * 重写开发和构建的脚本
 * 迁移到 `babili` 以避免完全反编译到 ES5
 * 在使用需要完整路径 \([`__static`](/using-static-assets.md)\) 的模块时支持 `static/` 资源
-
-The only down side to new bells & whistles every now and then is having your project stuck on an older scaffold.
