@@ -1,6 +1,6 @@
 # 项目结构
 
-当涉及制作 electron 应用程序时，项目结构会有些不同。如果你以前使用过官方的设置 [`vuejs-templates/webpack`](https://github.com/vuejs-templates/webpac)，那么这个结构应该感觉起来很熟悉。本文档再次章节将尝试解释样板代码的工作原理以及应用程序在构建中的区别。
+当涉及制作 electron 应用程序时，项目结构会有些不同。如果你以前使用过官方的设置 [`vuejs-templates/webpack`](https://github.com/vuejs-templates/webpac)，那么这个结构应该感觉起来很熟悉。本文档在此章节将尝试解释样板代码的工作原理以及应用程序在构建中的区别。
 
 ### 单一的 `package.json` 设置
 
@@ -16,7 +16,7 @@
 
 #### 安装原生 NPM 模块
 
-我们需要确保我们本地的 npm 模块是针对 electron 构建的。为了做到这一点，我们可以使用 [`electron-rebuild`](https://github.com/electron/electron-rebuild)，但是为了使事情更简单，强烈建议使用 [`electron-builder`](https://github.com/electron-userland/electron-builder) 作为你的构建工具，因为很多任务它都为你处理。
+我们需要确保我们本地的 npm 模块是针对 electron 构建的。为了做到这一点，我们可以使用 [`electron-rebuild`](https://github.com/electron/electron-rebuild)，但是为了使事情更简单，强烈建议使用 [`electron-builder`](https://github.com/electron-userland/electron-builder) 作为你的构建工具，因为它会为你处理很多任务。
 
 ### 关于 `main` 进程
 

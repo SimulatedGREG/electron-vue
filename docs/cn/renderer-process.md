@@ -26,7 +26,7 @@ src/renderer/components
 
 ### vue 路由
 
-有关 `vue-router` 的更多信息请点击 [这里](https://github.com/vuejs/vue-router)。 简而言之，我们鼓励使用 `vue-router`，因为创建 单页应用程序 (Single Page Application) 在制作 electron 应用程序的时候更加实用。你真的想管理一堆 BrowserWindows，然后在之间传达信息吗？可能不会。
+有关 `vue-router` 的更多信息请点击 [这里](https://github.com/vuejs/vue-router)。 简而言之，我们鼓励使用 `vue-router`，因为创建 单页应用程序 (Single Page Application) 在制作 electron 应用程序的时候更加实用。你真的想管理一堆 BrowserWindows，然后在之间传达信息吗？恐怕不会。
 
 路由被保存在 `src/renderer/router/index.js` 里并定义如下...
 
@@ -42,7 +42,7 @@ src/renderer/components
 
 ##### 注意
 
-在使用 `vue-router` 时，不要使用 [**HTML5 历史模式**](http://router.vuejs.org/en/essentials/history-mode.html)。 此模式严格用于通过 `http` 协议提供文件，并且不能正常使用 `file` 协议，electron 在产品构建中提供文件。 默认的 `hash` 模式正式我们所需要的。
+在使用 `vue-router` 时，不要使用 [**HTML5 历史模式**](http://router.vuejs.org/en/essentials/history-mode.html)。 此模式严格用于通过 `http` 协议提供文件，并且不能正常使用 `file` 协议，electron 在产品构建中提供文件。 默认的 `hash` 模式正是我们所需要的。
 
 ### vuex 模块
 

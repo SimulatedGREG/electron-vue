@@ -14,8 +14,6 @@
 
 静态分析所有在你 `src/` 和 `test/` 下的 JS 以及 Vue 组件文件。
 
-Lint all your `src/`'s and `test/`'s JS & Vue component files.
-
 ### `npm run lint:fix`
 
 静态分析所有在你 `src/` 和 `test/` 下的 JS 以及 Vue 组件文件并且尝试修复问题。
