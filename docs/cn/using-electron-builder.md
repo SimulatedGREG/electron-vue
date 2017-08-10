@@ -68,14 +68,14 @@ npm run build:dir
 1. 在 [Travis CI](https://travis-ci.org/getting_started) / [AppVeyor](https://www.appveyor.com/) 上创建一个帐户
 2. 链接你的 electron-vue 项目的 GitHub 仓库
 3. 访问 [https://github.com/settings/tokens](https://github.com/settings/tokens) 并点击 **生成新令牌** \(同样的令牌可用于 Travis CI 和 AppVeyor 二者\)
-   1. 设置一个 **令牌描述**
-   2. 检查 **public\_repo** 的范围
-   3. 点击 **生成令牌**
-4.复制你的新令牌并保存以备以后使用
-5.打开 Travis CI / AppVeyor 上的仓库设置选项，添加一个新的 **环境变量**
-   1.将变量的名称设置为 `GH_TOKEN`
-   2.将变量的值设置为刚刚创建的 GitHub 的访问令牌
-   3. **保存** 新变量并确保加密已启用
+    1. 设置一个 **令牌描述**
+    2. 检查 **public\_repo** 的范围
+    3. 点击 **生成令牌**
+4. 复制你的新令牌并保存以备以后使用
+5. 打开 Travis CI / AppVeyor 上的仓库设置选项，添加一个新的 **环境变量**
+    1. 将变量的名称设置为 `GH_TOKEN`
+    2. 将变量的值设置为刚刚创建的 GitHub 的访问令牌
+    3. **保存** 新变量并确保加密已启用
 
 现在，所有的事情应该都配置完毕了。Travis CI / AppVeyor 默认情况下会监测到任何到你 `master` 分支的推送。推送完毕后，Travis CI / AppVeyor 将克隆你的仓库到其服务器并开始构建过程。在最后阶段，`electron-builder` 可以看到 `GH_TOKEN` 环境变量，并创建一个发布草稿，并将生成上传到你公共 GitHub 仓库。现在，你可以编辑发布草稿，然后发布出去。发布了发行版后，通过更新你的 `package.json`，你可以确保将来的版本标有新版本号。
 
