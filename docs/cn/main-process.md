@@ -14,7 +14,7 @@
 
 #### `app/src/main/index.dev.js`
 
-这个文件是专门用于开发阶段，因为它会安装 `electron-debug` 与 `vue-devtools`。一般不需要修改此文件，但它可以用于扩展你开发夹断的需求。
+这个文件是专门用于开发阶段，因为它会安装 `electron-debug` 与 `vue-devtools`。一般不需要修改此文件，但它可以用于扩展你开发的需求。
 
 ## 关于 `__dirname` 与 `__filename` 的使用
 
