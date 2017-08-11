@@ -7,6 +7,3 @@ electron-vue does its best to not force a particular project structure, but does
 ### [Renderer Process](renderer-process.md)
 
 ### [Main Process](main-process.md)
-
-
-

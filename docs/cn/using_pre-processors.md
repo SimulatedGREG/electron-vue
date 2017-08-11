@@ -1,6 +1,6 @@
 # 预处理器的使用
 
-将 [`vue-loader`](https://github.com/vuejs/vue-loader) 与 [`webpack`](https://github.com/webpack/webpack) 一起使用的好处之一是能够直接在你的 Vue 组件文件中预处理你的 HTML/CSS/JS，而无需任何多用工作。请查询 [**这里**](https://vuejs.org/v2/guide/single-file-components.html) 相关的详细信息。
+将 [`vue-loader`](https://github.com/vuejs/vue-loader) 与 [`webpack`](https://github.com/webpack/webpack) 一起使用的好处之一是能够直接在你的 Vue 组件文件中预处理你的 HTML/CSS/JS，而无需其他工作。请查询 [**这里**](https://vuejs.org/v2/guide/single-file-components.html) 相关的详细信息。
 
 ## 使用案例
 
@@ -12,7 +12,7 @@
 npm install --save-dev sass-loader node-sass
 ```
 
-一旦安装了我们需要的加载器，一切就都完成了。`vue-loader` 将神奇地做好其余的工作。现在我们可以轻松地将 `lang="sass"` 或 `lang="scss"` 添加到我们的 Vue 组件文件中。注意，我们还安装了 `node-sass`，因为它是 `sass-loader` 的依赖包。
+一旦安装了我们需要的加载器，一切就都差不多完成了。`vue-loader` 将神奇地做好其余的工作。现在我们可以轻松地将 `lang="sass"` 或 `lang="scss"` 添加到我们的 Vue 组件文件中。注意，我们还安装了 `node-sass`，因为它是 `sass-loader` 的依赖包。
 
 #### 应用 `lang` 属性
 

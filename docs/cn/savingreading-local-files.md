@@ -27,7 +27,7 @@ export default new Datastore({
 
 **src/renderer/main.js**
 
-为了更进一步，我们可以将数据存储导入到 `src/renderer/main.js` 里，并将其附加到 Vue 的原型上。通过在所有组件文件中使用 `this.$db`，我们现在访问访问数据存储的 API。
+为了更进一步，我们可以将数据存储导入到 `src/renderer/main.js` 里，并将其附加到 Vue 的原型上。通过在所有组件文件中使用 `this.$db`，我们现在可以访问数据存储的 API。
 
 ```js
 import db from './datastore'
