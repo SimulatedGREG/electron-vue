@@ -1,9 +1,9 @@
 # Using the File Structure
 
-electron-vue does its best to not force a particular project structure, but does try to follow common Vue & Electron practices. The following documentation describes common practices used in the original project structure.
+electron-vue 尽可能不强制一个特别的项目结构，但是努力去跟随通用 Vue & Electron 的实践。以下文档描述了在元项目结构中使用的通用实践。
 
-**If you are unfamiliar with Electron's **`renderer`** and **`main`** processes, please give the first section of the **[**Quick Start**](http://electron.atom.io/docs/tutorial/quick-start)** a good read. It explains, in detail, their differences.**
+**如果你对 Electron 的 **`renderer`** 和 **`main`**进程不熟悉，请认真阅读第一部分 **[**快速起步**](http://electron.atom.io/docs/tutorial/quick-start)**。它详尽的解释了他们的不同。**
 
-### [Renderer Process](renderer-process.md)
+### [渲染进程](renderer-process.md)
 
-### [Main Process](main-process.md)
+### [主进程](main-process.md)

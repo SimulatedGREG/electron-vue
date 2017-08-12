@@ -4,7 +4,7 @@
 
 ### Vue 组件里 `src` 标签的使用案例
 
-Let's say I have a component that loads an image, but the image's path isn't known until some other task is completed. To keep things simple, let's just use a `data` variable to bind our `<img>`'s src.
+假设我有一个组件需要下载一个图像，但是直到一些其他任务完成后这个图像的地址才能知道。简单起见，让我们用一个 `data` 变量来绑定图像的来源。
 
 **SomeComponent.vue**
 
@@ -47,6 +47,6 @@ console.log(fileContents)
 // => "foobar"
 ```
 
-请注意，在产品阶段，默认情况下，所有文件都包含 [`asar`](https://github.com/electron/asar)，因为它是被极力推荐的。因此，`static/` 文件夹中的资源只能在 `electron` 内部访问，因为 `electron` 了解此特性。由此，如果你打算将文件分发给用户，例如在外部程序中打开文件，那么，首先你需要将这些资源从应用程序复制到用户的文档空间或桌面中。从那里，你可以使用 electron 的 API [`shell.openItem()`](https://electron.atom.io/docs/api/shell/#shellopenitemfullpath) 来打开这些资源。
+请注意，在产品阶段，默认情况下，所有文件都包含 [`asar`](https://github.com/electron/asar)，它是被极力推荐的。因此，`static/` 文件夹中的资源只能在 `electron` 内部访问，因为 `electron` 了解此特性。由此，如果你打算将文件分发给用户，例如在外部程序中打开文件，那么，首先你需要将这些资源从应用程序复制到用户的文档空间或桌面中。从那里，你可以使用 electron 的 API [`shell.openItem()`](https://electron.atom.io/docs/api/shell/#shellopenitemfullpath) 来打开这些资源。
 
-这种情况的一种替代方法是配置 `electron-packager`/`electron-builder`，设置特定文件，用来 “解压缩” 在产品阶段的 `asar` 存档。electron-vue 并没有计划支持这种方法; 任何与 此 或 如何设定此事项 相关的问题将被关闭。
+这种情况的一种替代方法是配置 `electron-packager`/`electron-builder`，设置特定文件，用来 “解压缩” 在产品阶段的 `asar` 存档。electron-vue 并没有计划支持这种方法; 任何与此或如何设定此事项相关的问题将被关闭。

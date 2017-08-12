@@ -13,7 +13,7 @@ electron-vue 包含以下 `vue` 插件，可以使用 `vue-cli` 脚手架安装.
 
 > 用于浏览器和 node.js 的基于 Promise 的 HTTP 客户端
 
-如果你熟悉 `vue-resource`，那么你也会感觉 `axios` 很熟悉，因为大部分 API 几乎是一样的。你可以在 `main` 进程脚本中轻松导入 `axios`，或者在 `renderer` 进程中使用 `this.$http` 或 `Vue.http`。
+如果你熟悉 `vue-resource`，那么你也会觉得 `axios` 很熟悉，因为大部分 API 几乎是一样的。你可以在 `main` 进程脚本中轻松导入 `axios`，或者在 `renderer` 进程中使用 `this.$http` 或 `Vue.http`。
 
 ### [`vue-electron`](https://github.com/SimulatedGREG/vue-electron)
 
