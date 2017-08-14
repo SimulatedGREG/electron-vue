@@ -3,7 +3,7 @@
 * [简介](./README.md)
 * [起步](getting_started.md)
 * [项目结构](project_structure.md)
-  * [文件数](file-tree.md)
+  * [文件树](file-tree.md)
   * [渲染器进程](renderer-process.md)
   * [主进程](main-process.md)
   * [Webpack 配置](webpack-configurations.md)
