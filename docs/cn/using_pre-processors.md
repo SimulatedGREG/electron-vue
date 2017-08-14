@@ -26,7 +26,7 @@ npm install --save-dev sass-loader node-sass
 </style>
 ```
 
-...现在变成了...
+... 现在变成了 ...
 
 ```html
 <style lang="scss">
@@ -36,17 +36,17 @@ npm install --save-dev sass-loader node-sass
 </style>
 ```
 
-相同的原理适用于任何其他预处理器。那么也许你的 JS 需要 coffeescript？只需安装 [coffeescript-loader](https://github.com/webpack/coffee-loader)，并将 `lang =“coffeescript”` 属性应用到你的 `<script>` 标签上。
+相同的原理适用于任何其他预处理器。那么，也许你的 JS 需要 coffeescript？只需安装 [coffeescript-loader](https://github.com/webpack/coffee-loader)，并将属性 `lang=“coffeescript”` 应用到你的 `<script>` 标签上。
 
 要获得该功能更高级的使用情况，请转到 [vue-loader 的文档](http://vue-loader.vuejs.org/en/configurations/pre-processors.html) 了解更多信息。
 
 ## Sass/SCSS 全局变量的使用
 
-当使用 Sass/SCSS 作为你的 CSS 语法时，在整个 Vue 组件文件中使用 全局变量/混合嵌套 是非常有益的。以下是如何实现此方法。
+当使用 Sass/SCSS 作为你的 CSS 语法时，在整个 Vue 组件文件中使用 全局变量 与 混合嵌套 是非常有益的。以下是此方法的实现。
 
 ### 使用案例
 
-此示例演示了如何将 `globals.scss` 应用于所有的 Vue 组件文件。本文档假设你已经在开发环境中如上所述地设置了 `sass-loader`。
+此示例演示了如何将 `globals.scss` 应用于所有的 Vue 组件文件中。本文档假设你已经在开发环境中如上所述地设置了 `sass-loader`。
 
 #### 定义你的全局变量
 
