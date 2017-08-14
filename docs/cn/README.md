@@ -77,7 +77,7 @@ vue init simulatedgreg/electron-vue#1.0 my-project
 * [**Space-Snake**](https://github.com/ilyagru/Space-Snake): 使用 Electron 和 Vue.js 构建的桌面游戏。
 * [**Forrest**](https://github.com/stefanjudis/forrest): 一个 npm 脚本的桌面客户端
 * [**miikun**](https://github.com/hiro0218/miikun): 一个简单的 Markdown 编辑器
-* [**Dakika**](https://github.com/Madawar/Dakika): A minute taking application that makes writing minutes a breeze
+* [**Dakika**](https://github.com/Madawar/Dakika): 超省时的应用程序，使写作变得轻而易举
 * [**Dynamoc**](https://github.com/ieiayaobb/dynamoc): Dynamoc 是一个 dynamodb-local、 dynalite 和 AWS dynamodb 的图形化界面客户端
 * [**Dockeron**](https://github.com/dockeron/dockeron): Dockeron 项目, 基于 Electron + Vue.js 的 Docker 桌面客户端
 * [**Easysubs**](https://github.com/matiastucci/easysubs): 快速简单地下载字幕
