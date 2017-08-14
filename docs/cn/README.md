@@ -1,6 +1,6 @@
 ![](../images/logo.png)
 
-> 样板代码：基于 vue (基本上是它听起来的样子) 来构造 electron 应用程序。
+> 基于 vue (基本上是它听起来的样子) 来构造 electron 应用程序的样板代码。
 
 [![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
 

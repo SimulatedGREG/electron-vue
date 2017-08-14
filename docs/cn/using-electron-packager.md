@@ -1,10 +1,10 @@
-# 使用 [`electron-packager`](https://github.com/electron-userland/electron-packager)
+# [`electron-packager`](https://github.com/electron-userland/electron-packager) 的使用
 
 所有 `electron-packager` 生成的文件都可以在 `build` 文件夹中找到。
 
 #### 针对所有平台的构建
 
-请注意，并非所有操作系统都可以为所有其他平台构建。
+请注意，并非所有操作系统都可以为所有其他平台进行构建。
 
 ```bash
 npm run build
@@ -21,7 +21,7 @@ npm run build:darwin
 
 #### 清除
 
-从 `build` 删除所有构建文件。
+从 `build` 删除所有的构建文件。
 
 ```bash
 npm run build:clean
@@ -29,11 +29,11 @@ npm run build:clean
 
 ### 非 Windows 用户注意事项
 
-如果你想在非 Windows 平台上 **使用自定义图标** 为 Windows 构建，你必须安装 [wine](https://www.winehq.org/)。[更多信息](https://github.com/electron-userland/electron-packager#building-windows-apps-from-non-windows-platforms)。
+如果你想在非 Windows 平台上为 Windows 构建时 **使用自定义图标**，你必须安装 [wine](https://www.winehq.org/)。[更多信息](https://github.com/electron-userland/electron-packager#building-windows-apps-from-non-windows-platforms)。
 
 ### 默认的构建配置
 
-可以在 `.electron-vue/build.config.js` 中基于 `electron-packager` 的 [各种选项](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options) 进一步定制。你可以设置 `package.json` 里的 `productName` 来设置构建后的程序名称。
+可以在 `.electron-vue/build.config.js` 中使用基于 `electron-packager` 的 [各种选项](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options) 进行进一步定制。你可以设置 `package.json` 里的 `productName` 来设置构建后的程序名称。
 
 ```js
 {
