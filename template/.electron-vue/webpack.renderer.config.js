@@ -82,7 +82,7 @@ let rendererConfig = {
           loader: 'url-loader',
           query: {
             limit: 10000,
-            name: 'imgs/[path][name].[ext]'
+            name: 'imgs/[name]--[folder].[ext]'
           }
         }
       },
@@ -91,7 +91,7 @@ let rendererConfig = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: 'media/[path][name].[ext]'
+          name: 'media/[name]--[folder].[ext]'
         }
       },
       {
@@ -100,7 +100,7 @@ let rendererConfig = {
           loader: 'url-loader',
           query: {
             limit: 10000,
-            name: 'fonts/[path][name].[ext]'
+            name: 'fonts/[name]--[folder].[ext]'
           }
         }
       }
