@@ -1,41 +1,4 @@
 {
-  "comments": false,
-  "env": {
-{{#testing unit e2e}}
-    "test": {
-      "presets": [
-        ["env", {
-          "targets": { "node": 7 }
-        }],
-        "stage-0"
-      ],
-      "plugins": ["istanbul"]
-    },
-{{/testing}}
-    "main": {
-      "presets": [
-        ["env", {
-          "targets": { "node": 7 }
-        }],
-        "stage-0"
-      ]
-    },
-    "renderer": {
-      "presets": [
-        ["env", {
-          "modules": false
-        }],
-        "stage-0"
-      ]
-    },
-    "web": {
-      "presets": [
-        ["env", {
-          "modules": false
-        }],
-        "stage-0"
-      ]
-    }
-  },
+  "presets": ["stage-0"],
   "plugins": ["transform-runtime"]
 }

@@ -4,6 +4,9 @@
 {{/if_eq}}
 import { app, BrowserWindow } from 'electron'{{#if_eq eslintConfig 'airbnb'}} // eslint-disable-line{{/if_eq}}
 
+// Install `electron-debug` with `devtron`
+require('electron-debug')({ showDevTools: true })
+
 /**
  * Set `__static` path to static files in production
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
