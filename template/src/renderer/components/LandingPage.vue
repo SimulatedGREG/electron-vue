@@ -29,18 +29,38 @@
   </div>
 </template>
 
-<script>
-  import SystemInformation from './LandingPage/SystemInformation'
+<script{{#if typescript}} lang="ts"{{/if}}>
+  {{#if typescript}}import Vue, { ComponentOptions } from 'vue'{{/if}}
+  import SystemInformation from './LandingPage/SystemInformation{{#if typescript}}.vue{{/if}}'
 
   export default {
     name: 'landing-page',
     components: { SystemInformation },
     methods: {
-      open (link) {
+      open (link{{#if typescript}}: string{{/if}}) {
         {{#isEnabled plugins 'vue-electron'}}this.$electron{{else}}require('electron'){{/isEnabled}}.shell.openExternal(link)
       }
     }
+  }{{#if typescript}} as ComponentOptions<Vue>{{/if}}
+  {{#if typescript}}
+
+/*
+  import Vue from 'vue'
+  import Component from 'vue-class-component'
+  import SystemInformation from './LandingPage/SystemInformation.vue'
+
+  @Component({
+    components: {
+      SystemInformation
+    }
+  })
+  export default class LandingPage extends Vue {
+    open (link: string) {
+      this.$electron.shell.openExternal(link)
+    }
   }
+*/
+  {{/if}}
 </script>
 
 <style>

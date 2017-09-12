@@ -92,6 +92,11 @@ module.exports = {
         }
       ]
     },
+    typescript: {
+      type: 'confirm',
+      message: 'Setup TypeScript support?',
+      require: true
+    },
     unit: {
       type: 'confirm',
       message: 'Setup unit testing with Karma + Mocha?',
@@ -151,6 +156,8 @@ module.exports = {
   filters: {
     'src/renderer/routes.js': 'plugins[\'vue-router\']',
     'src/renderer/components/LandingPageView/CurrentPage.vue': 'plugins[\'vue-router\']',
+    'src/**/*.ts': 'typescript',
+    'src/**/*.js': '!typescript',
     'src/renderer/router/**/*': 'plugins[\'vue-router\']',
     'src/renderer/store/**/*': 'plugins[\'vuex\']',
     'test/e2e/**/*': 'e2e',
@@ -159,6 +166,7 @@ module.exports = {
     'test/.eslintrc': 'e2e || unit',
     '.eslintignore': 'eslint',
     '.eslintrc.js': 'eslint',
+    'tsconfig.json': 'typescript',
     'appveyor.yml': 'builder === \'builder\'',
     '.travis.yml': 'builder === \'builder\''
   },

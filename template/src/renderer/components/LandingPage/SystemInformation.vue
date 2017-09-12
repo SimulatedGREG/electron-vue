@@ -32,11 +32,15 @@
   </div>
 </template>
 
-<script>
+<script{{#if typescript}} lang="ts"{{/if}}>
+  {{#if typescript}}
+  import Vue, { ComponentOptions } from 'vue'
+
+  {{/if}}
   export default {
     data () {
       return {
-        electron: process.versions['atom-shell'],
+        electron: process.versions.electron,
         {{#isEnabled plugins 'vue-router'}}
         name: 'landing-page',
         {{/isEnabled}}
@@ -48,7 +52,24 @@
         vue: require('vue/package.json').version
       }
     }
+  }{{#if typescript}} as ComponentOptions<Vue>{{/if}}
+  {{#if typescript}}
+
+/*
+  import Vue from 'vue'
+  import Component from 'vue-class-component'
+
+  @Component
+  export default class SystemInformation extends Vue {
+    electron = process.versions.electron
+    name = 'landing-page'
+    node = process.versions.node
+    path = '/'
+    platform = require('os').platform()
+    vue = require('vue/package.json').version
   }
+*/
+  {{/if}}
 </script>
 
 <style scoped>

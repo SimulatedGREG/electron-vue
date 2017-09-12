@@ -8,10 +8,11 @@
   </div>
 </template>
 
-<script>
+<script{{#if typescript}} lang="ts"{{/if}}>
+  {{#if typescript}}import Vue, { ComponentOptions } from 'vue'{{/if}}
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
-  import LandingPage from '@/components/LandingPage'
+  import LandingPage from '@/components/LandingPage{{#if typescript}}.vue{{/if}}'
 
 {{/isEnabled}}
   export default {
@@ -22,7 +23,19 @@
       LandingPage
     }
 {{/isEnabled}}
+  }{{#if typescript}} as ComponentOptions<Vue>{{/if}}
+  {{#if typescript}}
+
+/*
+  import Vue from 'vue'
+  import Component from 'vue-class-component'
+
+  @Component
+  export default class DidItWork extends Vue {
+    name = 'did-it-work'
   }
+*/
+  {{/if}}
 </script>
 
 <style>
