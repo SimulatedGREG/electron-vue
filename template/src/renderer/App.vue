@@ -31,7 +31,7 @@
   import Component from 'vue-class-component'
 
   @Component
-  export default class DidItWork extends Vue {
+  export default class App extends Vue {
     name = 'did-it-work'
   }
 */
