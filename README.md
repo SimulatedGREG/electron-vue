@@ -82,7 +82,7 @@ Make sure to take a look at the [documentation](https://simulatedgreg.gitbooks.i
 
 
 ## Made with electron-vue
-Take a look at some of the amazing projects built with electron-vue. Want to have your own project listed? Feel free to submit a pull request.
+Take a look at some of the amazing projects built with electron-vue. Want to have your own project listed? Feel free add your project to the bottom of the list below then submit a pull request.
 
 * [**Surfbird**](https://github.com/surfbirdapp/surfbird): A Twitter client built on Electron and Vue
 * [**Lulumi-browser**](https://github.com/qazbnm456/lulumi-browser): Lulumi-browser is a light weight browser coded with Vue.js 2 and Electron
@@ -96,3 +96,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**adminScheduler**](https://github.com/danieltoorani/adminScheduler): An application leveraging electron for cross platform compatibility, Vue.js for lightning fast UI and full-calendar.io to deliver a premium calendar interface.
 * [**Backlog**](https://github.com/czytelny/backlog): Simple app for storing TODOs, ideas or backlog items. You can organize them with boards. Sleek flow. Built with Electron + Vue.js + iView
 * [**DevOps Helper**](https://github.com/ricktbaker/devops_helper): DevOps tool to make life easier working with AWS instances.
+* [**GitHoard**](https://github.com/jojobyte/githoard): Hoard git repositories with ease.
