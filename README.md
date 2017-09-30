@@ -82,7 +82,7 @@ Make sure to take a look at the [documentation](https://simulatedgreg.gitbooks.i
 
 
 ## Made with electron-vue
-Take a look at some of the amazing projects built with electron-vue. Want to have your own project listed? Feel free to submit a pull request.
+Take a look at some of the amazing projects built with electron-vue. Want to have your own project listed? Feel free add your project to the bottom of the list below then submit a pull request.
 
 * [**Surfbird**](https://github.com/surfbirdapp/surfbird): A Twitter client built on Electron and Vue
 * [**Lulumi-browser**](https://github.com/qazbnm456/lulumi-browser): Lulumi-browser is a light weight browser coded with Vue.js 2 and Electron
