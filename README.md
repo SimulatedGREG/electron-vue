@@ -95,4 +95,5 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**Easysubs**](https://github.com/matiastucci/easysubs): Download subtitles in a very fast and simple way
 * [**adminScheduler**](https://github.com/danieltoorani/adminScheduler): An application leveraging electron for cross platform compatibility, Vue.js for lightning fast UI and full-calendar.io to deliver a premium calendar interface.
 * [**Backlog**](https://github.com/czytelny/backlog): Simple app for storing TODOs, ideas or backlog items. You can organize them with boards. Sleek flow. Built with Electron + Vue.js + iView
+* [**DevOps Helper**](https://github.com/ricktbaker/devops_helper): DevOps tool to make life easier working with AWS instances.
 * [**GitHoard**](https://github.com/jojobyte/githoard): Hoard git repositories with ease.
