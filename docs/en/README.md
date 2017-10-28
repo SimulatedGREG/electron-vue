@@ -10,7 +10,7 @@
 
 ## Overview
 
-The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of vue-cli for scaffolding and includes webpack with vue-loader, electron-packager/electron-builder to build your app, and some of the most used plugins like vue-router, vuex, and so much more.
+The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding and includes `webpack` with `vue-loader`, `electron-packager`/`electron-builder` to build your app, and some of the most used plugins like `vue-router`, `vuex`, and so much more.
 
 #### Check out the documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
 
