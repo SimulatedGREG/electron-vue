@@ -97,3 +97,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**Backlog**](https://github.com/czytelny/backlog): Simple app for storing TODOs, ideas or backlog items. You can organize them with boards. Sleek flow. Built with Electron + Vue.js + iView
 * [**Opshell**](https://github.com/ricktbaker/opshell): Ops tool to make life easier working with AWS instances.
 * [**GitHoard**](https://github.com/jojobyte/githoard): Hoard git repositories with ease.
+* [**Data-curator**](https://github.com/ODIQueensland/data-curator): Share usable open data.
