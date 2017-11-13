@@ -12,7 +12,7 @@ Targets electron's `renderer` process. This configuration handles your Vue appli
 
 ##### White-listing Externals
 
-One important thing to consider about this config is that you can whitelist specific modules to not treat as webpack `externals`. There aren't many use cases where this functionality is need, but for the case of Vue UI libraries that provide raw `*.vue` components they will need to be whitelisted, so `vue-loader` is able to compile them. Another use case would be using webpack `alias`es, such as setting `vue` to import the full Compiler + Runtime build. Because of this, `vue` is already in the whitelist.
+One important thing to consider about this config is that you can whitelist specific modules to not treat as webpack `externals`. There aren't many use cases where this functionality is needed, but for the case of Vue UI libraries that provide raw `*.vue` components they will need to be whitelisted, so `vue-loader` is able to compile them. Another use case would be using webpack `alias`es, such as setting `vue` to import the full Compiler + Runtime build. Because of this, `vue` is already in the whitelist.
 
 ### `.electron-vue/webpack.web.config.js`
 
