@@ -81,3 +81,4 @@ vue init simulatedgreg/electron-vue#1.0 my-project
 * [**Dynamoc**](https://github.com/ieiayaobb/dynamoc): Dynamoc 是一个 dynamodb-local、 dynalite 和 AWS dynamodb 的图形化界面客户端
 * [**Dockeron**](https://github.com/dockeron/dockeron): Dockeron 项目, 基于 Electron + Vue.js 的 Docker 桌面客户端
 * [**Easysubs**](https://github.com/matiastucci/easysubs): 快速简单地下载字幕
+* [**Data-curator**](https://github.com/ODIQueensland/data-curator)：分享可用的開放數據。
