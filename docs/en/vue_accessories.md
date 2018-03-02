@@ -14,6 +14,7 @@ electron-vue comes packed with the following `vue` plugins that can be installed
 > Promise based HTTP client for the browser and node.js
 
 If you are familiar with `vue-resource`, then `axios` will feel very familiar as most of the API is nearly identical. You can easily import `axios` in your `main` process scripts or use with `this.$http` & `Vue.http` in the `renderer` process.
+If you find CORS a blocker in develpment stage, add `webPreferences: {webSecurity: false}` option to the BrowserWindow definition.
 
 ### [`vue-electron`](https://github.com/SimulatedGREG/vue-electron)
 
