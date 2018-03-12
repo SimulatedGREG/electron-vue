@@ -102,3 +102,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**Uber Run**](https://github.com/break-enter/uberrun): Simple automation desktop app to download and organize your tax invoices from Uber.
 * [**Netsix**](https://github.com/pulsardev/netsix): Share videos with your friends in a real peer-to-peer manner using WebRTC.
 * [**code-notes**](https://github.com/lauthieb/code-notes): A simple code snippet manager for developers built with Electron & Vue.js.
+* [**Pomotroid**](https://github.com/Splode/pomotroid): A simple and visually-pleasing Pomodoro timer
