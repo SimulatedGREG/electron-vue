@@ -13,8 +13,7 @@ electron-vue comes packed with the following `vue` plugins that can be installed
 
 > Promise based HTTP client for the browser and node.js
 
-If you are familiar with `vue-resource`, then `axios` will feel very familiar as most of the API is nearly identical. You can easily import `axios` in your `main` process scripts or use with `this.$http` & `Vue.http` in the `renderer` process.
-If you find CORS a blocker in develpment stage, add `webPreferences: {webSecurity: false}` option to the BrowserWindow definition.
+If you are familiar with `vue-resource`, then `axios` will feel very familiar as most of the API is nearly identical. You can easily import `axios` in your `main` process scripts or use with `this.$http` & `Vue.http` in the `renderer` process. Please note that during development you may run into issues with CORS since requests are passed through `webpack-dev-server`. As a small workaround, you can disable [`webSecurity`](https://electronjs.org/docs/api/browser-window#new-browserwindowoptions) within the BrowserWindow configuration, but please do remember to only disable this during development. Disabling this in production is highly not recommended and can create a serious security risk for your final application!
 
 ### [`vue-electron`](https://github.com/SimulatedGREG/vue-electron)
 
