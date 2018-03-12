@@ -98,4 +98,6 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**Opshell**](https://github.com/ricktbaker/opshell): Ops tool to make life easier working with AWS instances.
 * [**GitHoard**](https://github.com/jojobyte/githoard): Hoard git repositories with ease.
 * [**Data-curator**](https://github.com/ODIQueensland/data-curator): Share usable open data.
+* [**Bookmark**](https://github.com/mrgodhani/bookmark): Desktop app to manage bookmarked links using Atom Electron and Vue.js
+* [**Uber Run**](https://github.com/break-enter/uberrun): Simple automation desktop app to download and organize your tax invoices from Uber.
 * [**Netsix**](https://github.com/pulsardev/netsix): Share videos with your friends in a real peer-to-peer manner using WebRTC.
