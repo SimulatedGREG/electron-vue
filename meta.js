@@ -73,7 +73,7 @@ module.exports = {
     eslintConfig: {
       when: 'eslint',
       type: 'list',
-      message: 'Which eslint config would you like to use?',
+      message: 'Which ESLint config would you like to use?',
       choices: [
         {
           name: 'Standard (https://github.com/feross/standard)',
@@ -81,9 +81,9 @@ module.exports = {
           short: 'Standard'
         },
         {
-          name: 'AirBNB (https://github.com/airbnb/javascript)',
+          name: 'Airbnb (https://github.com/airbnb/javascript)',
           value: 'airbnb',
-          short: 'AirBNB'
+          short: 'Airbnb'
         },
         {
           name: 'none (configure it yourself)',
@@ -94,12 +94,12 @@ module.exports = {
     },
     unit: {
       type: 'confirm',
-      message: 'Setup unit testing with Karma + Mocha?',
+      message: 'Set up unit testing with Karma + Mocha?',
       required: true
     },
     e2e: {
       type: 'confirm',
-      message: 'Setup end-to-end testing with Spectron + Mocha?',
+      message: 'Set up end-to-end testing with Spectron + Mocha?',
       require: true
     },
     builder: {
