@@ -62,6 +62,7 @@ vue init simulatedgreg/electron-vue my-project
 cd my-project
 yarn # or npm install
 yarn run dev # or npm run dev
+yarn run storybook # or npm run storybook
 ```
 
 ##### Are you a Windows User?

@@ -92,6 +92,17 @@ module.exports = {
         }
       ]
     },
+    storybook: {
+      type: 'confirm',
+      message: 'Setup Storybook for Vue (https://storybook.js.org/)?',
+      required: true
+    },
+    ui: {
+      type: 'checkbox',
+      message: 'Setup front-end framework?',
+      choices: ['animate.css', 'bootstrap', 'element-ui' ,'font-awesome'],
+      default: ['bootstrap','font-awesome']
+    },    
     unit: {
       type: 'confirm',
       message: 'Set up unit testing with Karma + Mocha?',
@@ -124,14 +135,19 @@ module.exports = {
       if (list[check]) return opts.fn(this)
       else return opts.inverse(this)
     },
-    deps (plugins) {
+    deps (plugins,ui) {
       let output = ''
       let dependencies = {
         'axios': '^0.16.1',
         'vue-electron': '^1.0.6',
         'vue-router': '^2.5.3',
-        'vuex': '^2.3.1'
+        'vuex': '^2.3.1',
+        "animate.css": "^3.6.1",
+        "bootstrap": "^4.0.0",
+        "element-ui": "^2.2.1",
+        "font-awesome": "^4.7.0"
       }
+      Object.assign(plugins,ui)
 
       if (Object.keys(plugins).length > 0) output += ',\n'
 
@@ -149,6 +165,16 @@ module.exports = {
     }
   },
   filters: {
+    'src/adds/bootstrap/**/*': 'ui[\'bootstrap\']',
+    'src/adds/animate.css/**/*': 'ui[\'animate.css\']',
+    'src/adds/element-ui/**/*': 'ui[\'element-ui\']',
+    'src/adds/font-awesome/**/*': 'ui[\'font-awesome\']',
+    'src/adds/bootstrap/stories/**/*': 'storybook',
+    'src/adds/animate.css/stories/**/*': 'storybook',
+    'src/adds/element-ui/stories/**/*': 'storybook',
+    'src/adds/font-awesome/stories/**/*': 'storybook',
+    'src/adds/stories-example/**/*': 'storybook', 
+    '.storybook/**/*': 'storybook',
     'src/renderer/routes.js': 'plugins[\'vue-router\']',
     'src/renderer/components/LandingPageView/CurrentPage.vue': 'plugins[\'vue-router\']',
     'src/renderer/router/**/*': 'plugins[\'vue-router\']',
