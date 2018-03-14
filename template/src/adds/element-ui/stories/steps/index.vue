@@ -65,7 +65,8 @@ export default {
 
   methods: {
     next() {
-      if (this.active++ > 2) this.active = 0
+      this.active += 1
+      if (this.active > 2) this.active = 0
     }
   }
 }
