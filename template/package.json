@@ -22,6 +22,7 @@
     "build:clean": "cross-env BUILD_TARGET=clean node .electron-vue/build.js",
     "build:web": "cross-env BUILD_TARGET=web node .electron-vue/build.js",
     "dev": "node .electron-vue/dev-runner.js",
+    "watch": "cross-env BUILD_TARGET=web node .electron-vue/dev-runner.js",
     {{#if e2e}}
     "e2e": "npm run pack && mocha test/e2e",
     {{/if}}
