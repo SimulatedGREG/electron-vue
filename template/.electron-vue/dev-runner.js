@@ -16,6 +16,11 @@ let electronProcess = null
 let manualRestart = false
 let hotMiddleware
 
+let colors = true
+if (process.env.FORCE_COLOR !== undefined) {
+  colors = !!parseInt(process.env.FORCE_COLOR)
+}
+
 function logStats (proc, data) {
   let log = ''
 
@@ -24,7 +29,7 @@ function logStats (proc, data) {
 
   if (typeof data === 'object') {
     data.toString({
-      colors: true,
+      colors,
       chunks: false
     }).split(/\r?\n/).forEach(line => {
       log += '  ' + line + '\n'
