@@ -21,12 +21,8 @@ const webConfig = require('./webpack.web.config')
 const doneLog = chalk.bgGreen.white(' DONE ') + ' '
 const errorLog = chalk.bgRed.white(' ERROR ') + ' '
 const okayLog = chalk.bgBlue.white(' OKAY ') + ' '
+const colors = (process.env.FORCE_COLOR == 0) ? false : true
 const isCI = process.env.CI || false
-
-let colors = true
-if (process.env.FORCE_COLOR !== undefined) {
-  colors = !!parseInt(process.env.FORCE_COLOR)
-}
 
 if (process.env.BUILD_TARGET === 'clean') clean()
 else if (process.env.BUILD_TARGET === 'web') web()

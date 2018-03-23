@@ -12,14 +12,10 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 const mainConfig = require('./webpack.main.config')
 const rendererConfig = require('./webpack.renderer.config')
 
+const colors = (process.env.FORCE_COLOR == 0) ? false : true
 let electronProcess = null
 let manualRestart = false
 let hotMiddleware
-
-let colors = true
-if (process.env.FORCE_COLOR !== undefined) {
-  colors = !!parseInt(process.env.FORCE_COLOR)
-}
 
 function logStats (proc, data) {
   let log = ''
