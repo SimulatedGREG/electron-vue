@@ -40,7 +40,7 @@ my-project
 
 ### 关于 Spectron
 
-Spectron 是使用 [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 和 [WebDriverIO](http://webdriver.io/) 来操作 DOM 元素的 [electron]（http://electron.atom.io）官方测试框架。
+Spectron 是使用 [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/) 和 [WebDriverIO](http://webdriver.io/) 来操作 DOM 元素的 [electron](http://electron.atom.io) 官方测试框架。
 
 #### WebDriverIO 的使用
 
