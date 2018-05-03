@@ -50,5 +50,5 @@ Describing `vuex` is not the easiest thing to do, so please read [this](http://v
 
 electron-vue takes advantage of `vuex`'s module structure to create multiple data stores and are saved in `src/renderer/store/modules`.
 
-Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `src/renderer/store/modules/index.js` does the dirty work for us! This little script let's `src/renderer/store/index.js` import all of our modules in a one-shot manner. If all that didn't make sense, just know you can easily duplicate the given `Counter.js` module and it will be loaded in "magically".
+Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `src/renderer/store/modules/index.js` does the dirty work for us! This little script lets `src/renderer/store/index.js` import all of our modules in a one-shot manner. If all that didn't make sense, just know you can easily duplicate the given `Counter.js` module and it will be loaded in "magically".
 
