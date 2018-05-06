@@ -26,7 +26,7 @@ src/renderer/components
 
 ### vue routes
 
-For more information about `vue-router` click [here](https://github.com/vuejs/vue-router). In short, it is encouraged to use `vue-router` as creating a Single Page Application is much more practical when making electron applications. Do you really want to manage a bunch of BrowserWindows and then communicating information between everything? Probably not.
+For more information about `vue-router` click [here](https://github.com/vuejs/vue-router). In short, it is encouraged to use `vue-router` as creating a Single Page Application is much more practical when making Electron applications. Do you really want to manage a bunch of BrowserWindows and then communicating information between everything? Probably not.
 
 Routes are held in `src/renderer/router/index.js` and defined like so...
 
@@ -42,13 +42,13 @@ Routes are held in `src/renderer/router/index.js` and defined like so...
 
 ##### Notice
 
-When using `vue-router`, do not use [**HTML5 History Mode**](http://router.vuejs.org/en/essentials/history-mode.html). This mode is strictly meant for serving files over the `http` protocol and does not work properly with the `file` protocol that electron serves files with in production builds. The default `hash` mode is just what we need.
+When using `vue-router`, do not use [**HTML5 History Mode**](http://router.vuejs.org/en/essentials/history-mode.html). This mode is strictly meant for serving files over the `http` protocol and does not work properly with the `file` protocol that Electron serves files with in production builds. The default `hash` mode is just what we need.
 
 ### vuex modules
 
 Describing `vuex` is not the easiest thing to do, so please read [this](http://vuex.vuejs.org/en/intro.html) for a better understanding of what problem it tries to solve and how it works.
 
-electron-vue takes advantage of `vuex`'s module structure to create multiple data stores and are saved in `src/renderer/store/modules`.
+electron-vue takes advantage of `vuex`'s module structure to create multiple data stores, which are saved in `src/renderer/store/modules`.
 
-Having multiple data stores can be great for organization, but can also be annoying to have to import each and every one. But don't fret, as `src/renderer/store/modules/index.js` does the dirty work for us! This little script let's `src/renderer/store/index.js` import all of our modules in a one-shot manner. If all that didn't make sense, just know you can easily duplicate the given `Counter.js` module and it will be loaded in "magically".
+Having multiple data stores can be great for organization, but it can also be annoying to have to import each and every one. But don't fret, as `src/renderer/store/modules/index.js` does the dirty work for us! This little script lets `src/renderer/store/index.js` import all of our modules in a one-shot manner. If all that didn't make sense, just know you can easily duplicate the given `Counter.js` module and it will be loaded in "magically".
 
