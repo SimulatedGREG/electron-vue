@@ -104,3 +104,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**code-notes**](https://github.com/lauthieb/code-notes): A simple code snippet manager for developers built with Electron & Vue.js.
 * [**Pomotroid**](https://github.com/Splode/pomotroid): A simple and visually-pleasing Pomodoro timer
 * [**MarkText**](https://github.com/marktext/marktext): Mark Text is a realtime Markdown Editor.
+* [**vue-design**](https://github.com/L-Chris/vue-design): the best website visualization builder with Vue and Electron
