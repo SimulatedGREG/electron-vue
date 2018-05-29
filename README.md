@@ -105,3 +105,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**Pomotroid**](https://github.com/Splode/pomotroid): A simple and visually-pleasing Pomodoro timer
 * [**MarkText**](https://github.com/marktext/marktext): Mark Text is a realtime Markdown Editor.
 * [**vue-design**](https://github.com/L-Chris/vue-design): the best website visualization builder with Vue and Electron
+* [**ImapSync Client**](https://github.com/ridaamirini/ImapSyncClient): It's only an Internet Message Access Protocol Synchronization Client
