@@ -32,6 +32,9 @@
     "pack": "npm run pack:main && npm run pack:renderer",
     "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
     "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
+    {{#storybook}}
+    "storybook": "start-storybook -p 9001",
+    {{/storybook}}
     {{#testing unit e2e}}
     "test": "{{#unit}}npm run unit{{/unit}}{{#unit}}{{#e2e}} && {{/e2e}}{{/unit}}{{#e2e}}npm run e2e{{/e2e}}",
     {{/testing}}
@@ -77,9 +80,25 @@
   },
 {{/if_eq}}
   "dependencies": {
-    "vue": "^2.3.3"{{deps plugins}}
+    "vue": "^2.3.3"{{deps plugins ui}}
   },
   "devDependencies": {
+    {{#storybook}}
+    "@storybook/addon-actions": "^3.3.14",
+    "@storybook/addon-console": "^1.0.0",
+    "@storybook/addon-knobs": "^3.3.14",
+    "@storybook/addon-links": "^3.3.14",
+    "@storybook/addon-notes": "^3.3.14",
+    "@storybook/addon-options": "^3.3.14",
+    "@storybook/addon-storyshots": "^3.3.14",
+    "@storybook/addon-storysource": "^3.4.0-alpha.8",
+    "@storybook/addon-viewport": "^3.3.14",
+    "@storybook/addons": "^3.3.14",
+    "@storybook/vue": "^3.3.14",
+    "storybook-addon-specifications": "^2.1.1",
+    "storybook-readme": "^3.2.1",
+    "storybook-router": "^0.3.2",
+    {{/storybook}}    
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-runtime": "^6.23.0",

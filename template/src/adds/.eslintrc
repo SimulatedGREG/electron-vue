@@ -1,0 +1,18 @@
+{
+  "env": {
+    "mocha": true
+  },
+  "globals": {
+    "assert": true,
+    "expect": true,
+    "should": true,
+    "__static": true
+  },
+  "rules": {
+    "func-names": 0,
+    "prefer-arrow-callback": 0,
+    "no-console": 0{{#if_eq eslintConfig 'airbnb'}},
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true, "optionalDependencies": false, "peerDependencies": false}]
+    {{/if_eq}}
+  }
+}

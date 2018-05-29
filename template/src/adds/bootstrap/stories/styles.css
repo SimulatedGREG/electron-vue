@@ -1,0 +1,13 @@
+.red {
+  outline: 1px dashed blue;
+  background: rgba(252, 161, 161, 0.3);
+}
+ 
+.blue {
+  outline: 1px dashed red;
+  background: rgba(149, 181, 233, 0.425);
+}
+
+h3,h1,h2,h4 {
+  text-align: left;
+}

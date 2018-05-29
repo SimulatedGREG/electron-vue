@@ -11,6 +11,8 @@ import router from './router'
 import store from './store'
 {{/isEnabled}}
 
+import '../adds'
+
 {{#isEnabled plugins 'vue-electron'}}
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 {{/isEnabled}}
