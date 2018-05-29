@@ -2,6 +2,10 @@ const state = {
   main: 0
 }
 
+const getters = {
+  main: state => state.main
+}
+
 const mutations = {
   DECREMENT_MAIN_COUNTER (state) {
     {{#if_eq eslintConfig 'airbnb'}}state.main = state.main - 1{{else}}state.main--{{/if_eq}}
@@ -20,6 +24,7 @@ const actions = {
 
 export default {
   state,
+  getters,
   mutations,
   actions
 }
