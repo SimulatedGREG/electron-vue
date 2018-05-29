@@ -21,6 +21,7 @@ const webConfig = require('./webpack.web.config')
 const doneLog = chalk.bgGreen.white(' DONE ') + ' '
 const errorLog = chalk.bgRed.white(' ERROR ') + ' '
 const okayLog = chalk.bgBlue.white(' OKAY ') + ' '
+const colors = (process.env.FORCE_COLOR == 0) ? false : true
 const isCI = process.env.CI || false
 
 if (process.env.BUILD_TARGET === 'clean') clean()
@@ -83,7 +84,7 @@ function pack (config) {
 
         stats.toString({
           chunks: false,
-          colors: true
+          colors
         })
         .split(/\r?\n/)
         .forEach(line => {
@@ -94,7 +95,7 @@ function pack (config) {
       } else {
         resolve(stats.toString({
           chunks: false,
-          colors: true
+          colors
         }))
       }
     })
@@ -121,7 +122,7 @@ function web () {
 
     console.log(stats.toString({
       chunks: false,
-      colors: true
+      colors
     }))
 
     process.exit()

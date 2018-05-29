@@ -12,6 +12,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware')
 const mainConfig = require('./webpack.main.config')
 const rendererConfig = require('./webpack.renderer.config')
 
+const colors = (process.env.FORCE_COLOR == 0) ? false : true
 let electronProcess = null
 let manualRestart = false
 let hotMiddleware
@@ -24,7 +25,7 @@ function logStats (proc, data) {
 
   if (typeof data === 'object') {
     data.toString({
-      colors: true,
+      colors,
       chunks: false
     }).split(/\r?\n/).forEach(line => {
       log += '  ' + line + '\n'
