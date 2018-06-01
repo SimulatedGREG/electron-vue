@@ -3,7 +3,7 @@
 {{#if_eq builder 'packager'}}
   "productName": "{{ name }}",
 {{/if_eq}}
-  "version": "0.0.0",
+  "version": "{{ appver }}",
   "author": "{{ author }}",
   "description": "{{ description }}",
   "license": null,
@@ -43,7 +43,7 @@
   {{#if_eq builder 'builder'}}
   "build": {
     "productName": "{{ name }}",
-    "appId": "org.simulatedgreg.electron-vue",
+    "appId": "{{ appid }}",
     "directories": {
       "output": "build"
     },

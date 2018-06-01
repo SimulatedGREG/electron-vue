@@ -52,6 +52,17 @@ module.exports = {
       required: true,
       message: 'Application Name'
     },
+    appid: {
+        type: 'string',
+        required: true,
+        message: 'Application Id (e.g. com.example.yourapp)'
+    },
+    appver: {
+        type: 'string',
+        required: true,
+        message: 'Application Version',
+        default: '0.0.1'
+    },
     description: {
       type: 'string',
       required: false,
