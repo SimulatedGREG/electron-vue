@@ -50,7 +50,8 @@ module.exports = {
     name: {
       type: 'string',
       required: true,
-      message: 'Application Name'
+      message: 'Application Name',
+      default: 'your-app'
     },
     appid: {
         type: 'string',
