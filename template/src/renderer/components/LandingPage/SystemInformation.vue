@@ -36,7 +36,7 @@
   export default {
     data () {
       return {
-        electron: process.versions['atom-shell'],
+        electron: process.versions.electron,
         {{#isEnabled plugins 'vue-router'}}
         name: this.$route.name,
         {{/isEnabled}}
