@@ -31,6 +31,7 @@ let webConfig = {
         }
       },
 {{/if}}
+    {{#if usesass}}
       {
         test: /\.scss$/,
         use: ['vue-style-loader', 'css-loader', 'sass-loader']
@@ -39,6 +40,7 @@ let webConfig = {
         test: /\.sass$/,
         use: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax']
       },
+    {{/if}}
       {
         test: /\.less$/,
         use: ['vue-style-loader', 'css-loader', 'less-loader']

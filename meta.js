@@ -75,6 +75,11 @@ module.exports = {
       choices: ['axios', 'vue-electron', 'vue-router', 'vuex'],
       default: ['axios', 'vue-electron', 'vue-router', 'vuex']
     },
+    usesass: {
+        type: 'confirm',
+        message: 'Use Sass / Scss?',
+        required: true
+    },
     eslint: {
       type: 'confirm',
       require: true,

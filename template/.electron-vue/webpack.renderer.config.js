@@ -44,6 +44,7 @@ let rendererConfig = {
         }
       },
 {{/if}}
+    {{#if usesass}}
       {
         test: /\.scss$/,
         use: ['vue-style-loader', 'css-loader', 'sass-loader']
@@ -52,6 +53,7 @@ let rendererConfig = {
         test: /\.sass$/,
         use: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax']
       },
+    {{/if}}
       {
         test: /\.less$/,
         use: ['vue-style-loader', 'css-loader', 'less-loader']
