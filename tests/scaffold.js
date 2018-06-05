@@ -22,7 +22,10 @@ function generate (key, build) {
 
   suppose('vue', ['init', `${projectDir}`, key], { debug: process.stdout })
     .when(/Application Name/g).respond(build[0])
+    .when(/Application Id/g).respond(build[1])
+    .when(/Application Version/g).respond(build[1])
     .when(/Project description/g).respond(build[1])
+    .when(/Scss/g).respond(build[2])
     .when(/plugins/g).respond(build[2])
     .when(/ESLint/g).respond(build[3])
     .when(/config/g).respond(build[4])
