@@ -136,7 +136,6 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-spec-reporter": "^0.0.32",
     "karma-webpack": "^3.0.0",
-    "webpack-merge": "^4.1.0",
     {{/if}}
     {{#if e2e}}
     "require-dir": "^1.0.0",
