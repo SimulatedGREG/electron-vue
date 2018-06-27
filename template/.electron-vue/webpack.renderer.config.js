@@ -84,7 +84,7 @@ let rendererConfig = {
             loaders: {
               sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
               scss: 'vue-style-loader!css-loader!sass-loader',
-              less: `vue-style-loader!css-loader!less-loader`
+              less: 'vue-style-loader!css-loader!less-loader'
             }
           }
         }
