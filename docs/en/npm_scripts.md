@@ -10,6 +10,10 @@ Build your app for production and package. More info can be found in the [**Buil
 
 Run app in development.
 
+You can also pass command line paramaters to the application with: 
+
+    npm run dev --arg1=val1 --arg2
+
 ### `npm run lint`
 
 Lint all your `src/`'s and `test/`'s JS & Vue component files.
