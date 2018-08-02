@@ -108,4 +108,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**ImapSync Client**](https://github.com/ridaamirini/ImapSyncClient): It's only an Internet Message Access Protocol Synchronization Client
 * [**Hve**](https://github.com/hellohve/hve): A static blog client tool you may like.
 * [**MarkdownFox**](https://github.com/lx4r/markdownfox): A simple Markdown viewer with auto update and PDF export.
-* [**Smart DOCSE**](https://github.com/shirshak786/smart-docse): A generic app which ability to display news, contact etc.
+* [**Smart DOCSE**](https://github.com/shirshak55/smart-docse): A generic app which ability to display news, contact etc.
