@@ -25,7 +25,7 @@ If you run into errors during `npm install` about `node-gyp`, then you most like
 
 The first item we need to check is our npm version and ensure that it is not outdated. This can is accomplished using [`npm-windows-upgrade`](https://github.com/felixrieseberg/npm-windows-upgrade). If you are using `yarn`, then you can skip this check.
 
-Once that is complete, we can then continue to setup the needed build tools. Using [`windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools), most of the dirty work is done for us. Installing this globally will in turn setup Visual C++ packages, Python, and more.
+Once that is completed, we can then continue to setup the needed build tools. Using [`windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools), most of the dirty work is done for us. Installing this globally will in turn set up Visual C++ packages, Python, and more.
 
 At this point things should successfully install, but if not then you will need a clean installation of Visual Studio. Please note that these are not direct problems with electron-vue itself \(Windows can be difficult sometimes ¯\\\_\(ツ\)\_/¯\).
 
