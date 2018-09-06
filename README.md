@@ -108,3 +108,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**ImapSync Client**](https://github.com/ridaamirini/ImapSyncClient): It's only an Internet Message Access Protocol Synchronization Client
 * [**Hve**](https://github.com/hellohve/hve): A static blog client tool you may like.
 * [**MarkdownFox**](https://github.com/lx4r/markdownfox): A simple Markdown viewer with auto update and PDF export.
+* [**Hexo-Client**](https://github.com/gaoyoubo/hexo-client): A hexo client powered by electron-vue.
