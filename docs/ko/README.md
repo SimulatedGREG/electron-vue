@@ -1,44 +1,57 @@
-![](../images/logo.png)
+<div align="center">
+<br>
+<img width="500" src="/docs/images/logo.png" alt="electron-vue">
+<br>
+<br>
+</div>
 
-> The boilerplate for making electron applications built with vue \(pretty much what it sounds like\).
+<p align="center" color="#6a737d">
+vue로 구축 된 electron 애플리케이션을 만들기 위한 <span title="최소한의 변경으로 재사용할 수 있는 것">보일러 플레이트</span>
+</p>
 
-[![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
+<div align="center">
+
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
+</div>
+
+<div align="center">
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
+[![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
+</div>
 
-## Overview
+## 개요
 
-The aim of this project is to remove the need of manually setting up electron apps using vue. electron-vue takes advantage of `vue-cli` for scaffolding, `webpack` with `vue-loader`, `electron-packager` or `electron-builder`, some of the most used plugins like `vue-router`, `vuex`, and so much more.
+이 프로젝트의 목적은 vue를 사용하여 Electron 앱을 수동으로 설정해야 할 필요성을 없애는 것 입니다. electron-vue은 스캐폴딩(발판)을 위한 `vue-cli`, `vue-loader`이 있는 `webpack`, `electron-packager` 또는 `electron-builder`, `vue-router`, `vuex` 등과 같이 가장 많이 사용되는 플러그인을 사용합니다.
 
-#### Check out the documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
+#### Check out the detailed documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
 
-Things you'll find in this boilerplate...
+이 보일러플레이트에서 찾을 수있는 것...
 
-* Basic project structure with a **single** `package.json` setup
-* Detailed [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/)
-* Project scaffolding using [vue-cli](https://github.com/vuejs/vue-cli)
-* Ready to use Vue plugins \([axios](https://github.com/mzabriskie/axios), [vue-electron](https://github.com/SimulatedGREG/vue-electron), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex)\)\*
-* Installed [vue-devtools](https://github.com/vuejs/vue-devtools) and [devtron](https://github.com/electron/devtron) tools for development
-* Ability to easily package your application using [electron-packager](https://github.com/electron-userland/electron-packager) or [electron-builder](https://github.com/electron-userland/electron-builder)\*
-* `appveyor.yml` and `.travis.yml` configurations for automated deployments with [electron-builder](https://github.com/electron-userland/electron-builder)\*
-* Ability to produce web output for browsers
-* Handy [NPM scripts](/npm_scripts.md)
-* Use of [webpack](https://github.com/webpack/webpack) and [vue-loader](https://github.com/vuejs/vue-loader) with Hot Module Replacement
-* Process restarting when working in electron's `main` process
-* HTML/CSS/JS pre-processor support with [vue-loader](https://github.com/vuejs/vue-loader/)
-* ES6 with [`stage-0`](https://babeljs.io/docs/plugins/preset-stage-0/) by default
-* Use of [`babili`](https://github.com/babel/babili) to remove the need of transpiling completely down to ES5
-* ESLint \(with support for [`standard`](https://github.com/feross/standard) and [`airbnb-base`](https://github.com/airbnb/javascript)\)\*
-* Unit Testing \(with Karma + Mocha\)\*
-* End-to-end Testing \(with Spectron + Mocha\)\*
+* **단일** `package.json` 설정으로된 기본 프로젝트 구조(다른 프로젝트는 두개 package.json 파일로 구성되어 있습니다.)
+* 상세한 [문서](https://simulatedgreg.gitbooks.io/electron-vue/content/)
+*  [vue-cli](https://github.com/vuejs/vue-cli)를 사용한 프로젝트 스캐폴딩
+* Vue 플러그인을 사용한 준비가 되어 있습니다. \([axios](https://github.com/mzabriskie/axios), [vue-electron](https://github.com/SimulatedGREG/vue-electron), [vue-router](https://github.com/vuejs/vue-router), [vuex](https://github.com/vuejs/vuex)\)\*
+* 설치된 [vue-devtools](https://github.com/vuejs/vue-devtools) 과 개발을 위한 [devtron](https://github.com/electron/devtron) 도구 
+* [electron-packager](https://github.com/electron-userland/electron-packager) 또는 [electron-builder](https://github.com/electron-userland/electron-builder)를 사용하여 애플리케이션을 쉽게 패키징 할 수 있는 기능\*
+* [electron-builder](https://github.com/electron-userland/electron-builder)를 이용한 자동화 배포를 위한 `appveyor.yml` 과  `.travis.yml`\*
+* 브라우저 용 웹 출력 기능
+* 편리한 [NPM scripts](https://simulatedgreg.gitbooks.io/electron-vue/content/en/npm_scripts.html)
+* 핫 모듈 교체로 [webpack](https://github.com/webpack/webpack) 과 [vue-loader](https://github.com/vuejs/vue-loader) 사용
+* electron의 메인 프로세스에서 작업 할 때 프로세스 재시작
+* [vue-loader](https://github.com/vuejs/vue-loader/)를 사용한 HTML/CSS/JS 전처리기 지원
+* 기본적으로 [`stage-0`](https://babeljs.io/docs/plugins/preset-stage-0/)으로된 ES6 
+* [`babili`](https://github.com/babel/babili)를 사용하여 ES5로 완전히 내릴 필요성을 제거
+* ESLint \([`standard`](https://github.com/feross/standard) 와 [`airbnb-base`](https://github.com/airbnb/javascript) 지원\)\*
+* \(Karma + Mocha 로\) 단위 테스팅 *
+* \(Spectron + Mocha 로\) End-to-end 테스팅 \*
 
-\*Customizable during `vue-cli` scaffolding
+\* vue-cli 스캐폴딩 중 사용자 정의 가능
 
-### Getting Started
+### 시작하기
 
-This boilerplate was built as a template for [`vue-cli`](https://github.com/vuejs/vue-cli) and includes options to customize your final scaffolded app. The use of `node@^7` or higher is required. electron-vue also officially recommends the [`yarn`](https://yarnpkg.org) package manager as it handles dependencies much better and can help reduce final build size with `yarn clean`.
+이 보일러플레이트는 [vue-cli](https://github.com/vuejs/vue-cli)를 위한 템플릿으로 제작되었으며 최종 스캐폴드 앱을 사용자 정의 할 수 있는 옵션을 포함하고 있습니다. `node@^7` 이상의 노드를 사용해야 합니다. 또한 electron-vue는 의존성을 훨씬 잘 처리하고 `yarn clean`으로 최종 빌드 크기를 줄일 수 있는 [`yarn`](https://yarnpkg.org) 패키지 매니저를 공싱적으로 추천합니다.
 
 ```bash
 # Install vue-cli and scaffold boilerplate
@@ -51,34 +64,48 @@ yarn # or npm install
 yarn run dev # or npm run dev
 ```
 
-##### Are you a Windows User?
+##### Windows 사용자 입니까?
 
-Make sure to check out [**A Note for Windows Users**](https://simulatedgreg.gitbooks.io/electron-vue/content/en/getting_started.html#a-note-for-windows-users) to make sure you have all the necessary build tools needed for electron and other dependencies.
+electron 및 기타 의존성에 필요한 모든 빌드 도구가 있는 지 확인하려면 [**A Note for Windows Users**](https://simulatedgreg.gitbooks.io/electron-vue/content/ko/getting_started.html#a-note-for-windows-users)를 확인하세요.
 
-##### Wanting to use Vue 1?
+##### Vue 1을 사용하고 싶나요?
 
-Just point to the `1.0` branch. Please note that electron-vue has officially deprecated the usage of `vue@^1`, so project structure, features, and documentation will reflect those changes \([**legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs)\).
+ `1.0` 브랜치를 가리키기만 하세요. Please note that electron-vue는 `vue@^1`의 사용을 공식적으로 권장하지 않습니다. 따라서 프로젝트 구조, 기능 및 문서는 이러한 변경 사항을 반영합니다.([**legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs)).
 
 ```bash
 vue init simulatedgreg/electron-vue#1.0 my-project
 ```
 
-### Next Steps
+### 다음 단계
 
-Make sure to take a look at the [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/). Here you will find useful information about configuration, project structure, and building your app. There's also a handy [FAQs](https://simulatedgreg.gitbooks.io/electron-vue/content/en/faqs.html) section.
+[documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/)를 면밀히 살펴보세요. 이 문서에서 구성, 프로젝트 구조, 앱 빌드에 대한 유용한 정보가 있습니다. 또한 편리한 [FAQs](https://simulatedgreg.gitbooks.io/electron-vue/content/en/faqs.html) 섹션도 있습니다.
 
-## Made with electron-vue
 
-Take a look at some of the amazing projects built with electron-vue. Want to have your own project listed? Feel free to submit a pull request.
+## electron-vue로 만듬
+electron-vue로 만들어진 몇 가지 놀라운 프로젝트를 살펴보세요. 여러분의 프로젝트가 목록에 추가를 원하시면 언제든지 pull request를 보내 주시기 바랍니다.
 
 * [**Surfbird**](https://github.com/surfbirdapp/surfbird): A Twitter client built on Electron and Vue
 * [**Lulumi-browser**](https://github.com/qazbnm456/lulumi-browser): Lulumi-browser is a light weight browser coded with Vue.js 2 and Electron
 * [**Space-Snake**](https://github.com/ilyagru/Space-Snake): A Desktop game built with Electron and Vue.js.
 * [**Forrest**](https://github.com/stefanjudis/forrest): An npm scripts desktop client
 * [**miikun**](https://github.com/hiro0218/miikun): A Simple Markdown Editor
-* [**Dakika**](https://github.com/Madawar/Dakika): A minute taking application that makes writing minutes a breeze
+* [**Dakika**](https://github.com/raj347/Dakika): A minute taking application that makes writing minutes a breeze
 * [**Dynamoc**](https://github.com/ieiayaobb/dynamoc): Dynamoc is a GUI client for dynamodb-local, dynalite and AWS dynamodb
 * [**Dockeron**](https://github.com/dockeron/dockeron): A dockeron project, built on Electron + Vue.js for Docker
 * [**Easysubs**](https://github.com/matiastucci/easysubs): Download subtitles in a very fast and simple way
 * [**adminScheduler**](https://github.com/danieltoorani/adminScheduler): An application leveraging electron for cross platform compatibility, Vue.js for lightning fast UI and full-calendar.io to deliver a premium calendar interface.
+* [**Backlog**](https://github.com/czytelny/backlog): Simple app for storing TODOs, ideas or backlog items. You can organize them with boards. Sleek flow. Built with Electron + Vue.js + iView
+* [**Opshell**](https://github.com/ricktbaker/opshell): Ops tool to make life easier working with AWS instances.
+* [**GitHoard**](https://github.com/jojobyte/githoard): Hoard git repositories with ease.
 * [**Data-curator**](https://github.com/ODIQueensland/data-curator): Share usable open data.
+* [**Bookmark**](https://github.com/mrgodhani/bookmark): Desktop app to manage bookmarked links using Atom Electron and Vue.js
+* [**Uber Run**](https://github.com/break-enter/uberrun): Simple automation desktop app to download and organize your tax invoices from Uber.
+* [**Netsix**](https://github.com/pulsardev/netsix): Share videos with your friends in a real peer-to-peer manner using WebRTC.
+* [**code-notes**](https://github.com/lauthieb/code-notes): A simple code snippet manager for developers built with Electron & Vue.js.
+* [**Pomotroid**](https://github.com/Splode/pomotroid): A simple and visually-pleasing Pomodoro timer
+* [**MarkText**](https://github.com/marktext/marktext): Mark Text is a realtime Markdown Editor.
+* [**vue-design**](https://github.com/L-Chris/vue-design): the best website visualization builder with Vue and Electron
+* [**ImapSync Client**](https://github.com/ridaamirini/ImapSyncClient): It's only an Internet Message Access Protocol Synchronization Client
+* [**Hve**](https://github.com/hellohve/hve): A static blog client tool you may like.
+* [**MarkdownFox**](https://github.com/lx4r/markdownfox): A simple Markdown viewer with auto update and PDF export.
+* [**Cleaver**](https://getcleaver.com/): Cleaver helps you provision servers ready for deploying your web apps with zero downtime - for free!
