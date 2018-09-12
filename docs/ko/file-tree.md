@@ -1,8 +1,8 @@
-# File Tree
+# 파일 트리
 
-### During development
+### 개발 파일 트리
 
-**Note**: Some files/folders may differ based on the settings chosen during `vue-cli` scaffolding.
+**Note**: 일부 파일,폴더는 `vue-cli` 스캐폴딩 중 선택한 설정에 따라 다를 수 있습니다..
 
 ```
 my-project
@@ -44,7 +44,7 @@ my-project
 └─ README.md
 ```
 
-#### Production builds
+#### 프로덕션 빌드 파일 트리
 
 ```
 app.asar
@@ -58,8 +58,7 @@ app.asar
 └─ package.json
 ```
 
-As you can probably tell, almost everything is stripped down in final production builds. This is almost mandatory when distributing electron apps, as you do not want your users to download bloated software with a large file size.
-
+여러분도 알 수 있듯이 거의 모든 것이 최종 프로덕션 빌드에서 제거 됩니다. 사용자가 큰 파일 크기로 부푼 소프트웨어를 다운로드하는 것을 원하지 않으므로 electron 앱을 배포 할 때는 거의 필수 입니다.
 
 
 
