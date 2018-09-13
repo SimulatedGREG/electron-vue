@@ -50,4 +50,4 @@ Routes는 `src/renderer/router/index.js`에 저장되며 다음과 같이 정의
 
 electron-vue는 `vuex`의 모듈 구조를 이용하여 여러 데이터 stores를 만들고 `src/renderer/store/modules`에 저장합니다.
 
-여러 데이터 저장소를 보유하면 조직에 적합 할 수 있지만 각각을 가져와야하는 것은 귀찮습니다. 그러나 `src/renderer/store/modules/index.js`가 우리를 위해 더러운 작업을하기 때문에 무서워하지 마세요! 이 작은 스크립트는 `src/renderer/store/index.js`가 모든 모듈을 한 번에 가져올 수 있도록합니다. 모든 것이 이해가되지 않는다면, 주어진 Counter.js 모듈을 쉽게 복제 할 수 있다는 것을 알면 "마술처럼" 로드 될 것 입니다.
+여러 데이터 저장소를 보유하면 조직에 적합 할 수 있지만 각각을 가져와야하는 것은 귀찮습니다. 그러나 `src/renderer/store/modules/index.js`가 우리를 위해 더러운 작업을하기 때문에 무서워하지 마세요! 이 작은 스크립트는 `src/renderer/store/index.js`가 모든 모듈을 한 번에 가져올 수 있도록합니다. 모든 것이 이해가되지 않는다면, 주어진 `Counter.js` 모듈을 쉽게 복제 할 수 있다는 것을 알면 "마술처럼" 로드 될 것 입니다.
