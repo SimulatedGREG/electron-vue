@@ -1,15 +1,15 @@
 # Development
 
-### Starting the development setup
+### 개발 설정 시작하기
 
-After you have installed dependencies with `yarn` or `npm install`, then run...
+`yarn` 또는 `npm install`을 사용하여 종속성을 설치 한 후, 실행합니다.
 
 ```bash
 yarn run dev # or npm run dev
 ```
 
-...and boom! You now have a running electron-vue app.  
+... 뿜! 실행 중인 electron-vue 앱이 있습니다.
 ![](../images/landing-page.jpg)
 
-This boilerplate comes with a few landing-page components that are easily removable.
+이 보일러플레이트는 쉽게 제거할 수 있는 몇 가지 landing-page components가 있습니다.
 
