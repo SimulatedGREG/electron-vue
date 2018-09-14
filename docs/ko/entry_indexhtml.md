@@ -1,10 +1,11 @@
 # Entry `index.html`
 
-electron-vue makes use of [**`html-webpack-plugin`**](https://github.com/ampedandwired/html-webpack-plugin) to create the `index.html` in production builds. During development you will find a `index.ejs` in the `src/` directory. It is here where you can make changes to your entry HTML file.
+electron-vue는 프로덕션 빌드 중 [**`html-webpack-plugin`**](https://github.com/ampedandwired/html-webpack-plugin)을 사용하여 `index.html`을 만듭니다.
+여러분은 개발 중에 `src/` 디렉토리에서 `index.ejs`를 발견할 것 입니다. 여기서 엔트리 HTML 파일을 변경 할 수 있습니다.
 
-If you are unfamiliar with how this plugin works, then I'd encourage you take a look at its [documentation](https://www.npmjs.com/package/html-webpack-plugin). But in short, this plugin will automatically inject production assets including `renderer.js` and `styles.css` into a final minified `index.html`.
+이 플러그인의 작동 방식에 익숙하지 않은 경우, 이 [문서](https://www.npmjs.com/package/html-webpack-plugin)를 읽기 바랍니다. 간단히 말해, 이 플러그인은 `renderer.js`과 `styles.css`을 포함한 프로덕션 assets을 최종으로 축소된 index.html에 자동으로 삽입합니다.
 
-### `index.ejs` during development
+### 개발 할 때 `index.ejs`
 
 ```html
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ If you are unfamiliar with how this plugin works, then I'd encourage you take a 
 </html>
 ```
 
-### `index.html` in production \(non-minified\)
+### 프로덕션의 `index.html` \(non-minified\)
 
 ```html
 <!DOCTYPE html>
@@ -38,11 +39,11 @@ If you are unfamiliar with how this plugin works, then I'd encourage you take a 
 </html>
 ```
 
-### On the subject of using CDNs
+### CDNs 사용에 관하여
 
-Although the benefits of using assets served from a CDN can be great for your application's final build size, I would advised against using them. The main reason being is that by doing so you are assuming the application always has access to the internet, which is not always the case for Electron apps. This becomes a rather major issue with CSS frameworks like bootstrap, as your app will quickly become an un-styled mess.
+CDN에서 제공되는 assets을 사용하면 애플리케이션의 최종 빌드 사이즈에 득이 되지만 사용하지 않는 것을 권합니다. 주된 이유는 여러분은 애플리케이션이 인터넷에 항상 액세스 할 수 있다고 가정하지만 Electron 앱의 경우 항상 그렇지 않습니다. 이는 bootstrap 같은 CSS 프레임워크에서 중요한 이슈가 됩니다. 여러분의 앱은 아주 빠른 속도로 스타일이 없는 난잡한 상태가 될 수 있습니다.
 
-> "I don't care, I still want to use a CDN"
+> "나는 이를 신경쓰지 않고 CDN을 계속 사용하고 싶습니다."
 
-If you are determined to still use a CDN, then you can still do so by adding the tags to your `src/index.ejs` file. Just make sure to set up proper UI/UX flows for when you app is offline.
+CDN을 계속 사용하기로 결정한 경우, `src/index.ejs`에 태그를 추가하여 계속해서 사용 할 수 있습니다. 다만 앱이 오프라인 일 때 적절한 UI/UX 플로우를 설정해야합니다.
 
