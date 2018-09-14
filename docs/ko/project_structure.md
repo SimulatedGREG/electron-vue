@@ -5,7 +5,7 @@ electron-vue 프로젝트 구조는 Electron App을 만들 때와  조금 다릅
 
 ### 단일 `package.json` 설정
 
-예전에는 두 개의 `package.json` 설정이 필요 했지만 [@electron-userland](https://github.com/electron-userland)의 노력 덕분에 [`electron-packager`](https://github.com/electron-userland/electron-packager)와 [`electron-builder`](https://github.com/electron-userland/electron-builder) 둘다 지금은 완전히 단일 `package.json` 설정을 지원합니다.
+예전에는 두 개의 `package.json` 설정이 필요 했지만 [@electron-userland](https://github.com/electron-userland)의 노력 덕분에 [`electron-packager`](https://github.com/electron-userland/electron-packager)와 [`electron-builder`](https://github.com/electron-userland/electron-builder) 둘 다 지금은 완전히 단일 `package.json` 설정을 지원합니다.
 
 #### `dependencies`
 
