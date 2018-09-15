@@ -1,6 +1,6 @@
 # Read & Write Local Files
 
-One great benefit of using `electron` is the ability to access the user's file system. This enables you to read and write files on the local system. To help avoid Chromium restrictions and writing to your application's internal files, make sure to take use of `electron`'s APIs, specifically the [`app.getPath(name)`](https://electron.atom.io/docs/api/app/#appgetpathname) function. This helper method can get you file paths to system directories such as the user's desktop, system temporary files, etc.
+`electron` 사용의 큰 이점 중 하나는 사용자의 파일 시스템에 액세스 할 수 있다는 것 입니다. This enables you to read and write files on the local system. To help avoid Chromium restrictions and writing to your application's internal files, make sure to take use of `electron`'s APIs, specifically the [`app.getPath(name)`](https://electron.atom.io/docs/api/app/#appgetpathname) function. This helper method can get you file paths to system directories such as the user's desktop, system temporary files, etc.
 
 ### Use Case
 
