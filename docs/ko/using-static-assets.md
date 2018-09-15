@@ -1,10 +1,10 @@
-# Using Static Assets
+# Static Assets 사용하기
 
-If you have used the official `vuejs-templates/webpack` boilerplate before, then you should be familiar with the `static/` directory. It is here where you can place static assets that both the `main` and `renderer` process can consume. Using these assets within your Vue application is simple, but usage with `fs` and other modules that need a full path can be a little tricky. Thankfully, electron-vue provides a `__static` variable that yields the path to the `static/` directory in both development and production.
+이전에 공식 `vuejs-templates/webpack` 보일러플레이트를 사용했다면, `static/` 디렉토리에 익숙해야합니다. 여기에 `main`과 `renderer` 프로세스 둘 다가 소비 할 수 있는 Static assets을 배치 할 수 있습니다. Vue 애플리케이션에서 이러한 assets을 사용하는 것은 간단하지만 전체 경로가 필요한 `fs` 및 다른 모듈을 사용하는 것은 다소 까다로울 수 있습니다. 감사하게도 electron-vue는 개발 및 프로덕션 환경에서 `static/` 디렉토리 경로를 생성하는 `__static` 변수를 제공합니다.
 
-### Use Case within `src` tags in Vue Components
+### Vue Components에서 'src' 태그 사용 사례
 
-Let's say I have a component that loads an image, but the image's path isn't known until some other task is completed. To keep things simple, let's just use a `data` variable to bind our `<img>`'s src.
+이미지를 로드하는 component가 있지만 다른 작업이 완료 될 때까지 이미지의 경로를 알 수 없다고 가정 해 보겠습니다. 작업을 단순하게 유지하기 위해 `<img>`의 src 바인드하기 위해 `data` 변수를 합시다.
 
 **SomeComponent.vue**
 
@@ -27,7 +27,7 @@ Here `webpack` will not bundle the `unsplash.png` image and the application will
 
 ### Use Case within JS with `fs`,`path` and `__static`
 
-Let's say we have a static asset that we need to read into our application using `fs`, but how do we get a reliable path, in both development and production, to the `static/` directory? electron-vue provides a global variable named `__static` that will yield a proper path to the `static/` directory. Here's how we can use it to read a simple text file in both development and production.
+`fs`를 사용하여 애플리케이션에서 읽을 static asset이 있다고 가정 해 봅시다. 근대 개발과 프로덕션 둘 다에서  `static/` 디렉토리에 대한 신뢰할 수있는 경로를 얻는 방법은 무엇입니까? electron-vue는 `static/` 디렉토리에 대한 적절한 경로를 생성하는 `__static`이라는 전역 변수를 제공합니다. 다음은 개발과 프로덕션 둘 다에서 간단한 텍스트 파일을 읽는 방법입니다.
 
 **static/someFile.txt**
 
@@ -47,7 +47,7 @@ console.log(fileContents)
 // => "foobar"
 ```
 
-Please note that in production all files are packed with [`asar`](https://github.com/electron/asar) by default as it is highly recommended. Because of this, assets within the `static/` folder can only be accessed within `electron` since it is aware of this behavior. So if you are planning to distribute files to your users, that can for example open in a external program, you would first need to copy those assets from your application into the user's document space or desktop. From there you could use the [`shell.openItem()`](https://electron.atom.io/docs/api/shell/#shellopenitemfullpath) electron API to open those assets.
+프로덕션 환경에서는 기본적으로 모든 파일이 [`asar`](https://github.com/electron/asar)로 압축되어 있으므로 `__static`는 적극 권장합니다. 왜냐하면 `static/` 폴더 내의 assets은 오직 `electron`에서 액세스 할 수 있기 때문입니다. electron은 이 동작을 알고 있습니다. 예를 들어 외부 프로그램에서 열 수있는 파일을 사용자에게 배포하려는 경우, 먼저 애플리케이션의 해당 assets을 사용자의 문서 공간 또는 데스크톱으로 복사해야합니다.[`shell.openItem()`](https://electron.atom.io/docs/api/shell/#shellopenitemfullpath) electron API를 사용하여 해당 assets을 열 수 있습니다.
 
-An alternative method to this situation would be to configure `electron-packager`/`electron-builder` to set specific files to "unpack" from the `asar` archive in production. electron-vue has no plans to support this method; any issues related to this or how to set this up will be closed.
+이 상황에서 다른 대안은 특정 파일을 프로덕션 환경의 `asar` 아카이브에서 "unpack"하도록 `electron-packager`/`electron-builder`를 구성하는 것 입니다. electron-vue는 이 방법을 지원할 계획이 없습니다. 이 이슈와 관련된 것 또는 이를 설정하는 방법은 닫힙니다.
 
