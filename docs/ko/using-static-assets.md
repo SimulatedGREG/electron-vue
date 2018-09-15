@@ -23,7 +23,7 @@
 </script>
 ```
 
-Here `webpack` will not bundle the `unsplash.png` image and the application will look inside the `static/imgs/unsplash.png` directory for the asset. Thanks to `vue-loader`, all of the dirty work is done for us.
+여기서 `webpack`은 `unsplash.png` 이미지를 번들로 제공하지 않으며 애플리케이션은 해당 asset을 `static/imgs/unsplash.png` 디렉토리에서 찾습니다. `vue-loader` 덕분에 모든 더러운 작업이 완료되었습니다.
 
 ### Use Case within JS with `fs`,`path` and `__static`
 
