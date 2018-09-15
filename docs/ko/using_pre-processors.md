@@ -1,10 +1,10 @@
 # Using Pre-Processors
 
-One of the great benefits of using [`vue-loader`](https://github.com/vuejs/vue-loader) with [`webpack`](https://github.com/webpack/webpack) is the ability to pre-process your HTML/CSS/JS directly in your Vue components files without much effort at all. For more information about this check [**here**](https://vuejs.org/v2/guide/single-file-components.html).
+[`webpack`](https://github.com/webpack/webpack)과 함께 [`vue-loader`](https://github.com/vuejs/vue-loader)를 사용하면 큰 노력을 들이지 않고도 Vue components 파일에서 직접 HTML/CSS/JS를 전-처리 할 수 ​​있다는 이점이 있습니다. 이에 대한 자세한 내용은 [**여기**](https://vuejs.org/v2/guide/single-file-components.html)를 참조하세요.
 
 ## Use Case
 
-Let's say we need to use Sass/SCSS for pre-processing our CSS. First, we need to install the proper `webpack` loader to handle this syntax.
+CSS를 사전 처리하기 위해 Sass/SCSS를 사용해야한다고 가정 해봅시다. 먼저 다음 구문을 처리 할 적절한 `webpack` loader를 설치해야합니다.
 
 #### Installing `sass-loader`
 
