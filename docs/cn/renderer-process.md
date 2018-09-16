@@ -46,7 +46,7 @@ src/renderer/components
 
 ### vuex 模块
 
-描述 `vuex` 并不是简单的事情，所以请阅读 [这里](http://vuex.vuejs.org/en/intro.html)，以便更好地了解它试图解决的问题及其工作原理。
+描述 `vuex` 并不是简单的事情，所以请阅读 [这里](https://vuex.vuejs.org/zh/)，以便更好地了解它试图解决的问题及其工作原理。
 
 electron-vue 利用 `vuex` 的模块结构创建多个数据存储，并保存在 `src/renderer/store/modules` 中。
 
