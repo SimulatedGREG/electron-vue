@@ -2,7 +2,7 @@
 
 ### Main Process
 
-When running your application in development you may have noticed a message from the `main` process mentioning a remote debugger. Ever since the release of `electron@^1.7.2`, remote debugging over the Inspect API was introduced and can be easily accessed by opening the provided link with Google Chrome or through another debugger that can remotely attach to the process using the default port of 5858, such as Visual Studio Code.
+개발 중인 애플리케이션을 실행할 때, 여러분은 원격 디버거를 언급하는 `main` 프로세스에서 메시지를 발견했을 수도 있습니다. `electron@^1.7.2`가 출시 된 이래로 Inspect API를 통한 원격 디버깅이 도입되었으며 Google 크롬 또는 기본 포트 5858을 사용하는 프로세스(Visual Studio Code)에 원격으로 연결할 수 있는 다른 디버거를 제공된 링크를 열면 쉽게 액세스 할 수 있습니다.
 
 ```bash
 ┏ Electron -------------------
@@ -19,11 +19,11 @@ When running your application in development you may have noticed a message from
 
 ###### Notice
 
-Although it is possible to debug your application in production, please do know that production code is minified and highly unreadable compared to what you find during development.
+프로덕션 환경에서 애플리케이션을 디버그하는 것이 가능할 수도 있지만 개발 중에 발견 된 것과 비교하여 프로덕션 코드가 축소되어  읽을 수 없다는 것을 알고 있으세요.
 
 ##### `renderer` Process
 
-There isn't much of a big difference here than it is in development. You can simply invoke the dev tools using the [`BrowserWindow` APIs](https://electron.atom.io/docs/api/web-contents/#contentsopendevtoolsoptions). Using the initial electron-vue setup, you can add the following snippet of code inside `src/main/index.js` , just after the `new BrowserWindow` construction, to force the dev tools to open on launch.
+현재 개발중인 것보다 큰 차이점이 없습니다. [`BrowserWindow` APIs](https://electron.atom.io/docs/api/web-contents/#contentsopendevtoolsoptions)를 사용하여 개발자 도구를 간단하게 호출 할 수 있습니다. 초기 electron-vue 설정을 사용하여 `src/main/index.js` 안에 다음과 같은 코드 스니펫을 추가 할 수 있습니다. `new BrowserWindow` 구축 직후, 개발 도구를 강제로 열 수 있습니다.
 
 ```js
 mainWindow.webContents.openDevTools()
@@ -31,7 +31,7 @@ mainWindow.webContents.openDevTools()
 
 ##### `main` Process
 
-Similar to what is mentioned above, you can also attach an external debugger to the `main` process to remotely debug your application. In order to activate the debugger in production you can add the follow snippet after the `app` import inside `src/main/index.js`. Then you can navigate Google Chrome to `chrome://inspect` and get connected.
+위에서 언급 한 것과 비슷하게 `main` 프로세스에 외부 디버거를 연결하여 애플리케이션을 원격 디버깅 할 수도 있습니다. 프로덕션 환경에서 디버거를 활성화하려면 `src/main/index.js`에서 `app`을 import 후에 다음 스니펫을 추가하면 됩니다. 그런 다음 Google 크롬에서 `chrome://inspect`를 통해 연결하여 탐색 할 수 있습니다.
 
 ```js
 app.commandLine.appendSwitch('inspect', '5858')
