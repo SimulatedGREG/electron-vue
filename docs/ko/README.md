@@ -1,6 +1,6 @@
 ![](../images/logo.png)
 
-> vue로 구축 된 electron 애플리케이션을 만들기 위한 <span title="최소한의 변경으로 재사용할 수 있는 것">보일러 플레이트</span>
+> vue로 구축 된 electron 애플리케이션을 만들기 위한 보일러 플레이트
 
 [![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
 
