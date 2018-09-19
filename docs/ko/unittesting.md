@@ -1,8 +1,8 @@
 # Unit Testing
 
-electron-vue makes use of the [Karma](https://karma-runner.github.io/1.0/index.html) test runner and the [Mocha](https://mochajs.org/) test framework \(with [Chai](http://chaijs.com/)\) for unit testing.
+electron-vue는 유닛 테스트를 위해 [Karma](https://karma-runner.github.io/1.0/index.html) 테스트 러너, \(Chai[Chai](http://chaijs.com/)와 함께\)[Mocha](https://mochajs.org/) 테스트 프레임워크를 사용합니다.
 
-Both Mocha and Chai are integrated using `karma-mocha` and `karma-chai` respectively, so all APIs such as `expect` are globally available in test files.
+Mocha와 Chai는 각각 `karma-mocha`와 `karma-chai`를 사용하여 통합되므로 `expect`와 같은 모든 API는 테스트 파일 전역에서 사용할 수 있습니다.
 
 ### Running Tests
 
@@ -22,21 +22,24 @@ my-project
 └─ └─ └─ karma.conf.js
 ```
 
-**For the most part, you can ignore both **`index.js`** and **`karma.conf.js`** and focus solely on writing **`specs/`**.**
+대부분의 경우, index.js와 karma.conf.js 둘 다 무시하고 specs/ 작성에만 집중할 수 있습니다.
+
+**대부분의 경우,** `index.js` **와** `karma.conf.js` **둘 다 무시하고** `specs/` **작성에만 집중 할 수 있습니다.**
 
 #### `specs/`
 
-Inside this directory is where actual tests are written. Thanks to the power of webpack, you have full access to ES2015 and supported loaders.
+이 디렉토리 안은 실제 테스트가 작성되는 곳이 있습니다. webpack의 힘으로 ES2015 및 지원되는 로더에 대한 모든 액세스 권한을 갖게됩니다.
 
 #### `index.js`
 
-This is the entry file used by `karma-webpack`. The purpose of this file is to gather all test and source code in a "one-shot" manner.
+`karma-webpack`에서 사용하는 엔트리 파일입니다. 이 파일의 목적은 모든 테스트 및 소스 코드를 "한 번에" 수집하는 것입니다.
 
 #### `karma.conf.js`
 
-Here you will find the actual `karma` configuration, set up with spec/coverage reporters. Further customization can be made in accordance to the [official karma documentation](http://karma-runner.github.io/1.0/config/configuration-file.html).
+여기서 spec/coverage 리포터와 함께 설정한 실제 `karma` 구성을 찾을 수 있습니다. 추가 사용자 정의는 [official karma documentation](http://karma-runner.github.io/1.0/config/configuration-file.html)를 따라 만들 수 있습니다.
 
 ### Mocking Dependencies
 
-electron-vue comes with [`inject-loader`](https://github.com/plasticine/inject-loader) installed by default. For usage with Vue component files see [`vue-loader` docs on testing with mocks](http://vue-loader.vuejs.org/en/workflow/testing-with-mocks.html).
+electron-vue는 기본적으로  [`inject-loader`](https://github.com/plasticine/inject-loader)가 설치되어 있습니다. 
+Vue 컴포넌트 파일 사용법은 [`vue-loader` docs on testing with mocks](http://vue-loader.vuejs.org/en/workflow/testing-with-mocks.html)를 참조하세요.
 
