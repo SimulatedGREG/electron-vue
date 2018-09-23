@@ -1,18 +1,18 @@
-# Using [`electron-packager`](https://github.com/electron-userland/electron-packager)
+# [`electron-packager`](https://github.com/electron-userland/electron-packager) 사용하기
 
-All builds produced by `electron-packager` can be found within the `build` folder.
+`electron-packager`가 생성 한 모든 빌드는 `build` 폴더에서 찾을 수 있습니다.
 
-#### Building for all platforms
+#### 모든 플랫폼 빌드
 
-Please know that not all Operating Systems can build for all other platforms.
+모든 운영체제가 다른 모든 플랫폼을 위한 빌드를 할 수있는 것은 아닙니다.
 
 ```bash
 npm run build
 ```
 
-#### Building for a specific platform
+#### 특정 플랫폼 빌드
 
-Platforms include `darwin`, `mas`, `linux` and `win32`.
+플랫폼에는 `darwin`, `mas`, `linux` 및 `win32`가 포함됩니다.
 
 ```bash
 # build for darwin (macOS)
@@ -21,19 +21,19 @@ npm run build:darwin
 
 #### Cleaning
 
-Delete all builds from `build`.
+`build` 폴더에 있는 모든 빌드를 제거합니다.
 
 ```bash
 npm run build:clean
 ```
 
-### A note for non-Windows users
+### non-Windows 사용자를 위한 주의사항
 
-If you are wanting to build for Windows **with a custom icon** using a non-Windows platform, you must have [wine](https://www.winehq.org/) installed. [More Info](https://github.com/electron-userland/electron-packager#building-windows-apps-from-non-windows-platforms).
+non-Windows 플랫폼을 사용하여 **사용자 정의 아이콘이 있는** Windows를 위한 빌드를 하려면 [wine](https://www.winehq.org/)을 설치해야합니다. [More Info](https://github.com/electron-userland/electron-packager#building-windows-apps-from-non-windows-platforms).
 
-### Default building configurations
+### 디폴트 빌드 구성
 
-Further customization can be made at `.electron-vue/build.config.js` in accordance to `electron-packager`'s options found [here](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options). The name applied to your built application is set with the `productName` value in your `package.json`.
+[여기서](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#options) `electron-packager`의 옵션에 찾아서 `.electron-vue/build.config.js`에 추가하여 사용자 정의를 할 수 있습니다. 빌드 애플리케이션에 적용된 이름은 `package.json`의 `productName` 값으로 설정됩니다.
 
 ```js
 {
