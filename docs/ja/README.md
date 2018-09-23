@@ -79,3 +79,4 @@ electron-vue で作られたいくつかの素晴らしいプロジェクトを�
 - [**Dynamoc**](https://github.com/ieiayaobb/dynamoc): Dynamoc は dynamodb-local、 dynalite と AWS dynamodb のための GUI クライアントです
 - [**Dockeron**](https://github.com/dockeron/dockeron): Docker のために Electron と Vue.js で作られた dockeron プロジェクト
 - [**Easysubs**](https://github.com/matiastucci/easysubs): 字幕を早く簡単な方法でダウンロードする
+- [**Data-curator**](https://github.com/ODIQueensland/data-curator)：利用可能な公開データを共有します。

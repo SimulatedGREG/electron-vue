@@ -36,13 +36,13 @@
   export default {
     data () {
       return {
-        electron: process.versions['atom-shell'],
+        electron: process.versions.electron,
         {{#isEnabled plugins 'vue-router'}}
-        name: 'landing-page',
+        name: this.$route.name,
         {{/isEnabled}}
         node: process.versions.node,
         {{#isEnabled plugins 'vue-router'}}
-        path: '/',
+        path: this.$route.path,
         {{/isEnabled}}
         platform: require('os').platform(),
         vue: require('vue/package.json').version

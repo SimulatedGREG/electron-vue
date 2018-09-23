@@ -38,7 +38,7 @@ npm install --save-dev sass-loader node-sass
 
 相同的原理适用于任何其他预处理器。那么，也许你的 JS 需要 coffeescript？只需安装 [coffeescript-loader](https://github.com/webpack/coffee-loader)，并将属性 `lang=“coffeescript”` 应用到你的 `<script>` 标签上。
 
-要获得该功能更高级的使用情况，请转到 [vue-loader 的文档](http://vue-loader.vuejs.org/en/configurations/pre-processors.html) 了解更多信息。
+要获得该功能更高级的使用情况，请转到 [vue-loader 的文档](https://vue-loader.vuejs.org/zh/guide/pre-processors.html) 了解更多信息。
 
 ## Sass/SCSS 全局变量的使用
 
