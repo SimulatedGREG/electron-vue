@@ -46,7 +46,7 @@ When using `vue-router`, do not use [**HTML5 History Mode**](http://router.vuejs
 
 ### vuex modules
 
-Describing `vuex` is not the easiest thing to do, so please read [this](http://vuex.vuejs.org/en/intro.html) for a better understanding of what problem it tries to solve and how it works.
+Describing `vuex` is not the easiest thing to do, so please read [this](https://vuex.vuejs.org/guide/) for a better understanding of what problem it tries to solve and how it works.
 
 electron-vue takes advantage of `vuex`'s module structure to create multiple data stores, which are saved in `src/renderer/store/modules`.
 
