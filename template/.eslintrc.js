@@ -18,7 +18,8 @@ module.exports = {
     __static: true
   },
   plugins: [
-    'html'
+    'html',
+    'chai-friendly'
   ],
   'rules': {
     {{#if_eq eslintConfig 'standard'}}
@@ -43,7 +44,8 @@ module.exports = {
     {
       "files": ["*-test.js", "*.spec.js"],
       "rules": {
-        "no-unused-expressions": "off"
+        "no-unused-expressions": "off",
+        'chai-friendly/no-unused-expressions': 'off',
       }
     }
   ]
