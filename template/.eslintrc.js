@@ -5,6 +5,7 @@ module.exports = {
     sourceType: 'module'
   },
   env: {
+    mocha: process.env.NODE_ENV !== 'production',
     browser: true,
     node: true
   },
