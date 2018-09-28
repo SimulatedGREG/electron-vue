@@ -109,3 +109,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**Hve**](https://github.com/hellohve/hve): A static blog client tool you may like.
 * [**MarkdownFox**](https://github.com/lx4r/markdownfox): A simple Markdown viewer with auto update and PDF export.
 * [**Cleaver**](https://getcleaver.com/): Cleaver helps you provision servers ready for deploying your web apps with zero downtime - for free!
+* [**XPanel**](https://github.com/krustnic/xpanel): XAMPP control panel alternative built with Electron & Vue.js
