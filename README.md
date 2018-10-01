@@ -110,4 +110,5 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**MarkdownFox**](https://github.com/lx4r/markdownfox): A simple Markdown viewer with auto update and PDF export.
 * [**Cleaver**](https://getcleaver.com/): Cleaver helps you provision servers ready for deploying your web apps with zero downtime - for free!
 * [**XPanel**](https://github.com/krustnic/xpanel): XAMPP control panel alternative built with Electron & Vue.js
+* [**Hexo-Client**](https://github.com/gaoyoubo/hexo-client): A hexo client powered by electron-vue.
 * [**YT.Downloader**](https://github.com/myazarc/ytdownloader): Youtube Video Downloader&Converter and Play Music, built with Electron & Vue.js.
