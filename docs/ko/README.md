@@ -1,25 +1,12 @@
-<div align="center">
-<br>
-<img width="500" src="/docs/images/logo.png" alt="electron-vue">
-<br>
-<br>
-</div>
+![](../images/logo.png)
 
-<p align="center" color="#6a737d">
-vue로 구축 된 electron 애플리케이션을 만들기 위한 <span title="최소한의 변경으로 재사용할 수 있는 것">보일러 플레이트</span>
-</p>
+> vue로 구축 된 electron 애플리케이션을 만들기 위한 보일러 플레이트
 
-<div align="center">
-
-[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
-</div>
-
-<div align="center">
+[![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-[![Build Status](https://semaphoreci.com/api/v1/simulatedgreg/electron-vue/branches/master/badge.svg)](https://semaphoreci.com/simulatedgreg/electron-vue)
-</div>
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/uses-js.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/makes-people-smile.svg)](http://forthebadge.com)
 
 ## 개요
 
