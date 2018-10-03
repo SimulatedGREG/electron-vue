@@ -5,6 +5,7 @@ module.exports = {
     sourceType: 'module'
   },
   env: {
+    mocha: process.env.NODE_ENV !== 'production',
     browser: true,
     node: true
   },
@@ -18,7 +19,8 @@ module.exports = {
     __static: true
   },
   plugins: [
-    'html'
+    'html',
+    'chai-friendly'
   ],
   'rules': {
     {{#if_eq eslintConfig 'standard'}}
@@ -38,5 +40,14 @@ module.exports = {
     {{/if_eq}}
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
-  }
+  },
+  overrides: [
+    {
+      "files": ["*-test.js", "*.spec.js"],
+      "rules": {
+        "no-unused-expressions": "off",
+        'chai-friendly/no-unused-expressions': 'off',
+      }
+    }
+  ]
 }
