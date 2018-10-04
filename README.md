@@ -114,3 +114,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**Hexo-Client**](https://github.com/gaoyoubo/hexo-client): A hexo client powered by electron-vue.
 * [**YT.Downloader**](https://github.com/myazarc/ytdownloader): Youtube Video Downloader&Converter and Play Music, built with Electron & Vue.js.
 * [**BMFont-JS**](https://github.com/elisaday/bmfont-js): BMFont-js is a bitmap font generator, built with Electron & Vue.js.
+* [**YouGet**](https://github.com/ahmetzeybek/YouGet): YouGet - YouTube Video/Playlist Downloader/Cutter - MP3 Converter
