@@ -33,7 +33,7 @@
 
 ## 在哪里放置我的静态资源？
 
-[**静态资源的使用**](/using-static-assets.md)
+[**静态资源的使用**](using-static-assets.md)
 
 ## 为什么 `npm run lint` 会出现错误？
 
