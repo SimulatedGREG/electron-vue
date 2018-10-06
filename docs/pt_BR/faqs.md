@@ -39,7 +39,7 @@ Make sure to close and reopen the developer tools panel on first launch if they 
 
 ## Onde eu coloco meus assets estaticos ?
 
-[**Usando Static(estatico) Assets**](/using-static-assets.md)
+[**Usando Static(estatico) Assets**](using-static-assets.md)
 
 ## Por que o `npm run lint` resulta em um erro ?
 

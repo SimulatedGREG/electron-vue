@@ -27,5 +27,5 @@ npm test
 
 ### CI 테스팅에 관하여
 
-스캐폴딩 할 때 `electron-builder`를 빌드 도구로 사용하기로 결정했다면 `darwin`, `linux` 그리고 `win32` 용 Travis CI 및 AppVeyor에서 애플리케이션을 쉽게 테스트 할 수 있습니다. `.travis.yml` 와 `appveyor.yml` 둘 다 내부에서 주석 처리 된 섹션을 찾을 수 있고 곧바로 주석을 해제하여 테스트를 수행 할 수 있습니다. 자세한 내용은 [**Automated Deployments using CI**](/using-electron-builder.md#automated-deployments-using-ci)를 읽으세요.
+스캐폴딩 할 때 `electron-builder`를 빌드 도구로 사용하기로 결정했다면 `darwin`, `linux` 그리고 `win32` 용 Travis CI 및 AppVeyor에서 애플리케이션을 쉽게 테스트 할 수 있습니다. `.travis.yml` 와 `appveyor.yml` 둘 다 내부에서 주석 처리 된 섹션을 찾을 수 있고 곧바로 주석을 해제하여 테스트를 수행 할 수 있습니다. 자세한 내용은 [**Automated Deployments using CI**](using-electron-builder.md#automated-deployments-using-ci)를 읽으세요.
 

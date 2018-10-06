@@ -26,5 +26,5 @@ npm test
 
 ### On the subject of CI testing
 
-If your decided to use `electron-builder` as your build tool when scaffolding, then you can easily test your application on both Travis CI & AppVeyor for `darwin`, `linux`, and `win32`. Inside both `.travis.yml` and `appveyor.yml` you will find commented sections you can quickly un-comment to enable testing. Make sure to read up on [**Automated Deployments using CI**](/using-electron-builder.md#automated-deployments-using-ci)** **for further information.
+If your decided to use `electron-builder` as your build tool when scaffolding, then you can easily test your application on both Travis CI & AppVeyor for `darwin`, `linux`, and `win32`. Inside both `.travis.yml` and `appveyor.yml` you will find commented sections you can quickly un-comment to enable testing. Make sure to read up on [**Automated Deployments using CI**](using-electron-builder.md#automated-deployments-using-ci)** **for further information.
 
