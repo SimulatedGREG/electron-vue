@@ -33,7 +33,7 @@
 
 ## 静的なアセットはどこに置けば良いですか？
 
-[**静的なアセットの使用**](/using-static-assets.md)
+[**静的なアセットの使用**](using-static-assets.md)
 
 ## `npm run lint` がエラーで終了するのはなぜですか？
 

@@ -33,7 +33,7 @@ Make sure to close and reopen the developer tools panel on first launch if they 
 
 ## Where do I put Static Assets?
 
-[**Using Static Assets**](/using-static-assets.md)
+[**Using Static Assets**](using-static-assets.md)
 
 ## Why did `npm run lint` end with an error?
 

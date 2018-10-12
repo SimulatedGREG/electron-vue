@@ -26,4 +26,4 @@ npm test
 
 ### CI テストについて
 
-スキャフォールディング時にビルドツールとして `electron-builder` を使うことに決めた場合、`darwin`、`linux`、`win32`向けにTravis CI と AppVeyorの両方で簡単にアプリケーションをテストできます。`.travis.yml` と `appveyor.yml` の中には、コメントアウトされたセクションがあります。テストを有効にするために、セクションのコメントアウトを解除することができます。詳細については、[**CI を使用した自動デプロイ**](/using-electron-builder.md#automated-deployments-using-ci)を読んでください。** **
+スキャフォールディング時にビルドツールとして `electron-builder` を使うことに決めた場合、`darwin`、`linux`、`win32`向けにTravis CI と AppVeyorの両方で簡単にアプリケーションをテストできます。`.travis.yml` と `appveyor.yml` の中には、コメントアウトされたセクションがあります。テストを有効にするために、セクションのコメントアウトを解除することができます。詳細については、[**CI を使用した自動デプロイ**](using-electron-builder.md#automated-deployments-using-ci)を読んでください。** **
