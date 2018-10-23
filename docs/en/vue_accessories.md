@@ -6,6 +6,7 @@ electron-vue comes packed with the following `vue` plugins that can be installed
 * [vue-electron](https://github.com/SimulatedGREG/vue-electron) \(attach electron APIs to Vue object\)
 * [vue-router](https://github.com/vuejs/vue-router) \(single page application routes\)
 * [vuex](https://github.com/vuejs/vuex) \(flux-inspired application architecture\)
+* [vuex-electron](https://github.com/vue-electron/vuex-electron) \(sync vuex store between all processes and instances\)
 
 ---
 
@@ -33,3 +34,8 @@ The provided project structure should feel familiar to the setup provided in the
 
 The provided project structure is rather bare but does encourage the use of `vuex`'s module pattern to help organize your data stores. The extra `@/store/modules/index.js` let's your `vuex` store import all modules in a one-shot manner.
 
+### [`vuex-electron`](https://github.com/vue-electron/vuex-electron)
+
+> The easiest way to use your Vuex store between all processes (including main) and instances.
+
+In case if your application has multiple windows, probably you would need to share the state of the application between them. Moreover, probably you would need to share the state of the app between launches or different instances. You could easily solve these two tasks by using `vuex-store`.
