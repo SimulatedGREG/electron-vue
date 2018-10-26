@@ -118,3 +118,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**Asar UI**](https://github.com/myazarc/AsarUI): UI for Asar Pack, built with Electron & Vue.js.
 * [**Leeze**](https://github.com/dayinji/Leeze): A Receipt Record App, built with Electron & Vue.js.
 * [**IntelTracker**](https://github.com/hectate/inteltracker): An intel item tracker for players/speedrunners of NOLF.
+* [**Metube**](https://github.com/kimyearho/MeTube): A program to manage your simple YouTube music player and enjoy your music
