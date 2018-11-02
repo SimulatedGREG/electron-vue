@@ -1,6 +1,6 @@
 'use strict'
 
-process.env.NODE_ENV = 'production'
+process.env.NODE_ENV = 'development'
 
 const chalk = require('chalk')
 const electron = require('electron')
