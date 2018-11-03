@@ -80,6 +80,10 @@ vue init simulatedgreg/electron-vue#1.0 my-project
 
 Make sure to take a look at the [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/). Here you will find useful information about configuration, project structure, and building your app. There's also a handy [FAQs](https://simulatedgreg.gitbooks.io/electron-vue/content/en/faqs.html) section.
 
+## Plugins
+
+* [**electron-vue-windows**](https://github.com/hxkuc/electron-vue-windows): create frameless window quickly (with vibrancy and animation)
+
 
 ## Made with electron-vue
 Take a look at some of the amazing projects built with electron-vue. Want to have your own project listed? Feel free add your project to the bottom of the list below then submit a pull request.
