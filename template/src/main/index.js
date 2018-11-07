@@ -8,9 +8,9 @@ import { app, BrowserWindow } from 'electron'{{#if_eq eslintConfig 'airbnb'}} //
 /**
  * Vuex will not work without this
  */
-import '../renderer/store'{{#if_eq eslintConfig 'airbnb'}} // eslint-disable-line{{/if_eq}}
-{{/isEnabled}}
+import '@/renderer/store'{{#if_eq eslintConfig 'airbnb'}} // eslint-disable-line{{/if_eq}}
 
+{{/isEnabled}}
 /**
  * Set `__static` path to static files in production
  * https://simulatedgreg.gitbooks.io/electron-vue/content/en/using-static-assets.html
