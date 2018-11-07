@@ -8,7 +8,7 @@ import { app, BrowserWindow } from 'electron'{{#if_eq eslintConfig 'airbnb'}} //
 /**
  * Vuex will not work without this
  */
-import '@/renderer/store'{{#if_eq eslintConfig 'airbnb'}} // eslint-disable-line{{/if_eq}}
+import '../renderer/store'{{#if_eq eslintConfig 'airbnb'}} // eslint-disable-line{{/if_eq}}
 
 {{/isEnabled}}
 /**
