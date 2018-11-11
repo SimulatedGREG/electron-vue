@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-{{/isEnabled}}
 import modules from './modules'
 
 Vue.use(Vuex)
