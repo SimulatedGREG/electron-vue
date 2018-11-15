@@ -152,6 +152,10 @@
     "node-sass": "^4.9.2",
     "sass-loader": "^7.0.3",
     {{/if}}
+    {{#if useless}}
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    {{/if}}
     "style-loader": "^0.21.0",
     "url-loader": "^1.0.1",
     "vue-html-loader": "^1.2.4",

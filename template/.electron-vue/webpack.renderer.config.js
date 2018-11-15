@@ -12,6 +12,64 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
+const isProd = process.env.NODE_ENV === 'production'
+
+const styleLoaders = isProd ? [
+  {{#if usesass}}
+  {
+    test: /\.scss$/,
+    use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+  },
+  {
+    test: /\.sass$/,
+    use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader?indentedSyntax'],
+  },
+  {{/if}}
+  {{#if useless}}
+  {
+    test: /\.less$/,
+    use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
+  },
+  {{/if}}
+  {
+    test: /\.css$/,
+    use: [MiniCssExtractPlugin.loader, 'css-loader'],
+  }
+] : [
+  {{#if usesass}}
+  {
+    test: /\.scss$/,
+    use: ['vue-style-loader', 'css-loader', 'sass-loader'],
+  },
+  {
+    test: /\.sass$/,
+    use: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax'],
+  },
+  {{/if}}
+  {{#if useless}}
+  {
+    test: /\.less$/,
+    use: ['vue-style-loader', 'css-loader', 'less-loader'],
+  },
+  {{/if}}
+  {
+    test: /\.css$/,
+    use: ['vue-style-loader', 'css-loader'],
+  }
+];
+
+{{#if eslint}}const createLintingRule = () => ({
+  test: /\.(js|vue)$/,
+  enforce: 'pre',
+  exclude: /node_modules/,
+  use: {
+    loader: 'eslint-loader',
+    options: {
+      formatter: require('eslint-friendly-formatter')
+    }
+  }
+}){{/if}}
+
 /**
  * List of node_modules to include in webpack bundle
  *
@@ -31,37 +89,10 @@ let rendererConfig = {
   ],
   module: {
     rules: [
-{{#if eslint}}
-      {
-        test: /\.(js|vue)$/,
-        enforce: 'pre',
-        exclude: /node_modules/,
-        use: {
-          loader: 'eslint-loader',
-          options: {
-            formatter: require('eslint-friendly-formatter')
-          }
-        }
-      },
-{{/if}}
-    {{#if usesass}}
-      {
-        test: /\.scss$/,
-        use: ['vue-style-loader', 'css-loader', 'sass-loader']
-      },
-      {
-        test: /\.sass$/,
-        use: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax']
-      },
-    {{/if}}
-      {
-        test: /\.less$/,
-        use: ['vue-style-loader', 'css-loader', 'less-loader']
-      },
-      {
-        test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader']
-      },
+      {{#if eslint}}
+        ...(!isProd ? [createLintingRule()] : []),
+      {{/if}}
+      ...styleLoaders,
       {
         test: /\.html$/,
         use: 'vue-html-loader'
@@ -80,7 +111,7 @@ let rendererConfig = {
         use: {
           loader: 'vue-loader',
           options: {
-            extractCSS: process.env.NODE_ENV === 'production',
+            extractCSS: isProd,
             loaders: {
               sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax=1',
               scss: 'vue-style-loader!css-loader!sass-loader',
@@ -120,8 +151,8 @@ let rendererConfig = {
     ]
   },
   node: {
-    __dirname: process.env.NODE_ENV !== 'production',
-    __filename: process.env.NODE_ENV !== 'production'
+    __dirname: !isProd,
+    __filename: !isProd
   },
   plugins: [
     new VueLoaderPlugin(),
@@ -134,7 +165,7 @@ let rendererConfig = {
         removeAttributeQuotes: true,
         removeComments: true
       },
-      nodeModules: process.env.NODE_ENV !== 'production'
+      nodeModules: !isProd
         ? path.resolve(__dirname, '../node_modules')
         : false
     }),
@@ -159,7 +190,7 @@ let rendererConfig = {
 /**
  * Adjust rendererConfig for development settings
  */
-if (process.env.NODE_ENV !== 'production') {
+if (!isProd) {
   rendererConfig.plugins.push(
     new webpack.DefinePlugin({
       '__static': `"${path.join(__dirname, '../static').replace(/\\/g, '\\\\')}"`
@@ -170,7 +201,7 @@ if (process.env.NODE_ENV !== 'production') {
 /**
  * Adjust rendererConfig for production settings
  */
-if (process.env.NODE_ENV === 'production') {
+if (isProd) {
   rendererConfig.devtool = ''
 
   rendererConfig.plugins.push(
