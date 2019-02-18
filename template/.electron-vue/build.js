@@ -8,7 +8,6 @@ const del = require('del')
 {{#if_eq builder 'packager'}}
 const packager = require('electron-packager')
 {{else}}
-const { spawn } = require('child_process')
 {{/if_eq}}
 const webpack = require('webpack')
 const Multispinner = require('multispinner')
