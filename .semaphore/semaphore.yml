@@ -5,6 +5,15 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
+  - name: Tests
+    task:
+      prologue:
+        commands:
+          - sem-version node 8.15.1
+      jobs:
+        - name: Tests
+          commands:
+            - node --version
   - name: "Build"
     task:
       env_vars:
