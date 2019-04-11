@@ -116,3 +116,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**BMFont-JS**](https://github.com/elisaday/bmfont-js): BMFont-js is a bitmap font generator, built with Electron & Vue.js.
 * [**YouGet**](https://github.com/ahmetzeybek/YouGet): YouGet - YouTube Video/Playlist Downloader/Cutter - MP3 Converter
 * [**Asar UI**](https://github.com/myazarc/AsarUI): UI for Asar Pack, built with Electron & Vue.js.
+* [**Filename.ext**](https://github.com/ShenJet/filename.ext): A desktop tool for modify filename and extension.
