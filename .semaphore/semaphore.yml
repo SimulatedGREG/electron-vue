@@ -5,13 +5,14 @@ agent:
     type: e1-standard-2
     os_image: ubuntu1804
 blocks:
-  - name: Tests
+  - name: node_setup
     task:
       prologue:
         commands:
-          - sem-version node 8.12.0
+          - nvm install 8.15.1 carbon
+          - sem-version node 8.15.1 carbon
       jobs:
-        - name: Tests
+        - name: node_version
           commands:
             - node --version
   - name: "Build"
