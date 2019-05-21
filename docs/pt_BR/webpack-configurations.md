@@ -1,20 +1,30 @@
-# Webpack Configurations
+# Configurações do Webpack
 
-electron-vue comes packed with three separate webpack config files located in the `.electron-vue/` directory. Aside for the optional use of the `web` output, both `main` and `renderer` are similar in setup. Both make use of `babel-preset-env` to target `node@7` features, use `babili`, and treat all modules as `externals`.
+electron-vue vem com três arquivos de configuração do webpack separados, todos localizados na pasta `.electron-vue/`.
+Além do uso opcional do output `web`, ambos `main` e `renderer` são similares em estrutura. Ambos fazem uso de `babel-preset-env` para atingir as features do `node@7`, usam `babili` e tratam todos os modulos como `externals`.
+
 
 ### `.electron-vue/webpack.main.config.js`
 
-Targets electron's `main` process. This configuration is rather bare, but does include some common `webpack` practices.
+Segmenta o processo `main` do electron. Essa configuração é bem simples, mas inclui algumas práticas comuns do `webpack`.
 
 ### `.electron-vue/webpack.renderer.config.js`
 
-Targets electron's `renderer` process. This configuration handles your Vue application, so it includes `vue-loader` and many other configurations that are available in the official `vuejs-templates/webpack` boilerplate.
+Segmenta o processo `renderer` do electron. Essa configuração lida com a sua aplicação Vue, então inclui o `vue-loader` 
+e várias outras configurações que estão disponiveis no _boilerplate_ original. 
 
-##### White-listing Externals
+##### Colocando Externals na lista branca
 
-One important thing to consider about this config is that you can whitelist specific modules to not treat as webpack `externals`. There aren't many use cases where this functionality is need, but for the case of Vue UI libraries that provide raw `*.vue` components they will need to be whitelisted, so `vue-loader` is able to compile them. Another use case would be using webpack `alias`es, such as setting `vue` to import the full Compiler + Runtime build. Because of this, `vue` is already in the whitelist.
+Uma coisa importante a se considerar sobre está configuração é que você pode adicionar modulos especificos a _whitelist_ para que não sejam tratados como `externals` no webpack.
+Não existem muitos casos de uso onde essa funcionálidade é necessaria, mas no caso de bibliotecas Vue UI que fornecem componentes `*.vue` "brutos", eles precisão estar nesta lista de permissões para que o `vue-loader` consiga compilá-los.
+Outr caso seria o uso de _alias_ do webpack, como configurar o `vue` para importar a compilação completa do Compiler + Runtime. Por causa disso, o `vue` já está na lista branca.
 
 ### `.electron-vue/webpack.web.config.js`
 
-Targets building your `renderer` process source code for the browser. This config is provided as a strong starting base if you are in need of publishing to web. **electron-vue does not support web output further than what is provided.** Issues related to web output will most likely be deferred or closed.
+Atinge a build do processo `renderer` 
+
+Segmenta a construção do código-fonte do processo `renderer` para o navegador.
+Essa configuração é um ótimo ponto de partida caso você precise publicar na web.
+**electron-vue não tem suporte para web além do que já é fornecido**
+Quaisquer problemas relacionados a build para web provavelmente serão fechados.
 
