@@ -76,6 +76,11 @@ module.exports = {
         message: 'Use Sass / Scss?',
         required: true
     },
+    useless: {
+        type: 'confirm',
+        message: 'Use Less?',
+        required: true
+    },
     plugins: {
       type: 'checkbox',
       message: 'Select which Vue plugins to install',
