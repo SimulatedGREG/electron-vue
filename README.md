@@ -121,3 +121,4 @@ Take a look at some of the amazing projects built with electron-vue. Want to hav
 * [**IntelTracker**](https://github.com/hectate/inteltracker): An intel item tracker for players/speedrunners of NOLF.
 * [**Metube**](https://github.com/kimyearho/MeTube): A program to manage your simple YouTube music player and enjoy your music
 * [**it-tools**](https://github.com/TsaiKoga/it-tools): A programing helper for developers built with Electron & Vue.js. 
+* [**GifsWorld**](https://github.com/dj0nny/GifsWorld): Gifs finder built with Vue and Electron
