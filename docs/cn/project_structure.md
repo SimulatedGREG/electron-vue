@@ -1,6 +1,6 @@
 # 项目结构
 
-当涉及制作 electron 应用程序的问题时，项目结构会有些不同。如果你以前使用过官方的 [`vuejs-templates/webpack`](https://github.com/vuejs-templates/webpac) 设置，那么你对这个结构应该很熟悉。本文档在此章节将尝试解释样板代码的工作原理以及应用程序在构建中的一些区别。
+当涉及制作 electron 应用程序的问题时，项目结构会有些不同。如果你以前使用过官方的 [`vuejs-templates/webpack`](https://github.com/vuejs-templates/webpack) 设置，那么你对这个结构应该很熟悉。本文档在此章节将尝试解释样板代码的工作原理以及应用程序在构建中的一些区别。
 
 ### 单一的 `package.json` 设置
 

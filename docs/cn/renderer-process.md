@@ -50,4 +50,4 @@ src/renderer/components
 
 electron-vue 利用 `vuex` 的模块结构创建多个数据存储，并保存在 `src/renderer/store/modules` 中。
 
-拥有多个数据存储对于组织化来说可能很好，但你必须导入每一个数据，这也可能令人厌烦。但是不要担心，因为 `src/renderer/store/modules/index.js` 对我们来说是麻烦的工作！这个简单的脚本让 `src/renderer/store/index.js` 一次性导入我们所有的模块。如果所有这些都没有，只要知道你可以轻松地复制给定的 `Counter.js` 模块，它将以 "神奇" 的方式被加载进来。
+拥有多个数据存储对于组织化来说可能很好，但你必须导入每一个数据，这也可能令人厌烦。但是不要担心，因为 `src/renderer/store/modules/index.js` 帮我们处理了这些麻烦事！这个简单的脚本让 `src/renderer/store/index.js` 一次性导入我们所有的模块。如果所有这些都没有，只要知道你可以轻松地复制给定的 `Counter.js` 模块，它将以 "神奇" 的方式被加载进来。
