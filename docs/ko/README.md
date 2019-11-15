@@ -38,7 +38,7 @@
 
 ### 시작하기
 
-이 보일러플레이트는 [vue-cli](https://github.com/vuejs/vue-cli)를 위한 템플릿으로 제작되었으며 최종 스캐폴드 앱을 사용자 정의 할 수 있는 옵션을 포함하고 있습니다. `node@^7` 이상의 노드를 사용해야 합니다. 또한 electron-vue는 의존성을 훨씬 잘 처리하고 `yarn clean`으로 최종 빌드 크기를 줄일 수 있는 [`yarn`](https://yarnpkg.org) 패키지 매니저를 공싱적으로 추천합니다.
+이 보일러플레이트는 [vue-cli](https://github.com/vuejs/vue-cli)를 위한 템플릿으로 제작되었으며 최종 스캐폴드 앱을 사용자 정의 할 수 있는 옵션을 포함하고 있습니다. `node@^7` 이상의 노드를 사용해야 합니다. 또한 electron-vue는 의존성을 훨씬 잘 처리하고 `yarn clean`으로 최종 빌드 크기를 줄일 수 있는 [`yarn`](https://yarnpkg.org) 패키지 매니저를 공식적으로 추천합니다.
 
 ```bash
 # Install vue-cli and scaffold boilerplate
