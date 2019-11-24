@@ -1,6 +1,6 @@
 # Webpack 配置
 
-electron-vue 包含三个单独的、位于 `.electron-vue/` 目录中的 webpack 配置文件。除了可选de的使用 `web` 输出以外，`main` 和 `renderer` 在安装过程中都是相似的。两者都使用 `babel-preset-env` 来针对 `node@7` 的功能特性、使用`babili`、并把所有的模块都视为 `externals`。
+electron-vue 包含三个单独的、位于 `.electron-vue/` 目录中的 webpack 配置文件。除了可选的使用 `web` 输出以外，`main` 和 `renderer` 在安装过程中都是相似的。两者都使用 `babel-preset-env` 来针对 `node@7` 的功能特性、使用`babili`、并把所有的模块都视为 `externals`。
 
 ### `.electron-vue/webpack.main.config.js`
 
