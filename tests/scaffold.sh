@@ -5,7 +5,7 @@ set -e
 cd "$PWD/tests"
 node scaffold.js "$1"
 
-# Install dependecies
+# Install dependencies
 cd "$PWD/builds/$1"
 yarn
 
