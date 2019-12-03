@@ -5,7 +5,7 @@ process.env.BABEL_ENV = 'web'
 const path = require('path')
 const webpack = require('webpack')
 
-const BabiliWebpackPlugin = require('babili-webpack-plugin')
+const BabelMinifyWebpackPlugin = require('babel-minify-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -135,7 +135,7 @@ if (process.env.NODE_ENV === 'production') {
   webConfig.devtool = ''
 
   webConfig.plugins.push(
-    new BabiliWebpackPlugin(),
+    new BabelMinifyWebpackPlugin(),
     new CopyWebpackPlugin([
       {
         from: path.join(__dirname, '../static'),
