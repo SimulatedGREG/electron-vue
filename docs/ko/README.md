@@ -10,11 +10,11 @@
 
 ## 개요
 
-이 프로젝트의 목적은 vue를 사용하여 Electron 앱을 수동으로 설정해야 할 필요성을 없애는 것 입니다. electron-vue은 스캐폴딩(발판)을 위한 `vue-cli`, `vue-loader`이 있는 `webpack`, `electron-packager` 또는 `electron-builder`, `vue-router`, `vuex` 등과 같이 가장 많이 사용되는 플러그인을 사용합니다.
+이 프로젝트의 목적은 vue를 사용하는 Electron 앱을 수동으로 설정할 필요가 없도록 만드는 것 입니다. electron-vue는 스캐폴딩(발판)을 위한`vue-cli`, `webpack`과 `vue-loader`, `electron-packager` 또는 `electron-builder`, `vue-router`와 `vuex` 등과 같이 가장 많이 사용되는 플러그인들 등의 이점들을 취했습니다.
 
 #### Check out the detailed documentation [here](https://simulatedgreg.gitbooks.io/electron-vue/content/index.html).
 
-이 보일러플레이트에서 찾을 수있는 것...
+이 보일러플레이트에서 찾을 수 있는 것...
 
 * **단일** `package.json` 설정으로된 기본 프로젝트 구조(다른 프로젝트는 두개 package.json 파일로 구성되어 있습니다.)
 * 상세한 [문서](https://simulatedgreg.gitbooks.io/electron-vue/content/)
@@ -38,7 +38,7 @@
 
 ### 시작하기
 
-이 보일러플레이트는 [vue-cli](https://github.com/vuejs/vue-cli)를 위한 템플릿으로 제작되었으며 최종 스캐폴드 앱을 사용자 정의 할 수 있는 옵션을 포함하고 있습니다. `node@^7` 이상의 노드를 사용해야 합니다. 또한 electron-vue는 의존성을 훨씬 잘 처리하고 `yarn clean`으로 최종 빌드 크기를 줄일 수 있는 [`yarn`](https://yarnpkg.org) 패키지 매니저를 공싱적으로 추천합니다.
+이 보일러플레이트는 [vue-cli](https://github.com/vuejs/vue-cli)를 위한 템플릿으로 제작되었으며 최종 스캐폴드 앱을 사용자 정의 할 수 있는 옵션을 포함하고 있습니다. `node@^7` 이상의 노드를 사용해야 합니다. 또한 electron-vue는 의존성을 훨씬 잘 처리하고 `yarn clean`으로 최종 빌드 크기를 줄일 수 있는 [`yarn`](https://yarnpkg.org) 패키지 매니저를 공식적으로 추천합니다.
 
 ```bash
 # Install vue-cli and scaffold boilerplate
@@ -57,7 +57,7 @@ electron 및 기타 의존성에 필요한 모든 빌드 도구가 있는 지 �
 
 ##### Vue 1을 사용하고 싶나요?
 
- `1.0` 브랜치를 가리키기만 하세요. Please note that electron-vue는 `vue@^1`의 사용을 공식적으로 권장하지 않습니다. 따라서 프로젝트 구조, 기능 및 문서는 이러한 변경 사항을 반영합니다.([**legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs)).
+ `1.0` 브랜치를 가리키기만 하세요. 하지만 electron-vue는 `vue@^1`의 사용을 공식적으로 권장하지 않습니다. 따라서 프로젝트 구조, 기능 및 문서는 이러한 변경 사항을 반영합니다.([**legacy documentation**](https://github.com/SimulatedGREG/electron-vue/tree/1.0/docs)).
 
 ```bash
 vue init simulatedgreg/electron-vue#1.0 my-project
@@ -68,7 +68,7 @@ vue init simulatedgreg/electron-vue#1.0 my-project
 [documentation](https://simulatedgreg.gitbooks.io/electron-vue/content/)를 면밀히 살펴보세요. 이 문서에서 구성, 프로젝트 구조, 앱 빌드에 대한 유용한 정보가 있습니다. 또한 편리한 [FAQs](https://simulatedgreg.gitbooks.io/electron-vue/content/en/faqs.html) 섹션도 있습니다.
 
 
-## electron-vue로 만듬
+## electron-vue로 만든 프로젝트
 electron-vue로 만들어진 몇 가지 놀라운 프로젝트를 살펴보세요. 여러분의 프로젝트가 목록에 추가를 원하시면 언제든지 pull request를 보내 주시기 바랍니다.
 
 * [**Surfbird**](https://github.com/surfbirdapp/surfbird): A Twitter client built on Electron and Vue
