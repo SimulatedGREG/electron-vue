@@ -68,6 +68,19 @@ loaders: {
 }
 ```
 
+In some cases it doesn't work, you may edit `scss` and `sass` directly
+
+```js
+{
+  test: /\.scss$/,
+  use: ['vue-style-loader', 'css-loader', 'sass-loader?data=@import "./src/renderer/globals";']
+},
+{
+  test: /\.sass$/,
+  use: ['vue-style-loader', 'css-loader', 'sass-loader?data=@import "./src/renderer/globals";']
+},
+```
+
 #### Use your globals
 
 **SomeComponent.vue**
