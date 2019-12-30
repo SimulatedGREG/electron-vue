@@ -137,6 +137,7 @@
     "karma-spec-reporter": "^0.0.32",
     "karma-webpack": "^3.0.0",
     {{/if}}
+    "listr": "^0.14.3",
     {{#if e2e}}
     "require-dir": "^1.0.0",
     "spectron": "^3.8.0",
@@ -146,7 +147,6 @@
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
     {{/testing}}
-    "multispinner": "^0.2.1",
     "node-loader": "^0.6.0",
     {{#if usesass}}
     "node-sass": "^4.9.2",
