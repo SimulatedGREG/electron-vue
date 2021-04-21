@@ -25,9 +25,30 @@ export default new Datastore({
 })
 ```
 
+If we want to setup multiple databases across different files in to our `userData` directory, we can wrap the Datastore into a function and export many databases.
+
+```js
+import Datastore from 'nedb'
+import path from 'path'
+import { remote } from 'electron'
+
+const dbFactory = file =>
+  new Datastore({
+    filename: `${path.join(remote.app.getPath('userData'))}/data/${file}`,
+    autoload: true
+  })
+
+const db = {
+  users: dbFactory('users.db'),
+  config: dbFactory('config.db')
+}
+
+export default db
+```
+
 **src/renderer/main.js**
 
-To take this a step further, we can then import our datastore into `src/renderer/main.js` and attach it to the Vue prototype. Doing so, we are now able to access the datastore API through the usage of `this.$db` in all component files.
+To take this a step further, we can then import our datastore into `src/renderer/main.js` and attach it to the Vue prototype. Doing so, we are now able to access the datastore API through the usage of `this.$db` in all component files. If we had multiple databases, we are able to acces throught the usage of `this.$db.{database-name}`.
 
 ```js
 import db from './datastore'
