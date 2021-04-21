@@ -37,6 +37,7 @@ module.exports = {
     'no-multi-assign': 0,
     {{/if_eq}}
     // allow debugger during development
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+    // `process.env.NODE_ENV` will get `undefined` when `npm run lint`
+    'no-debugger': process.env.NODE_ENV === 'development' ? 0 : 2
   }
 }
