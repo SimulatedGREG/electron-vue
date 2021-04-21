@@ -14,7 +14,7 @@ electron-vue에는 `vue-cli`의 스캐폴딩 중 설치 할 수 있는 다음의
 
 > 브라우저와 Node.js를위한 Promise 기반의 HTTP 클라이언트
 
-`vue-resource`에 익숙하다면 대부분의 `axios` API가 거의 동일하기 때문에 익숙 할 것 입니다. `main` 프로세스 스크립트에서 `axios`을 쉽게 가져 오거나 `renderer` 프로세스에서 `this.$http` & `Vue.http`를 함께 사용할 수 있습니다. 개발 중에는 `webpack-dev-server`를 통해 요청이 전달되기 때문에 CORS 관련 이슈가 발생할 수 있음을 주의하세요. 작은 예비 수단으로 BrowserWindow configuration에서 [`webSecurity`](https://electronjs.org/docs/api/browser-window#new-browserwindowoptions)를 ​​비활성화 할 수 있지만 개발 중에 비활성화하는 것을 잊미 마세요. 프로덕션에서 비활성화하는 것은 정말 권장하지 않습니다. 최종 애플리케이션에 심각한 보안 위험을 초래할 수 있습니다.
+`vue-resource`에 익숙하다면 대부분의 `axios` API가 거의 동일하기 때문에 익숙 할 것 입니다. `main` 프로세스 스크립트에서 `axios`을 쉽게 가져 오거나 `renderer` 프로세스에서 `this.$http` & `Vue.http`를 함께 사용할 수 있습니다. 개발 중에는 `webpack-dev-server`를 통해 요청이 전달되기 때문에 CORS 관련 이슈가 발생할 수 있음을 주의하세요. 작은 예비 수단으로 BrowserWindow configuration에서 [`webSecurity`](https://electronjs.org/docs/api/browser-window#new-browserwindowoptions)를 ​​비활성화 할 수 있지만 개발 중에 비활성화하는 것을 잊지 마세요. 프로덕션에서 비활성화하는 것은 정말 권장하지 않습니다. 최종 애플리케이션에 심각한 보안 위험을 초래할 수 있습니다.
 
 ### [`vue-electron`](https://github.com/SimulatedGREG/vue-electron)
 
