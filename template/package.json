@@ -137,6 +137,10 @@
     "karma-spec-reporter": "^0.0.32",
     "karma-webpack": "^3.0.0",
     {{/if}}
+    {{#if useless}}
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    {{/if}}
     {{#if e2e}}
     "require-dir": "^1.0.0",
     "spectron": "^3.8.0",

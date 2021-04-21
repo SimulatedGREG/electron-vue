@@ -54,10 +54,12 @@ let rendererConfig = {
         use: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax']
       },
     {{/if}}
+    {{#if useless}}
       {
         test: /\.less$/,
         use: ['vue-style-loader', 'css-loader', 'less-loader']
       },
+    {{/if}}
       {
         test: /\.css$/,
         use: ['vue-style-loader', 'css-loader']
