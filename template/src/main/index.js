@@ -3,6 +3,9 @@
 
 {{/if_eq}}
 import { app, BrowserWindow } from 'electron'{{#if_eq eslintConfig 'airbnb'}} // eslint-disable-line{{/if_eq}}
+{{#isEnabled plugins 'vuex-electron'}}
+import '../renderer/store'
+{{/isEnabled}}
 
 /**
  * Set `__static` path to static files in production
