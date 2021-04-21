@@ -11,7 +11,7 @@ const packager = require('electron-packager')
 const { spawn } = require('child_process')
 {{/if_eq}}
 const webpack = require('webpack')
-const Multispinner = require('multispinner')
+const Listr = require('listr')
 
 {{#if_eq builder 'packager'}}const buildConfig = require('./build.config'){{/if_eq}}
 const mainConfig = require('./webpack.main.config')
@@ -33,7 +33,7 @@ function clean () {
   process.exit()
 }
 
-function build () {
+async function build () {
   greeting()
 
   del.sync(['dist/electron/*', '!.gitkeep'])
@@ -46,32 +46,49 @@ function build () {
 
   let results = ''
 
-  m.on('success', () => {
-    process.stdout.write('\x1B[2J\x1B[0f')
-    console.log(`\n\n${results}`)
-    console.log(`${okayLog}take it away ${chalk.yellow('`electron-{{builder}}`')}\n`)
-    {{#if_eq builder 'packager'}}bundleApp(){{else}}process.exit(){{/if_eq}}
-  })
+  const tasks = new Listr(
+    [
+      {
+        title: 'building master process',
+        task: async () => {
+          await pack(mainConfig)
+            .then(result => {
+              results += result + '\n\n'
+            })
+            .catch(err => {
+              console.log(`\n  ${errorLog}failed to build main process`)
+              console.error(`\n${err}\n`)
+            })
+        }
+      },
+      {
+        title: 'building renderer process',
+        task: async () => {
+          await pack(rendererConfig)
+            .then(result => {
+              results += result + '\n\n'
+            })
+            .catch(err => {
+              console.log(`\n  ${errorLog}failed to build renderer process`)
+              console.error(`\n${err}\n`)
+            })
+        }
+      }
+    ],
+    { concurrent: 2 }
+  )
 
-  pack(mainConfig).then(result => {
-    results += result + '\n\n'
-    m.success('main')
-  }).catch(err => {
-    m.error('main')
-    console.log(`\n  ${errorLog}failed to build main process`)
-    console.error(`\n${err}\n`)
-    process.exit(1)
-  })
-
-  pack(rendererConfig).then(result => {
-    results += result + '\n\n'
-    m.success('renderer')
-  }).catch(err => {
-    m.error('renderer')
-    console.log(`\n  ${errorLog}failed to build renderer process`)
-    console.error(`\n${err}\n`)
-    process.exit(1)
-  })
+  await tasks
+    .run()
+    .then(() => {
+      process.stdout.write('\x1B[2J\x1B[0f')
+      console.log(`\n\n${results}`)
+      console.log(`${okayLog}take it away ${chalk.yellow('`electron-builder`')}\n`)
+      process.exit()
+    })
+    .catch(err => {
+      process.exit(1)
+    })
 }
 
 function pack (config) {
