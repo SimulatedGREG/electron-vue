@@ -11,6 +11,64 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
+const isProd = process.env.NODE_ENV === 'production'
+
+const styleLoaders = isProd ? [
+  {{#if usesass}}
+  {
+    test: /\.scss$/,
+    use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+  },
+  {
+    test: /\.sass$/,
+    use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader?indentedSyntax'],
+  },
+  {{/if}}
+  {{#if useless}}
+  {
+    test: /\.less$/,
+    use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
+  },
+  {{/if}}
+  {
+    test: /\.css$/,
+    use: [MiniCssExtractPlugin.loader, 'css-loader'],
+  }
+] : [
+  {{#if usesass}}
+  {
+    test: /\.scss$/,
+    use: ['vue-style-loader', 'css-loader', 'sass-loader'],
+  },
+  {
+    test: /\.sass$/,
+    use: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax'],
+  },
+  {{/if}}
+  {{#if useless}}
+  {
+    test: /\.less$/,
+    use: ['vue-style-loader', 'css-loader', 'less-loader'],
+  },
+  {{/if}}
+  {
+    test: /\.css$/,
+    use: ['vue-style-loader', 'css-loader'],
+  }
+];
+
+{{#if eslint}}const createLintingRule = () => ({
+  test: /\.(js|vue)$/,
+  enforce: 'pre',
+  exclude: /node_modules/,
+  use: {
+    loader: 'eslint-loader',
+    options: {
+      formatter: require('eslint-friendly-formatter')
+    }
+  }
+}){{/if}}
+
 let webConfig = {
   devtool: '#cheap-module-eval-source-map',
   entry: {
@@ -18,37 +76,10 @@ let webConfig = {
   },
   module: {
     rules: [
-{{#if eslint}}
-      {
-        test: /\.(js|vue)$/,
-        enforce: 'pre',
-        exclude: /node_modules/,
-        use: {
-          loader: 'eslint-loader',
-          options: {
-            formatter: require('eslint-friendly-formatter')
-          }
-        }
-      },
-{{/if}}
-    {{#if usesass}}
-      {
-        test: /\.scss$/,
-        use: ['vue-style-loader', 'css-loader', 'sass-loader']
-      },
-      {
-        test: /\.sass$/,
-        use: ['vue-style-loader', 'css-loader', 'sass-loader?indentedSyntax']
-      },
-    {{/if}}
-      {
-        test: /\.less$/,
-        use: ['vue-style-loader', 'css-loader', 'less-loader']
-      },
-      {
-        test: /\.css$/,
-        use: ['vue-style-loader', 'css-loader']
-      },
+      {{#if eslint}}
+        ...(!isProd ? [createLintingRule()] : []),
+      {{/if}}
+      ...styleLoaders,
       {
         test: /\.html$/,
         use: 'vue-html-loader'
@@ -143,7 +174,7 @@ let webConfig = {
 /**
  * Adjust webConfig for production settings
  */
-if (process.env.NODE_ENV === 'production') {
+if (isProd) {
   webConfig.devtool = ''
 
   webConfig.plugins.push(
