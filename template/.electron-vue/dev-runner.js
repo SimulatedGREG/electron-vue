@@ -66,7 +66,7 @@ function startRenderer () {
         quiet: true,
         hot: true,
         before (app, ctx) {
-          // app.use(hotMiddleware)
+          app.use(hotMiddleware)
           ctx.middleware.waitUntilValid(() => {
             resolve()
           })
