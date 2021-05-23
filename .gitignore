@@ -7,3 +7,4 @@ tests/builds/*
 npm-debug.log
 npm-debug.*.log
 !.gitkeep
+yarn.lock
