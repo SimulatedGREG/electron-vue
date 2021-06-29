@@ -30,6 +30,7 @@ function createWindow () {
     useContentSize: true,
     width: 1000,
     webPreferences: {
+      contextIsolation: false,
       nodeIntegration: true,
       nodeIntegrationInWorker: true,
       enableRemoteModule: true
