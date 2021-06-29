@@ -33,22 +33,22 @@
 </template>
 
 <script>
-  export default {
-    data () {
-      return {
-        electron: process.versions.electron,
-        {{#isEnabled plugins 'vue-router'}}
-        name: this.$route.name,
-        {{/isEnabled}}
-        node: process.versions.node,
-        {{#isEnabled plugins 'vue-router'}}
-        path: this.$route.path,
-        {{/isEnabled}}
-        platform: require('os').platform(),
-        vue: require('vue/package.json').version
-      }
+export default {
+  data () {
+    return {
+      electron: process.versions.electron,
+      {{#isEnabled plugins 'vue-router'}}
+      name: this.$route.name,
+      {{/isEnabled}}
+      node: process.versions.node,
+      {{#isEnabled plugins 'vue-router'}}
+      path: this.$route.path,
+      {{/isEnabled}}
+      platform: require('os').platform(),
+      vue: require('vue/package.json').version
     }
   }
+}
 </script>
 
 <style scoped>

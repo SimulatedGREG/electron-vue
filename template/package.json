@@ -108,6 +108,7 @@
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-vue": "^7.12.1",
     {{#if_eq eslintConfig 'standard'}}
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",

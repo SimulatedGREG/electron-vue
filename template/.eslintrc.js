@@ -9,7 +9,7 @@ module.exports = {
     node: true
   },
   {{#if_eq eslintConfig 'standard'}}
-  extends: 'standard',
+  extends: ['standard', 'plugin:vue/base'],
   {{/if_eq}}
   {{#if_eq eslintConfig 'airbnb'}}
   extends: 'airbnb-base',

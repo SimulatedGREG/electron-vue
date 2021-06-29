@@ -30,17 +30,17 @@
 </template>
 
 <script>
-  import SystemInformation from './LandingPage/SystemInformation'
+import SystemInformation from './LandingPage/SystemInformation'
 
-  export default {
-    name: 'landing-page',
-    components: { SystemInformation },
-    methods: {
-      open (link) {
-        {{#isEnabled plugins 'vue-electron'}}this.$electron{{else}}require('electron'){{/isEnabled}}.shell.openExternal(link)
-      }
+export default {
+  name: 'landing-page',
+  components: { SystemInformation },
+  methods: {
+    open (link) {
+      {{#isEnabled plugins 'vue-electron'}}this.$electron{{else}}require('electron'){{/isEnabled}}.shell.openExternal(link)
     }
   }
+}
 </script>
 
 <style>
