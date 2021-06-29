@@ -49,10 +49,10 @@ function startRenderer () {
     })
 
     compiler.hooks.compilation.tap('compilation', compilation => {
-      compilation.hooks.htmlWebpackPluginAfterEmit.tapAsync('html-webpack-plugin-after-emit', (data, cb) => {
+      /*compilation.hooks.htmlWebpackPluginAfterEmit.tapAsync('html-webpack-plugin-after-emit', (data, cb) => {
         hotMiddleware.publish({ action: 'reload' })
         cb()
-      })
+      })*/
     })
 
     compiler.hooks.done.tap('done', stats => {
@@ -65,6 +65,11 @@ function startRenderer () {
         contentBase: path.join(__dirname, '../'),
         quiet: true,
         hot: true,
+        compress: true,
+        liveReload: true,
+        watchOptions: {
+          ignored: /node_modules/
+        },
         before (app, ctx) {
           // app.use(hotMiddleware)
           ctx.middleware.waitUntilValid(() => {
@@ -86,7 +91,7 @@ function startMain () {
 
     compiler.hooks.watchRun.tapAsync('watch-run', (compilation, done) => {
       logStats('Main', chalk.white.bold('compiling...'))
-      hotMiddleware.publish({ action: 'compiling' })
+      // hotMiddleware.publish({ action: 'compiling' })
       done()
     })
 
@@ -128,7 +133,7 @@ function startElectron () {
   }
 
   electronProcess = spawn(electron, args)
-  
+
   electronProcess.stdout.on('data', data => {
     electronLog(data, 'blue')
   })

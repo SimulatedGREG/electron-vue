@@ -5,7 +5,7 @@ process.env.BABEL_ENV = 'web'
 const path = require('path')
 const webpack = require('webpack')
 
-const MinifyPlugin = require("babel-minify-webpack-plugin")
+const TerserPlugin = require('terser-webpack-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -77,7 +77,7 @@ let webConfig = {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         use: {
           loader: 'url-loader',
-          query: {
+          options: {
             limit: 10000,
             name: 'imgs/[name].[ext]'
           }
@@ -87,7 +87,7 @@ let webConfig = {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         use: {
           loader: 'url-loader',
-          query: {
+          options: {
             limit: 10000,
             name: 'fonts/[name].[ext]'
           }
@@ -101,24 +101,16 @@ let webConfig = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, '../src/index.ejs'),
-      templateParameters(compilation, assets, options) {
-        return {
-          compilation: compilation,
-          webpack: compilation.getStats().toJson(),
-          webpackConfig: compilation.options,
-          htmlWebpackPlugin: {
-            files: assets,
-            options: options,
-          },
-          process,
-        };
-      },
       minify: {
         collapseWhitespace: true,
         removeAttributeQuotes: true,
         removeComments: true
       },
-      nodeModules: false
+      isBrowser: false,
+      isDevelopment: process.env.NODE_ENV !== 'production',
+      nodeModules: process.env.NODE_ENV !== 'production'
+          ? path.resolve(__dirname, '../node_modules')
+          : false
     }),
     new webpack.DefinePlugin({
       'process.env.IS_WEB': 'true'
@@ -144,17 +136,21 @@ let webConfig = {
  * Adjust webConfig for production settings
  */
 if (process.env.NODE_ENV === 'production') {
-  webConfig.devtool = ''
+  webConfig.devtool = false
 
   webConfig.plugins.push(
-    new MinifyPlugin(),
-    new CopyWebpackPlugin([
-      {
-        from: path.join(__dirname, '../static'),
-        to: path.join(__dirname, '../dist/web/static'),
-        ignore: ['.*']
-      }
-    ]),
+    new TerserPlugin(),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: path.join(__dirname, '../static'),
+          to: path.join(__dirname, '../dist/web/static'),
+          globOptions: {
+            ignore: ['.*']
+          }
+        }
+      ]
+    }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': '"production"'
     }),

@@ -1,15 +1,15 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
   parserOptions: {
-    sourceType: 'module'
+    parser: 'babel-eslint',
+    sourceType: 'module',
   },
   env: {
     browser: true,
     node: true
   },
   {{#if_eq eslintConfig 'standard'}}
-  extends: 'standard',
+  extends: ['standard', 'plugin:vue/base'],
   {{/if_eq}}
   {{#if_eq eslintConfig 'airbnb'}}
   extends: 'airbnb-base',
@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     'html'
   ],
-  'rules': {
+  rules: {
     {{#if_eq eslintConfig 'standard'}}
     // allow paren-less arrow functions
     'arrow-parens': 0,

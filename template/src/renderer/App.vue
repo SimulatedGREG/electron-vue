@@ -11,18 +11,18 @@
 <script>
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
-  import LandingPage from '@/components/LandingPage'
+import LandingPage from '@/components/LandingPage'
 
 {{/isEnabled}}
-  export default {
-    name: '{{ name }}'{{#isEnabled plugins 'vue-router'}}{{else}},{{/isEnabled}}
+export default {
+  name: '{{ name }}'{{#isEnabled plugins 'vue-router'}}{{else}},{{/isEnabled}}
 {{#isEnabled plugins 'vue-router'}}
 {{else}}
-    components: {
-      LandingPage
-    }
-{{/isEnabled}}
+  components: {
+    LandingPage
   }
+{{/isEnabled}}
+}
 </script>
 
 <style>
