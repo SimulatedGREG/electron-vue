@@ -4,10 +4,9 @@
 {{#testing unit e2e}}
     "test": {
       "presets": [
-        ["env", {
+        ["@babel/preset-env", {
           "targets": { "node": 7 }
         }],
-        "stage-0"
       ],
       "plugins": ["istanbul"]
     },
@@ -22,20 +21,18 @@
     },
     "renderer": {
       "presets": [
-        ["env", {
+        ["@babel/preset-env", {
           "modules": false
         }],
-        "stage-0"
       ]
     },
     "web": {
       "presets": [
-        ["env", {
+        ["@babel/preset-env", {
           "modules": false
         }],
-        "stage-0"
       ]
     }
   },
-  "plugins": ["transform-runtime"]
+  "plugins": ["@babel/plugin-transform-runtime"]
 }
