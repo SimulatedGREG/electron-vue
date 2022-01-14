@@ -38,11 +38,15 @@ async function build () {
 
   del.sync(['dist/electron/*', '!.gitkeep'])
 
+  /**
+  
+  Please either remove these commented lines or put another name
+  
   const tasks = ['main', 'renderer']
   const m = new Multispinner(tasks, {
     preText: 'building',
     postText: 'process'
-  })
+  })**/
 
   let results = ''
 
